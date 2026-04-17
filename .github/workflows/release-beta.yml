@@ -1,0 +1,12 @@
+name: 🚧 Create Bèta Release
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - staging
+
+jobs:
+  release:
+    uses: ./.github/workflows/release-workflow.yml
+    with:
+      release_type: beta

@@ -1,0 +1,50 @@
+*.DS_Store
+
+# Composer
+/wp-content/themes/wp-surf-theme/vendor
+
+# Node
+*/node_modules/
+/wp-content/themes/wp-surf-theme/node_modules/**/*
+/wp-content/themes/wp-surf-theme/npm-debug.log
+/wp-content/themes/wp-surf-theme/assets
+
+# Docker
+/docker/*
+!/docker/config
+!/docker/.htaccess
+
+# PHPStorm
+/.idea/
+!/.idea/webResources.xml
+
+# VSCode
+/.vscode/
+
+# Temp files
+*.cache
+*.lo
+
+# Ignore all plugins by default
+/wp-content/plugins/*
+!/wp-content/plugins/composer.json
+/wp-content/plugins/*/.svn/
+/wp-content/mu-plugins
+/wp-content/mu-plugins/*/.svn/
+
+# Ignore other themes
+/wp-content/themes/*
+!/wp-content/themes/wp-surf-theme
+
+# Ignore update files
+/wp-content/updates
+
+# Ignore cache
+/wp-content/themes/wp-surf-theme/cache
+
+# Build output
+.env
+build
+/wp-content/themes/wp-surf-theme/hot
+/wp-content/themes/wp-surf-theme/dist
+/wp-content/themes/wp-surf-theme/includes/Plugins/*/*.zip

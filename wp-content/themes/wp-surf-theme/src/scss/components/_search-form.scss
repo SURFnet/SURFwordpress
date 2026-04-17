@@ -1,0 +1,94 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Search form
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.search-form {
+	position: relative;
+}
+
+.search-form.animate .search-field {
+	transition: variables.$transition;
+
+	@include mixins.placeholder() {
+		font-style: italic;
+	}
+}
+
+.search-form .search-field {
+	border-radius: var(--surf-search-field-border-radius);
+}
+
+.search-submit {
+	background-color: var(--surf-color-search-button);
+	color: var(--surf-color-search-button-icon);
+	border: 0;
+	width: functions.rem(32);
+	height: functions.rem(32);
+	border-radius: var(--surf-header-button-radius);
+	position: absolute;
+	right: functions.rem(8);
+	top: functions.rem(8);
+	transition: variables.$transition;
+	padding: functions.rem(8);
+}
+
+.search-submit:hover {
+	background-color: var(--surf-color-search-button-hover);
+	color: var(--surf-color-search-button-hover-icon);
+	cursor: pointer;
+}
+
+.search-submit .icon {
+	width: functions.rem(14);
+	height: functions.rem(14);
+}
+
+/**
+* Header style
+* In the header the search has a different color scheme
+*/
+
+.header .search-form:not(.is-active) .search-submit {
+	background-color: var(--surf-color-header-search-button);
+	color: var(--surf-color-header-search-button-icon);
+}
+
+.header .search-form:not(.is-active) .search-submit:hover {
+	background-color: var(--surf-color-header-search-button-hover);
+	color: var(--surf-color-header-search-button-hover-icon);
+}
+
+/**
+* Header Toggle
+* Add the custom toggle style, the classes are managed via headerSearchBar.js
+*/
+.header .search-form {
+	margin-right: functions.rem(10);
+}
+
+.header .search-field {
+	width: functions.rem(50);
+	border-color: transparent;
+	cursor: default;
+	box-shadow: none;
+	background: var(--surf-color-header-background);
+}
+
+.header .search-form.is-active .search-field {
+	width: functions.rem(220);
+	border-color: var(--surf-color-border);
+	background: var(--surf-color-white);
+	box-shadow: none;
+}
+
+@include mixins.breakpoint($from: large) {
+	.header .search-form {
+		margin-right: -#{functions.rem(10)};
+	}
+}

@@ -1,0 +1,100 @@
+//
+// ----------------------------------------------------------------------------
+// Base / Typography
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+
+//
+// Root
+// --------------------------------------------------------------------------------
+
+html {
+	font-size: 100%;
+}
+
+body {
+	@include mixins.type-root;
+	width: 100%;
+}
+
+
+//
+// Headings
+// ----------------------------------------------------------------------------
+
+//
+// All levels
+
+#{variables.$selector-headings} {
+	@include mixins.all-headings;
+}
+
+//
+// Level 1
+
+#{variables.$selector-h1} {
+	@include mixins.h1-heading;
+}
+
+//
+// Level 2
+
+#{variables.$selector-h2} {
+	@include mixins.h2-heading;
+}
+
+//
+// Level 3
+
+#{variables.$selector-h3} {
+	@include mixins.h3-heading;
+}
+
+//
+// Level 4
+
+#{variables.$selector-h4} {
+	@include mixins.h4-heading;
+}
+
+//
+// Level 5
+
+#{variables.$selector-h5} {
+	@include mixins.h5-heading;
+}
+
+//
+// Level 6
+
+#{variables.$selector-h6} {
+	@include mixins.h6-heading;
+}
+
+
+//
+// Paragraphs
+// ----------------------------------------------------------------------------
+
+
+p {
+	@include mixins.paragraph;
+}
+
+
+//
+// Links
+// ----------------------------------------------------------------------------
+
+a {
+	@include mixins.anchor;
+}
+
+p a {
+	font-weight: bold;
+}

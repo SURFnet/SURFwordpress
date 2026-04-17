@@ -1,0 +1,70 @@
+.surf-placeholder {
+	--placeholder-item-color: #d9d9d9;
+
+	background: #f6f7f7;
+	font-family: 'Nunito', Helvetica, sans-serif;
+
+	.components-placeholder__label {
+		font-size: 1.875rem;
+	}
+
+	.surf-skeleton {
+		margin-top: 1rem;
+		width: 100%;
+
+		> div {
+			will-change: background-position;
+			background: linear-gradient(
+							90deg,
+							var(--placeholder-item-color) 30%,
+							#eeeeee 50%,
+							var(--placeholder-item-color) 70%
+			);
+			background-size: 400% 100%;
+			animation: surf-skeleton-loading 9s ease-in-out infinite;
+
+			@for $i from 1 through 10 {
+				&:nth-child(#{$i}) {
+					animation-delay: -($i - 1) * 0.15s;
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				animation: none;
+				background: var(--placeholder-item-color);
+			}
+		}
+	}
+
+	.surf-skeleton--list {
+		div {
+			height: 3rem;
+			border-radius: .5rem;
+			margin-bottom: .5rem;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.surf-skeleton--cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+		gap: 1rem;
+
+		div {
+			height: 6rem;
+			border-radius: .5rem;
+		}
+	}
+}
+
+@keyframes surf-skeleton-loading {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}

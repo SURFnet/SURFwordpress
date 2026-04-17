@@ -1,0 +1,48 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Admin / ACF
+// Cleans up the standard ACF styling
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+$-wp-border-color: #dddddd;
+$-wp-postbox-border-color: #c3c4c7;
+
+.edit-post-meta-boxes-area {
+	margin-top: -#{functions.rem(1)};
+}
+
+.edit-post-meta-boxes-area #poststuff .stuffbox > h3,
+.edit-post-meta-boxes-area #poststuff h2.hndle,
+.edit-post-meta-boxes-area #poststuff h3.hndle {
+	font-size: functions.rem(13);
+	padding-left: functions.rem(13);
+}
+
+.block-editor .edit-post-sidebar .acf-fields > .acf-field {
+	margin: functions.rem(5 16 16);
+}
+
+.metabox-location-normal .postbox:not(.closed) .postbox-header {
+	border-bottom: functions.rem(1) solid $-wp-border-color;
+
+}
+
+.acf-fields > .acf-field:nth-child(1) {
+	border-top: none !important;
+}
+
+// Theme settings
+.acf-settings-wrap #major-publishing-actions {
+	border-top: 0;
+}
+
+.acf-settings-wrap .acf-fields.-sidebar::before {
+	border-right: 1px solid $-wp-postbox-border-color;
+}
+
+.acf-settings-wrap .acf-tab-wrap.-left .acf-tab-group li.active a {
+	border-color: $-wp-postbox-border-color;
+}

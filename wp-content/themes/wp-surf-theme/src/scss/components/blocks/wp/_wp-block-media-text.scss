@@ -1,0 +1,54 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Media - Text
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.wp-block-media-text {
+	grid-template-columns: 60% auto;
+}
+
+.wp-block-media-text.has-media-on-the-right {
+	grid-template-columns: auto 60%
+}
+
+.wp-block-media-text__media {
+	border-radius: var(--surf-border-radius);
+	overflow: hidden;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: functions.rem(20 0 0 0);
+}
+
+.wp-block-media-text.has-background {
+	padding: functions.rem(20) !important;
+}
+
+@include mixins.breakpoint($from: 600px) {
+	.wp-block-media-text .wp-block-media-text__content {
+		padding: 0 0 0 variables.$grid-gap;
+	}
+
+	.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+		padding: 0 variables.$grid-gap 0 0;
+	}
+
+	.wp-block-media-text.has-background {
+		padding: variables.$grid-gap !important;
+	}
+}
+
+@include mixins.is-editor {
+	.wp-block-media-text {
+		grid-template-columns: 60% 1fr !important;
+	}
+
+	.wp-block-media-text.has-media-on-the-right {
+		grid-template-columns: 1fr 60% !important;
+	}
+}

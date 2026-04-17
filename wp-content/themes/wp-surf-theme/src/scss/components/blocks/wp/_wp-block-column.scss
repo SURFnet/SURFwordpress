@@ -1,0 +1,47 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Column
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/variables';
+
+@media (max-width: 599px) {
+	.wp-block-column:not(:first-child) {
+		margin-top: variables.$grid-gap;
+	}
+}
+
+.wp-block-column {
+	&.has-border-color,
+	&.has-background {
+		padding: 1.25rem;
+		border-radius: var(--surf-card-border-radius);
+
+		.wp-block-image {
+			img {
+				// Reduce the border radius for nested images to account for padding
+				border-radius: calc(var(--surf-card-border-radius) - 1.25rem + 0.5rem);
+			}
+		}
+	}
+
+	&.is-vertically-aligned-stretch {
+		.wp-block-columns {
+			height: 100%;
+		}
+
+		.wp-block-image {
+			height: 100%;
+
+			div {
+				height: 100%;
+			}
+
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

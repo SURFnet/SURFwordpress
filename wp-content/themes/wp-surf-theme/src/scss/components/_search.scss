@@ -1,0 +1,118 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Search page
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.search__header {
+	margin-bottom: functions.rem(20);
+	margin-top: functions.rem(20);
+}
+
+.search__title {
+	margin-bottom: functions.rem(3);
+}
+
+.search__subtitle {
+	margin-bottom: functions.rem(35);
+	@include mixins.body-lg();
+}
+
+.search__subtitle strong {
+	color: var(--surf-color-black);
+}
+
+.search__list {
+	min-height: functions.rem(260);
+}
+
+.search__header,
+.search__list {
+	& > * {
+		max-width: functions.rem(790);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.search__header {
+		margin-bottom: functions.rem(35);
+		margin-top: functions.rem(50);
+	}
+}
+
+/**
+* Search item
+*/
+
+.search-item {
+	border: 1px solid var(--surf-color-border);
+	padding: functions.rem(24);
+	border-radius: var(--surf-border-radius);
+	margin-bottom: 0;
+}
+
+.search-item__type {
+	font-weight: bold;
+	margin: functions.rem(0 0 7 0);
+	color: var(--surf-color-primary);
+}
+
+.search-item__type--post,
+.search-item__title--post a::after {
+	color: var(--surf-color-posttype-post);
+}
+
+.search-item__type--page,
+.search-item__title--page a::after {
+	color: var(--surf-color-posttype-page);
+}
+
+.search-item__type--surf-agenda,
+.search-item__title--surf-agenda a::after {
+	color: var(--surf-color-posttype-agenda);
+}
+
+.search-item__type--surf-download,
+.search-item__title--surf-download a::after {
+	color: var(--surf-color-posttype-download);
+}
+
+
+.search-item__title {
+	margin: functions.rem(0 0 5 0);
+}
+
+.search-item__title a {
+	@include mixins.arrow-right();
+	color: var(--surf-color-black);
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: var(--surf-color-primary);
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.search-item {
+		padding: functions.rem(30);
+	}
+}
+
+@include mixins.poweredTheme {
+	.search-item {
+		background: var(--surf-color-background);
+		border: 0;
+	}
+
+	.search-item__type {
+		color: #a9a8a7;
+		font-size: functions.rem(15);
+	}
+}

@@ -1,0 +1,15 @@
+//
+// ----------------------------------------------------------------------------
+// Icon
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+
+.icon {
+	display: inline;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}

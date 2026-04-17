@@ -1,0 +1,24 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Columns
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+
+.entry__inner .wp-block-columns {
+	gap: variables.$grid-gap;
+}
+
+.wp-block-columns.has-background {
+	padding: functions.rem(20);
+	border-radius: var(--surf-border-radius);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.wp-block-columns.has-background {
+		padding: functions.rem(35 30);
+	}
+}

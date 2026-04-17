@@ -1,0 +1,15 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / CTA
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+@include mixins.poweredTheme {
+	.surf-block-downloads {
+		background: var(--surf-color-background);
+	}
+}

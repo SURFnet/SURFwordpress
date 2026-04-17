@@ -1,0 +1,148 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Vacancy
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.vacancy__meta {
+	background: var(--surf-color-background);
+	padding: functions.rem(25 20);
+	border-radius: var(--surf-border-radius);
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd {
+		margin-inline-start: 0;
+		margin-bottom: functions.rem(25);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	& + & {
+		margin-top: variables.$grid-gap;
+	}
+}
+
+.vacancy__sidebar {
+	position: relative;
+	z-index: 1;
+	height: min-content;
+}
+
+.application-form .vacancy__apply {
+	display: inline-flex;
+	align-items: center;
+	gap: functions.rem(20);
+	border: 0;
+	border-radius: var(--surf-button-border-radius);
+	appearance: none;
+	cursor: pointer;
+	font-family: var(--surf-font-heading);
+	line-height: functions.rem(16);
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	width: 100%;
+	padding: functions.rem(20);
+	font-size: functions.rem(20);
+	background-color: var(--surf-color-secondary);
+	color: var(--surf-color-black);
+	transition: variables.$transition;
+
+	&:disabled {
+		background-color: var(--surf-color-disabled)
+	}
+
+	&:hover {
+		color: var(--surf-color-black);
+		filter: brightness(85%);
+	}
+}
+
+.application-form .vacancy__apply {
+	.icon {
+		width: functions.rem(16);
+		height: functions.rem(16);
+		display: none;
+		animation: rotation 2s infinite linear;
+	}
+}
+
+.application-form .vacancy__apply.loading {
+	.icon {
+		display: block
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.vacancy__meta {
+		padding: functions.rem(35 30);
+	}
+
+	.vacancy__header {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.vacancy__apply, .application-form .vacancy__apply {
+		width: initial;
+	}
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.vacancy__meta--conditions {
+	background-color: var(--surf-color-white);
+	border: 1px solid var(--surf-color-border);
+
+	.vacancy__meta__icon {
+		font-size: functions.rem(46);
+		line-height: 1;
+		color: var(--surf-color-primary);
+	}
+
+	.vacancy__meta__conditions-title {
+		margin-bottom: 0;
+	}
+
+	.vacancy__meta__conditions {
+		padding-left: functions.rem(20);
+
+		ul {
+			padding-left: 0;
+		}
+
+		::marker {
+			color: var(--surf-color-primary);
+			font-size: 1.5em;
+		}
+	}
+
+	.vacancy__meta__conditions-disclaimer {
+		margin-top: functions.rem(20);
+		font-size: functions.rem(14);
+		color: var(--surf-color-dark-grey);
+	}
+}

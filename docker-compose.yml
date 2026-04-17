@@ -1,0 +1,29 @@
+version: "3"
+services:
+    app:
+        build: .
+        ports:
+            - "8080:80"
+        volumes:
+            - ./docker/languages:/var/www/html/wp-content/languages
+            - ./wp-content/themes/wp-surf-theme:/var/www/html/wp-content/themes/wp-surf-theme
+            - ./wp-content/plugins:/var/www/html/wp-content/plugins
+            - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins
+            - ./wp-content/updates:/var/www/html/wp-content/updates
+            - ./docker/config/wp-config.php:/var/www/html/wp-config.php
+            - ./docker/uploads:/var/www/html/wp-content/uploads
+            - ./docker/scripts:/var/www/html/docker/scripts
+            - ./docker/.htaccess:/var/www/html/.htaccess
+            - ./docker/config/ray.php:/var/www/html/ray.php
+    mysql:
+        image: mysql:lts
+        command: --mysql-native-password
+        volumes:
+            - ./docker/db:/var/lib/mysql
+        ports:
+          - "13306:3306"
+        environment:
+          MYSQL_ROOT_PASSWORD: CzSx9Wj7XNQeV9
+          MYSQL_USER: surf
+          MYSQL_PASSWORD: x37YPHCq54Yh4E
+          MYSQL_DATABASE: wp-surf-theme

@@ -1,0 +1,21 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / Block Paragraph
+// ----------------------------------------------------------------------------
+//
+
+// !! This block is actually a core WP block. It's class is added by the
+// !! starter theme to make styling easier. The surf prefix is used to prevent
+// !! future conflicts.
+
+@use 'abstracts/mixins';
+
+.surf-block-paragraph {
+	@include mixins.body-md;
+	color: var(--surf-color-text);
+}
+
+.surf-block-paragraph.is-style-lead,
+.wp-block-paragraph.is-style-lead {
+	@include mixins.body-lg;
+}

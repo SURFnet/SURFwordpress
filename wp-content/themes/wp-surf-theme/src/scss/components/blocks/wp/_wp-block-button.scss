@@ -1,0 +1,34 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Button
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+@use '../../button';
+
+
+.wp-block-button:not(.is-style-secondary) .wp-block-button__link {
+	@extend %button;
+}
+
+.wp-block-button.is-style-secondary .wp-block-button__link {
+	@extend %button-secondary;
+}
+
+@include mixins.poweredTheme {
+	.wp-block-button:not(.is-style-secondary) .wp-block-button__link {
+		font-size: functions.rem(16);
+	}
+
+	.wp-block-button.is-style-secondary .wp-block-button__link {
+		text-decoration: none;
+
+		&::after {
+			display: block;
+		}
+	}
+}

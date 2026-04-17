@@ -1,0 +1,32 @@
+@use 'abstracts/functions';
+
+.meta-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+	gap: 0.5rem;
+	color: #A4A4A4;
+	font-size: functions.rem(15);
+	line-height: 1.5;
+}
+
+.meta-list dd {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: functions.rem(8);
+	width: 100%;
+	margin-inline-start: 0;
+}
+
+.meta-list dd span {
+	width: calc(100% - #{functions.rem(22)});
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.meta-list svg {
+	flex-shrink: 0;
+	width: functions.rem(14);
+	height: functions.rem(14);
+}

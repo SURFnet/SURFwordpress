@@ -1,0 +1,27 @@
+//
+// ----------------------------------------------------------------------------
+// Admin styles (wrapped)
+// ----------------------------------------------------------------------------
+//
+
+//
+// Include styles here that need to be available only inside the
+// editor-style-wrapper element.
+
+// Override the $editor variable
+@use 'abstracts/variables';
+
+// PHPStorm thinks this line is incorrect, but it is not...
+// noinspection ALL
+variables.$editor:true;
+
+@use './abstracts/utils';
+
+@use './base/reset';
+@use './base/forms';
+@use './base/typography';
+
+@use './components'; // admin components are included in admin.scss
+@use './vendors';
+
+@use './layout';

@@ -1,0 +1,308 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / Block Header
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.surf-block-header {
+	position: relative;
+	max-width: variables.$container-width;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.surf-block-header--background-image,
+	&.surf-block-header--background-video,
+	&.surf-block-header--background-video-gradient {
+		min-height: functions.rem(460);
+		display: grid !important;
+
+		&.surf-block-header--auto-height {
+			min-height: functions.rem(230);
+		}
+	}
+}
+
+.surf-block-header__title {
+	margin-bottom: functions.rem(5);
+}
+
+.surf-block-header__text {
+	font-size: functions.rem(16);
+	line-height: functions.rem(24);
+	color: var(--surf-color-text);
+}
+
+.surf-block-header__image img {
+	border-radius: var(--surf-border-radius);
+}
+
+@include mixins.breakpoint($from: large) {
+	.surf-block-header__title {
+		margin-bottom: 0;
+	}
+
+	.surf-block-header__text {
+		font-size: functions.rem(24);
+		line-height: functions.rem(36);
+		color: var(--surf-color-black);
+	}
+}
+
+/**
+* Variation: Text
+*/
+
+.surf-block-header--text .surf-block-header__text {
+	max-width: functions.rem(860);
+}
+
+.surf-block-header--text .surf-block-header__content {
+	margin-bottom: functions.rem(35);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.surf-block-header--text .surf-block-header__content {
+		margin-bottom: functions.rem(75);
+	}
+}
+
+/**
+* Variation: Small image
+*/
+
+.surf-block-header--small-image {
+	display: flex;
+	flex-direction: column;
+	gap: functions.rem(20);
+}
+
+.surf-block-header--small-image .surf-block-header__image {
+	order: 1;
+}
+
+.surf-block-header--small-image .surf-block-header__content {
+	order: 2;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.surf-block-header--small-image {
+		flex-direction: row;
+		align-items: center;
+		gap: functions.rem(40);
+	}
+
+	.surf-block-header--small-image .surf-block-header__image {
+		width: 100%;
+		max-width: functions.rem(480);
+	}
+	.surf-block-header--small-image .surf-block-header__content {
+		width: 100%;
+		max-width: calc(100% - #{functions.rem(480)});
+	}
+}
+
+/**
+* Variation: Full image
+*/
+
+.surf-block-header__video {
+	width: 100%;
+	height: functions.rem(460);
+	object-fit: cover;
+	border-radius: var(--surf-border-radius);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.surf-block-header--background-image,
+.surf-block-header--background-video,
+.surf-block-header--background-video-gradient {
+	display: flex;
+	flex-direction: column;
+	gap: functions.rem(20);
+}
+
+.surf-block-header--background-image .surf-block-header__image,
+.surf-block-header--background-video .surf-block-header__image,
+.surf-block-header--background-video-gradient .surf-block-header__image {
+	overflow: hidden;
+	position: absolute;
+	inset: 0%;
+	width: 100%;
+	height: 100%;
+	order: 1;
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: var(--surf-border-radius);
+	}
+}
+
+.surf-block-header--background-image .surf-block-header__content,
+.surf-block-header--background-video .surf-block-header__content,
+.surf-block-header--background-video-gradient .surf-block-header__content {
+	order: 2;
+}
+
+.surf-block-header--background-video .surf-block-header__image video,
+.surf-block-header--background-video-gradient .surf-block-header__image video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: var(--surf-border-radius);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.surf-block-header--background-video .surf-block-header__image video,
+	.surf-block-header--background-video-gradient .surf-block-header__image video {
+		width: 100%;
+		object-fit: cover;
+		aspect-ratio: 80/23;
+	}
+
+	.surf-block-header--background-image .surf-block-header__content,
+	.surf-block-header--background-video .surf-block-header__content,
+	.surf-block-header--background-video-gradient .surf-block-header__content {
+		padding: functions.rem(44);
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		z-index: 2;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%);
+		border-radius: var(--surf-border-radius);
+	}
+
+	.surf-block-header--background-video .surf-block-header__content {
+		background-image: none;
+	}
+
+	.surf-block-header--background-image .surf-block-header--search-bottom .search-form,
+	.surf-block-header--background-image .surf-block-header--search-bottom .search-form,
+	.surf-block-header--background-video-gradient .surf-block-header--search-bottom .search-form {
+		margin-top: auto;
+	}
+
+	.surf-block-header--background-image .surf-block-header__title,
+	.surf-block-header--background-image .surf-block-header__text,
+	.surf-block-header--background-video .surf-block-header__title,
+	.surf-block-header--background-video .surf-block-header__text,
+	.surf-block-header--background-video-gradient .surf-block-header__title,
+	.surf-block-header--background-video-gradient .surf-block-header__text {
+		color: var(--surf-color-white);
+	}
+}
+
+/**
+* Variation: Search
+*/
+@include mixins.breakpoint($from: medium) {
+	.surf-block-header .search-form {
+		background: white;
+		padding: 10px;
+		border-radius: var(--surf-button-border-radius);
+		box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+		z-index: 2;
+	}
+	.surf-block-header .search-form .search-submit {
+		top: functions.rem(18);
+		right: functions.rem(18);
+	}
+
+	.surf-block-header .search-form .search-field {
+		border-radius: var(--surf-search-field-hero-border-radius);
+	}
+}
+
+@include mixins.is-editor {
+	.surf-block-header--background-image .surf-block-header--search-top,
+	.surf-block-header--background-video .surf-block-header--search-top,
+	.surf-block-header--background-video-gradient .surf-block-header--search-top {
+		&::before {
+			content: 'Zoeken';
+			display: block;
+			background: white;
+			height: 70px;
+			border-radius: 10px;
+			width: 100%;
+			text-align: center;
+			line-height: 70px;
+			margin-bottom: auto;
+		}
+	}
+
+	.surf-block-header--background-image .surf-block-header--search-bottom,
+	.surf-block-header--background-video .surf-block-header--search-bottom,
+	.surf-block-header--background-video-gradient .surf-block-header--search-bottom {
+		&::after {
+			content: 'Zoeken';
+			display: block;
+			background: white;
+			height: 70px;
+			border-radius: 10px;
+			width: 100%;
+			text-align: center;
+			line-height: 70px;
+			margin-top: 10px;
+		}
+	}
+}
+
+.entry__inner *:first-child:is(.surf-block-header__wrapper--has-background) {
+	margin-top: -#{functions.rem(20)} !important;
+
+	@include mixins.breakpoint($from: medium) {
+		margin-top: -#{functions.rem(50)} !important;
+	}
+}
+
+.surf-block-header__wrapper {
+	position: relative;
+	overflow: hidden;
+	padding: functions.rem(0 20);
+
+	@include mixins.breakpoint($from: medium) {
+		padding: functions.rem(0 20);
+	}
+}
+
+.surf-block-header__wrapper--has-background {
+	padding: functions.rem(20 20);
+
+	.wp-block-surf-header {
+		position: relative;
+		z-index: 1;
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		padding: functions.rem(50 20);
+
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.surf-block-header__background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	video,
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

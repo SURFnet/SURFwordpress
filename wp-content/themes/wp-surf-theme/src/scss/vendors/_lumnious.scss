@@ -1,0 +1,291 @@
+//
+// ----------------------------------------------------------------------------
+// Vendor / Lumnnious
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+@keyframes lum-fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes lum-fadeZoom {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes lum-loader-rotate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(-180deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+
+@keyframes lum-loader-before {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.2) translateX(6px);
+	}
+	25% {
+		transform: scale(1.3) translateX(8px);
+	}
+	40% {
+		transform: scale(1.2) translateX(6px);
+	}
+	50% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(0.8) translateX(6px);
+	}
+	75% {
+		transform: scale(0.7) translateX(8px);
+	}
+	90% {
+		transform: scale(0.8) translateX(6px);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes lum-loader-after {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.2) translateX(-6px);
+	}
+	25% {
+		transform: scale(1.3) translateX(-8px);
+	}
+	40% {
+		transform: scale(1.2) translateX(-6px);
+	}
+	50% {
+		transform: scale(1);
+	}
+	60% {
+		transform: scale(0.8) translateX(-6px);
+	}
+	75% {
+		transform: scale(0.7) translateX(-8px);
+	}
+	90% {
+		transform: scale(0.8) translateX(-6px);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.lum-lightbox {
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(5px);
+}
+
+.lum-lightbox-inner {
+	top: functions.rem(30);
+	right: functions.rem(30);
+	bottom: functions.rem(30);
+	left: functions.rem(30);
+}
+
+.lum-lightbox-inner img {
+	position: relative;
+	border-radius: var(--surf-border-radius);
+	margin: 0 auto;
+	max-width: functions.rem(1600);
+}
+
+.lum-lightbox-inner .lum-lightbox-caption {
+	margin: 0 auto;
+	color: var(--surf-color-text);
+	max-width: functions.rem(700);
+	text-align: center;
+}
+
+.lum-loading .lum-lightbox-loader {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: functions.rem(66);
+	height: functions.rem(20);
+	animation: lum-loader-rotate 1800ms infinite linear;
+}
+
+.lum-lightbox-loader:before,
+.lum-lightbox-loader:after {
+	content: "";
+	display: block;
+	width: functions.rem(20);
+	height: functions.rem(20);
+	position: absolute;
+	top: 50%;
+	margin-top: -#{functions.rem(10)};
+	border-radius: functions.rem(20);
+	background: var(--surf-color-primary);
+}
+
+.lum-lightbox-loader:before {
+	left: 0;
+	animation: lum-loader-before 1800ms infinite linear;
+}
+
+.lum-lightbox-loader:after {
+	right: 0;
+	animation: lum-loader-after 1800ms infinite linear;
+	animation-delay: -900ms;
+}
+
+.lum-lightbox.lum-opening {
+	animation: lum-fade 180ms ease-out;
+}
+
+.lum-lightbox.lum-opening .lum-lightbox-inner {
+	animation: lum-fadeZoom 180ms ease-out;
+}
+
+.lum-lightbox.lum-closing {
+	animation: lum-fade 300ms ease-in;
+	animation-direction: reverse;
+}
+
+.lum-lightbox.lum-closing .lum-lightbox-inner {
+	animation: lum-fadeZoom 300ms ease-in;
+	animation-direction: reverse;
+}
+
+.lum-img {
+	transition: opacity 120ms ease-out;
+}
+
+.lum-loading .lum-img {
+	opacity: 0;
+}
+
+.lum-gallery-button {
+	overflow: hidden;
+	text-indent: 150%;
+	white-space: nowrap;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: functions.rem(100);
+	max-height: 100%;
+	width: 60px;
+	cursor: pointer;
+}
+
+.lum-close-button {
+	position: absolute;
+	right: functions.rem(10);
+	top: functions.rem(10);
+	width: functions.rem(32);
+	height: functions.rem(32);
+	opacity: 0.3;
+}
+
+.lum-close-button:hover {
+	opacity: 1;
+}
+
+.lum-close-button:before,
+.lum-close-button:after {
+	position: absolute;
+	left: functions.rem(15);
+	content: " ";
+	height: functions.rem(33);
+	width: functions.rem(2);
+	background-color: var(--surf-color-primary);
+}
+
+.lum-close-button:before {
+	transform: rotate(45deg);
+}
+
+.lum-close-button:after {
+	transform: rotate(-45deg);
+}
+
+.lum-previous-button {
+	left: functions.rem(12);
+}
+
+.lum-next-button {
+	right: functions.rem(12);
+}
+
+.lum-gallery-button:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: functions.rem(36);
+	height: functions.rem(36);
+	border-top: functions.rem(4) solid var(--surf-color-primary);
+}
+
+.lum-previous-button:after {
+	transform: translateY(-50%) rotate(-45deg);
+	border-left: functions.rem(4) solid var(--surf-color-primary);
+	left: 12%;
+	border-radius: functions.rem(3) 0 0 0;
+}
+
+.lum-next-button:after {
+	transform: translateY(-50%) rotate(45deg);
+	border-right: 4px solid var(--surf-color-primary);
+	right: 12%;
+	border-radius: 0 functions.rem(3) 0 0;
+}
+
+@include mixins.breakpoint($until: medium) {
+	.lum-lightbox-image-wrapper {
+		display: flex;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.lum-lightbox-caption {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+	.lum-lightbox-position-helper {
+		margin: auto;
+	}
+
+	.lum-lightbox-inner img {
+		max-width: none;
+		max-height: none;
+	}
+}

@@ -1,0 +1,59 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Quote
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.wp-block-quote {
+	border-radius: var(--surf-border-radius);
+	background: var(--surf-color-blockquote);
+	padding: functions.rem(35);
+	color: var(--surf-color-white);
+	border: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wp-block-quote:not(:first-child) {
+	margin-top: var(--surf-font-size-3);
+}
+
+.wp-block-quote:not(:last-child) {
+	margin-bottom: var(--surf-font-size-3);
+}
+
+.wp-block-quote p {
+	@include mixins.h3-heading;
+	@include mixins.all-headings;
+	color: var(--surf-color-white);
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.wp-block-quote cite {
+	display: block;
+	font-size: functions.rem(16);
+	font-style: normal;
+	margin-top: functions.rem(12);
+
+	&::before {
+		content: '\2014';
+		margin: functions.rem(0 7 0 0);
+	}
+}
+
+@include mixins.breakpoint($from: large) {
+	.wp-block-quote cite {
+		font-size: functions.rem(20);
+	}
+}
+
+@include mixins.is-editor {
+	.wp-block-quote {
+		min-width: variables.$container-width-wide;
+	}
+}

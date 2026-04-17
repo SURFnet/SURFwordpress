@@ -1,0 +1,57 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / Contact Person
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.surf-block-contact-person__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+
+.surf-block-contact-person__person {
+	text-align: center;
+}
+
+.surf-block-contact-person__person figure {
+	max-width: functions.rem(228);
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: functions.rem(20);
+	margin-inline: auto;
+	overflow: hidden;
+}
+
+.surf-block-contact-person__person figure img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.surf-block-contact-person__person p {
+	margin-top: functions.rem(18);
+	max-width: functions.rem(228);
+	margin-inline: auto;
+}
+
+@include mixins.breakpoint($from: large) {
+	.surf-block-contact-person__inner {
+		flex-direction: row;
+	}
+
+	.surf-block-contact-person__person {
+		max-width: functions.rem(388);
+		width: 100%;
+		flex-shrink: 0;
+	}
+
+	.surf-block-contact-person__content {
+		flex-grow: 1;
+	}
+}

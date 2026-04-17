@@ -1,0 +1,66 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Admin / Post Picker List
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+
+.post-picker-list {
+	padding-left: 0;
+	margin: 0;
+	list-style: none none;
+}
+
+.post-picker-list__item:not(:first-child) {
+	padding-top: functions.rem(12);
+	border-top: 1px solid #ddd;
+	margin-top: functions.rem(12);
+}
+
+.post-picker-list__item-button {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	border: 0;
+	appearance: none;
+	background-color: transparent;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	text-align: left;
+}
+
+.post-picker-list__item-button::before {
+	position: absolute;
+	top: functions.rem(-8);
+	left: functions.rem(-8);
+	z-index: -1;
+	display: block;
+	width: calc(100% + #{functions.rem(16)});
+	height: calc(100% + #{functions.rem(16)});
+	border-radius: functions.rem(4);
+	background-color: #f3f3f3;
+	content: '';
+	opacity: 0;
+	transform: scale(0.95);
+	transition: all 0.2s ease-in-out 0s;
+	will-change: transform;
+}
+
+.post-picker-list__item-button:hover::before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.post-picker-list__item-title {
+	margin-bottom: functions.rem(8);
+	font-size: functions.rem(20);
+	font-weight: 600;
+}
+
+.post-picker-list__item-meta {
+	color: #666;
+}

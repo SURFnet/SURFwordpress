@@ -1,0 +1,100 @@
+//
+// ----------------------------------------------------------------------------
+// Button
+// ----------------------------------------------------------------------------
+//
+
+@use 'sass:color';
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+%button {
+	display: inline-block;
+	padding: functions.rem(14 16);
+	border: 0;
+	border-radius: var(--surf-button-border-radius);
+	appearance: none;
+	background-color: var(--surf-color-button);
+	color: var(--surf-color-button-text);
+	cursor: pointer;
+	font-family: var(--surf-font-heading);
+	font-size: functions.rem(14);
+	line-height: functions.rem(16);
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	transition: variables.$transition;
+
+	&:hover {
+		background-color: var(--surf-color-button-hover);
+		color: var(--surf-color-button-hover-text);
+	}
+
+	&:link {
+		color: var(--surf-color-button-text);
+	}
+}
+
+.button {
+	@extend %button;
+}
+
+@include mixins.poweredTheme() {
+	.button {
+		font-size: functions.rem(16);
+	}
+}
+
+%button-secondary {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	appearance: none;
+	background-color: transparent;
+	color: var(--surf-color-link);
+	cursor: pointer;
+	font-family: var(--surf-font-heading);
+	font-size: functions.rem(18);
+	line-height: functions.rem(29);
+	text-decoration: underline;
+	font-weight: 700;
+	transition: variables.$transition;
+
+	&:hover {
+		color: var(--surf-color-link-hover);
+	}
+
+	&:link {
+		color: var(--surf-color-link);
+	}
+
+	@include mixins.arrow-right();
+}
+
+.button--secondary {
+	@extend %button-secondary;
+}
+
+.button--secondary.button--download {
+	&::after {
+		transform: rotate(90deg);
+	}
+
+	&:hover:after {
+		margin-top: functions.rem(5);
+		margin-left: functions.rem(7);
+	}
+}
+
+%button-large {
+	font-size: functions.rem(18);
+	padding: functions.rem(18 22);
+}
+
+.button--large {
+	@extend %button-large;
+}

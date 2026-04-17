@@ -1,0 +1,34 @@
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+
+.badge {
+	overflow: hidden;
+	display: inline-block;
+	width: max-content;
+	max-width: functions.rem(250);
+	padding: functions.rem(12) functions.rem(10);
+	border-radius: functions.rem(8);
+	margin: 0;
+	background-color: var(--surf-color-category, var(--surf-color-primary));
+	color: var(--surf-color-category-tag-text, var(--surf-color-white));
+	font-size: functions.rem(14);
+	line-height: calc(14 / 16);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	&.badge--secondary {
+		background-color: var(--surf-color-background);
+		color: var(--surf-color-dark);
+	}
+
+	&.badge--clear {
+		background-color: transparent;
+		color: var(--surf-color-dark, var(--surf-color-primary));
+		padding: functions.rem(12) functions.rem(5);
+	}
+}
+
+.assets-item-full:hover .badge--secondary {
+	background-color: var(--surf-color-white);
+	color: var(--surf-color-dark);
+}

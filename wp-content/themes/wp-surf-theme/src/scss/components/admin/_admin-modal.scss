@@ -1,0 +1,37 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Admin / Admin Modal
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+
+.admin-modal {
+	width: calc(100% - #{functions.rem(48)});
+	max-width: functions.rem(800);
+}
+
+.admin-modal__content {
+	display: flex;
+}
+
+.admin-modal__aside {
+	flex: 0 0 functions.rem(200);
+}
+
+.admin-modal__aside > * + * {
+	margin-top: functions.rem(24);
+}
+
+.admin-modal__aside label:first-child {
+	display: block;
+	margin-bottom: functions.rem(8);
+}
+
+.admin-modal__main {
+	flex-grow: 1;
+	border-left: 1px solid #ddd;
+	padding-left: functions.rem(24);
+	margin-left: functions.rem(24);
+}

@@ -1,0 +1,367 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Asset Top Menu
+// ----------------------------------------------------------------------------
+//
+// Styled similarly to the main navigation (.header__primary-navigation-menu)
+// with a horizontally scrollable list and prev/next navigation buttons.
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+// ----------------------------------------------------------------------------
+// Toggle icon states — hamburger when closed, × when open
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__toggle .asset-top-menu__toggle-icon--open,
+.asset-sub-menu__toggle .asset-sub-menu__toggle-icon--open {
+	display: none;
+}
+
+#mobile-top-menu:checked ~ .asset-top-menu__toggle .asset-top-menu__toggle-icon--closed,
+#show-sub-menu:checked ~ .asset-sub-menu__toggle .asset-sub-menu__toggle-icon--closed {
+	display: none;
+}
+
+#mobile-top-menu:checked ~ .asset-top-menu__toggle .asset-top-menu__toggle-icon--open,
+#show-sub-menu:checked ~ .asset-sub-menu__toggle .asset-sub-menu__toggle-icon--open {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	line-height: 1;
+	width: 1rem;
+	height: 1rem;;
+}
+
+// ----------------------------------------------------------------------------
+// Bar wrapper — mobile: assets-navigation, desktop: horizontal scroll
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__bar {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	position: relative;
+	margin-bottom: functions.rem(20);
+
+	@include mixins.breakpoint($from: medium) {
+		flex-direction: row;
+		margin-bottom: 0;
+	}
+}
+
+// Mobile: assets-navigation (1:1 with subcategories). Desktop: hide it.
+.asset-top-menu__bar .assets-navigation {
+	@include mixins.breakpoint($from: medium) {
+		display: none !important;
+	}
+}
+
+.asset-top-menu__bar .asset-top-menu__scroll-wrapper,
+.asset-top-menu__bar .asset-top-menu__gradient,
+.asset-top-menu__bar .asset-top-menu__nav {
+	display: none;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.asset-top-menu__bar .asset-top-menu__scroll-wrapper {
+		display: block;
+	}
+
+	.asset-top-menu__bar .asset-top-menu__gradient {
+		display: block;
+	}
+
+	.asset-top-menu__bar .asset-top-menu__nav {
+		display: flex;
+	}
+}
+
+// ----------------------------------------------------------------------------
+// Scrollable list
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__scroll-wrapper {
+	overflow-x: auto;
+	scrollbar-width: none;
+	flex: 1;
+	min-width: 0;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.asset-top-menu__list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: functions.rem(24);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: var(--surf-font-heading);
+	font-size: functions.rem(18);
+	font-weight: 700;
+
+}
+
+// ----------------------------------------------------------------------------
+// Menu items — mirrors .header__primary-navigation-menu li
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__list > .asset-top-menu__item {
+	min-height: functions.rem(44);
+	height: functions.rem(44);
+}
+
+.asset-top-menu__item {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-shrink: 0;
+	min-height: 1.5rem;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	> a {
+		color: var(--surf-color-header-menu-link, var(--surf-color-text));
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			display: block;
+			border-radius: functions.rem(2);
+			height: functions.rem(2);
+			background: transparent;
+			position: relative;
+			z-index: 9;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--surf-color-header-menu-link-hover, var(--surf-color-primary));
+		}
+	}
+
+	// Active state underline — mirrors .header__primary-navigation-menu li.current-menu-item
+	&.current-menu-item > a::after,
+	&.current-menu-ancestor > a::after,
+	&.current-menu-parent > a::after {
+		background: var(--surf-color-header-menu-link-active-indicator, var(--surf-color-primary));
+	}
+
+	// Rotate chevron when submenu is open
+	&:has(.menu-item-button[aria-expanded='true']) .menu-item-button {
+		transform: rotate(180deg);
+	}
+}
+
+// ----------------------------------------------------------------------------
+// Chevron toggle button — mirrors .header__primary-navigation .menu-item-button
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__item .menu-item-button {
+	background: transparent;
+	border: 0;
+	margin: functions.rem(0 0 0 9);
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: functions.rem(24);
+	height: functions.rem(24);
+	min-width: functions.rem(24);
+	flex-shrink: 0;
+	cursor: pointer;
+	color: var(--surf-color-header-menu-link, var(--surf-color-text));
+
+	.icon {
+		width: functions.rem(8.3);
+		height: functions.rem(5);
+	}
+}
+
+// ----------------------------------------------------------------------------
+// Submenu — rendered in the top layer via the Popover API
+// Mirrors .header__primary-navigation-menu .sub-menu styling
+// ----------------------------------------------------------------------------
+
+// The [popover] UA sheet sets display:none and position:fixed on the top layer.
+// Position is set via JS in assetTopMenu when the popover opens.
+.asset-top-menu .sub-menu[popover] {
+	position: fixed;
+	inset: unset;
+	margin: 0;
+	height: fit-content;
+	max-height: none;
+	overflow: visible;
+	padding-bottom: 1rem;
+	border: solid var(--surf-color-border);
+	border-width: 0 2px 2px;
+	border-bottom-left-radius: var(--surf-submenu-border-radius);
+	border-bottom-right-radius: var(--surf-submenu-border-radius);
+	background: var(--surf-color-white);
+	font-family: var(--surf-font-body);
+	max-width: functions.rem(215);
+	width: 100%;
+	list-style: none;
+	z-index: 9999;
+
+	// Bridge above dropdown — anchored to menu item, not inside popover layout
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: functions.rem(33);
+		background: var(--surf-color-white);
+		z-index: 9998;
+	}
+
+	// Concave curves — anchored to menu item, not inside popover layout
+	.top-border-left,
+	.top-border-right {
+		all: unset;
+		position: absolute;
+		top: 0;
+		right: -18px;
+		width: functions.rem(18);
+		height: functions.rem(18);
+		overflow: hidden;
+		background: var(--surf-color-white);
+		margin: 0 !important;
+		z-index: 9998;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 200%;
+			height: 200%;
+			border-radius: 50%;
+			background: var(--surf-color-white);
+			border: 2px solid var(--surf-color-border);
+			position: absolute;
+		}
+	}
+
+	.top-border-left {
+		left: -18px;
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	.top-border-right {
+		right: -18px;
+
+		&::after {
+			left: 0;
+		}
+	}
+
+	li {
+		margin: functions.rem(8 0);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-inline: 1rem;
+	}
+
+	a {
+		font-weight: normal;
+		width: 100%;
+		font-size: functions.rem(16);
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: var(--surf-color-primary);
+		}
+	}
+
+	li.current-menu-item > a {
+		font-weight: bold;
+		color: var(--surf-color-header-menu-link-active-indicator, var(--surf-color-primary));
+	}
+}
+
+// ----------------------------------------------------------------------------
+// Gradient fade — hides right edge of scrollable list
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__gradient {
+	position: absolute;
+	right: functions.rem(88); // nav buttons area: 40 + 8 + 40
+	top: 0;
+	width: functions.rem(63);
+	height: 100%;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+	pointer-events: none;
+	z-index: 1;
+}
+
+// ----------------------------------------------------------------------------
+// Navigation scroll buttons
+// ----------------------------------------------------------------------------
+
+.asset-top-menu__nav {
+	display: flex;
+	gap: .5rem;
+	flex-shrink: 0;
+	margin-left: 1.5rem;
+	z-index: 2;
+}
+
+.asset-top-menu__nav-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	background: var(--surf-color-white, #fff);
+	border: 1px solid #ccc;
+	border-radius: functions.rem(5);
+	cursor: pointer;
+	padding: 0;
+	font-family: var(--surf-font-heading);
+	transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+	color: var(--surf-color-text);
+
+	.icon {
+		width: functions.rem(10);
+		height: functions.rem(10);
+	}
+
+	&:hover {
+		border-color: var(--surf-color-primary);
+		color: var(--surf-color-primary);
+	}
+
+	&:disabled {
+		opacity: 0.35;
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+.asset-top-menu + .separator {
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+
+	@include mixins.breakpoint($until: medium) {
+		display: none;
+	}
+}

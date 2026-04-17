@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+# We use this script to forward commands to the Docker container running WordPress
+# Example: './cowboy db:refresh --seed' will run 'wp surf db:refresh --seed' in the container
+docker_compose_exec() {
+    eval "docker-compose exec app ${*}"
+}
+
+init() {
+    docker_compose_exec "bash ./docker/scripts/init.sh"
+}
+
+build() {
+    case $1 in
+        build)
+            docker_compose_exec "bash ./docker/scripts/build.sh"
+            ;;
+        build:watch)
+            docker_compose_exec "bash ./docker/scripts/watch.sh"
+            ;;
+    esac
+
+    docker_compose_exec "$command"
+
+}
+
+join() {
+    local result=""
+    for cmd in "$@"; do
+        [ -z "$result" ] && result="${cmd}" || result="${result} && ${cmd}"
+    done
+    echo "$result"
+}
+
+wp_cli() {
+    docker_compose_exec "wp surf ${*} --allow-root"
+}
+
+case $1 in
+    init*)
+        init "$@"
+        ;;
+    build*)
+        build "$@"
+        ;;
+    db*)
+        wp_cli "$@"
+        ;;
+    *)
+        docker_compose_exec "$@"
+        ;;
+esac

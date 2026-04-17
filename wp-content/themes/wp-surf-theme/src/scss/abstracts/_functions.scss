@@ -1,0 +1,57 @@
+//
+// ----------------------------------------------------------------------------
+// Abstracts / Functions
+// ----------------------------------------------------------------------------
+//
+
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:string';
+
+
+//
+// Type scale
+// --------------------------------------------------------------------------------
+
+@function get-scale($size, $ratio, $index) {
+	@return $size * math.pow($ratio, $index);
+}
+
+
+//
+// Merge selectors
+// --------------------------------------------------------------------------------
+
+@function merge-selectors($selectors...) {
+	$list: ();
+	@each $item in $selectors {
+		$list: list.join($list, string.unquote($item), 'comma');
+	}
+	@return $list;
+}
+
+
+//
+// Units and conversion
+// --------------------------------------------------------------------------------
+
+@function convert-rem-or-em($values, $base: 16, $unit: 'rem') {
+	$max: length($values);
+	$multiplier: if($unit == 'rem', 1rem, 1em);
+	@if ($max == 1) {
+		@return math.div($values, $base) * $multiplier;
+	}
+	$list: ();
+	@for $i from 1 through $max {
+		$list: append($list, math.div(nth($values, $i), $base) * $multiplier);
+	}
+	@return $list;
+}
+
+@function em($values, $base: 16) {
+	@return convert-rem-or-em($values, $base, 'em');
+}
+
+@function rem($values) {
+	@return convert-rem-or-em($values);
+}

@@ -1,0 +1,92 @@
+//
+// ----------------------------------------------------------------------------
+// Vendor / Gravity Forms
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.gform_wrapper {
+	border-radius: var(--surf-border-radius);
+	background: var(--surf-color-comment-form-background);
+	padding: functions.rem(23 20);
+	position: relative;
+}
+
+.gform_heading {
+	margin-bottom: functions.rem(20);
+}
+
+.gform_title {
+	margin-bottom: functions.rem(6);
+	@include mixins.h3-heading();
+}
+
+.gform_description {
+	@include mixins.body-lg;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.gform_wrapper {
+		padding: functions.rem(36 33);
+	}
+
+	.gform_heading {
+		margin-bottom: functions.rem(35);
+	}
+}
+
+.gform_wrapper .gform_fields,
+.gform_wrapper.gravity-theme .gform_fields {
+	grid-row-gap: functions.rem(20);
+}
+
+.gform_wrapper label,
+.gform_wrapper legend {
+	display: block;
+	font-weight: 800;
+	font-family: var(--surf-font-heading);
+	color: var(--surf-color-black);
+	margin: functions.rem(0 0 5 0);
+}
+
+.gform_wrapper .ginput_complex label {
+	font-weight: normal;
+	color: var(--surf-color-text);
+}
+
+.gform_wrapper .gfield_checkbox .gchoice input,
+.gform_wrapper .ginput_container_radio .gchoice input,
+.gform_wrapper .ginput_container_consent input {
+	display: none;
+}
+
+.gform_wrapper .gfield_checkbox .gchoice label,
+.gform_wrapper .ginput_container_radio .gchoice label,
+.gform_wrapper label.gfield_consent_label {
+	font-weight: normal;
+	color: var(--surf-color-text);
+	font-family: var(--surf-font-body);
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: functions.rem(5);
+}
+
+.gform_wrapper .gform_footer {
+	padding-bottom: 0 !important;
+}
+
+.gform_wrapper,
+.gform_wrapper.gravity-theme {
+	#{variables.$form-elements} {
+		padding: variables.$form-field-padding !important;
+	}
+}
+
+@include mixins.SurfTheme() {
+	.gform_wrapper .gform_footer .button {
+		background: var(--surf-color-comment-form-button);
+	}
+}

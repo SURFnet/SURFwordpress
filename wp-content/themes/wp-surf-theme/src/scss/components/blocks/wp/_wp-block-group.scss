@@ -1,0 +1,31 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Group
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+.wp-block-group > * {
+	max-width: none !important;
+}
+
+.wp-block-group.has-background {
+	padding: functions.rem(20);
+	border-radius: var(--surf-border-radius);
+}
+
+.editor-styles-wrapper .wp-block-group.has-background {
+	padding: functions.rem(20) !important;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.wp-block-group.has-background {
+		padding: functions.rem(35);
+	}
+
+	.editor-styles-wrapper .wp-block-group.has-background {
+		padding: functions.rem(35) !important;
+	}
+}

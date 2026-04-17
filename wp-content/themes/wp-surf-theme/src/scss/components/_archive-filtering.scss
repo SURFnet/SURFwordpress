@@ -1,0 +1,199 @@
+//
+// ----------------------------------------------------------------------------
+// Archive Filtering — Figma 1948-3568 (mobile/stacked), 1777-7534 (desktop/horizontal)
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+$-shadow: functions.rem(0 1 4) rgba(0, 0, 0, 0.05);
+$-border: 1px solid #ccc;
+
+// Mobile: grid — row 1: count + sort, row 2: search. Desktop: count left, sort + search right (fixed widths), gap + space-between
+.archive__filtering {
+	display: grid;
+	grid-template-areas: 'count sort' 'search search';
+	grid-template-columns: auto 1fr;
+	gap: functions.rem(12);
+	align-items: stretch;
+	margin-bottom: functions.rem(20);
+
+	@include mixins.breakpoint($from: medium) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: functions.rem(12);
+	}
+}
+
+.archive__filtering__count {
+	grid-area: count;
+}
+
+.archive__filtering__sort {
+	grid-area: sort;
+
+	@include mixins.breakpoint($from: medium) {
+		margin-left: auto;
+	}
+}
+
+.archive__filtering__search-form {
+	grid-area: search;
+	position: relative;
+	min-width: 0;
+
+	@include mixins.breakpoint($from: medium) {
+		flex: 0 0 functions.rem(376);
+		min-width: 0;
+	}
+}
+
+// Count badge — #efefef, rounded 5px, icon + text bold 12px #454545
+.archive__filtering__count {
+	display: flex;
+	align-items: center;
+	gap: functions.rem(10);
+	background: #efefef;
+	border-radius: functions.rem(5);
+	padding: functions.rem(7 11 7 9);
+	font-family: var(--surf-font-heading);
+	font-weight: bold;
+	font-size: functions.rem(12);
+	line-height: functions.rem(16);
+	color: #454545;
+	min-height: functions.rem(28);
+	overflow: visible;
+
+	// Document icon viewBox 16×20 — use proportional size so it's not cut off
+	.icon {
+		width: functions.rem(12);
+		height: functions.rem(15);
+		min-width: functions.rem(12);
+		min-height: functions.rem(15);
+		flex-shrink: 0;
+		color: var(--surf-color-primary);
+	}
+}
+
+// Sort dropdown — Figma: white, border #ccc, rounded 7px, shadow, h 40px, padding 5 13
+.archive__filtering__sort {
+	form {
+		height: 100%;
+	}
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+
+	select {
+		appearance: none;
+		background: var(--surf-color-white);
+		border: $-border;
+		border-radius: functions.rem(7);
+		box-shadow: $-shadow;
+		padding: functions.rem(5 13);
+		height: functions.rem(40);
+		width: 100%;
+		min-width: 0;
+		font-family: var(--surf-font-heading);
+		font-size: functions.rem(15);
+		font-weight: bold;
+		font-style: italic;
+		line-height: functions.rem(16);
+		color: #a4a4a4;
+		cursor: pointer;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 5'%3E%3Cpath fill='%23000' d='M8.089 1.422l-3.31 3.333A.918.918 0 0 1 4.167 5a.83.83 0 0 1-.59-.244L.268 1.423A.8.8 0 0 1 .065.516.837.837 0 0 1 .834 0h6.643c.337 0 .641.203.77.514.13.312.081.67-.158.908z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right functions.rem(13) center;
+		background-size: functions.rem(9) functions.rem(5);
+		padding-right: functions.rem(32);
+
+		&:focus {
+			outline: none;
+			border-color: var(--surf-color-primary);
+		}
+
+		option {
+			color: var(--surf-color-text);
+			font-style: normal;
+		}
+
+		option:first-child {
+			color: #a4a4a4;
+		}
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		flex: 0 0 functions.rem(240);
+		width: functions.rem(240);
+
+		select {
+			width: 100%;
+		}
+	}
+}
+
+// Search form — Figma: white, border, rounded 7px, shadow, placeholder italic #a4a4a4, search button inside
+.archive__filtering__search-form fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.archive__filtering__search-form input {
+	width: 100%;
+	height: functions.rem(40);
+	padding: functions.rem(12 50 12 15);
+	background: var(--surf-color-white);
+	border: $-border;
+	border-radius: functions.rem(7);
+	box-shadow: $-shadow;
+	font-family: var(--surf-font-heading);
+	font-size: functions.rem(15);
+	font-weight: bold;
+	font-style: italic;
+	line-height: functions.rem(16);
+	color: var(--surf-color-text);
+
+	&::placeholder {
+		color: #a4a4a4;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: var(--surf-color-primary);
+	}
+}
+
+.archive__filtering__search-submit {
+	position: absolute;
+	top: functions.rem(5);
+	right: functions.rem(5);
+	width: functions.rem(32);
+	height: functions.rem(32);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--surf-color-primary);
+	border: 0;
+	border-radius: functions.rem(5);
+	cursor: pointer;
+	padding: 0;
+	color: var(--surf-color-white);
+
+	.icon {
+		width: functions.rem(14);
+		height: functions.rem(14);
+	}
+
+	&:hover,
+	&:focus {
+		opacity: 0.9;
+	}
+}

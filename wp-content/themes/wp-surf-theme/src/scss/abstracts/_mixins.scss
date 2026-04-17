@@ -1,0 +1,393 @@
+//
+// ----------------------------------------------------------------------------
+// Abstracts / Mixins
+// ----------------------------------------------------------------------------
+//
+
+@use './functions';
+@use './variables';
+
+@use 'sass-mq' as * with (
+    $breakpoints: variables.$breakpoints
+);
+
+
+//
+// Breakpoint
+// ----------------------------------------------------------------------------
+
+@mixin breakpoint($from: false, $until: false, $and: false, $media-type: all) {
+	@include mq($from, $until, $and, $media-type) {
+		@content;
+	}
+}
+
+//
+// List reset
+// --------------------------------------------------------------------------------
+
+@mixin unstyled-list {
+	padding-left: 0;
+	list-style: none none;
+}
+
+
+//
+// At-rules
+// --------------------------------------------------------------------------------
+
+@mixin dark-mode {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}
+
+@mixin high-contrast {
+	@media (prefers-contrast: more) {
+		@content;
+	}
+}
+
+@mixin light-mode {
+	@media (prefers-color-scheme: light) {
+		@content;
+	}
+}
+
+@mixin low-contrast {
+	@media (prefers-contrast: less) {
+		@content;
+	}
+}
+
+@mixin reduced-data($cares: true) {
+	$arg: if($cares == true, reduce, no-preference);
+	@media (prefers-reduced-data: $arg) {
+		@content;
+	}
+}
+
+@mixin reduced-motion {
+	@media (prefers-reduced-motion) {
+		@content;
+	}
+}
+
+
+//
+// Optionally nest styles in root
+// --------------------------------------------------------------------------------
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+
+//
+// Placeholder style
+// --------------------------------------------------------------------------------
+
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root(':-moz-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root('::-moz-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root(':-ms-input-placeholder') {
+		@content;
+	}
+}
+
+
+//
+// Typography
+// --------------------------------------------------------------------------------
+
+@mixin all-headings {
+	margin-bottom: variables.$spacing-heading-bottom;
+	font-family: variables.$font-stack-headings;
+	font-weight: var(--surf-font-heading-font-weight);
+	line-height: variables.$line-height-headings;
+	color: var(--surf-color-headings);
+
+	+ * {
+		margin-top: 0;
+	}
+
+	.has-white-color & {
+		color: var(--surf-color-white);
+	}
+}
+
+@mixin h1-heading {
+	font-size: variables.$heading-h1-mobile;
+	font-family: variables.$font-stack-heading-h1;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h1-desktop;
+	}
+}
+
+@mixin h2-heading {
+	font-size: variables.$heading-h2-mobile;
+	font-family: variables.$font-stack-heading-h2;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h2-desktop;
+	}
+}
+
+@mixin h3-heading {
+	font-size: variables.$heading-h3-mobile;
+	font-family: variables.$font-stack-heading-h3;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h3-desktop;
+	}
+}
+
+@mixin h4-heading {
+	font-size: variables.$heading-h4-mobile;
+	font-family: variables.$font-stack-heading-h4;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h4-desktop;
+	}
+}
+
+@mixin h5-heading {
+	font-size: variables.$heading-h5-mobile;
+	font-family: variables.$font-stack-heading-h5;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h5-desktop;
+	}
+}
+
+@mixin h6-heading {
+	font-size: variables.$heading-h6-mobile;
+	font-family: variables.$font-stack-heading-h6;
+
+	@include breakpoint($from: large) {
+		font-size: variables.$heading-h6-desktop;
+	}
+}
+
+@mixin type-root {
+	-webkit-font-smoothing: antialiased;
+	color: var(--surf-color-text);
+	font-family: variables.$font-stack-body;
+	font-size: variables.$body-font-size;
+	font-weight: variables.$font-weight-body;
+	line-height: variables.$line-height-base;
+}
+
+@mixin paragraph {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+@mixin body-md {
+	font-size: variables.$body-font-size;
+	line-height: 1.5em;
+
+	@include breakpoint($from: medium) {
+		line-height: 1.8em;
+	}
+}
+
+@mixin body-lg {
+	font-size: variables.$body-font-large;
+	line-height: 1.6em;
+}
+
+@mixin anchor {
+	color: var(--surf-color-link);
+
+	&:hover {
+		color: var(--surf-color-link-hover);
+	}
+}
+
+@mixin intro-text {
+	color: var(--surf-color-text);
+
+	@include breakpoint($from: medium) {
+		font-size: functions.rem(20);
+		line-height: functions.rem(29);
+	}
+}
+
+@mixin hyphenate($overflow-wrap: break-word) {
+	hyphens: auto;
+	word-break: normal;
+	overflow-wrap: $overflow-wrap;
+}
+
+//
+// Editor styles wrapper
+// --------------------------------------------------------------------------------
+
+@mixin editor-styles-wrapper {
+	:root .editor-styles-wrapper {
+		@content;
+	}
+}
+
+
+//
+// Editor
+// ----------------------------------------------------------------------------
+
+@mixin is-editor {
+	@if (variables.$editor == true) {
+		@content;
+	}
+}
+
+@mixin is-not-editor {
+	@if (variables.$editor == false) {
+		@content;
+	}
+}
+
+//
+// Set vars
+// ----------------------------------------------------------------------------
+
+@mixin set-color-vars($vars) {
+	@each $name, $color in $vars {
+		--surf-color-#{$name}: #{$color};
+	}
+}
+
+//
+// Image
+// ----------------------------------------------------------------------------
+
+@mixin standard-image() {
+	border-radius: var(--surf-border-radius);
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+//
+// Figcaption
+// ----------------------------------------------------------------------------
+
+@mixin figcaption() {
+	color: var(--surf-color-text);
+	font-size: functions.rem(16);
+	margin: functions.rem(12 0 0 0);
+	text-align: center;
+
+	@include breakpoint($from: large) {
+		margin: functions.rem(18 0 0 0);
+	}
+}
+
+//
+// Arrows
+// ----------------------------------------------------------------------------
+
+@mixin arrow-right() {
+	&::after {
+		content: '';
+		display: var(--surf-display-arrow-link);
+		height: functions.rem(14);
+		width: var(--surf-link-arrow-width);
+		margin-left: functions.rem(7);
+		background: currentColor;
+		mask-image: var(--surf-button-right-arrow);
+		mask-repeat: no-repeat;
+		mask-position: left center;
+		transition: variables.$transition;
+	}
+
+	&:hover::after,
+	&:active::after {
+		margin-left: functions.rem(12);
+	}
+}
+
+@mixin arrow-left() {
+	&::before {
+		content: '';
+		display: var(--surf-display-arrow-link);
+		height: functions.rem(14);
+		width: var(--surf-link-arrow-width);
+		margin-right: functions.rem(5);
+		background: currentColor;
+		mask-image: var(--surf-button-left-arrow);
+		mask-repeat: no-repeat;
+		mask-position: left center;
+		transition: variables.$transition;
+	}
+
+	&:hover::before,
+	&:active::before {
+		margin-right: functions.rem(10);
+	}
+}
+
+// Themes
+
+@mixin SurfTheme {
+	.theme-surf {
+		@content;
+	}
+}
+
+@mixin poweredTheme {
+	.theme-powered {
+		@content;
+	}
+}
+
+//
+// Tag pillows
+// ----------------------------------------------------------------------------
+
+@mixin tag-pillow() {
+	display: inline-block;
+	padding: functions.rem(9 12);
+	border: 1px solid var(--surf-color-border);
+	border-radius: var(--surf-category-tag-border-radius);
+	appearance: none;
+	background-color: var(--surf-color-white);
+	color: var(--surf-color-black);
+	font-family: var(--surf-font-heading);
+	font-size: functions.rem(14);
+	line-height: functions.rem(16);
+	text-align: center;
+	text-decoration: none;
+	font-weight: 800;
+	transition: variables.$transition;
+	margin-bottom: functions.rem(9);
+	margin-right: functions.rem(9);
+
+	&.has-link:hover,
+	&.has-link:active {
+		color: var(--surf-color-primary);
+		border-color: var(--surf-color-primary);
+	}
+
+	@include poweredTheme() {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: functions.rem(12);
+		letter-spacing: 1px;
+		border-radius: var(--surf-border-radius);
+	}
+}

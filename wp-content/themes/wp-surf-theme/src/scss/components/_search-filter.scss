@@ -1,0 +1,79 @@
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+.search__grid {
+	margin: functions.rem(30 0 0 0);
+
+	@include mixins.breakpoint($from: medium) {
+		margin: functions.rem(60 0 0 0);
+	}
+}
+
+.search-filter {
+	display: grid;
+	gap: functions.rem(45);
+
+	@include mixins.breakpoint($until: medium) {
+		gap: functions.rem(12);
+		border-bottom: 2px solid var(--surf-color-border);
+		padding-bottom: functions.rem(20);
+	}
+}
+
+.search-filter__group {
+	display: grid;
+	gap: functions.rem(12);
+}
+
+.search-filter__group__heading {
+	display: block;
+	display: flex;
+	margin: 0;
+	justify-content: space-between;
+	cursor: pointer;
+
+	svg {
+		width: functions.rem(8);
+		margin-top: functions.rem(5);
+		color: var(--surf-color-text);
+	}
+}
+
+.search-filter__group__list {
+	display: grid;
+	list-style: none;
+	padding: unset;
+	gap: functions.rem(12);
+	transition: variables.$transition;
+	height: 0;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.search-filter__group__list ul {
+	list-style: none;
+	padding-left: functions.rem(35);
+	margin-top: functions.rem(6);
+	display: grid;
+	gap: functions.rem(6);
+}
+
+.search-filter__group__list select {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 9 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.089 1.422l-3.31 3.333A.918.918 0 0 1 4.167 5a.83.83 0 0 1-.59-.244L.268 1.423A.8.8 0 0 1 .065.516.837.837 0 0 1 .834 0h6.643c.337 0 .641.203.77.514.13.312.081.67-.158.908z' fill='%23676767'/%3E%3C/svg%3E");
+	background-position: right .875rem center;
+	background-repeat: no-repeat;
+	background-size: 0.5rem;
+}
+
+.search-filter__group__list input[type="radio"]:has(+ label),
+.search-filter__group__list input[type="checkbox"]:has(+ label) {
+	display: none;
+}
+
+.search-filter__group.is-open .search-filter__group__list {
+	opacity: 1;
+	visibility: visible;
+	margin-bottom: 0.9375rem;
+}

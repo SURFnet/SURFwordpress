@@ -1,0 +1,100 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Location
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.location {
+	background: var(--surf-color-background);
+	border-radius: var(--surf-border-radius);
+	overflow: hidden;
+}
+
+.location__inner {
+	padding: functions.rem(25 20);
+}
+
+.location__inner a {
+	font-weight: bold;
+	text-decoration: none;
+	display: flex;
+	gap: functions.rem(5);
+	align-items: center;
+}
+
+.location__inner .location__title {
+	font-weight: normal;
+}
+
+.location__inner a:hover {
+	color: var(--surf-color-header-menu-link-hover);
+}
+
+.location__columns {
+	display: flex;
+	flex-direction: column;
+	gap: functions.rem(20);
+}
+
+.location__columns .location__column:last-child {
+	display: flex;
+	flex-direction: column;
+	gap: functions.rem(7);
+}
+
+@include mixins.breakpoint($from: medium) {
+
+	.location__columns {
+		flex-direction: row;
+		gap: functions.rem(10);
+	}
+
+	.location__columns .location__column:first-child {
+		width: 60%;
+	}
+
+	.location__columns .location__column:last-child {
+		width: 40%;
+	}
+
+}
+
+.location__figure img {
+	width: 100%;
+}
+
+.location--archive {
+	display: flex;
+	flex-direction: column;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.location--archive {
+		flex-direction: row;
+	}
+
+	.location--archive .location__inner {
+		width: 100%;
+		max-width: functions.rem(420);
+	}
+
+	.location--archive .location__figure {
+		max-width: functions.rem(206);
+		width: 100%;
+		position: relative;
+	}
+
+	.location--archive .location__figure img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}

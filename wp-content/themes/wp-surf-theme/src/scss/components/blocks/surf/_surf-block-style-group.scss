@@ -1,0 +1,88 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / Style Group
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.surf-block-style-group {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.surf-block-style-group__inner {
+	padding: functions.rem(20 0);
+
+	@include mixins.breakpoint($from: medium) {
+		padding: functions.rem(50 20);
+	}
+}
+
+.surf-block-style-group__inner > .surf-block-paragraph,
+.surf-block-style-group__inner > .surf-block-heading,
+.surf-block-style-group__inner > .surf-block-quote,
+.surf-block-style-group__inner > .surf-block-list,
+.surf-block-style-group__inner > .wp-block-media-text,
+.surf-block-style-group__inner > .wp-block-group,
+.surf-block-style-group__inner > .wp-block-columns {
+	padding-left: functions.rem(20);
+	padding-right: functions.rem(20);
+}
+
+.surf-block-style-group__inner > p,
+.surf-block-style-group__inner p {
+	color: var(--surf-color-text);
+}
+
+.surf-block-style-group .surf-block-style-group__sep img {
+	margin: 0 !important;
+}
+
+.surf-block-style-group__inner .block-editor-block-list__layout > *:not([data-type="core/list-item"]):not([role="textbox"]) {
+	margin-bottom: 50px;
+}
+
+.surf-block-style-group__inner [data-type="surf/cta"] {
+	max-width: variables.$container-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.surf-block-style-group__inner [data-type="surf/accordion"],
+.surf-block-style-group__inner [data-type*="core/"]:not(.alignwide):not(.alignfull) {
+	max-width: variables.$container-width-narrow;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.surf-block-style-group__inner > .alignwide,
+.surf-block-style-group__inner > .wp-block-quote,
+.surf-block-style-group__inner .block-editor-block-list__layout > .alignwide,
+.surf-block-style-group__inner .block-editor-block-list__layout > .wp-block-quote {
+	max-width: variables.$container-width-wide;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.surf-block-style-group__separator {
+	background: black;
+	color: white;
+	font-weight: bold;
+	padding: functions.rem(20 5);
+	text-align: center;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	width: calc(100% - 20px);
+	margin: 10px;
+}
+
+.surf-block-style-group--no-margin {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}

@@ -1,0 +1,97 @@
+//
+// ----------------------------------------------------------------------------
+// Assets Header
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.assets-header {
+	position: relative;
+}
+
+.assets-header--fancy {
+	min-height: functions.rem(460);
+	border-top-left-radius: var(--surf-border-radius);
+	border-top-right-radius: var(--surf-border-radius);
+	border-bottom-left-radius: var(--surf-assets-header-border-radius);
+	border-bottom-right-radius: var(--surf-assets-header-border-radius);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.assets-header--fancy .assets-header__background::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: var(--assets-gradient);
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.assets-header--fancy .assets-header__background img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.assets-header--fancy .assets-header__content {
+	padding: functions.rem(15 20);
+
+	@include mixins.breakpoint($from: medium) {
+		padding: functions.rem(44);
+	}
+}
+
+.assets-header--fancy .assets-header__content h1 {
+	margin-bottom: functions.rem(5);
+}
+
+.assets-header--fancy .assets-header__content,
+.assets-header--fancy .assets-header__content h1 {
+	color: var(--surf-color-white);
+}
+
+.assets-header--fancy .assets-navigation {
+	margin-top: auto;
+	border-radius: 0;
+	background: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(5px);
+}
+
+.assets-header--fancy .assets-navigation nav ul li a,
+.assets-header--fancy .assets-navigation .archive-page__search-form input {
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-type-cutout .assets-header__content {
+	margin-top: auto;
+}
+
+.image-type-cutout .assets-header__content p {
+	@include mixins.breakpoint($from: medium) {
+		max-width: 80%;
+	}
+}
+
+.image-type-cutout .assets-header--fancy .assets-navigation {
+	margin-top: 0;
+}
+
+.assets-header--position-bottom .assets-navigation {
+	margin-top: 0;
+}
+
+.assets-header--position-bottom .assets-header__content {
+	margin-top: auto;
+}

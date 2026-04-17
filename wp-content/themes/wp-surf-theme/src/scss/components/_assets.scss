@@ -1,0 +1,54 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Assets
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.assets__main {
+	margin: functions.rem(30 0);
+}
+
+.assets__main-title {
+	margin: 0;
+}
+
+.assets__main-introduction {
+	@include mixins.breakpoint($from: medium) {
+		font-size: functions.rem(18);
+		line-height: functions.rem(29);
+	}
+}
+
+.assets__header {
+	margin-bottom: functions.rem(30);
+}
+
+.assets__search-title {
+	text-align: center;
+	margin: functions.rem(30 0);
+
+	@include mixins.breakpoint($from: medium) {
+		margin: functions.rem(45 0);
+	}
+}
+
+.assets__search-results {
+	max-width: functions.rem(790);
+	margin: 0 auto;
+}
+
+.assets__more-link {
+	font-weight: bold;
+	display: inline-block;
+	margin-top: functions.rem(16);
+	@include mixins.arrow-right();
+
+	@include mixins.breakpoint($from: medium) {
+		font-size: functions.rem(18);
+		line-height: functions.rem(29);
+	}
+}

@@ -1,0 +1,133 @@
+@use 'abstracts/functions';
+
+$border-color: #c3c4c7;
+$border: solid 1px $border-color;
+
+.setup-wizard__footer {
+	margin-top: functions.rem(16);
+	display: flex;
+	justify-content: space-between;
+}
+
+.setup-wizard .step .postbox-header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.setup-wizard .step .postbox-header {
+	box-sizing: border-box;
+	padding: functions.rem(8);
+}
+
+.setup-wizard .dashicons-completed {
+	color: #00a32a;
+}
+
+.setup-wizard .postbox-header .components-spinner {
+	margin: 0;
+}
+
+.setup-wizard .postbox .inside {
+	margin: 0;
+	padding: functions.rem(12);
+}
+
+.step__form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	margin-bottom: functions.rem(16);
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.step__error {
+	color: #d63638;
+}
+
+.step__checkbox {
+	display: flex;
+	align-items: center;
+	gap: functions.rem(4);
+
+	input[type="checkbox"] {
+		margin: 0;
+	}
+}
+
+.step__header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	h2.hndle {
+		padding: 0;
+	}
+}
+
+.step__status {
+	width: 20px;
+	height: 20px;
+}
+
+.step__footer {
+	margin-top: functions.rem(16);
+	display: flex;
+}
+
+.setup-wizard__plugin {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.setup-wizard__plugin-wrapper {
+	padding: functions.rem(8);
+	border-bottom: $border;
+
+	&:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+
+.setup-wizard__plugin-name {
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: functions.rem(8);
+}
+
+.setup-wizard__post-type {
+	display: flex;
+	align-items: center;
+	gap: functions.rem(8);
+	padding: functions.rem(8);
+	border-bottom: $border;
+
+	&:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+
+.setup-wizard__plugin-license {
+	display: flex;
+	align-items: center;
+	gap: functions.rem(8);
+	padding: functions.rem(8);
+	border-bottom: $border;
+
+	&:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+
+.setup-wizard__plugin-error {
+	padding: functions.rem(8) 0 functions.rem(8) functions.rem(8);
+	margin: functions.rem(16) 0;
+}

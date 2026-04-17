@@ -1,0 +1,27 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Embed
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/mixins';
+
+.wp-block-embed iframe {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.entry__inner iframe {
+	display: block;
+	width: 100%;
+	border-radius: var(--surf-border-radius);
+}
+
+.wp-block-embed figcaption {
+	@include mixins.figcaption;
+}
+
+.wp-block-embed.wp-embed-aspect-16-9 iframe {
+	aspect-ratio: 16 / 9;
+}

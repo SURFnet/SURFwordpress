@@ -1,0 +1,37 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Media - Text
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.wp-block-video {
+	position: relative;
+}
+
+.wp-block-video video {
+	border-radius: var(--surf-border-radius);
+}
+
+.wp-block-video .video-play {
+	position: absolute;
+	width: functions.rem(54);
+	height: functions.rem(63);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, calc(-50% - 27px));
+	cursor: pointer;
+	transition: variables.$transition;
+
+	&.is-hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.wp-block-video figcaption {
+	@include mixins.figcaption();
+}

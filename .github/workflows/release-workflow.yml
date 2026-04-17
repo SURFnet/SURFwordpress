@@ -1,0 +1,95 @@
+name: "_Template: Release_"
+on:
+  workflow_call:
+    inputs:
+      release_type:
+        required: true
+        type: string
+
+env:
+  PHP_VERSION: 8.2
+  WP_THEME_BASE: wp-content/themes
+  THEME_SLUG: wp-surf-theme
+  THEME_PATH: wp-content/themes/wp-surf-theme
+  GH_APP_ID: ${{ secrets.GH_APP_ID }}
+  GH_APP_KEY: ${{ secrets.GH_APP_KEY }}
+  GH_INSTALL_ID: ${{ secrets.GH_INSTALL_ID }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📄 Clone repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 🏷 Set tag name
+        id: tag
+        run: |
+          VERSION=$(bash .github/scripts/generate-tag.sh ${{ inputs.release_type }})
+          echo "tag_name=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: ⚙️ Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+
+      - name: ✨ Get Composer cache directory
+        id: composer-cache
+        run: |
+          cd ${{ env.THEME_PATH }}
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - name: 📦 Set up Composer dependency caching
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles(format('{0}/composer.lock', env.THEME_PATH)) }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: ⬇️ Install Composer dependencies
+        run: |
+          cd ${{ env.THEME_PATH }}
+          composer validate --no-check-publish && composer install --prefer-dist --no-progress --no-dev
+
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '${{ env.THEME_PATH }}/.nvmrc'
+          cache: 'npm'
+          cache-dependency-path: ${{ env.THEME_PATH }}/package-lock.json
+
+      - name: ⬇️ Install npm dependencies
+        run: |
+          cd ${{ env.THEME_PATH }}
+          npm ci
+
+      - name: 🔧 Build npm
+        run: |
+          cd ${{ env.THEME_PATH }}
+          npm run build
+
+      - name: 📄 Update style.css placeholders
+        run: |
+          bash .github/scripts/update-style.sh ${{ env.THEME_PATH }} ${{ steps.tag.outputs.tag_name }} ${{ env.PHP_VERSION }}
+
+      - name: 📦 Zip the theme
+        run: |
+          cd ${{ env.WP_THEME_BASE }}
+          zip -r ${{ env.THEME_SLUG }}.zip ${{ env.THEME_SLUG }} \
+            -x "*.git*" \
+            -x "*/node_modules/*" \
+            -x "*/tests/*" \
+            -x "*/.github/*"
+
+      - name: 🚀 Create a new release
+        uses: ncipollo/release-action@v1.10.0
+        with:
+          artifacts: ${{ env.WP_THEME_BASE }}/${{ env.THEME_SLUG }}.zip
+          generateReleaseNotes: true
+          commit: ${{ github.ref }}
+          tag: ${{ steps.tag.outputs.tag_name }}
+          prerelease: ${{ inputs.release_type != 'stable' }}

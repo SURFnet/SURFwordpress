@@ -1,0 +1,20 @@
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+.surf-block.surf-block-custom-cards {
+	.block-editor-block-list__layout {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: variables.$grid-gap;
+		padding-inline: 1.5rem
+	}
+
+	.surf-block-custom-cards--hide-images-mobile {
+		@include mixins.breakpoint($until: medium) {
+			.post-item__figure {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+@use 'button';
+
+.form {
+	border-radius: var(--surf-border-radius);
+	background: var(--surf-color-comment-form-background);
+	padding: functions.rem(23 20);
+	position: relative;
+
+	label {
+		display: block;
+		font-weight: 800;
+		font-family: var(--surf-font-heading);
+		color: var(--surf-color-black);
+		margin: functions.rem(0 0 5 0);
+	}
+
+	input[type="checkbox"], input[type="radio"] {
+		display: none;
+	}
+
+	.required, .error {
+		color: var(--surf-color-required);
+	}
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: functions.rem(20);
+	margin-bottom: functions.rem(20);
+}
+
+.form-grid > * {
+	grid-column: span 2 / span 2;
+}
+
+@include mixins.breakpoint(large) {
+	.form {
+		padding: functions.rem(36 33);
+	}
+
+	.form-grid {
+		gap: functions.rem(20) functions.rem(33);
+	}
+
+	.form-grid > * {
+		grid-column: span 1 / span 1;
+	}
+}
+
+.form .form-group.file input[type="file"] {
+	display: none
+}
+
+.form .file__select {
+	@extend %button;
+}
+
+.form .file__file-names {
+	color: var(--surf-color-text);
+	font-size: functions.rem(14);
+	padding-top: functions.rem(7);
+}
+
+.form .form-group.options input + label,
+.form .form-group.privacy input + label {
+	font-weight: normal;
+}

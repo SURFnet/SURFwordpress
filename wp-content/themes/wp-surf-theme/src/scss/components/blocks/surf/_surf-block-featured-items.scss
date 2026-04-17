@@ -1,0 +1,36 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / CTA
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+@include mixins.poweredTheme {
+	.surf-block-featured-items {
+		background: var(--surf-color-background);
+		padding: var(--surf-outer-block-padding-sm);
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		.surf-block-featured-items {
+			padding: var(--surf-outer-block-padding-md);
+		}
+	}
+
+	@include mixins.breakpoint($from: large) {
+		.surf-block-featured-items {
+			padding: var(--surf-outer-block-padding-lg);
+		}
+	}
+}
+
+@include mixins.poweredTheme {
+	.surf-block-featured-items {
+		.post-item__category {
+			background: var(--surf-color-background);
+		}
+	}
+}

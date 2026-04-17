@@ -1,0 +1,4601 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP SURF Theme\n"
+"POT-Creation-Date: 2026-03-19 08:45+0100\n"
+"PO-Revision-Date: 2026-03-19 08:45+0100\n"
+"Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
+"Language-Team: SURF B.V. <info@surf.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_ngettext:1,2;_n:1,2;_ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: dist\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#: views/404.blade.php:19
+msgid "Something went wrong. What could have happened?"
+msgstr "Er ging iets mis. Wat kan er gebeurd zijn?"
+
+#: views/404.blade.php:22
+msgid "You clicked on a link with an error in it."
+msgstr "Je klikte op een link met een fout erin."
+
+#: views/404.blade.php:23
+msgid "We have removed or moved the page."
+msgstr "Wij hebben de pagina verwijderd of verplaatst."
+
+#: views/404.blade.php:24
+msgid "You made a typo."
+msgstr "Je maakte een typefout."
+
+#: views/404.blade.php:25
+msgid "You were looking for an event that has already taken place."
+msgstr "Je zocht een event dat al geweest is."
+
+#: views/404.blade.php:30
+msgid "And now?"
+msgstr "Hoe nu verder?"
+
+#: views/404.blade.php:32
+#, php-format
+msgid ""
+"Use the search function at the top right to find the information. %s Or go "
+"to the %s."
+msgstr ""
+"Gebruik de zoekfunctie rechtsboven om de informatie alsnog te vinden. %s Of "
+"ga naar de %s."
+
+#: views/404.blade.php:32
+msgid "home page"
+msgstr "homepage"
+
+#: views/admin/pages/csp-tool.blade.php:8
+msgctxt "admin"
+msgid "CSP Tool"
+msgstr "CSP-tool"
+
+#: views/admin/pages/csp-tool.blade.php:12
+msgctxt "admin"
+msgid "Up to date!"
+msgstr "Up to date!"
+
+#: views/admin/pages/csp-tool.blade.php:16
+msgctxt "admin"
+msgid "Something went wrong while syncing the new config"
+msgstr "Er ging iets mis tijdens het synchroniseren van de nieuwe configuratie"
+
+#: views/admin/pages/csp-tool.blade.php:24
+msgctxt "admin"
+msgid "Current CSP Config"
+msgstr "Huidige CSP-configuratie"
+
+#: views/admin/pages/csp-tool.blade.php:33
+#: views/admin/pages/csp-tool.blade.php:42
+msgctxt "admin"
+msgid "Sync CSP config"
+msgstr "CSP-configuratie synchroniseren"
+
+#: views/admin/theme-details.blade.php:65
+msgctxt "admin"
+msgid "Changelog"
+msgstr "Changelog"
+
+#: views/admin/theme-details.blade.php:72
+msgctxt "admin"
+msgid "Info"
+msgstr "Info"
+
+#: views/admin/updates/pending.blade.php:1
+msgctxt "admin"
+msgid ""
+"There is an update available for your theme, click the button below to "
+"update."
+msgstr ""
+"Er is een update beschikbaar voor jouw thema, klik op de knop hieronder om "
+"te updaten."
+
+#: views/admin/updates/pending.blade.php:4
+msgctxt "admin"
+msgid ""
+"Notice: since you are on a dev environment the update will be installed in "
+"the <code>wp-content/updates</code> folder. This means you can safely press "
+"the update button without overwriting any files."
+msgstr ""
+"Let op: omdat je in een ontwikkelomgeving zit, wordt de update in de "
+"<code>wp-content/updates</code> map geïnstalleerd. Dit betekent dat je "
+"veilig op de updateknop kunt drukken zonder bestanden te overschrijven."
+
+#: views/admin/widgets/app-stores.blade.php:10
+#: views/admin/widgets/social-menu.blade.php:10
+msgctxt "admin"
+msgid "Title"
+msgstr "Titel"
+
+#: views/admin/widgets/app-stores.blade.php:22
+msgctxt "admin"
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: views/admin/widgets/app-stores.blade.php:28
+msgctxt "admin"
+msgid "URL"
+msgstr "URL"
+
+#: views/admin/widgets/form.blade.php:11
+msgctxt "admin"
+msgid "Select a form"
+msgstr "Selecteer een formulier"
+
+#: views/admin/widgets/form.blade.php:20
+msgctxt "admin"
+msgid "Show title"
+msgstr "Toon titel"
+
+#: views/admin/widgets/nav-menu.blade.php:10
+msgctxt "admin"
+msgid "Select a menu"
+msgstr "Selecteer een menu"
+
+#: views/agenda/archive-aside.blade.php:30
+#: views/agenda/archive-aside.blade.php:51
+msgid "Toggle \"Upcoming events\""
+msgstr "Toggle \"Aankomende evenementen\""
+
+#: views/agenda/archive-aside.blade.php:31
+#: views/agenda/archive-aside.blade.php:52 views/agenda/archive.blade.php:70
+msgid "Upcoming events"
+msgstr "Komende events"
+
+#: views/agenda/archive-location.blade.php:53 views/agenda/single.blade.php:97
+msgid "View on map"
+msgstr "Bekijk op kaart"
+
+#: views/agenda/archive-location.blade.php:58 views/agenda/single.blade.php:102
+msgid "Website"
+msgstr "Website"
+
+#: views/agenda/archive.blade.php:44 views/agenda/item.blade.php:47
+#: views/download/archive.blade.php:39
+#: views/exports/archive-surf-faq-filters.blade.php:36 views/home.blade.php:38
+msgid "Category"
+msgstr "Categorie"
+
+#: views/agenda/archive.blade.php:57 views/agenda/item.blade.php:37
+#: views/vacancy/single.blade.php:66
+msgid "Location"
+msgstr "Locatie"
+
+#: views/agenda/item.blade.php:28
+msgid "Date"
+msgstr "Datum"
+
+#: views/agenda/not-found.blade.php:2
+msgid "No agenda items have been found."
+msgstr "Geen agendapunten gevonden."
+
+#: views/agenda/related.blade.php:17 views/vacancy/related.blade.php:16
+msgid "Related events"
+msgstr "Gerelateerde evenementen"
+
+#: views/agenda/single.blade.php:115 views/asset/single.blade.php:66
+#: views/download/single.blade.php:81 views/home.blade.php:98
+#: views/parts/content-page.blade.php:48 views/parts/content.blade.php:37
+#: views/post/single.blade.php:82 views/vacancy/single.blade.php:127
+msgctxt "admin"
+msgid "Edit"
+msgstr "Bewerken"
+
+#: views/asset/file.blade.php:22
+#: views/asset/parts/single-download-cta.blade.php:17
+#: views/asset/parts/single-download-cta.blade.php:31
+#: views/download/item.blade.php:39 views/download/single.blade.php:66
+msgid "Download"
+msgstr "Download"
+
+#: views/asset/item.blade.php:49 views/post/item.blade.php:70
+msgid "Updated on"
+msgstr "Geüpdatet op"
+
+#: views/asset/not-found.blade.php:2
+msgid "No asset items have been found."
+msgstr "Geen assets gevonden."
+
+#: views/asset/pagination.blade.php:17
+msgid "Previous"
+msgstr "Vorige"
+
+#: views/asset/pagination.blade.php:33
+msgid "Next"
+msgstr "Volgende"
+
+#: views/asset/parts/category-aside-menu.blade.php:10
+#: views/asset/parts/category-aside-menu.blade.php:14
+msgid "Subcategories"
+msgstr "Subcategorieën"
+
+#: views/asset/parts/category-top-menu-children.blade.php:14
+#: views/components/pages/top-menu-sub-toggle.blade.php:3
+msgid "Toggle submenu"
+msgstr "Submenu tonen"
+
+#: views/asset/parts/category-top-menu.blade.php:12
+msgid "Main categories"
+msgstr "Hoofdcategorieën"
+
+#: views/asset/parts/counter.blade.php:10
+#, php-format
+msgid "%1$s asset"
+msgid_plural "%1$s assets"
+msgstr[0] "%1$s asset"
+msgstr[1] "%1$s assets"
+
+#: views/asset/parts/search-form.blade.php:10
+msgid "Search in the assets"
+msgstr "Zoek in de assets"
+
+#: views/asset/parts/search-form.blade.php:12
+#: views/components/searchform.blade.php:11 views/faq/archive.blade.php:41
+#: views/faq/single.blade.php:40
+msgctxt "submit button"
+msgid "Search"
+msgstr "Zoeken"
+
+#: views/asset/parts/sorter.blade.php:10 views/faq/archive.blade.php:50
+msgid "Sort"
+msgstr "Sorteren"
+
+#: views/asset/parts/sorter.blade.php:12
+msgctxt "submit button"
+msgid "Sort assets"
+msgstr "Assets sorteren"
+
+#: views/asset/search.blade.php:27 views/asset/template-categories.blade.php:55
+msgid "Introduction"
+msgstr "Introductie"
+
+#: views/asset/search.blade.php:45 views/faq/archive.blade.php:72
+msgid "Search results on"
+msgstr "Zoekresultaten op"
+
+#: views/asset/search.blade.php:65
+msgid "View more"
+msgstr "Meer bekijken"
+
+#: views/asset/single.blade.php:28
+#, php-format
+msgid "Back to %s"
+msgstr "Terug naar %s"
+
+#: views/asset/template-categories.blade.php:92
+msgid "View item"
+msgstr "Bekijk item"
+
+#: views/blocks/articles.blade.php:44 views/blocks/articles.blade.php:66
+#: views/blocks/articles.blade.php:89
+msgid "Read more articles"
+msgstr "Lees meer artikelen"
+
+#: views/blocks/contact-person.blade.php:25
+#: views/components/contact-person.blade.php:31
+#, php-format
+msgid "Photo of %s"
+msgstr "Foto van %s"
+
+#: views/blocks/downloads.blade.php:38
+msgid "View all files"
+msgstr "Bekijk alle bestanden"
+
+#: views/blocks/events.blade.php:38
+msgid "View more events"
+msgstr "Bekijk meer evenementen"
+
+#: views/blocks/header.blade.php:13 views/components/search-filter.blade.php:17
+msgid "Search"
+msgstr "Zoeken"
+
+#: views/blocks/hero.blade.php:16
+msgid "Search..."
+msgstr "Zoeken…"
+
+#: views/blocks/latest-vacancies.blade.php:28
+msgid "View vacancy"
+msgstr "Bekijk vacature"
+
+#: views/blocks/sitemap.blade.php:11 views/components/sitemap/list.blade.php:9
+msgid "Content"
+msgstr "Inhoud"
+
+#: views/blocks/sitemap.blade.php:17
+msgctxt "admin"
+msgid "No items found for this post type."
+msgstr "Geen items gevonden voor dit type bericht."
+
+#: views/comments.blade.php:5
+msgid "Reactions"
+msgstr "Reacties"
+
+#: views/comments.blade.php:7
+msgid ""
+"Do you have something to say or you want to share something about this "
+"message, please feel free to start a discussion!"
+msgstr ""
+"Wil je iets kwijt, heb je een opmerking of wil je iets delen over dit "
+"bericht? Voel je vrij om een reactie achter te laten of in discussie te gaan "
+"met anderen!"
+
+#: views/comments.blade.php:20
+msgid "No reactions yet, are you the first one?"
+msgstr "Nog geen reacties, ben jij de eerste?"
+
+#: views/components/archive-export-button.blade.php:18
+msgid "Export"
+msgstr "Exporteren"
+
+#: views/components/archive-export-button.blade.php:32
+msgid "Excel"
+msgstr "Excel"
+
+#: views/components/archive-export-button.blade.php:40
+msgid "PDF"
+msgstr "PDF"
+
+#: views/components/asset-category-filter.blade.php:21
+#: views/components/child-terms-filter-item.blade.php:21
+#: views/faq/item.blade.php:23 views/search.blade.php:55
+#: views/search.blade.php:84
+#: views/wp-widgets/taxonomy-filter-surf-widget.blade.php:44
+#: views/wp-widgets/term-filter-surf-widget.blade.php:48
+msgid "Toggle"
+msgstr "Toggle"
+
+#: views/components/asset-category-filter.blade.php:29
+#: views/wp-widgets/taxonomy-filter-surf-widget.blade.php:52
+#: views/wp-widgets/term-filter-surf-widget.blade.php:58
+msgid "Category:"
+msgstr "Categorie:"
+
+#: views/components/asset-category-filter.blade.php:30
+#: views/components/child-terms-filter-item.blade.php:30
+#: views/wp-widgets/taxonomy-filter-surf-widget.blade.php:53
+#: views/wp-widgets/term-filter-surf-widget.blade.php:59
+msgid "Close"
+msgstr "Sluiten"
+
+#: views/components/child-terms-filter-item.blade.php:29
+#, php-format
+msgid "Category: %s"
+msgstr "Categorie: %s"
+
+#: views/components/language-switch.blade.php:22
+msgid "Switch language"
+msgstr "Taal aanpassen"
+
+#: views/components/pages/top-menu.blade.php:25
+msgid "Navigate"
+msgstr "Navigeer"
+
+#: views/components/searchform.blade.php:3
+#: views/components/searchform.blade.php:8
+msgctxt "label"
+msgid "Search for:"
+msgstr "Zoeken naar:"
+
+#: views/components/searchform.blade.php:5
+msgctxt "placeholder"
+msgid "Search"
+msgstr "Zoeken"
+
+#: views/components/share.blade.php:4
+msgid "Share this article"
+msgstr "Deel dit artikel"
+
+#: views/components/social-links.blade.php:16
+#: views/parts/footer-extended.blade.php:28
+msgid "Follow us"
+msgstr "Volg ons"
+
+#: views/components/tag-list.blade.php:16
+msgid "Tags"
+msgstr "Tags"
+
+#: views/consent/youtube.blade.php:15
+msgid "This content is blocked because you do not allow third-party cookies."
+msgstr ""
+"Deze inhoud wordt geblokkeerd omdat je geen cookies van derden toestaat."
+
+#: views/consent/youtube.blade.php:16
+msgid "Open cookie preferences"
+msgstr "Cookievoorkeuren openen"
+
+#: views/download/not-found.blade.php:2
+msgid "No download items have been found."
+msgstr "Geen bestanden gevonden."
+
+#: views/download/single.blade.php:29 views/search/item.blade.php:18
+#: views/search/item.blade.php:23
+msgid "File"
+msgstr "Bestand"
+
+#: views/exports/archive-surf-faq-filters.blade.php:16
+msgid "Filter"
+msgstr "Filter"
+
+#: views/exports/archive-surf-faq-filters.blade.php:17
+msgid "Value"
+msgstr "Waarde"
+
+#: views/exports/archive-surf-faq-filters.blade.php:23
+msgid "Order by"
+msgstr "Sorteer op"
+
+#: views/exports/archive-surf-faq-filters.blade.php:29
+msgid "Order"
+msgstr "Volgorde"
+
+#: views/exports/archive-surf-faq-filters.blade.php:30
+msgid "Descending"
+msgstr "Aflopend"
+
+#: views/exports/archive-surf-faq-filters.blade.php:30
+msgid "Ascending"
+msgstr "Oplopend"
+
+#: views/faq/archive.blade.php:33 views/faq/single.blade.php:34
+msgid "Frequently asked questions"
+msgstr "Veelgestelde vragen"
+
+#: views/faq/archive.blade.php:39 views/faq/single.blade.php:38
+msgid "Search for an answer"
+msgstr "Zoek naar een antwoord"
+
+#: views/faq/archive.blade.php:70
+msgid "Cancel search"
+msgstr "Zoekopdracht annuleren"
+
+#: views/faq/item.blade.php:47 views/search/item.blade.php:44
+msgid "Read more"
+msgstr "Lees meer"
+
+#: views/faq/list-items.blade.php:11
+msgid "Found items"
+msgstr "Gevonden items"
+
+#: views/faq/not-found.blade.php:2
+msgid "No FAQ items have been found."
+msgstr "Er zijn geen vragen gevonden."
+
+#: views/faq/single.blade.php:53
+msgid "Back to overview"
+msgstr "Terug naar overzicht"
+
+#: views/faq/single.blade.php:83
+msgid "Other questions"
+msgstr "Andere vragen"
+
+#: views/header.blade.php:23
+msgid "Skip to content"
+msgstr "Meteen naar de content"
+
+#: views/header.blade.php:54 views/parts/content-none.blade.php:16
+msgid "Search in the site"
+msgstr "Zoek op de site"
+
+#: views/header.blade.php:77
+msgid "Primary Menu"
+msgstr "Hoofd Menu"
+
+#: views/parts/content-none.blade.php:9
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: views/parts/content-none.blade.php:12
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, maar niets kwam overeen met uw zoektermen. Probeer het opnieuw met "
+"enkele andere zoekwoorden."
+
+#: views/parts/content-none.blade.php:14
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+"Het lijkt erop dat we niet kunnen vinden wat u zoekt. Misschien kan onze "
+"zoekfunctie helpen."
+
+#: views/parts/content.blade.php:29 views/post/single.blade.php:70
+#, php-format
+msgid "Continue reading %s"
+msgstr "Verder lezen %s"
+
+#: views/parts/footer-extended.blade.php:23
+msgid "Driving innovation together"
+msgstr "Samen aanjagen van vernieuwing"
+
+#: views/parts/footer/copyright.blade.php:8
+msgid "Powered by"
+msgstr "Powered by"
+
+#: views/parts/single-contact-persons.blade.php:11
+msgid "Contact persons"
+msgstr "Contactpersonen"
+
+#: views/patterns/agenda-columns.blade.php:13
+#: views/patterns/agenda-columns.blade.php:25
+#: views/patterns/agenda-columns.blade.php:37
+msgid "Enter title"
+msgstr "Voer titel in"
+
+#: views/patterns/agenda-columns.blade.php:17
+#: views/patterns/agenda-columns.blade.php:29
+#: views/patterns/agenda-columns.blade.php:41
+msgid "Enter text"
+msgstr "Voer tekst in"
+
+#: views/post/comment.blade.php:13
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: views/post/comment.blade.php:16
+msgid "Edit"
+msgstr "Bewerk"
+
+#: views/post/comment.blade.php:28
+msgid "Your comment is awaiting moderation."
+msgstr "Jouw reactie wacht op moderatie."
+
+#: views/post/item.blade.php:19
+msgid "Read article"
+msgstr "Lees artikel"
+
+#: views/post/related.blade.php:10
+msgid "Related posts"
+msgstr "Gerelateerde artikelen"
+
+#: views/search.blade.php:31
+msgid "Search results"
+msgstr "Zoekresultaten"
+
+#: views/search.blade.php:34
+#, php-format
+msgid "We found %s on the searchterm %s"
+msgstr "Wij vonden %s op de zoekterm %s"
+
+#: views/search.blade.php:34
+msgid "no results"
+msgstr "geen resultaten"
+
+#: views/search.blade.php:34
+msgid " result"
+msgstr " resultaat"
+
+#: views/search.blade.php:34
+msgid " results"
+msgstr " resultaten"
+
+#: views/search.blade.php:55 views/search.blade.php:57
+msgid "Type"
+msgstr "Type"
+
+#: views/search/item.blade.php:19
+msgid "Article"
+msgstr "Artikel"
+
+#: views/search/item.blade.php:20
+msgid "Page"
+msgstr "Pagina"
+
+#: views/search/item.blade.php:21
+msgid "Event"
+msgstr "Evenement"
+
+#: views/search/item.blade.php:22
+msgid "Asset"
+msgstr "Asset"
+
+#: views/search/item.blade.php:24
+msgid "FAQ"
+msgstr "FAQ"
+
+#: views/search/item.blade.php:25
+msgid "Vacancy"
+msgstr "Vacature"
+
+#: views/search/not-found.blade.php:2
+msgid "Nothing found, try again."
+msgstr "Niks gevonden, probeer opnieuw."
+
+#: views/vacancy/archive.blade.php:42
+msgid "Functioncategory"
+msgstr "Functiecategorie"
+
+#: views/vacancy/archive.blade.php:52
+msgid "Hours"
+msgstr "Uren"
+
+#: views/vacancy/not-found.blade.php:2
+msgid "No vacancies were found."
+msgstr "Er werden geen vacatures gevonden."
+
+#: views/vacancy/single.blade.php:70
+msgid "Degree"
+msgstr "Opleidingsniveau"
+
+#: views/vacancy/single.blade.php:74
+msgid "Employment"
+msgstr "Dienstverband"
+
+#: views/vacancy/single.blade.php:78
+msgid "Salary"
+msgstr "Salaris"
+
+#: views/vacancy/single.blade.php:82
+msgid "Hours per week"
+msgstr "Uren per week"
+
+#: views/vacancy/single.blade.php:86
+msgid "Deadline"
+msgstr "Deadline"
+
+#: views/wp-widgets/post-type-filter-surf-widget.blade.php:23
+msgid "Toggle post types"
+msgstr "Toggle bericht types"
+
+#: views/wp-widgets/post-type-filter-surf-widget.blade.php:24
+msgid "Post type"
+msgstr "Bericht type"
+
+#: archive-surf-agenda.php:52
+msgid "Events in the past"
+msgstr "Events in het verleden"
+
+#: archive-surf-faq.php:44
+msgid "Title - Ascending"
+msgstr "Titel - Oplopend"
+
+#: archive-surf-faq.php:45
+msgid "Title - Descending"
+msgstr "Titel - Aflopend"
+
+#: archive-surf-faq.php:49
+msgid "ID - Ascending"
+msgstr "ID - Oplopend"
+
+#: archive-surf-faq.php:50
+msgid "ID - Descending"
+msgstr "ID - Aflopend"
+
+#: cache/views/10b2aabd02237af6dd007d48aa9543a72bce26e4.php:18
+#: includes/PostTypes/Asset.php:255
+msgid "Examples"
+msgstr "Voorbeelden"
+
+#: cache/views/ae44d7eb18dfdce8ce0f3ecb801ec9daf455ad54.php:37
+msgid "Uncategorized"
+msgstr "Zonder categorie"
+
+#: cache/views/b243374ee1a6981b55e29000be45556ba942b5cd.php:51
+msgid "Categories"
+msgstr "Categorieën"
+
+#: cache/views/b243374ee1a6981b55e29000be45556ba942b5cd.php:112
+msgid "Assets"
+msgstr "Assets"
+
+#: cache/views/bb2bd94fc77b580444248693c7fac978f20fcaef.php:2
+msgid "No assets have been found."
+msgstr "Geen berichten zijn gevonden."
+
+#: includes/Admin/BlockPatterns.php:23
+msgctxt "Block pattern category"
+msgid "Template parts"
+msgstr "Sjabloon onderdelen"
+
+#: includes/Admin/BlockPatterns.php:27
+msgctxt "Block pattern title"
+msgid "Agenda - Columns"
+msgstr "Agenda - Kolommen"
+
+#: includes/Admin/BlockPatterns.php:28
+msgctxt "Block pattern description"
+msgid "A pattern that setups the agenda columns block"
+msgstr "Een sjabloon dat kolommen klaarzet in de stijl van de agenda"
+
+#: includes/Admin/Blocks.php:70
+#, php-format
+msgctxt "admin"
+msgid "Error: View not found %s"
+msgstr "Fout: View niet gevonden %s"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:22 includes/Admin/Pages.php:89
+msgctxt "admin"
+msgid "Event settings"
+msgstr "Evenement Instellingen"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:53
+msgctxt "admin"
+msgid "Archive page"
+msgstr "Archiefpagina"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:60
+msgctxt "admin"
+msgid "Hide expired items"
+msgstr "Verberg verlopen items"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:65
+msgctxt "admin"
+msgid "Hide expired items and add a filter that allows the user to see them."
+msgstr ""
+"Verberg verlopen items en voeg een filter toe waarmee de gebruiker ze kan "
+"zien."
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:69
+msgctxt "admin"
+msgid "Detail page"
+msgstr "Detailpagina"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:76
+msgctxt "admin"
+msgid "Show related items"
+msgstr "Toon gerelateerde items"
+
+#: includes/Admin/MetaBoxes/AgendaSettings.php:81
+msgctxt "admin"
+msgid "Show the related items block at the bottom of the single page."
+msgstr "Toon het “gerelateerde items”-blok onderaan de detailpagina."
+
+#: includes/Admin/MetaBoxes/ContactPersonsSettings.php:27
+#: includes/Admin/MetaBoxes/ContactPersonsSettings.php:98
+msgctxt "admin"
+msgid "Contact persons"
+msgstr "Contactpersonen"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:20
+msgctxt "admin"
+msgid "Menu item settings"
+msgstr "Instellingen van menu-items"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:68
+msgctxt "admin"
+msgid "Button type"
+msgstr "Button type"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:72
+#: includes/PostTypes/Asset.php:657 includes/PostTypes/Asset.php:950
+#: languages/_jsx-strings.js:105
+msgctxt "admin"
+msgid "None"
+msgstr "Geen"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:73
+msgctxt "admin"
+msgid "Filled"
+msgstr "Gevuld"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:74
+msgctxt "admin"
+msgid "Transparent"
+msgstr "Transparant"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:79
+msgctxt "admin"
+msgid "Button color"
+msgstr "Button kleur"
+
+#: includes/Admin/MetaBoxes/MenuItemSettings.php:85
+msgctxt "admin"
+msgid "Button hover color"
+msgstr "Button hover kleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:38
+#: includes/Admin/MetaBoxes/ThemeSettings.php:46
+#: includes/Admin/MetaBoxes/ThemeSettings.php:55
+#: includes/Core/Traits/HasLocalizedSettingsPage.php:73
+#: includes/Core/Traits/HasLocalizedSettingsPage.php:89
+#: includes/PostTypes/Agenda.php:317 includes/PostTypes/Asset.php:761
+#: includes/PostTypes/Download.php:179 includes/PostTypes/Faq.php:279
+#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:481
+#: languages/_jsx-strings.js:38
+msgctxt "admin"
+msgid "Settings"
+msgstr "Instellingen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:213
+#: includes/Admin/MetaBoxes/ThemeSettings.php:870
+msgctxt "admin"
+msgid "Site"
+msgstr "Site"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:220
+msgctxt "admin"
+msgid "Theme"
+msgstr "Thema"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:227
+#: includes/Admin/MetaBoxes/ThemeSettings.php:878
+msgctxt "admin"
+msgid "Logo's"
+msgstr "Logo's"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:231
+#: includes/Admin/MetaBoxes/ThemeSettings.php:883
+msgctxt "admin"
+msgid "Add logo"
+msgstr "Logo toevoegen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:235
+#: includes/Admin/MetaBoxes/ThemeSettings.php:888
+msgctxt "admin"
+msgid "Logo"
+msgstr "Logo"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:243
+#: includes/Admin/MetaBoxes/ThemeSettings.php:895
+msgctxt "admin"
+msgid "Logo size"
+msgstr "Logo formaat"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:257
+msgctxt "admin"
+msgid "Font"
+msgstr "Lettertype"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:265
+msgctxt "admin"
+msgid "Heading font"
+msgstr "Kop lettertype"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:273
+msgctxt "admin"
+msgid "Menu separator"
+msgstr "Menu Scheidingslijn"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:281
+#: includes/Admin/MetaBoxes/ThemeSettings.php:371
+msgctxt "admin"
+msgid "Separator image"
+msgstr "Scheidingslijn afbeelding"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:288
+#: includes/Admin/MetaBoxes/ThemeSettings.php:378
+msgctxt "admin"
+msgid "Negative margins"
+msgstr "Negatieve marges"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:289
+#: includes/Admin/MetaBoxes/ThemeSettings.php:379
+msgctxt "admin"
+msgid ""
+"Sometimes an image has some whitespace, to control this you can add negative "
+"margins to the top and bottom, to align the image better with the content."
+msgstr ""
+"Soms heeft een afbeelding wat witruimte, om dit te controleren kun je "
+"negatieve marges toevoegen aan de boven- en onderkant, om de afbeelding "
+"beter uit te lijnen met de inhoud."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:299
+#: includes/Admin/MetaBoxes/ThemeSettings.php:389
+msgctxt "admin"
+msgid "Mobile - Top"
+msgstr "Mobiel - Boven"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:309
+#: includes/Admin/MetaBoxes/ThemeSettings.php:399
+msgctxt "admin"
+msgid "Mobile - Bottom"
+msgstr "Mobiel - Onder"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:319
+#: includes/Admin/MetaBoxes/ThemeSettings.php:409
+msgctxt "admin"
+msgid "Tablet - Top"
+msgstr "Tablet - Boven"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:329
+#: includes/Admin/MetaBoxes/ThemeSettings.php:419
+msgctxt "admin"
+msgid "Tablet - Bottom"
+msgstr "Tablet - Onder"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:339
+#: includes/Admin/MetaBoxes/ThemeSettings.php:429
+msgctxt "admin"
+msgid "Desktop - Top"
+msgstr "Desktop - Boven"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:349
+#: includes/Admin/MetaBoxes/ThemeSettings.php:439
+msgctxt "admin"
+msgid "Desktop - Bottom"
+msgstr "Desktop - Onder"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:363
+msgctxt "admin"
+msgid "Global separator"
+msgstr "Globale scheidingslijn"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:451 languages/_jsx-strings.js:112
+msgctxt "admin"
+msgid "No margin"
+msgstr "Geen marges"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:460
+msgctxt "admin"
+msgid "Tags position"
+msgstr "Tags positie"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:461
+msgctxt "admin"
+msgid ""
+"Where do you want to show the tags, at the top of bottom of the post. Bottom "
+"is standard."
+msgstr ""
+"Waar wil je de tags laten zien? Bovenaan of onderaan een bericht. Onderaan "
+"is standaard."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:465
+#: includes/PostTypes/Asset.php:855 languages/_jsx-strings.js:134
+msgctxt "admin"
+msgid "Bottom"
+msgstr "Onderaan"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:466
+#: includes/PostTypes/Asset.php:854 includes/PostTypes/Asset.php:951
+#: includes/PostTypes/Page.php:250
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:164
+#: languages/_jsx-strings.js:133
+msgctxt "admin"
+msgid "Top"
+msgstr "Bovenaan"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:471
+msgctxt "admin"
+msgid "Show year in Event dates"
+msgstr "Toon jaar in Evenement datums"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:472
+msgctxt "admin"
+msgid "Select when to display the year in the Event dates of this site."
+msgstr ""
+"Selecteer wanneer het jaar moet worden weergegeven in de evenementdatums van "
+"deze site."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:476
+msgctxt "admin"
+msgid "Never"
+msgstr "Nooit"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:477
+msgctxt "admin"
+msgid "Always"
+msgstr "Altijd"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:478
+#, php-format
+msgctxt "admin"
+msgid "Only if not current (%s)"
+msgstr "Alleen indien niet huidige (%s)"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:484
+#: includes/PostTypes/Post.php:73 languages/_jsx-strings.js:44
+msgctxt "admin"
+msgid "Post date display"
+msgstr "Postdatum-weergave"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:485
+#: includes/PostTypes/Post.php:75
+msgctxt "admin"
+msgid ""
+"Select which date(s) you want to display. This only applies to posts and "
+"pages."
+msgstr ""
+"Selecteer welke datum/data getoond moet(en) worden. Dit geldt alleen voor "
+"posts en pagina’s."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:489
+#: includes/PostTypes/Post.php:80
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:163
+#: languages/_jsx-strings.js:34
+msgctxt "admin"
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:490
+#: includes/PostTypes/Post.php:81 languages/_jsx-strings.js:35
+msgctxt "admin"
+msgid "Published"
+msgstr "Gepubliceerd"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:491
+#: includes/PostTypes/Post.php:82 languages/_jsx-strings.js:36
+msgctxt "admin"
+msgid "Modified"
+msgstr "Bewerkt"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:492
+#: includes/PostTypes/Post.php:83 languages/_jsx-strings.js:37
+msgctxt "admin"
+msgid "Published and modified"
+msgstr "Gepubliceerd en bewerkt"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:498
+#: includes/Admin/MetaBoxes/ThemeSettings.php:909
+msgctxt "admin"
+msgid "Post date display - Published at text"
+msgstr "Postdatum-weergave - “Gepubliceerd op” tekst"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:499
+#: includes/Admin/MetaBoxes/ThemeSettings.php:910
+msgctxt "admin"
+msgid "This will be displayed before the post's published date."
+msgstr "Dit zal worden getoond voor de publicatiedatum van de post."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:506
+#: includes/Admin/MetaBoxes/ThemeSettings.php:917
+msgctxt "admin"
+msgid "Post date display - Modified at text"
+msgstr "Postdatum-weergave - “Bewerkt op” tekst"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:507
+#: includes/Admin/MetaBoxes/ThemeSettings.php:918
+msgctxt "admin"
+msgid "This will be displayed before the post's modified date."
+msgstr "Dit zal worden getoond voor de bewerkdatum van de post."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:525
+msgctxt "admin"
+msgid "Headings"
+msgstr "Kop lettertype"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:553
+#, php-format
+msgctxt "admin"
+msgid "Font %s"
+msgstr "Lettertype%s"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:576
+#: includes/Admin/MetaBoxes/ThemeSettings.php:584
+msgctxt "admin"
+msgid "Fonts"
+msgstr "Lettertypen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:588
+msgctxt "admin"
+msgid "Add font"
+msgstr "Lettertype toevoegen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:592
+msgctxt "admin"
+msgid "Name"
+msgstr "Naam"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:599
+#: includes/Helpers/RoadmapHelper.php:18 includes/PostTypes/Asset.php:705
+#: includes/Traits/HasIndexedPdf.php:99
+msgctxt "admin"
+msgid "File"
+msgstr "Bestand"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:621
+msgctxt "admin"
+msgid "Colors"
+msgstr "Kleuren"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:629
+msgctxt "admin"
+msgid "Primary color"
+msgstr "Primaire kleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:637
+msgctxt "admin"
+msgid "Secondary color"
+msgstr "Secundaire kleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:645
+msgctxt "admin"
+msgid "Tertiary color"
+msgstr "Tertiaire kleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:653
+msgctxt "admin"
+msgid "Quaternary color"
+msgstr "Tertiaire kleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:661
+msgctxt "admin"
+msgid "Header background color"
+msgstr "Header achtergrondkleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:662
+msgctxt "admin"
+msgid "This color will be used on items like: header"
+msgstr "Deze kleur wordt gebruikt bij elementen zoals: Footer"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:669
+msgctxt "admin"
+msgid "Footer background color"
+msgstr "Footer achtergrondkleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:670
+msgctxt "admin"
+msgid "This color will be used on items like: Footer"
+msgstr "Deze kleur wordt gebruikt bij elementen zoals: Footer"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:678
+msgctxt "admin"
+msgid "This color will be used on items like: Gravity Forms, Comment forms"
+msgstr ""
+"Deze kleur wordt gebruikt bij elementen zoals: Gravity Forms, Reactie "
+"formulier"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:679
+msgctxt "admin"
+msgid "Form background color"
+msgstr "Formulier achtergrondkleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:687
+msgctxt "admin"
+msgid "Global background color"
+msgstr "Globale achtergrondkleur"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:688
+msgctxt "admin"
+msgid ""
+"This color will be used on items like: Comments, Archive pages, FAQ items, "
+"Articles block, Downloads block, Featured Items block"
+msgstr ""
+"Deze kleur wordt gebruikt bij elementen zoals: Reacties, Archiefpagina’s, "
+"Filters, FAQ items, Artikelen blokken en meer"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:706
+msgctxt "admin"
+msgid "Images and buttons"
+msgstr "Afbeeldingen en knoppen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:714
+#: includes/PostTypes/Asset.php:887 includes/Taxonomies/AgendaLocation.php:163
+#: languages/_jsx-strings.js:107
+msgctxt "admin"
+msgid "Image"
+msgstr "Afbeelding"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:721
+#: includes/Admin/MetaBoxes/ThemeSettings.php:792 languages/_jsx-strings.js:207
+msgctxt "admin"
+msgid "Type"
+msgstr "Type"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:723
+msgctxt "admin"
+msgid "Select how you would like to show the images"
+msgstr "Selecteer hoe de afbeeldingen getoond moeten worden"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:726
+#: includes/Admin/MetaBoxes/ThemeSettings.php:797
+#: includes/Hooks/AcfHooks.php:43 includes/Traits/HasCategoryColor.php:47
+msgctxt "admin"
+msgid "Default"
+msgstr "Standaard"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:727
+#: includes/Admin/MetaBoxes/ThemeSettings.php:798
+msgctxt "admin"
+msgid "Square"
+msgstr "Vierkant"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:728
+#: includes/Admin/MetaBoxes/ThemeSettings.php:734
+#: includes/Admin/MetaBoxes/ThemeSettings.php:799
+#: includes/Admin/MetaBoxes/ThemeSettings.php:805
+msgctxt "admin"
+msgid "Rounded"
+msgstr "Ronding"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:729
+#: includes/Admin/MetaBoxes/ThemeSettings.php:749
+#: includes/Admin/MetaBoxes/ThemeSettings.php:800
+#: includes/Admin/MetaBoxes/ThemeSettings.php:820
+msgctxt "admin"
+msgid "Cutout"
+msgstr "Uitknip"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:736
+msgctxt "admin"
+msgid "Select how round you want the image to be"
+msgstr "Selecteer hoe rond de afbeeldingen moeten worden"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:751
+msgctxt "admin"
+msgid "This will be used to decide the cutout for each corner of an image."
+msgstr ""
+"Dit zal worden gebruikt voor het uitknippen van elke hoek in een afbeelding."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:757
+#: includes/Admin/MetaBoxes/ThemeSettings.php:832
+msgctxt "admin"
+msgid "Top left corner"
+msgstr "Linksboven hoek"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:762
+#: includes/Admin/MetaBoxes/ThemeSettings.php:837
+msgctxt "admin"
+msgid "Top right corner"
+msgstr "Rechtsboven hoek"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:767
+#: includes/Admin/MetaBoxes/ThemeSettings.php:842
+msgctxt "admin"
+msgid "Bottom left corner"
+msgstr "Linksonder hoek"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:772
+#: includes/Admin/MetaBoxes/ThemeSettings.php:847
+msgctxt "admin"
+msgid "Bottom right corner"
+msgstr "Rechtsonder hoek"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:785
+#: includes/PostTypes/Asset.php:797
+msgctxt "admin"
+msgid "Button"
+msgstr "Knop"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:794
+msgctxt "admin"
+msgid "Select how you would like to show the buttons"
+msgstr "Selecteer hoe de knoppen getoond moeten worden"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:807
+msgctxt "admin"
+msgid "Select how round you want the button to be"
+msgstr "Selecteer hoe rond de knoppen moeten worden"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:823
+msgctxt "admin"
+msgid "This will be used to decide the cutout for each corner of an button."
+msgstr "Dit zal worden gebruikt voor het uitknippen van elke hoek in een knop."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:936
+msgctxt "admin"
+msgid "Social media"
+msgstr "Sociale media"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:963
+#: includes/Admin/MetaBoxes/ThemeSettings.php:969
+msgctxt "admin"
+msgid "Error page"
+msgstr "Foutpagina / 404"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:970
+msgctxt "admin"
+msgid ""
+"Select an error page, when there is not one selected, a standard page will "
+"be shown."
+msgstr ""
+"Selecteer een foutpagina, als er geen is geselecteerd, wordt een "
+"standaardpagina getoond."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:987
+#: includes/Admin/Sidebars.php:22 includes/Admin/Sidebars.php:23
+msgctxt "admin"
+msgid "Footer"
+msgstr "Footer"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:994
+msgctxt "admin"
+msgid "Simple footer"
+msgstr "Simpele footer"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1001
+msgctxt "admin"
+msgid "Copyright"
+msgstr "Copyright"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1016
+msgctxt "admin"
+msgid "Breadcrumbs"
+msgstr "Kruimelpad"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1023
+msgctxt "admin"
+msgid "Deactivate breadcrumbs"
+msgstr "Kruimelpad verbergen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1024
+msgctxt "admin"
+msgid "Select post types where you would like to deactivate the breadcrumbs"
+msgstr "Selecteer post types waar je het kruimelpad zou willen verbergen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1028 languages/_jsx-strings.js:55
+msgctxt "admin"
+msgid "Posts"
+msgstr "Posts"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1029
+msgctxt "admin"
+msgid "Pages"
+msgstr "Pagina’s"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1030
+msgctxt "admin"
+msgid "Agenda"
+msgstr "Agenda"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1031
+msgctxt "admin"
+msgid "Assets"
+msgstr "Assets"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1032 languages/_jsx-strings.js:71
+msgctxt "admin"
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1033
+msgctxt "admin"
+msgid "FAQs"
+msgstr "FAQs"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1034
+msgctxt "admin"
+msgid "Vacancies"
+msgstr "Vacatures"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1048
+msgctxt "admin"
+msgid "Content Sharing"
+msgstr "Content delen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1056
+#, php-format
+msgctxt "admin"
+msgid "Allow for sharing items via %1$s"
+msgstr "Delen van items via %1$s toestaan"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1078
+msgctxt "admin"
+msgid "Search labels"
+msgstr "Labels zoeken"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1085
+msgctxt "admin"
+msgid "Search page title"
+msgstr "Pagina titel zoeken"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1088
+msgctxt "admin"
+msgid "Search results"
+msgstr "Zoekresultaten"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1126
+#, php-format
+msgctxt "admin"
+msgid "Alternative search name: %s"
+msgstr "Alternatieve zoeknaam: %s"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1155
+#, php-format
+msgctxt "admin"
+msgid "Alternative search name: %s (%s)"
+msgstr "Alternatieve zoeknaam: %s (%s)"
+
+#: includes/Admin/MetaBoxes/UserSettings.php:20
+msgctxt "admin"
+msgid "User settings"
+msgstr "Gebruiker instellingen"
+
+#: includes/Admin/MetaBoxes/UserSettings.php:51
+msgctxt "admin"
+msgid "Disable archive"
+msgstr "Archief uitschakelen"
+
+#: includes/Admin/Pages.php:43 includes/Admin/Pages.php:44
+#: includes/Admin/Pages.php:47 includes/Admin/Pages.php:54
+#: includes/Admin/Pages.php:55 includes/Admin/Pages.php:77
+#: includes/Admin/Pages.php:78
+msgctxt "admin"
+msgid "Theme Settings"
+msgstr "Thema Instellingen"
+
+#: includes/Admin/Pages.php:66 includes/Admin/Pages.php:67
+#, php-format
+msgctxt "admin"
+msgid "Theme Settings (%s)"
+msgstr "Thema Instellingen (%s)"
+
+#: includes/Admin/Pages.php:133 includes/Admin/Pages.php:134
+#: languages/_jsx-strings.js:5
+msgctxt "admin"
+msgid "Setup Wizard"
+msgstr "Setup Wizard"
+
+#: includes/Admin/Widgets/AppStoresWidget.php:22
+msgctxt "admin"
+msgid "App Stores"
+msgstr "App stores"
+
+#: includes/Admin/Widgets/AppStoresWidget.php:24
+msgctxt "admin"
+msgid "Show the app store buttons."
+msgstr "Toon de app store knoppen."
+
+#: includes/Admin/Widgets/AppStoresWidget.php:83
+msgctxt "admin"
+msgid "Android"
+msgstr "Android"
+
+#: includes/Admin/Widgets/AppStoresWidget.php:86
+msgctxt "admin"
+msgid "iOS"
+msgstr "iOS"
+
+#: includes/Admin/Widgets/CustomContentWidget.php:22
+msgctxt "admin"
+msgid "Show custom content."
+msgstr "Toon aangepaste content."
+
+#: includes/Admin/Widgets/CustomContentWidget.php:33
+msgctxt "admin"
+msgid "Custom Content"
+msgstr "Aangepaste Inhoud"
+
+#: includes/Admin/Widgets/FormWidget.php:23
+msgctxt "admin"
+msgid "Form"
+msgstr "Formulier"
+
+#: includes/Admin/Widgets/FormWidget.php:25
+msgctxt "admin"
+msgid "Show a form."
+msgstr "Toon een formulier."
+
+#: includes/Admin/Widgets/NavMenuWidget.php:24
+msgctxt "admin"
+msgid "Navigation Menu"
+msgstr "Navigatiemenu"
+
+#: includes/Admin/Widgets/NavMenuWidget.php:26
+msgctxt "admin"
+msgid "Show a navigation menu."
+msgstr "Toon een navigatiemenu."
+
+#: includes/Admin/Widgets/SocialMenuWidget.php:23
+msgctxt "admin"
+msgid "Social Menu"
+msgstr "Sociaal menu"
+
+#: includes/Admin/Widgets/SocialMenuWidget.php:25
+msgctxt "admin"
+msgid "Show the social links."
+msgstr "Toon de sociale links."
+
+#: includes/Api/SyncCspController.php:64
+msgctxt "rest"
+msgid "You are not authorized to perform this action"
+msgstr ""
+
+#: includes/Api/SyncCspController.php:69
+msgctxt "rest"
+msgid "CSP Synced successfully"
+msgstr ""
+
+#: includes/Core/PostTypes/Registers.php:312
+#, php-format
+msgctxt "admin: post type general name"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/PostTypes/Registers.php:313
+#, php-format
+msgctxt "admin: post type singular name"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/PostTypes/Registers.php:314
+#, php-format
+msgctxt "admin: admin menu"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/PostTypes/Registers.php:315
+#, php-format
+msgctxt "admin: add new on admin bar"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/PostTypes/Registers.php:316
+#, php-format
+msgctxt "admin"
+msgid "Add %s"
+msgstr "%s toevoegen"
+
+#: includes/Core/PostTypes/Registers.php:317
+#, php-format
+msgctxt "admin"
+msgid "Add New %s"
+msgstr "Nieuwe %s toevoegen"
+
+#: includes/Core/PostTypes/Registers.php:318
+#, php-format
+msgctxt "admin"
+msgid "New %s"
+msgstr "Nieuw %s"
+
+#: includes/Core/PostTypes/Registers.php:319
+#, php-format
+msgctxt "admin"
+msgid "Edit %s"
+msgstr "Bewerk %s"
+
+#: includes/Core/PostTypes/Registers.php:320
+#: includes/Core/PostTypes/Registers.php:321
+#, php-format
+msgctxt "admin"
+msgid "View %s"
+msgstr "Bekijk %s"
+
+#: includes/Core/PostTypes/Registers.php:322
+#, php-format
+msgctxt "admin"
+msgid "All %s"
+msgstr "Alle %s"
+
+#: includes/Core/PostTypes/Registers.php:323
+#, php-format
+msgctxt "admin"
+msgid "Search %s"
+msgstr "Zoek %s"
+
+#: includes/Core/PostTypes/Registers.php:324
+#, php-format
+msgctxt "admin"
+msgid "Parent %s:"
+msgstr "Hoofd %s:"
+
+#: includes/Core/PostTypes/Registers.php:325
+#, php-format
+msgctxt "admin"
+msgid "No %s found."
+msgstr "Geen %s gevonden."
+
+#: includes/Core/PostTypes/Registers.php:326
+#, php-format
+msgctxt "admin"
+msgid "No %s found in Trash."
+msgstr "Geen %s gevonden in de prullenbak."
+
+#: includes/Core/PostTypes/Registers.php:342
+msgctxt "admin"
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Selecteer &mdash;"
+
+#: includes/Core/Taxonomies/Registers.php:154
+#, php-format
+msgctxt "post type general name"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/Taxonomies/Registers.php:155
+#, php-format
+msgctxt "post type singular name"
+msgid "%s"
+msgstr "%s"
+
+#: includes/Core/Taxonomies/Registers.php:156
+#, php-format
+msgid "Add %s"
+msgstr "%s Toevoegen"
+
+#: includes/Core/Taxonomies/Registers.php:157
+#, php-format
+msgid "Search %s"
+msgstr "Zoek %s"
+
+#: includes/Core/Taxonomies/Registers.php:158
+#, php-format
+msgid "Popular %s"
+msgstr "Populair %s"
+
+#: includes/Core/Taxonomies/Registers.php:159
+#, php-format
+msgid "All %s"
+msgstr "Alle %s"
+
+#: includes/Core/Taxonomies/Registers.php:160
+#, php-format
+msgid "Parent %s"
+msgstr "Hoofd %s"
+
+#: includes/Core/Taxonomies/Registers.php:161
+#, php-format
+msgid "Parent %s:"
+msgstr "Hoofd %s:"
+
+#: includes/Core/Taxonomies/Registers.php:162
+#, php-format
+msgid "Edit %s"
+msgstr "Bewerk %s"
+
+#: includes/Core/Taxonomies/Registers.php:163
+#, php-format
+msgid "View %s"
+msgstr "Bekijk %s"
+
+#: includes/Core/Taxonomies/Registers.php:164
+#, php-format
+msgid "Update %s"
+msgstr "Update %s"
+
+#: includes/Core/Taxonomies/Registers.php:165
+#, php-format
+msgid "Add New %s"
+msgstr "Nieuwe %s Toevoegen"
+
+#: includes/Core/Taxonomies/Registers.php:166
+#, php-format
+msgid "New %s Name"
+msgstr "Nieuwe %s Naam"
+
+#: includes/Core/Taxonomies/Registers.php:167
+#, php-format
+msgid "Add or remove %s"
+msgstr "Nieuwe %s Toevoegen of verwijderen"
+
+#: includes/Core/Taxonomies/Registers.php:168
+#, php-format
+msgid "No %s found."
+msgstr "Geen %s gevonden."
+
+#: includes/Core/Taxonomies/Registers.php:169
+#, php-format
+msgid "No %s"
+msgstr "Geen %s"
+
+#: includes/Core/Traits/HasLocalizedSettingsPage.php:68
+#: includes/Core/Traits/HasLocalizedSettingsPage.php:84
+#, php-format
+msgctxt "admin"
+msgid "Settings (%s)"
+msgstr "Instellingen (%s)"
+
+#: includes/Core/Traits/HasLocalizedSettingsPage.php:110
+msgid "Default"
+msgstr "Standaard"
+
+#: includes/Core/Traits/HasSettingsPage.php:49
+#: includes/Core/Traits/HasSettingsPage.php:57
+msgid "Settings"
+msgstr "Instellingen"
+
+#: includes/Enums/PdfIndexStatus.php:24
+msgid "PDF has been indexed"
+msgstr "PDF is geïndexeerd"
+
+#: includes/Enums/PdfIndexStatus.php:25
+msgid "PDF could not be indexed (secured PDFs are not supported)"
+msgstr ""
+"PDF kon niet worden geïndexeerd (beveiligde PDF’s worden niet ondersteund)"
+
+#: includes/Enums/PdfIndexStatus.php:26
+msgid "Only PDFs can be indexed"
+msgstr "Alleen PDF’s kunnen worden geïndexeerd"
+
+#: includes/Enums/PdfIndexStatus.php:27
+msgid "No file to index"
+msgstr "Geen bestand om te indexeren"
+
+#: includes/Enums/Theme.php:235
+msgid "SURF colors"
+msgstr "SURF-kleuren"
+
+#: includes/Enums/Theme.php:239
+msgctxt "admin"
+msgid "Blue"
+msgstr "Blauw"
+
+#: includes/Enums/Theme.php:244
+msgctxt "admin"
+msgid "Red"
+msgstr "Rood"
+
+#: includes/Enums/Theme.php:249
+msgctxt "admin"
+msgid "Green"
+msgstr "Groen"
+
+#: includes/Enums/Theme.php:254
+msgctxt "admin"
+msgid "Orange"
+msgstr "Oranje"
+
+#: includes/Enums/Theme.php:259
+msgctxt "admin"
+msgid "Purple"
+msgstr "Paars"
+
+#: includes/Enums/Theme.php:266
+msgctxt "admin"
+msgid "5% colors"
+msgstr "5% Kleuren"
+
+#: includes/Enums/Theme.php:270
+msgctxt "admin"
+msgid "Blue 5%"
+msgstr "Blauw 5%"
+
+#: includes/Enums/Theme.php:275
+msgctxt "admin"
+msgid "Red 5%"
+msgstr "Rood 5%"
+
+#: includes/Enums/Theme.php:280
+msgctxt "admin"
+msgid "Green 5%"
+msgstr "Groen 5%"
+
+#: includes/Enums/Theme.php:285
+msgctxt "admin"
+msgid "Orange 5%"
+msgstr "Oranje 5%"
+
+#: includes/Enums/Theme.php:290
+msgctxt "admin"
+msgid "Purple 5%"
+msgstr "Paars 5%"
+
+#: includes/Enums/Theme.php:297
+msgctxt "admin"
+msgid "Neutral colors"
+msgstr "Neutrale kleuren"
+
+#: includes/Enums/Theme.php:301
+msgctxt "admin"
+msgid "Black"
+msgstr "Zwart"
+
+#: includes/Enums/Theme.php:306
+msgctxt "admin"
+msgid "Grey"
+msgstr "Grijs"
+
+#: includes/Enums/Theme.php:311
+msgctxt "admin"
+msgid "White"
+msgstr "Wit"
+
+#: includes/Enums/Theme.php:321
+msgctxt "admin"
+msgid "Powered by colors"
+msgstr "Powered by kleuren"
+
+#: includes/Enums/Theme.php:325 includes/Providers/BlockServiceProvider.php:131
+msgctxt "admin"
+msgid "Primary"
+msgstr "Primair"
+
+#: includes/Enums/Theme.php:330 includes/Providers/BlockServiceProvider.php:137
+msgctxt "admin"
+msgid "Secondary"
+msgstr "Secundair"
+
+#: includes/Enums/Theme.php:335
+msgctxt "admin"
+msgid "Tertiary"
+msgstr "Tertiair"
+
+#: includes/Enums/Theme.php:340
+msgctxt "admin"
+msgid "Quaternary"
+msgstr "Kwartair"
+
+#: includes/Helpers/CutoutHelper.php:29
+msgctxt "admin"
+msgid "X axis"
+msgstr "X-as"
+
+#: includes/Helpers/CutoutHelper.php:39
+msgctxt "admin"
+msgid "Y axis"
+msgstr "Y-as"
+
+#: includes/Helpers/RoadmapHelper.php:19
+msgctxt "admin"
+msgid "PDF"
+msgstr "PDF"
+
+#: includes/Helpers/RoadmapHelper.php:20
+msgctxt "admin"
+msgid "Chat bubble"
+msgstr "Chatballon"
+
+#: includes/Helpers/RoadmapHelper.php:21
+msgctxt "admin"
+msgid "Chat bubbles"
+msgstr "Chatballonnen"
+
+#: includes/Helpers/RoadmapHelper.php:22
+msgctxt "admin"
+msgid "Speech bubble"
+msgstr "Tekstballon"
+
+#: includes/Helpers/RoadmapHelper.php:23
+msgctxt "admin"
+msgid "Speech bubbles"
+msgstr "Tekstballonnen"
+
+#: includes/Helpers/RoadmapHelper.php:24
+msgctxt "admin"
+msgid "Address Cards"
+msgstr "Adreskaarten"
+
+#: includes/Helpers/RoadmapHelper.php:25
+msgctxt "admin"
+msgid "Clock"
+msgstr "Klok"
+
+#: includes/Helpers/RoadmapHelper.php:26
+msgctxt "admin"
+msgid "Bullseye"
+msgstr "Bullseye"
+
+#: includes/Helpers/RoadmapHelper.php:27
+msgctxt "admin"
+msgid "Calendar"
+msgstr "Kalender"
+
+#: includes/Helpers/RoadmapHelper.php:28
+msgctxt "admin"
+msgid "Newspaper"
+msgstr "Krant"
+
+#: includes/Helpers/RoadmapHelper.php:29
+msgctxt "admin"
+msgid "Clipboard"
+msgstr "Clipbord"
+
+#: includes/Helpers/RoadmapHelper.php:30
+msgctxt "admin"
+msgid "Code"
+msgstr "Code"
+
+#: includes/Helpers/RoadmapHelper.php:31
+msgctxt "admin"
+msgid "Envelope"
+msgstr "Envelop"
+
+#: includes/Helpers/RoadmapHelper.php:32
+msgctxt "admin"
+msgid "Notebook"
+msgstr "Notitieboek"
+
+#: includes/Helpers/RoadmapHelper.php:33
+msgctxt "admin"
+msgid "Heart"
+msgstr "Hart"
+
+#: includes/Helpers/RoadmapHelper.php:34
+msgctxt "admin"
+msgid "Lightbulb"
+msgstr "Gloeilamp"
+
+#: includes/Helpers/RoadmapHelper.php:35
+msgctxt "admin"
+msgid "List"
+msgstr "List"
+
+#: includes/Helpers/RoadmapHelper.php:36
+msgctxt "admin"
+msgid "Network"
+msgstr "Netwerk"
+
+#: includes/Helpers/RoadmapHelper.php:37
+msgctxt "admin"
+msgid "Wifi"
+msgstr "Wifi"
+
+#: includes/Helpers/RoadmapHelper.php:38
+msgctxt "admin"
+msgid "Experiment"
+msgstr "Experiment"
+
+#: includes/Helpers/RoadmapHelper.php:39
+msgctxt "admin"
+msgid "Databases"
+msgstr "Databases"
+
+#: includes/Helpers/RoadmapHelper.php:40
+msgctxt "admin"
+msgid "Cake"
+msgstr "Cake"
+
+#: includes/Helpers/RoadmapHelper.php:41
+msgctxt "admin"
+msgid "Star"
+msgstr "Ster"
+
+#: includes/Helpers/RoadmapHelper.php:42
+msgctxt "admin"
+msgid "Tree"
+msgstr "Boom"
+
+#: includes/Helpers/RoadmapHelper.php:43
+msgctxt "admin"
+msgid "Turntable"
+msgstr "Draaiplateau"
+
+#: includes/Helpers/RoadmapHelper.php:44
+msgctxt "admin"
+msgid "Paper plane"
+msgstr "Vliegtuig"
+
+#: includes/Helpers/SearchHelper.php:21
+msgctxt "placeholder"
+msgid "Search..."
+msgstr "Zoeken…"
+
+#: includes/Helpers/SearchHelper.php:28
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Zoek &hellip;"
+
+#: includes/Helpers/SocialHelper.php:30 includes/Helpers/SocialHelper.php:153
+msgctxt "admin"
+msgid "Twitter"
+msgstr "Twitter"
+
+#: includes/Helpers/SocialHelper.php:31 includes/Helpers/SocialHelper.php:154
+msgctxt "admin"
+msgid "Facebook"
+msgstr "Facebook"
+
+#: includes/Helpers/SocialHelper.php:32 includes/Helpers/SocialHelper.php:156
+msgctxt "admin"
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:462
+msgctxt "admin"
+msgid "Email"
+msgstr "E-mail"
+
+#: includes/Helpers/SocialHelper.php:34
+msgctxt "admin"
+msgid "Print"
+msgstr "Print"
+
+#: includes/Helpers/SocialHelper.php:68
+msgid "Share this on Twitter"
+msgstr "Deel dit op Twitter"
+
+#: includes/Helpers/SocialHelper.php:73
+msgid "Share this on Facebook"
+msgstr "Deel dit op Facebook"
+
+#: includes/Helpers/SocialHelper.php:78
+msgid "Share this on LinkedIn"
+msgstr "Deel dit op LinkedIn"
+
+#: includes/Helpers/SocialHelper.php:83
+msgid "Share this by email"
+msgstr "Deel dit via e-mail"
+
+#: includes/Helpers/SocialHelper.php:88
+msgid "Print this item"
+msgstr "Print dit item"
+
+#: includes/Helpers/SocialHelper.php:135
+msgid "Read this:"
+msgstr "Lees dit:"
+
+#: includes/Helpers/SocialHelper.php:136
+msgid "This might interest you:"
+msgstr "Dit kan je interesseren:"
+
+#: includes/Helpers/SocialHelper.php:155
+msgctxt "admin"
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: includes/Helpers/SocialHelper.php:157
+msgctxt "admin"
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/Helpers/SocialHelper.php:158
+msgctxt "admin"
+msgid "Youtube"
+msgstr "Youtube"
+
+#: includes/Helpers/SocialHelper.php:159
+msgctxt "admin"
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: includes/Helpers/SocialHelper.php:160
+msgctxt "admin"
+msgid "TikTok"
+msgstr "TikTok"
+
+#: includes/Helpers/SocialHelper.php:171
+msgid "Follow us on X"
+msgstr "Volg ons op X"
+
+#: includes/Helpers/SocialHelper.php:176
+msgid "Follow us on Facebook"
+msgstr "Volg ons op Facebook"
+
+#: includes/Helpers/SocialHelper.php:181
+msgid "Follow us on Mastodon"
+msgstr "Volg ons op Mastodon"
+
+#: includes/Helpers/SocialHelper.php:186
+msgid "Follow us on LinkedIn"
+msgstr "Volg ons op LinkedIn"
+
+#: includes/Helpers/SocialHelper.php:191
+msgid "Follow us on Instagram"
+msgstr "Volg ons op Instagram"
+
+#: includes/Helpers/SocialHelper.php:196
+msgid "Follow us on Youtube"
+msgstr "Volg ons op YouTube"
+
+#: includes/Helpers/SocialHelper.php:201
+msgid "Follow us on Vimeo"
+msgstr "Volg ons op Vimeo"
+
+#: includes/Helpers/SocialHelper.php:206
+msgid "Follow us on TikTok"
+msgstr "Volg ons op TikTok"
+
+#: includes/Hooks/AcfHooks.php:81
+msgctxt "error"
+msgid "Invalid font file type."
+msgstr ""
+
+#: includes/Hooks/ConfigHooks.php:256
+msgctxt "rest"
+msgid "Only authenticated users can access the REST API."
+msgstr "Alleen geverifieerde gebruikers hebben toegang tot de REST API."
+
+#: includes/Hooks/ConfigHooks.php:328
+msgid "React on this article"
+msgstr "Reageer op dit artikel"
+
+#: includes/Hooks/ConfigHooks.php:333
+msgid "Add your comment"
+msgstr "Plaats jouw reactie"
+
+#: includes/Hooks/ConfigHooks.php:334
+msgid ""
+"You are currently logged in, therefor you don't see the fields for name, "
+"email etc."
+msgstr ""
+"Je bent op dit moment ingelogd. Daarom zien je niet de velden voor naam, e-"
+"mail etcetera."
+
+#: includes/Hooks/ImageHooks.php:66
+msgctxt "admin"
+msgid "Hero Large"
+msgstr "Hero Groot"
+
+#: includes/Hooks/ImageHooks.php:67
+msgctxt "admin"
+msgid "Hero Small"
+msgstr "Hero Klein"
+
+#: includes/Plugins/Acf/Acf.php:20
+msgctxt "plugin"
+msgid "ACF"
+msgstr "ACF"
+
+#: includes/Plugins/AcfPro/AcfPro.php:23
+msgctxt "plugin"
+msgid "ACF Pro"
+msgstr "ACF Pro"
+
+#: includes/Plugins/AcfPro/AcfPro.php:66
+#: includes/Plugins/GravityForms/GravityForms.php:60
+#: includes/Plugins/Plugin.php:79
+#: includes/Plugins/PolylangPro/PolylangPro.php:74
+msgctxt "error"
+msgid "Could not fetch plugin info."
+msgstr "Kon geen plug-in-informatie ophalen."
+
+#: includes/Plugins/AcfPro/AcfPro.php:73
+msgctxt "error"
+msgid "Could not find package info."
+msgstr "Kon geen package informatie vinden."
+
+#: includes/Plugins/AcfPro/AcfPro.php:79
+#: includes/Plugins/GravityForms/GravityForms.php:74
+#: includes/Plugins/PolylangPro/PolylangPro.php:84
+msgctxt "error"
+msgid "Could not find download link, is the license key correct?"
+msgstr "Kon de downloadlink niet vinden, is de licentiesleutel correct?"
+
+#: includes/Plugins/AcfPro/AcfPro.php:90
+msgctxt "error"
+msgid "Could not download plugin, is the license key correct?"
+msgstr "Kon de plug-in niet downloaden, is de licentiesleutel correct?"
+
+#: includes/Plugins/AcfPro/AcfPro.php:99 includes/Plugins/Plugin.php:114
+msgctxt "error"
+msgid "Could not write plugin zip to disk"
+msgstr "Kon de plugin zip niet wegschrijven"
+
+#: includes/Plugins/AcfPro/AcfPro.php:118
+msgctxt "error"
+msgid "ACF Pro is not activated."
+msgstr "ACF Pro is niet geactiveerd."
+
+#: includes/Plugins/CspManager/CspManager.php:23
+msgctxt "plugin"
+msgid "CSP Manager"
+msgstr "CSP Manager"
+
+#: includes/Plugins/GravityForms/GravityForms.php:66
+msgctxt "error"
+msgid "Invalid response from license server."
+msgstr ""
+
+#: includes/Plugins/GravityForms/GravityForms.php:69
+msgctxt "error"
+msgid "Unexpected response format from license server."
+msgstr ""
+
+#: includes/Plugins/OpenIdConnect/OpenIdConnect.php:19
+msgctxt "plugin"
+msgid "OpenID Connect"
+msgstr "OpenID Connect"
+
+#: includes/Plugins/Plugin.php:54
+#, php-format
+msgctxt "error"
+msgid "Could not open zip file %s."
+msgstr "Kon zip-bestand niet openen %s."
+
+#: includes/Plugins/Plugin.php:58
+msgctxt "error"
+msgid "Could not extract plugin."
+msgstr "Kon de plug-in niet uitpakken."
+
+#: includes/Plugins/Plugin.php:86
+msgctxt "error"
+msgid "Could not find download link."
+msgstr "Kon de downloadlink niet vinden."
+
+#: includes/Plugins/Plugin.php:103
+msgctxt "error"
+msgid "Could not download plugin."
+msgstr "Kon de plug-in niet downloaden."
+
+#: includes/Plugins/Plugin.php:108
+msgctxt "error"
+msgid "Downloaded plugin zip is empty."
+msgstr ""
+
+#: includes/Plugins/PolylangPro/PolylangPro.php:106
+msgctxt "error"
+msgid "Polylang Pro is not installed."
+msgstr "Polylang Pro is niet geïnstalleerd."
+
+#: includes/Plugins/PolylangPro/PolylangPro.php:110
+msgctxt "error"
+msgid "Polylang Pro is not installed: constants are not available."
+msgstr "Polylang Pro is niet geïnstalleerd: constanten zijn niet beschikbaar."
+
+#: includes/Plugins/Redirection/Redirection.php:45
+#, php-format
+msgctxt "admin"
+msgid ""
+"This plugin needs to be configured after activating. <a href=\"%s\" "
+"target=\"_blank\">Click here to open the setup in a new tab</a>."
+msgstr ""
+"Deze plugin moet geconfigureerd worden na activatie. <a href=\"%s\" "
+"target=\"_blank\">Klik hier om de setup in een nieuw tabblad te openen</a>."
+
+#: includes/PostTypes/Agenda.php:41
+msgctxt "CPT slug"
+msgid "agenda"
+msgstr "agenda"
+
+#: includes/PostTypes/Agenda.php:49
+msgctxt "CPT label singular"
+msgid "Event"
+msgstr "Evenement"
+
+#: includes/PostTypes/Agenda.php:57
+msgctxt "CPT label plural"
+msgid "Events"
+msgstr "Evenementen"
+
+#: includes/PostTypes/Agenda.php:321
+msgctxt "admin"
+msgid "Start date"
+msgstr "Start datum"
+
+#: includes/PostTypes/Agenda.php:329
+msgctxt "admin"
+msgid "End date"
+msgstr "Eind datum"
+
+#: includes/PostTypes/Agenda.php:340
+msgctxt "admin"
+msgid "Location Settings"
+msgstr "Locatie instellingen"
+
+#: includes/PostTypes/Agenda.php:345
+msgctxt "admin"
+msgid "Show location"
+msgstr "Toon locatie"
+
+#: includes/PostTypes/Agenda.php:346
+msgctxt "admin"
+msgid "Show location on the single page"
+msgstr "Toon de locatie op de detailpagina"
+
+#: includes/PostTypes/Asset.php:58
+msgctxt "CPT slug"
+msgid "assets"
+msgstr "assets"
+
+#: includes/PostTypes/Asset.php:66
+msgctxt "CPT label singular"
+msgid "Asset"
+msgstr "Asset"
+
+#: includes/PostTypes/Asset.php:74
+msgctxt "CPT label plural"
+msgid "Assets"
+msgstr "Assets"
+
+#: includes/PostTypes/Asset.php:303
+msgctxt "default author name"
+msgid "Surf"
+msgstr "Surf"
+
+#: includes/PostTypes/Asset.php:318
+msgid "Related assets"
+msgstr "Soortgelijke assets"
+
+#: includes/PostTypes/Asset.php:433
+msgid "SURF approved"
+msgstr "SURF Approved"
+
+#: includes/PostTypes/Asset.php:440
+msgid "SURF developed"
+msgstr "SURF Developed"
+
+#: includes/PostTypes/Asset.php:450
+#, php-format
+msgid "Production date %1$s"
+msgstr "Productiedatum %1$s"
+
+#: includes/PostTypes/Asset.php:459
+#, php-format
+msgid "Last update on %1$s"
+msgstr "Laatste update op %1$s"
+
+#: includes/PostTypes/Asset.php:470
+#, php-format
+msgid "Planned review on %1$s"
+msgstr "Geplande beoordeling op %1$s"
+
+#: includes/PostTypes/Asset.php:475
+#, php-format
+msgid "Reviewed at %1$s"
+msgstr "Beoordeeld op %1$s"
+
+#: includes/PostTypes/Asset.php:506 includes/PostTypes/Asset.php:644
+msgctxt "admin"
+msgid "Review Date"
+msgstr "Review Datum"
+
+#: includes/PostTypes/Asset.php:597
+msgctxt "admin"
+msgid "General"
+msgstr "Algemeen"
+
+#: includes/PostTypes/Asset.php:603
+msgctxt "admin"
+msgid "Author Type"
+msgstr "Auteur Type"
+
+#: includes/PostTypes/Asset.php:607 includes/PostTypes/Asset.php:614
+msgctxt "admin"
+msgid "User"
+msgstr "Gebruiker"
+
+#: includes/PostTypes/Asset.php:608 languages/_jsx-strings.js:89
+msgctxt "admin"
+msgid "Text"
+msgstr "Tekst"
+
+#: includes/PostTypes/Asset.php:629
+msgctxt "admin"
+msgid "Author"
+msgstr "Auteur"
+
+#: includes/PostTypes/Asset.php:652 includes/PostTypes/Faq.php:461
+msgctxt "admin"
+msgid "Label"
+msgstr "Label"
+
+#: includes/PostTypes/Asset.php:658
+msgctxt "Asset label"
+msgid "SURF approved"
+msgstr "SURF Approved"
+
+#: includes/PostTypes/Asset.php:659
+msgctxt "Asset label"
+msgid "SURF developed"
+msgstr "SURF Developed"
+
+#: includes/PostTypes/Asset.php:664
+msgctxt "admin"
+msgid "Lifecycle text"
+msgstr "Lifecycle tekst"
+
+#: includes/PostTypes/Asset.php:673 includes/PostTypes/Asset.php:713
+msgctxt "admin"
+msgid "File description"
+msgstr "Bestand omschrijving"
+
+#: includes/PostTypes/Asset.php:679 includes/PostTypes/Asset.php:699
+#: languages/_jsx-strings.js:51
+msgctxt "admin"
+msgid "Examples"
+msgstr "Voorbeelden"
+
+#: includes/PostTypes/Asset.php:684
+msgctxt "admin"
+msgid "Examples title"
+msgstr "Titel voorbeelden sectie"
+
+#: includes/PostTypes/Asset.php:691
+msgctxt "admin"
+msgid "Intro examples"
+msgstr "Introtekst voorbeelden"
+
+#: includes/PostTypes/Asset.php:719
+msgctxt "admin"
+msgid "Add example"
+msgstr "Voorbeeld toevoegen"
+
+#: includes/PostTypes/Asset.php:726 includes/PostTypes/Asset.php:750
+#: languages/_jsx-strings.js:152
+msgctxt "admin"
+msgid "Related assets"
+msgstr "Gerelateerde assets"
+
+#: includes/PostTypes/Asset.php:731
+msgctxt "admin"
+msgid "Related title"
+msgstr "Titel gerelateerde assets sectie"
+
+#: includes/PostTypes/Asset.php:738
+msgctxt "admin"
+msgid "Related description"
+msgstr "Intro gerelateerde assets"
+
+#: includes/PostTypes/Asset.php:746
+msgctxt "admin"
+msgid ""
+"By default, this section will be automatically filled with assets in the "
+"same (primary) category.<br/>Use the settings below, to override the default "
+"behaviour."
+msgstr ""
+"Standaard wordt deze sectie automatisch gevuld met assets in dezelfde "
+"(primaire) categorie.<br/>Gebruik de onderstaande instellingen om het "
+"standaardgedrag te overschrijven."
+
+#: includes/PostTypes/Asset.php:774 includes/PostTypes/Asset.php:812
+msgctxt "admin"
+msgid "Assets settings"
+msgstr "Assets Instellingen"
+
+#: includes/PostTypes/Asset.php:778
+msgctxt "admin"
+msgid "Contact block (single)"
+msgstr "Contact blok (single)"
+
+#: includes/PostTypes/Asset.php:791 includes/PostTypes/Asset.php:876
+#: includes/PostTypes/ContactPerson.php:94
+msgctxt "admin"
+msgid "Description"
+msgstr "Beschrijving"
+
+#: includes/PostTypes/Asset.php:816 languages/_jsx-strings.js:98
+msgctxt "admin"
+msgid "Search"
+msgstr "Zoeken"
+
+#: includes/PostTypes/Asset.php:823
+msgctxt "admin"
+msgid "Search deep"
+msgstr "Grondig zoeken"
+
+#: includes/PostTypes/Asset.php:828
+msgctxt "admin"
+msgid ""
+"Allow the global search to also look within Assets authors, categories, tags "
+"and files. <strong>Please note:</strong> this may affect performance."
+msgstr ""
+"Laat de globale zoekopdracht ook zoeken binnen auteurs, bestanden, "
+"categorieën en tags van Assets. <strong>Let op:</strong> dit kan de "
+"prestaties beïnvloeden."
+
+#: includes/PostTypes/Asset.php:835 languages/_jsx-strings.js:113
+msgctxt "admin"
+msgid "Header"
+msgstr "Header"
+
+#: includes/PostTypes/Asset.php:842
+msgctxt "admin"
+msgid "Fancy header"
+msgstr "Uitgebreide header"
+
+#: includes/PostTypes/Asset.php:846
+msgctxt "admin"
+msgid "Make the header, with the navigation and search, fancy."
+msgstr ""
+"Maak de header, met de navigatie en de zoekbalk, uitgebreid. Met titel, "
+"omschrijving en achtergrond."
+
+#: includes/PostTypes/Asset.php:850
+msgctxt "admin"
+msgid "Content position"
+msgstr "Inhoud positie"
+
+#: includes/PostTypes/Asset.php:902
+msgctxt "admin"
+msgid "Top fade"
+msgstr "Boven vervagen"
+
+#: includes/PostTypes/Asset.php:920
+msgctxt "admin"
+msgid "Bottom fade"
+msgstr "Onderkant vervagen"
+
+#: includes/PostTypes/Asset.php:938
+msgctxt "admin"
+msgid "Archive"
+msgstr "Archief"
+
+#: includes/PostTypes/Asset.php:945
+msgctxt "admin"
+msgid "Filters position"
+msgstr "Tags positie"
+
+#: includes/PostTypes/Asset.php:952 includes/PostTypes/Page.php:251
+#: includes/PostTypes/Page.php:273
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:165
+#: languages/_jsx-strings.js:138
+msgctxt "admin"
+msgid "Left"
+msgstr "Links"
+
+#: includes/PostTypes/Asset.php:953 includes/PostTypes/Page.php:274
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:166
+#: languages/_jsx-strings.js:140
+msgctxt "admin"
+msgid "Right"
+msgstr "Rechts"
+
+#: includes/PostTypes/Asset.php:967
+#, php-format
+msgid "Name %1$s"
+msgstr "Naam %1$s"
+
+#: includes/PostTypes/Asset.php:968
+msgid "(A - Z)"
+msgstr "(A - Z)"
+
+#: includes/PostTypes/Asset.php:969
+msgid "(Z - A)"
+msgstr "(Z - A)"
+
+#: includes/PostTypes/Asset.php:972
+#, php-format
+msgid "Publication date %1$s"
+msgstr "Publicatiedatum %1$s"
+
+#: includes/PostTypes/Asset.php:973 includes/PostTypes/Asset.php:978
+#: includes/PostTypes/Asset.php:983
+msgid "(oldest first)"
+msgstr "(oudste eerst)"
+
+#: includes/PostTypes/Asset.php:974
+msgid "(newest first)"
+msgstr "(nieuwste eerst)"
+
+#: includes/PostTypes/Asset.php:977
+#, php-format
+msgid "Modified date %1$s"
+msgstr "Bewerkt %1$s"
+
+#: includes/PostTypes/Asset.php:979 includes/PostTypes/Asset.php:984
+msgid "(latest first)"
+msgstr "(laatste eerst)"
+
+#: includes/PostTypes/Asset.php:982
+#, php-format
+msgid "Review date %1$s"
+msgstr "Beoordelingsdatum %1$s"
+
+#: includes/PostTypes/ContactPerson.php:43
+msgctxt "CPT slug"
+msgid "contact-person"
+msgstr "contact-person"
+
+#: includes/PostTypes/ContactPerson.php:51
+msgctxt "CPT label singular"
+msgid "Contact person"
+msgstr "Contactpersoon"
+
+#: includes/PostTypes/ContactPerson.php:59
+msgctxt "CPT label plural"
+msgid "Contact persons"
+msgstr "Contactpersonen"
+
+#: includes/PostTypes/ContactPerson.php:69
+msgctxt "admin"
+msgid "Contact person settings"
+msgstr "Content-instellingen"
+
+#: includes/PostTypes/ContactPerson.php:74
+msgctxt "admin"
+msgid "First name"
+msgstr "Voornaam"
+
+#: includes/PostTypes/ContactPerson.php:81
+msgctxt "admin"
+msgid "Last name"
+msgstr "Achternaam"
+
+#: includes/PostTypes/ContactPerson.php:88
+msgctxt "admin"
+msgid "Email address"
+msgstr "E-mailadres"
+
+#: includes/PostTypes/ContactPerson.php:100
+msgctxt "admin"
+msgid "Picture"
+msgstr "Afbeelding"
+
+#: includes/PostTypes/ContactPerson.php:104
+msgctxt "admin"
+msgid ""
+"The picture will be cropped to a square. Make sure the subject is centered."
+msgstr ""
+"De afbeelding wordt bijgesneden tot een vierkant. Zorg ervoor dat het "
+"onderwerp gecentreerd is."
+
+#: includes/PostTypes/Download.php:51
+msgctxt "CPT slug"
+msgid "downloads"
+msgstr "downloads"
+
+#: includes/PostTypes/Download.php:59
+msgctxt "CPT label singular"
+msgid "Download"
+msgstr "Download"
+
+#: includes/PostTypes/Download.php:67
+msgctxt "CPT label plural"
+msgid "Downloads"
+msgstr "Downloads"
+
+#: includes/PostTypes/Download.php:182
+msgctxt "admin"
+msgid "PDFs will be indexed for inclusion in search results"
+msgstr "PDF’s worden geïndexeerd om in de zoekresultaten te tonen"
+
+#: includes/PostTypes/Download.php:188
+msgctxt "admin"
+msgid "Date"
+msgstr "Datum"
+
+#: includes/PostTypes/Faq.php:46
+msgctxt "CPT slug"
+msgid "faqs"
+msgstr "faqs"
+
+#: includes/PostTypes/Faq.php:54
+msgctxt "CPT label singular"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/PostTypes/Faq.php:62
+msgctxt "CPT label plural"
+msgid "FAQs"
+msgstr "FAQs"
+
+#: includes/PostTypes/Faq.php:176
+#, php-format
+msgctxt "admin"
+msgid "Content block %s"
+msgstr "Contentblok %s"
+
+#: includes/PostTypes/Faq.php:250
+msgctxt "admin"
+msgid "Title prefix"
+msgstr "Titel voorvoegsel"
+
+#: includes/PostTypes/Faq.php:272 languages/_jsx-strings.js:24
+msgctxt "admin"
+msgid "Content settings"
+msgstr "Content instellingen"
+
+#: includes/PostTypes/Faq.php:283
+msgctxt "admin"
+msgid "ID"
+msgstr "ID"
+
+#: includes/PostTypes/Faq.php:289
+msgctxt "admin"
+msgid "Related questions"
+msgstr "Gerelateerde vragen"
+
+#: includes/PostTypes/Faq.php:308 includes/PostTypes/Faq.php:347
+msgctxt "admin"
+msgid "FAQ settings"
+msgstr "Tag instellingen"
+
+#: includes/PostTypes/Faq.php:313 includes/PostTypes/Faq.php:414
+msgctxt "admin"
+msgid "Single settings"
+msgstr "Detailpagina-instellingen"
+
+#: includes/PostTypes/Faq.php:322
+msgctxt "admin"
+msgid "The title shown on top of the FAQ single."
+msgstr "De titel die bovenaan de FAQ detailpagina wordt getoond."
+
+#: includes/PostTypes/Faq.php:326
+msgctxt "admin"
+msgid "Related questions title"
+msgstr "“Gerelateerde vragen”-titel"
+
+#: includes/PostTypes/Faq.php:331
+msgctxt "admin"
+msgid ""
+"The title shown on top of the \"related questions\" block on the FAQ single."
+msgstr ""
+"De titel die bovenaan het “gerelateerde vragen”-blok op de FAQ detailpagina "
+"wordt getoond."
+
+#: includes/PostTypes/Faq.php:352
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:155
+msgctxt "admin"
+msgid "Archive settings"
+msgstr "Archief instellingen"
+
+#: includes/PostTypes/Faq.php:358
+msgctxt "admin"
+msgid "Hide archive labels"
+msgstr "Verberg archief labels"
+
+#: includes/PostTypes/Faq.php:361
+msgctxt "admin"
+msgid "Hide the main category label on the archive page."
+msgstr "Verberg de hoofdcategorie labels op de archief pagina."
+
+#: includes/PostTypes/Faq.php:366
+msgctxt "admin"
+msgid "FAQs per page"
+msgstr "FAQs per pagina"
+
+#: includes/PostTypes/Faq.php:369
+msgctxt "admin"
+msgid ""
+"The amount of items to show on one page. Keep in mind that setting this to "
+"high numbers (100+) can negatively affect performance."
+msgstr ""
+"Het aantal items dat per pagina getoond wordt. Let er op dat een hoog getal "
+"(100+) negatieve effecten op het gebied van performance kan hebben."
+
+#: includes/PostTypes/Faq.php:374
+msgctxt "admin"
+msgid "Show parent categories"
+msgstr "Toon hoofdcategorieën"
+
+#: includes/PostTypes/Faq.php:377
+msgctxt "admin"
+msgid "Show the parent category above each category on a FAQ item."
+msgstr "Toon de hoofdcategorie boven iedere categorie bij een FAQ item."
+
+#: includes/PostTypes/Faq.php:382
+msgctxt "admin"
+msgid "Show export button"
+msgstr "Toon exportknop"
+
+#: includes/PostTypes/Faq.php:385
+msgctxt "admin"
+msgid ""
+"Show the export button that allows the user to generate an export of the "
+"items while respecting the selected filters and sorting."
+msgstr ""
+"Toon de exportknop die de gebruiker in staat stelt een export te genereren "
+"van alle items, waarbij rekening wordt gehouden met de geselecteerde filters "
+"en sortering."
+
+#: includes/PostTypes/Faq.php:390
+msgctxt "admin"
+msgid "Show dynamic filter counts"
+msgstr "Toon dynamische filter aantallen"
+
+#: includes/PostTypes/Faq.php:393
+msgctxt "admin"
+msgid "Show post counts behind each filter that update when changing filters."
+msgstr ""
+"Toon het aantal berichten achter elk filter dat wordt bijgewerkt wanneer "
+"filters worden gewijzigd."
+
+#: includes/PostTypes/Faq.php:398
+msgctxt "admin"
+msgid "Dynamic filter counts separator"
+msgstr "Scheidingsteken voor dynamische filter aantallen"
+
+#: includes/PostTypes/Faq.php:400
+msgctxt "admin"
+msgid ""
+"The separator that is shown between the current and total counts. For "
+"example: \"/\" would result in \"15/30\".<br>There is no default value, "
+"meaning that by default it would be shown as \"1530\"."
+msgstr ""
+"Het scheidingsteken dat wordt weergegeven tussen de huidige en totale "
+"aantallen. Bijvoorbeeld: “/“ zou resulteren in “15/30”.<br>Er is geen "
+"standaardwaarde, wat betekent dat deze standaard zou worden weergegeven als "
+"“1530”."
+
+#: includes/PostTypes/Faq.php:420
+msgctxt "admin"
+msgid "Enable this setting to unlock the title prefix and content blocks."
+msgstr ""
+"Zet deze instelling aan om een titel voorvoegsel en content blokken te "
+"ontgrendelen."
+
+#: includes/PostTypes/Faq.php:421
+msgctxt "admin"
+msgid "Use extra fields"
+msgstr "Gebruik extra velden"
+
+#: includes/PostTypes/Faq.php:428
+msgctxt "admin"
+msgid "The label for the title prefix."
+msgstr "Het label voor het titel voorvoegsel."
+
+#: includes/PostTypes/Faq.php:429
+msgctxt "admin"
+msgid "Title prefix label"
+msgstr "Titel voorvoegsel label"
+
+#: includes/PostTypes/Faq.php:444
+msgctxt "admin"
+msgid "Content blocks"
+msgstr "Content blokken"
+
+#: includes/PostTypes/Faq.php:451
+msgctxt "admin"
+msgid "Toggle the visibility of each content block."
+msgstr "Schakel de zichtbaarheid van ieder content blok in of uit."
+
+#: includes/PostTypes/Faq.php:460
+msgctxt "admin"
+msgid "The label that will be displayed above each content block."
+msgstr "Het label dat boven ieder content blok wordt getoond."
+
+#: includes/PostTypes/Faq.php:478
+msgctxt "admin"
+msgid "Disable ID"
+msgstr "ID uitschakelen"
+
+#: includes/PostTypes/Page.php:134
+msgctxt "admin"
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: includes/PostTypes/Page.php:135
+msgctxt "admin"
+msgid "Existing"
+msgstr "Bestaand"
+
+#: includes/PostTypes/Page.php:138
+msgctxt "admin"
+msgid "Custom"
+msgstr "Aangepast"
+
+#: includes/PostTypes/Page.php:141
+msgctxt "admin"
+msgid "Set up custom menu"
+msgstr "Aangepast menu instellen"
+
+#: includes/PostTypes/Page.php:145
+msgctxt "admin"
+msgid "Add menu item"
+msgstr "Menu item toevoegen"
+
+#: includes/PostTypes/Page.php:149
+msgctxt "admin"
+msgid "Item link"
+msgstr "Item link"
+
+#: includes/PostTypes/Page.php:174
+msgctxt "admin"
+msgid "Title - Full width"
+msgstr "Titel - Volledige breedte"
+
+#: includes/PostTypes/Page.php:175
+msgctxt "admin"
+msgid "Show the title as full width and not centered in grid."
+msgstr "Toon de titel over de volle breedte en niet gecentreerd in het raster."
+
+#: includes/PostTypes/Page.php:185
+msgctxt "admin"
+msgid "Hide title"
+msgstr "Titel verbergen"
+
+#: includes/PostTypes/Page.php:186
+msgctxt "admin"
+msgid "Hide the title on this page."
+msgstr "Verberg de titel op deze pagina."
+
+#: includes/PostTypes/Page.php:196
+msgctxt "admin"
+msgid "Hide breadcrumbs"
+msgstr "Verberg kruimelpad"
+
+#: includes/PostTypes/Page.php:197
+msgctxt "admin"
+msgid "Hide the breadcrumbs on this page."
+msgstr "Verberg het kruimelpad op deze pagina."
+
+#: includes/PostTypes/Page.php:207
+msgctxt "admin"
+msgid "Show date"
+msgstr "Toon datum"
+
+#: includes/PostTypes/Page.php:208
+msgctxt "admin"
+msgid "Show the page date."
+msgstr "Toon de paginadatum."
+
+#: includes/PostTypes/Page.php:218
+#: includes/Providers/ThemeServiceProvider.php:184
+msgctxt "admin"
+msgid "Top menu"
+msgstr "Top menu"
+
+#: includes/PostTypes/Page.php:226
+msgctxt "admin"
+msgid "Select existing menu"
+msgstr "Bestaand menu gebruiken"
+
+#: includes/PostTypes/Page.php:245
+msgctxt "admin"
+msgid "Top menu location"
+msgstr "Top menu locatie"
+
+#: includes/PostTypes/Page.php:268
+msgctxt "admin"
+msgid "Top menu alignment"
+msgstr "Top menu uitlijning"
+
+#: includes/PostTypes/Post.php:31
+msgctxt "admin"
+msgid "Post"
+msgstr "Nieuws"
+
+#: includes/PostTypes/Post.php:52
+msgctxt "admin"
+msgid "Layout Settings"
+msgstr "Layout Instellingen"
+
+#: includes/PostTypes/Post.php:57
+msgctxt "admin"
+msgid "Content Over the Image"
+msgstr "Inhoud over de afbeelding"
+
+#: includes/PostTypes/Post.php:68 languages/_jsx-strings.js:43
+msgctxt "admin"
+msgid "Publication date settings override"
+msgstr "Publicatie Instellingen"
+
+#: includes/PostTypes/Post.php:79 languages/_jsx-strings.js:33
+msgctxt "admin"
+msgid "Site default"
+msgstr "Standaard"
+
+#: includes/PostTypes/Vacancy.php:69
+msgctxt "CPT slug"
+msgid "vacancy"
+msgstr "vacature"
+
+#: includes/PostTypes/Vacancy.php:77
+msgctxt "CPT label singular"
+msgid "Vacancy"
+msgstr "Vacature"
+
+#: includes/PostTypes/Vacancy.php:85
+msgctxt "CPT label plural"
+msgid "Vacancies"
+msgstr "Vacatures"
+
+#: includes/PostTypes/Vacancy.php:364
+#: includes/Services/GithubReleaseService.php:59
+msgctxt "admin"
+msgid "Source"
+msgstr "Bron"
+
+#: includes/PostTypes/Vacancy.php:365
+msgctxt "admin"
+msgid ""
+"This vacancy cannot be edited since it has been imported from an external "
+"source."
+msgstr ""
+"Deze vacature kan niet worden aangepast omdat deze uit een externe bron is "
+"geïmporteerd."
+
+#: includes/PostTypes/Vacancy.php:375
+msgctxt "admin"
+msgid "Emply ID"
+msgstr "Emply ID"
+
+#: includes/PostTypes/Vacancy.php:376
+msgctxt "admin"
+msgid "The job id this vacancy has in Emply."
+msgstr "De job id van deze vacature in Emply."
+
+#: includes/PostTypes/Vacancy.php:386
+msgctxt "admin"
+msgid "Location"
+msgstr "Locatie"
+
+#: includes/PostTypes/Vacancy.php:396
+msgctxt "admin"
+msgid "Degree"
+msgstr "Opleidingsniveau"
+
+#: includes/PostTypes/Vacancy.php:406
+msgctxt "admin"
+msgid "Employment"
+msgstr "Dienstverband"
+
+#: includes/PostTypes/Vacancy.php:416
+msgctxt "admin"
+msgid "Salary"
+msgstr "Salaris"
+
+#: includes/PostTypes/Vacancy.php:426
+msgctxt "admin"
+msgid "Deadline"
+msgstr "Deadline"
+
+#: includes/PostTypes/Vacancy.php:439
+msgctxt "admin"
+msgid "Contact"
+msgstr "Contact"
+
+#: includes/PostTypes/Vacancy.php:442
+msgctxt "admin"
+msgid "Add Contact"
+msgstr "Contact toevoegen"
+
+#: includes/PostTypes/Vacancy.php:455
+msgctxt "admin"
+msgid "Person"
+msgstr "Persoon"
+
+#: includes/PostTypes/Vacancy.php:469
+msgctxt "admin"
+msgid "Phone"
+msgstr "Telefoonnummer"
+
+#: includes/PostTypes/Vacancy.php:495
+msgctxt "admin"
+msgid "Vacancy settings"
+msgstr "Vacature instellingen"
+
+#: includes/PostTypes/Vacancy.php:499
+msgctxt "admin"
+msgid "Roadmap default settings"
+msgstr "Content-instellingen"
+
+#: includes/PostTypes/Vacancy.php:505
+msgctxt "admin"
+msgid "Roadmap Title"
+msgstr "Roadmap Titel"
+
+#: includes/PostTypes/Vacancy.php:511
+msgctxt "admin"
+msgid "Roadmap Subtitle"
+msgstr "Roadmap Ondertitel"
+
+#: includes/PostTypes/Vacancy.php:517
+msgctxt "admin"
+msgid "Roadmap display"
+msgstr "Postdatum-weergave"
+
+#: includes/PostTypes/Vacancy.php:521 languages/_jsx-strings.js:157
+msgctxt "admin"
+msgid "Flow"
+msgstr "Flow"
+
+#: includes/PostTypes/Vacancy.php:522 languages/_jsx-strings.js:158
+msgctxt "admin"
+msgid "Slider"
+msgstr "Slider"
+
+#: includes/PostTypes/Vacancy.php:527
+msgctxt "admin"
+msgid "Roadmap icons"
+msgstr "Roadmap pictogrammen"
+
+#: includes/PostTypes/Vacancy.php:533
+msgctxt "admin"
+msgid "Steps"
+msgstr "Stappen"
+
+#: includes/PostTypes/Vacancy.php:539 languages/_jsx-strings.js:163
+msgctxt "admin"
+msgid "Icon"
+msgstr "Icoon"
+
+#: includes/PostTypes/Vacancy.php:561
+msgctxt "admin"
+msgid "Subtitle"
+msgstr "Toon titel"
+
+#: includes/PostTypes/Vacancy.php:569
+msgctxt "admin"
+msgid "Employment conditions settings"
+msgstr "Instellingen voor arbeidsvoorwaarden"
+
+#: includes/PostTypes/Vacancy.php:575
+msgctxt "admin"
+msgid "Employment conditions"
+msgstr "Arbeidsvoorwaarden"
+
+#: includes/PostTypes/Vacancy.php:583
+msgctxt "admin"
+msgid "Disclaimer"
+msgstr "Disclaimer"
+
+#: includes/PostTypes/Vacancy.php:585
+msgctxt "admin"
+msgid ""
+"This disclaimer will be shown on the vacancy page underneath the employment "
+"conditions."
+msgstr ""
+"Deze disclaimer zal worden getoond op de vacaturepagina onder de "
+"arbeidsvoorwaarden."
+
+#: includes/Providers/BlockServiceProvider.php:142
+#: includes/Providers/BlockServiceProvider.php:147
+msgctxt "admin"
+msgid "Larger"
+msgstr "Groter"
+
+#: includes/Providers/BlockServiceProvider.php:152
+#: includes/Providers/BlockServiceProvider.php:157
+#: includes/Providers/BlockServiceProvider.php:162
+#: includes/Providers/BlockServiceProvider.php:167
+msgctxt "admin"
+msgid "Extra wide"
+msgstr "Extra breed"
+
+#: includes/Providers/CacheServiceProvider.php:44
+msgctxt "admin"
+msgid "Clear SURF Cache"
+msgstr "SURF Cache legen"
+
+#: includes/Providers/CacheServiceProvider.php:47
+msgctxt "cache clear"
+msgid "SURF Cache cleared"
+msgstr "SURF Cache gewist"
+
+#: includes/Providers/PostTypeServiceProvider.php:95
+msgctxt "admin"
+msgid "Custom Post Types"
+msgstr "Custom Post Types"
+
+#: includes/Providers/PostTypeServiceProvider.php:98
+msgctxt "admin"
+msgid "Select the pages that are used for custom post type archives."
+msgstr ""
+"Selecteer de pagina's die worden gebruikt voor aangepaste post-type "
+"archieven."
+
+#: includes/Providers/ThemeServiceProvider.php:183
+msgctxt "admin"
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: includes/Providers/ThemeServiceProvider.php:185
+msgctxt "admin"
+msgid "Footer menu"
+msgstr "Footer menu"
+
+#: includes/Providers/ThemeServiceProvider.php:186
+msgctxt "admin"
+msgid "First column menu"
+msgstr "Menu in de eerste kolom"
+
+#: includes/Providers/ThemeServiceProvider.php:187
+msgctxt "admin"
+msgid "Second column menu"
+msgstr "Menu in de tweede kolom"
+
+#: includes/Providers/ThemeServiceProvider.php:188
+msgctxt "admin"
+msgid "Third column menu (Powered by Surf only)"
+msgstr ""
+"Menu in de derde kolom (Alleen beschikbaar op het thema Powered by Surf)"
+
+#: includes/Services/DefaultContentService.php:130
+#, php-format
+msgid "File does not exists: %s"
+msgstr "Bestand bestaat niet: %s"
+
+#: includes/Services/ExportService.php:210
+msgid "Data"
+msgstr "Gegevens"
+
+#: includes/Services/ExportService.php:300
+#: includes/Services/ExportService.php:515
+msgid "Title"
+msgstr "Titel"
+
+#: includes/Services/ExportService.php:306
+msgid "Description"
+msgstr "Beschrijving"
+
+#: includes/Services/ExportService.php:319
+msgid "Title prefix"
+msgstr "Titel voorvoegsel"
+
+#: includes/Services/ExportService.php:349
+#: includes/Services/ExportService.php:514
+msgid "ID"
+msgstr "ID"
+
+#: includes/Services/ExportService.php:395
+#: includes/Services/ExportService.php:471
+msgid "Selected filters"
+msgstr "Geselecteerde filters"
+
+#: includes/Services/ExportService.php:469
+msgid "Export for"
+msgstr "Export voor"
+
+#: includes/Services/GithubReleaseService.php:61
+msgctxt "admin"
+msgid "GitHub"
+msgstr "GitHub"
+
+#: includes/Services/GithubReleaseService.php:92
+msgctxt "admin"
+msgid "View full changelog"
+msgstr "Bekijk de volledige changelog"
+
+#: includes/Services/PluginService.php:67
+msgctxt "admin"
+msgid "Plugin was not found."
+msgstr "Plugin is niet gevonden."
+
+#: includes/Services/PluginService.php:71
+msgctxt "admin"
+msgid "Plugin requires a license."
+msgstr "Plugin vereist een licentie."
+
+#: includes/Services/PostTypeSitemapService.php:116
+msgid "Other content"
+msgstr "Overige inhoud"
+
+#: includes/Services/UpdateService.php:84
+msgctxt "admin"
+msgid "No changelog available."
+msgstr "Geen changelog beschikbaar."
+
+#: includes/Services/UpdateService.php:128
+msgctxt "admin"
+msgid "Current version"
+msgstr "Huidige versie"
+
+#: includes/Services/UpdateService.php:135
+msgctxt "admin"
+msgid "New version"
+msgstr "Nieuwe versie"
+
+#: includes/Services/UpdateService.php:142
+msgctxt "admin"
+msgid "Release date"
+msgstr "Releasedatum"
+
+#: includes/Services/UpdateService.php:149
+msgctxt "admin"
+msgid "WP requirements"
+msgstr "WP-vereisten"
+
+#: includes/Services/UpdateService.php:150
+#, php-format
+msgctxt "admin"
+msgid "WordPress %s"
+msgstr "WordPress %s"
+
+#: includes/Services/UpdateService.php:156
+msgctxt "admin"
+msgid "PHP requirements"
+msgstr "PHP-vereisten"
+
+#: includes/Services/UpdateService.php:157
+#, php-format
+msgctxt "admin"
+msgid "PHP %s"
+msgstr "PHP %s"
+
+#: includes/Taxonomies/AgendaCategory.php:29
+msgctxt "label singular - agenda-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/AgendaCategory.php:37
+msgctxt "label plural - agenda-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/AgendaCategory.php:45
+msgctxt "tax slug - agenda-category"
+msgid "category"
+msgstr "category"
+
+#: includes/Taxonomies/AgendaCategory.php:66
+#: includes/Taxonomies/AssetCategory.php:112
+#: includes/Taxonomies/Category.php:38
+#: includes/Taxonomies/DownloadCategory.php:66
+#: includes/Taxonomies/FaqCategory.php:81
+#: includes/Taxonomies/PageCategory.php:65
+#: includes/Taxonomies/VacancyCategory.php:64
+msgctxt "admin"
+msgid "Category settings"
+msgstr "Categorie-instellingen"
+
+#: includes/Taxonomies/AgendaLocation.php:36
+msgctxt "label singular - agenda-location"
+msgid "Location"
+msgstr "Locatie"
+
+#: includes/Taxonomies/AgendaLocation.php:44
+msgctxt "label plural - agenda-location"
+msgid "Location"
+msgstr "Locaties"
+
+#: includes/Taxonomies/AgendaLocation.php:52
+msgctxt "tax slug - agenda-location"
+msgid "location"
+msgstr "locatie"
+
+#: includes/Taxonomies/AgendaLocation.php:123
+msgctxt "admin"
+msgid "Location settings"
+msgstr "Locatie instellingen"
+
+#: includes/Taxonomies/AgendaLocation.php:127
+msgctxt "admin"
+msgid "Street"
+msgstr "Straat"
+
+#: includes/Taxonomies/AgendaLocation.php:133
+msgctxt "admin"
+msgid "City"
+msgstr "Plaats"
+
+#: includes/Taxonomies/AgendaLocation.php:139
+msgctxt "admin"
+msgid "Zipcode"
+msgstr "Postcode"
+
+#: includes/Taxonomies/AgendaLocation.php:145
+msgctxt "admin"
+msgid "Country"
+msgstr "Land"
+
+#: includes/Taxonomies/AgendaLocation.php:151
+msgctxt "admin"
+msgid "Location URL"
+msgstr "Locatie URL"
+
+#: includes/Taxonomies/AgendaLocation.php:157
+msgctxt "admin"
+msgid "Openstreetmap URL"
+msgstr "Openstreetmap URL"
+
+#: includes/Taxonomies/AssetCategory.php:30
+msgctxt "label singular - asset-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/AssetCategory.php:38
+msgctxt "label plural - asset-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/AssetCategory.php:46
+msgctxt "tax slug - asset-category"
+msgid "category"
+msgstr "category"
+
+#: includes/Taxonomies/AssetCategory.php:269
+msgid "Back to main categories"
+msgstr "Terug naar de hoofdcategorieën"
+
+#: includes/Taxonomies/AssetCategory.php:278
+#, php-format
+msgid "Back to %1$s"
+msgstr "Terug naar %1$s"
+
+#: includes/Taxonomies/DownloadCategory.php:29
+msgctxt "label singular - download-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/DownloadCategory.php:37
+msgctxt "label plural - download-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/DownloadCategory.php:45
+msgctxt "tax slug - download-category"
+msgid "category"
+msgstr "category"
+
+#: includes/Taxonomies/DownloadTag.php:26
+msgctxt "label singular - download-tag"
+msgid "Tag"
+msgstr "Tag"
+
+#: includes/Taxonomies/DownloadTag.php:34
+msgctxt "label plural - download-tag"
+msgid "Tags"
+msgstr "Tags"
+
+#: includes/Taxonomies/DownloadTag.php:42
+msgctxt "tax slug - download-tag"
+msgid "download-tag"
+msgstr "download-tag"
+
+#: includes/Taxonomies/FaqCategory.php:28
+msgctxt "label singular - faq-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/FaqCategory.php:36
+msgctxt "label plural - faq-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/FaqCategory.php:44
+msgctxt "tax slug - faq-category"
+msgid "category"
+msgstr "category"
+
+#: includes/Taxonomies/FaqCategory.php:86
+msgctxt "admin"
+msgid "Activate Toggle"
+msgstr "Toggle activeren"
+
+#: includes/Taxonomies/FaqTag.php:26
+msgctxt "label singular - faq-tag"
+msgid "Tag"
+msgstr "Tag"
+
+#: includes/Taxonomies/FaqTag.php:34
+msgctxt "label plural - faq-tag"
+msgid "Tags"
+msgstr "Tags"
+
+#: includes/Taxonomies/FaqTag.php:42
+msgctxt "tax slug - faq-tag"
+msgid "faq-tag"
+msgstr "faq-tag"
+
+#: includes/Taxonomies/PageCategory.php:28
+msgctxt "label singular - page-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/PageCategory.php:36
+msgctxt "label plural - page-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/PageCategory.php:44
+msgctxt "tax slug - page-category"
+msgid "page-category"
+msgstr "page-category"
+
+#: includes/Taxonomies/PageTag.php:28
+msgctxt "label singular - page-tag"
+msgid "Tag"
+msgstr "Tag"
+
+#: includes/Taxonomies/PageTag.php:36
+msgctxt "label plural - page-tag"
+msgid "Tags"
+msgstr "Tags"
+
+#: includes/Taxonomies/PageTag.php:44
+msgctxt "tax slug - page-tag"
+msgid "page-tag"
+msgstr "page-tag"
+
+#: includes/Taxonomies/PageTag.php:57
+msgctxt "admin"
+msgid "Tag settings"
+msgstr "Tag instellingen"
+
+#: includes/Taxonomies/VacancyCategory.php:27
+msgctxt "label singular - vacancy-category"
+msgid "Category"
+msgstr "Categorie"
+
+#: includes/Taxonomies/VacancyCategory.php:35
+msgctxt "label plural - vacancy-category"
+msgid "Categories"
+msgstr "Categorieën"
+
+#: includes/Taxonomies/VacancyCategory.php:43
+msgctxt "tax slug - vacancy-category"
+msgid "category"
+msgstr "category"
+
+#: includes/Taxonomies/VacancyHours.php:26
+msgctxt "label singular - vacancy-hours"
+msgid "Hours"
+msgstr "Uur"
+
+#: includes/Taxonomies/VacancyHours.php:34
+msgctxt "label plural - vacancy-hours"
+msgid "Hours"
+msgstr "Uren"
+
+#: includes/Taxonomies/VacancyHours.php:42
+msgctxt "tax slug - vacancy-hours"
+msgid "vacancy-hours"
+msgstr "vacancy-hours"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:55
+#, php-format
+msgctxt "admin"
+msgid "%s Widget Area"
+msgstr "%s widgetgebied"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:71
+#, php-format
+msgctxt "admin"
+msgid "Widget area for %s archive"
+msgstr "Widgetgebied voor %s archief"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:87
+#, php-format
+msgctxt "admin"
+msgid "%s Archive Settings"
+msgstr "%s-archief Instellingen"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:160
+msgctxt "admin"
+msgid "Widget area position"
+msgstr "Positie van het widgetgebied"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:172
+msgctxt "admin"
+msgid "Column count without widget area"
+msgstr "Kolomaantal zonder widgetgebied"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:175
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:188
+msgctxt "admin"
+msgid "1 Column"
+msgstr "1 kolom"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:176
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:189
+msgctxt "admin"
+msgid "2 Columns"
+msgstr "2 kolommen"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:177
+msgctxt "admin"
+msgid "3 Columns"
+msgstr "3 kolommen"
+
+#: includes/Traits/HasArchiveWidgetAreaFilters.php:185
+msgctxt "admin"
+msgid "Column count with widget area"
+msgstr "Kolomaantal met widgetgebied"
+
+#: includes/Traits/HasCategoryColor.php:53
+msgctxt "admin"
+msgid "Category color"
+msgstr "Categorie kleur"
+
+#: includes/Traits/HasFeaturedImage.php:29
+msgctxt "admin"
+msgid "Hide featured image"
+msgstr "Verberg uitgelichte afbeelding"
+
+#: includes/Traits/HasFeaturedImage.php:31
+msgctxt "admin"
+msgid "Hide the featured image on the single page"
+msgstr "Verberg de uitgelichte afbeelding op de pagina"
+
+#: includes/Traits/HasFeaturedImage.php:44
+msgctxt "admin"
+msgid "Featured Image Settings"
+msgstr "Afbeelding instellingen"
+
+#: includes/Traits/HasIndexedPdf.php:114
+msgctxt "admin"
+msgid "Index status"
+msgstr "Index status"
+
+#: includes/Traits/HasManagedTaxonomies.php:65
+#: includes/Traits/HasManagedTaxonomies.php:66
+#: includes/Traits/HasManagedTaxonomies.php:156
+msgctxt "admin"
+msgid "Taxonomy Settings"
+msgstr "Taxonomy Instellingen"
+
+#: includes/Traits/HasManagedTaxonomies.php:165
+#, php-format
+msgctxt "admin"
+msgid "Disable %s taxonomy archive"
+msgstr "Schakel %s taxonomiearchief uit"
+
+#: includes/Traits/HasManagedTaxonomies.php:168
+msgctxt "admin"
+msgid "Archive disabled"
+msgstr "Archief uitgeschakeld"
+
+#: includes/Traits/HasManagedTaxonomies.php:169
+msgctxt "admin"
+msgid "Archive enabled"
+msgstr "Archief ingeschakeld"
+
+#: includes/Traits/HasPriority.php:79
+msgctxt "admin"
+msgid "Priority"
+msgstr "Prioriteit"
+
+#: includes/Traits/HasPublicationDate.php:23
+msgctxt "admin"
+msgid "Depublication Date"
+msgstr "Depublicatie Datum"
+
+#: includes/Traits/HasPublicationDate.php:25
+msgctxt "admin"
+msgid "The date and time at which the post will be put back to draft."
+msgstr "De tijd en datum waarop de post teruggezet wordt naar concept."
+
+#: includes/Traits/HasPublicationDate.php:38
+msgctxt "admin"
+msgid "Publication Settings"
+msgstr "Publicatie Instellingen"
+
+#: includes/View/ViewModels/ErrorPageViewModel.php:28
+msgid "Oops! Page not found"
+msgstr "Oei! Pagina niet gevonden"
+
+#: includes/Widgets/PostTypeFilter.php:19
+msgctxt "admin"
+msgid "Displays a list of post types to filter the current query"
+msgstr "Toont een lijst met berichttypes om de huidige query te filteren"
+
+#: includes/Widgets/PostTypeFilter.php:27
+msgctxt "admin"
+msgid "Post type Filter"
+msgstr "Post type Filter"
+
+#: includes/Widgets/PostTypeFilter.php:41 languages/_jsx-strings.js:168
+msgctxt "admin"
+msgid "Post type"
+msgstr "Bericht type"
+
+#: includes/Widgets/TaxonomyFilter.php:20
+msgctxt "admin"
+msgid "Displays a list of taxonomies to filter the current query"
+msgstr "Toont een lijst van taxonomieën om de huidige zoekopdracht te filteren"
+
+#: includes/Widgets/TaxonomyFilter.php:28
+msgctxt "admin"
+msgid "Taxonomy Filter"
+msgstr "Taxonomie Filter"
+
+#: includes/Widgets/TaxonomyFilter.php:61
+msgctxt "admin"
+msgid "Taxonomies"
+msgstr "Taxonomieën"
+
+#: includes/Widgets/TermFilter.php:19
+msgctxt "admin"
+msgid "Displays a list of terms to filter the current query"
+msgstr "Toont een lijst met termen om de huidige zoekopdracht te filteren"
+
+#: includes/Widgets/TermFilter.php:27
+msgctxt "admin"
+msgid "Term Filter"
+msgstr "Term Filter"
+
+#: includes/Widgets/TermFilter.php:86
+#, php-format
+msgctxt "admin"
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: includes/Widgets/TermFilter.php:99
+msgctxt "admin"
+msgid "Terms"
+msgstr "Termen"
+
+#: languages/_jsx-strings.js:3
+msgctxt "admin"
+msgid "Previous"
+msgstr "Vorige"
+
+#: languages/_jsx-strings.js:4
+msgctxt "admin"
+msgid "Next"
+msgstr "Volgende"
+
+#: languages/_jsx-strings.js:6
+msgctxt "admin"
+msgid "Please enter a license key"
+msgstr "Voer alstublieft een licentiesleutel in"
+
+#: languages/_jsx-strings.js:7
+msgctxt "admin"
+msgid "Install"
+msgstr "Installeren"
+
+#: languages/_jsx-strings.js:8
+msgctxt "admin"
+msgid "Activate"
+msgstr "Activeren"
+
+#: languages/_jsx-strings.js:9
+msgctxt "admin"
+msgid "Installed & Activated"
+msgstr "Geïnstalleerd & geactiveerd"
+
+#: languages/_jsx-strings.js:10
+msgctxt "admin"
+msgid "License key:"
+msgstr "Licentiesleutel:"
+
+#: languages/_jsx-strings.js:11
+msgctxt "admin"
+msgid "Setup plugins"
+msgstr "Stel plugins in"
+
+#: languages/_jsx-strings.js:12
+msgctxt "admin"
+msgid "Setup post types"
+msgstr "Stel bericht types in"
+
+#: languages/_jsx-strings.js:13
+msgctxt "admin"
+msgid "Site info"
+msgstr "Site info"
+
+#: languages/_jsx-strings.js:14
+msgctxt "admin"
+msgid "Site Title"
+msgstr "Site titel"
+
+#: languages/_jsx-strings.js:15
+msgctxt "admin"
+msgid "Slogan"
+msgstr "Slogan"
+
+#: languages/_jsx-strings.js:16
+msgctxt "admin"
+msgid "Enable comments by default"
+msgstr "Reacties standaard inschakelen"
+
+#: languages/_jsx-strings.js:17
+msgctxt "admin"
+msgid "Comment must be manually approved"
+msgstr "Reacties moeten handmatig worden goedgekeurd"
+
+#: languages/_jsx-strings.js:18
+msgctxt "admin"
+msgid "Update"
+msgstr "Bijwerken"
+
+#: languages/_jsx-strings.js:19
+msgctxt "admin"
+msgid "Complete"
+msgstr "Voltooid"
+
+#: languages/_jsx-strings.js:20
+msgctxt "admin"
+msgid "Setup your theme"
+msgstr "Stel je thema in"
+
+#: languages/_jsx-strings.js:21
+msgctxt "admin"
+msgid "Tracking info"
+msgstr "Trackinginformatie"
+
+#: languages/_jsx-strings.js:22
+msgctxt "admin"
+msgid "Piwik container URL"
+msgstr "Piwik container URL"
+
+#: languages/_jsx-strings.js:23
+msgctxt "admin"
+msgid "Piwik site ID"
+msgstr "Piwik site ID"
+
+#: languages/_jsx-strings.js:25
+msgctxt "admin"
+msgid "Enable advanced content"
+msgstr "Schakel geavanceerde inhoud in"
+
+#: languages/_jsx-strings.js:26
+msgctxt "admin"
+msgid "Additional content blocks are enabled: list, table, heading & image."
+msgstr ""
+"Extra content blokken zijn ingeschakeld: lijst, tabel, kop en afbeelding."
+
+#: languages/_jsx-strings.js:27
+msgctxt "admin"
+msgid "Only a simple paragraph is allowed."
+msgstr "Slechts een eenvoudige alinea is toegestaan."
+
+#: languages/_jsx-strings.js:28
+msgctxt "admin"
+msgid "Add a title..."
+msgstr "Voeg een titel toe..."
+
+#: languages/_jsx-strings.js:29
+msgctxt "admin"
+msgid "Accordion"
+msgstr "Accordion"
+
+#: languages/_jsx-strings.js:30
+msgctxt "admin"
+msgid "Add an accordion to the page, add multiple to get a list."
+msgstr ""
+"Voeg een accordeon toe aan de pagina, voeg er meerdere toe om een lijst te "
+"krijgen."
+
+#: languages/_jsx-strings.js:31
+msgctxt "admin"
+msgid "Simple"
+msgstr "Eenvoudig"
+
+#: languages/_jsx-strings.js:32
+msgctxt "admin"
+msgid "Auto"
+msgstr "Automatisch"
+
+#: languages/_jsx-strings.js:39
+msgctxt "admin"
+msgid "Layout"
+msgstr "Layout"
+
+#: languages/_jsx-strings.js:40
+msgctxt "admin"
+msgid "Hide images on mobile"
+msgstr "Verberg afbeeldingen op mobiel"
+
+#: languages/_jsx-strings.js:41
+msgctxt "admin"
+msgid "Filtering"
+msgstr "Filteren"
+
+#: languages/_jsx-strings.js:42
+msgctxt "admin"
+msgid "Amount of posts"
+msgstr "Aantal berichten"
+
+#: languages/_jsx-strings.js:46
+msgctxt "admin"
+msgid "Intro"
+msgstr "Intro"
+
+#: languages/_jsx-strings.js:47
+msgctxt "admin"
+msgid "Add text..."
+msgstr "Tekst toevoegen..."
+
+#: languages/_jsx-strings.js:48
+msgctxt "admin"
+msgid "Articles"
+msgstr "Artikelen"
+
+#: languages/_jsx-strings.js:49
+msgctxt "admin"
+msgid ""
+"Shows articles in a grid, can set to show the latest posts or posts based on "
+"a category."
+msgstr ""
+"Toont artikelen in een raster, kan worden ingesteld om de nieuwste berichten "
+"of berichten gebaseerd op een categorie te tonen."
+
+#: languages/_jsx-strings.js:52
+msgctxt "admin"
+msgid ""
+"This is a placeholder; settings should be configured through the Settings "
+"panel > Examples"
+msgstr ""
+"Dit is een tijdelijke aanduiding; instellingen moeten worden geconfigureerd "
+"via het instellingenpaneel > Voorbeelden"
+
+#: languages/_jsx-strings.js:53
+msgctxt "admin"
+msgid "Placeholder - Asset examples"
+msgstr "[Placeholder] Asset voorbeelden"
+
+#: languages/_jsx-strings.js:54
+msgctxt "admin"
+msgid ""
+"Placeholder block for inserting the examples at a specific point in the "
+"page. So this one can only be added once here."
+msgstr ""
+"Placeholder blok voor het invoegen van de voorbeelden op een specifiek punt "
+"op de pagina. Dus dit kan hier maar één keer worden toegevoegd."
+
+#: languages/_jsx-strings.js:56
+msgctxt "admin"
+msgid "Contact person"
+msgstr "Contact person"
+
+#: languages/_jsx-strings.js:57
+msgctxt "admin"
+msgid "Shows a selected contact person."
+msgstr "Toont een geselecteerde contactpersoon."
+
+#: languages/_jsx-strings.js:58
+msgid "Click here"
+msgstr "Klik hier"
+
+#: languages/_jsx-strings.js:59
+msgctxt "admin"
+msgid "Add a subtitle..."
+msgstr "Voeg een ondertitel toe..."
+
+#: languages/_jsx-strings.js:60
+msgctxt "admin"
+msgid "Call to action"
+msgstr "Call to action"
+
+#: languages/_jsx-strings.js:61
+msgctxt "admin"
+msgid "Call to action block with a title, subtitle and a button."
+msgstr "Call-to-action blok met een titel, ondertitel en een knop."
+
+#: languages/_jsx-strings.js:62
+msgctxt "admin"
+msgid "Upload Image"
+msgstr "Afbeelding uploaden"
+
+#: languages/_jsx-strings.js:63
+msgctxt "admin"
+msgid "Replace"
+msgstr "Vervangen"
+
+#: languages/_jsx-strings.js:64
+msgctxt "admin"
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: languages/_jsx-strings.js:65
+msgctxt "admin"
+msgid "Card"
+msgstr "Kaart"
+
+#: languages/_jsx-strings.js:66
+msgctxt "admin"
+msgid "Card for the custom cards block"
+msgstr "Kaart voor het blok met custom kaarten"
+
+#: languages/_jsx-strings.js:67
+msgctxt "admin"
+msgid "Text color"
+msgstr "Tekst kleur"
+
+#: languages/_jsx-strings.js:68
+msgctxt "admin"
+msgid "Background color"
+msgstr "Achtergrondkleur"
+
+#: languages/_jsx-strings.js:69
+msgctxt "admin"
+msgid "Custom Cards"
+msgstr "Aangepaste kaarten"
+
+#: languages/_jsx-strings.js:70
+msgctxt "admin"
+msgid "Custom cards block with a title, subtitle and cards"
+msgstr "Custom kaart blokken met een titel, ondertitel en kaarten"
+
+#: languages/_jsx-strings.js:72
+msgctxt "admin"
+msgid "Shows selected downloads in a grid."
+msgstr "Toont geselecteerde downloads in een raster."
+
+#: languages/_jsx-strings.js:74
+msgctxt "admin"
+msgid "Display Options"
+msgstr "Toon opties"
+
+#: languages/_jsx-strings.js:75
+msgctxt "admin"
+msgid "Images will be hidden on mobile devices."
+msgstr "Afbeeldingen worden verborgen op mobiele apparaten."
+
+#: languages/_jsx-strings.js:76
+msgctxt "admin"
+msgid "Images will be shown on all devices."
+msgstr "Afbeeldingen worden op alle apparaten weergegeven."
+
+#: languages/_jsx-strings.js:77
+msgctxt "admin"
+msgid "Events"
+msgstr "Evenementen"
+
+#: languages/_jsx-strings.js:78
+msgctxt "admin"
+msgid "Shows selected events in a grid."
+msgstr "Toont geselecteerde events in een raster."
+
+#: languages/_jsx-strings.js:80
+msgctxt "admin"
+msgid "Hide categories"
+msgstr "Categorieën verbergen"
+
+#: languages/_jsx-strings.js:81
+msgctxt "admin"
+msgid "Hide dates"
+msgstr "Datums verbergen"
+
+#: languages/_jsx-strings.js:82
+msgctxt "admin"
+msgid "Featured items"
+msgstr "Uitgelichte items"
+
+#: languages/_jsx-strings.js:83
+msgctxt "admin"
+msgid "Shows items in a grid that are selected by you."
+msgstr "Toont items in een raster die door jou zijn geselecteerd."
+
+#: languages/_jsx-strings.js:84
+msgctxt "admin"
+msgid "Add Media"
+msgstr "Media toevoegen"
+
+#: languages/_jsx-strings.js:85
+msgctxt "admin"
+msgid "Replace background image"
+msgstr "Achtergrondafbeelding vervangen"
+
+#: languages/_jsx-strings.js:86
+msgctxt "admin"
+msgid "Add background image"
+msgstr "Achtergrondfoto toevoegen"
+
+#: languages/_jsx-strings.js:87
+msgctxt "admin"
+msgid "Foreground"
+msgstr "Voorgrond"
+
+#: languages/_jsx-strings.js:88
+msgctxt "admin"
+msgid "Select a variation"
+msgstr "Selecteer een variant"
+
+#: languages/_jsx-strings.js:90
+msgctxt "admin"
+msgid "Small image"
+msgstr "Kleine afbeelding"
+
+#: languages/_jsx-strings.js:91
+msgctxt "admin"
+msgid "Background image"
+msgstr "Achtergrondafbeelding"
+
+#: languages/_jsx-strings.js:92
+msgctxt "admin"
+msgid "Background video"
+msgstr "Achtergrondvideo"
+
+#: languages/_jsx-strings.js:93
+msgctxt "admin"
+msgid "Background video with gradient"
+msgstr "Achtergrondvideo met gradiënt"
+
+#: languages/_jsx-strings.js:94
+msgctxt "admin"
+msgid "Height"
+msgstr "Hoogte"
+
+#: languages/_jsx-strings.js:95
+msgctxt "admin"
+msgid "min. 230px"
+msgstr "min. 230px"
+
+#: languages/_jsx-strings.js:96
+msgctxt "admin"
+msgid "min. 460px"
+msgstr "min. 460px"
+
+#: languages/_jsx-strings.js:97
+msgctxt "admin"
+msgid "Video URL"
+msgstr "Video URL"
+
+#: languages/_jsx-strings.js:99
+msgctxt "admin"
+msgid "No search"
+msgstr "Geen zoeken"
+
+#: languages/_jsx-strings.js:100
+msgctxt "admin"
+msgid "Search at the top"
+msgstr "Zoekveld bovenaan"
+
+#: languages/_jsx-strings.js:101
+msgctxt "admin"
+msgid "Search at the bottom"
+msgstr "Zoekveld onderaan"
+
+#: languages/_jsx-strings.js:102
+msgctxt "admin"
+msgid "Placeholder"
+msgstr "Placeholder"
+
+#: languages/_jsx-strings.js:103
+msgctxt "admin"
+msgid "Background"
+msgstr "Achtergrond"
+
+#: languages/_jsx-strings.js:104
+msgctxt "admin"
+msgid "Background type"
+msgstr "Achtergrond type"
+
+#: languages/_jsx-strings.js:106
+msgctxt "admin"
+msgid "Video"
+msgstr "Video"
+
+#: languages/_jsx-strings.js:108
+msgctxt "admin"
+msgid "Color"
+msgstr "Kleur"
+
+#: languages/_jsx-strings.js:109
+msgctxt "admin"
+msgid "Video Background URL"
+msgstr "URL achtergrondvideo"
+
+#: languages/_jsx-strings.js:110
+msgctxt "admin"
+msgid "Margin"
+msgstr "Marge"
+
+#: languages/_jsx-strings.js:111
+msgctxt "admin"
+msgid "Normal"
+msgstr "Normaal"
+
+#: languages/_jsx-strings.js:114
+msgctxt "admin"
+msgid "Shows a header, with 3 types: Only text, a small image or a full image."
+msgstr ""
+"Toont een header, met 3 typen: alleen tekst, een kleine afbeelding of een "
+"volledige afbeelding."
+
+#: languages/_jsx-strings.js:115
+msgctxt "admin"
+msgid "Content layer"
+msgstr "Content laag"
+
+#: languages/_jsx-strings.js:116
+msgctxt "admin"
+msgid "Content variation"
+msgstr "Content variatie"
+
+#: languages/_jsx-strings.js:117
+msgctxt "admin"
+msgid "Content only"
+msgstr "Enkel content"
+
+#: languages/_jsx-strings.js:118
+msgctxt "admin"
+msgid "Content with media"
+msgstr "Content met media"
+
+#: languages/_jsx-strings.js:119
+msgctxt "admin"
+msgid "Content with media background"
+msgstr "Content met media achtergrond"
+
+#: languages/_jsx-strings.js:120
+msgctxt "admin"
+msgid "width"
+msgstr "breedte"
+
+#: languages/_jsx-strings.js:121
+msgctxt "admin"
+msgid "Small"
+msgstr "Klein"
+
+#: languages/_jsx-strings.js:122
+msgctxt "admin"
+msgid "Full"
+msgstr "Volledig"
+
+#: languages/_jsx-strings.js:123
+msgctxt "admin"
+msgid "Minimal height"
+msgstr "Minimale hoogte"
+
+#: languages/_jsx-strings.js:124
+msgctxt "admin"
+msgid "Low"
+msgstr "Laag"
+
+#: languages/_jsx-strings.js:125
+msgctxt "admin"
+msgid "High"
+msgstr "Hoog"
+
+#: languages/_jsx-strings.js:126
+msgctxt "admin"
+msgid "Select heading tag"
+msgstr "Selecteer koptag"
+
+#: languages/_jsx-strings.js:127
+msgctxt "admin"
+msgid "H1"
+msgstr "H1"
+
+#: languages/_jsx-strings.js:128
+msgctxt "admin"
+msgid "H2"
+msgstr "H2"
+
+#: languages/_jsx-strings.js:129
+msgctxt "admin"
+msgid "Enable tagline"
+msgstr "Slogan inschakelen"
+
+#: languages/_jsx-strings.js:130
+msgctxt "admin"
+msgid "Enable button"
+msgstr "Knop inschakelen"
+
+#: languages/_jsx-strings.js:131
+msgctxt "admin"
+msgid "Enable search"
+msgstr "Zoeken inschakelen"
+
+#: languages/_jsx-strings.js:132
+msgctxt "admin"
+msgid "Search alignment"
+msgstr "Uitlijning zoekveld"
+
+#: languages/_jsx-strings.js:135
+msgctxt "admin"
+msgid "Search width"
+msgstr "Breedte zoekveld"
+
+#: languages/_jsx-strings.js:136
+msgctxt "admin"
+msgid "Fill"
+msgstr "Vullen"
+
+#: languages/_jsx-strings.js:137
+msgctxt "admin"
+msgid "Horizontal alignment"
+msgstr "Horizontale uitlijning"
+
+#: languages/_jsx-strings.js:139
+msgctxt "admin"
+msgid "Center"
+msgstr "Gecentreerd"
+
+#: languages/_jsx-strings.js:141
+msgctxt "admin"
+msgid "Vertical alignment"
+msgstr "Verticale uitlijning"
+
+#: languages/_jsx-strings.js:142
+msgctxt "admin"
+msgid "Middle"
+msgstr "Midden"
+
+#: languages/_jsx-strings.js:143
+msgctxt "admin"
+msgid "Select media type"
+msgstr "Selecteer mediatype"
+
+#: languages/_jsx-strings.js:144
+msgctxt "admin"
+msgid "Enable rounded corners"
+msgstr "Afgeronde hoeken inschakelen"
+
+#: languages/_jsx-strings.js:145
+msgctxt "admin"
+msgid "Media location"
+msgstr "Medialocatie"
+
+#: languages/_jsx-strings.js:146
+msgctxt "admin"
+msgid "Backdrop layer"
+msgstr "Achtergrond laag"
+
+#: languages/_jsx-strings.js:147
+msgctxt "admin"
+msgid "Tagline"
+msgstr "Slogan"
+
+#: languages/_jsx-strings.js:148
+msgctxt "admin"
+msgid "Hero"
+msgstr "Hero"
+
+#: languages/_jsx-strings.js:149
+msgctxt "admin"
+msgid "Shows a header, with various options."
+msgstr "Toont een header, met verschillende opties."
+
+#: languages/_jsx-strings.js:150
+msgctxt "admin"
+msgid "Latest vacancies"
+msgstr "Laatste vacatures"
+
+#: languages/_jsx-strings.js:151
+msgctxt "admin"
+msgid "Shows the latest vacancies in a grid"
+msgstr "Toont de nieuwste vacatures in een raster"
+
+#: languages/_jsx-strings.js:153
+msgctxt "admin"
+msgid ""
+"This is a placeholder; settings should be configured through the Settings "
+"panel > Related assets"
+msgstr ""
+"Dit is een placeholder; instellingen moeten worden geconfigureerd via het "
+"Instellingen > Gerelateerde assets"
+
+#: languages/_jsx-strings.js:154
+msgctxt "admin"
+msgid "Placeholder - Related assets"
+msgstr "[Placeholder] Soortgelijke assets"
+
+#: languages/_jsx-strings.js:155
+msgctxt "admin"
+msgid ""
+"Placeholder block for inserting related assets at a specific point in the "
+"page. So this one can only be added once here."
+msgstr ""
+"Placeholder blok voor het invoegen van de gerelateerde assets op een "
+"specifiek punt op de pagina. Dus dit kan hier maar één keer worden "
+"toegevoegd."
+
+#: languages/_jsx-strings.js:156
+msgctxt "admin"
+msgid "Display type"
+msgstr "Weergave type"
+
+#: languages/_jsx-strings.js:159
+msgctxt "admin"
+msgid "Wide"
+msgstr "Breed"
+
+#: languages/_jsx-strings.js:160
+msgctxt "admin"
+msgid "Use Icons"
+msgstr "Gebruik iconen"
+
+#: languages/_jsx-strings.js:161
+msgctxt "admin"
+msgid "Roadmap"
+msgstr "Roadmap"
+
+#: languages/_jsx-strings.js:162
+msgctxt "admin"
+msgid "Roadmap block with a title, sub title and steps"
+msgstr "Roadmapblok met een titel, ondertitel en stappen"
+
+#: languages/_jsx-strings.js:164
+msgctxt "admin"
+msgid "Step"
+msgstr "Stap"
+
+#: languages/_jsx-strings.js:165
+msgctxt "admin"
+msgid "Steps for the roadmap"
+msgstr "Stappen voor de roadmap"
+
+#: languages/_jsx-strings.js:166
+msgctxt "admin"
+msgid "Separator"
+msgstr "Scheiding"
+
+#: languages/_jsx-strings.js:167
+msgctxt "admin"
+msgid "Shows a border bar that separates different blocks."
+msgstr "Toont een randbalk die verschillende blokken scheidt."
+
+#: languages/_jsx-strings.js:169
+msgctxt "admin"
+msgid "- Select a post type -"
+msgstr "- Selecteer een bericht type -"
+
+#: languages/_jsx-strings.js:170
+msgctxt "admin"
+msgid "Sitemap settings"
+msgstr "Sitemap-instellingen"
+
+#: languages/_jsx-strings.js:171
+msgctxt "admin"
+msgid "Hide empty categories"
+msgstr "Lege categorieën verbergen"
+
+#: languages/_jsx-strings.js:172
+msgctxt "admin"
+msgid "Use Yoast primary category only"
+msgstr "Gebruik enkel de primaire (Yoast) categorie"
+
+#: languages/_jsx-strings.js:173
+msgctxt "admin"
+msgid "Select a post type to generate the sitemap preview."
+msgstr "Selecteer een bericht type om de sitemap-preview te genereren."
+
+#: languages/_jsx-strings.js:174
+msgctxt "admin"
+msgid "Add title..."
+msgstr "Voeg titel toe..."
+
+#: languages/_jsx-strings.js:175
+msgctxt "admin"
+msgid "CPT sitemap"
+msgstr "CPT sitemap"
+
+#: languages/_jsx-strings.js:176
+msgctxt "admin"
+msgid "Shows a sitemap (table of contents) for the specified post type."
+msgstr "Toont een sitemap (inhoudsopgave) voor het opgegeven bericht type."
+
+#: languages/_jsx-strings.js:178
+msgctxt "admin"
+msgid "Divider"
+msgstr "Scheidingslijn"
+
+#: languages/_jsx-strings.js:179
+msgctxt "admin"
+msgid "Standard"
+msgstr "Standaard"
+
+#: languages/_jsx-strings.js:180
+msgctxt "admin"
+msgid "Position"
+msgstr "Positie"
+
+#: languages/_jsx-strings.js:181
+msgctxt "admin"
+msgid "Make a selection"
+msgstr "Maak een selectie"
+
+#: languages/_jsx-strings.js:182
+msgctxt "admin"
+msgid "Both sides"
+msgstr "Beide zijden"
+
+#: languages/_jsx-strings.js:183
+msgctxt "admin"
+msgid "Top only"
+msgstr "Alleen bovenaan"
+
+#: languages/_jsx-strings.js:184
+msgctxt "admin"
+msgid "Bottom only"
+msgstr "Alleen aan de onderkant"
+
+#: languages/_jsx-strings.js:185
+msgctxt "admin"
+msgid "Style"
+msgstr "Stijl"
+
+#: languages/_jsx-strings.js:186
+msgctxt "admin"
+msgid "Background (HEX)"
+msgstr "Achtergrond (HEX)"
+
+#: languages/_jsx-strings.js:187
+msgctxt "admin"
+msgid "Link"
+msgstr "Link"
+
+#: languages/_jsx-strings.js:188
+msgctxt "admin"
+msgid "Hover - Link"
+msgstr "Hover - Link"
+
+#: languages/_jsx-strings.js:189
+msgctxt "admin"
+msgid "Buttons"
+msgstr "Knoppen"
+
+#: languages/_jsx-strings.js:190
+msgctxt "admin"
+msgid "Hover - Background"
+msgstr "Hover - Achtergrond"
+
+#: languages/_jsx-strings.js:191
+msgctxt "admin"
+msgid "Hover - Text"
+msgstr "Hover - Tekst"
+
+#: languages/_jsx-strings.js:192
+msgctxt "admin"
+msgid "Style group"
+msgstr "Stijlgroep"
+
+#: languages/_jsx-strings.js:193
+msgctxt "admin"
+msgid ""
+"Creates a block where you can change your background, text colors, and "
+"button colors."
+msgstr ""
+"Maakt een blok aan waarin je je achtergrond, tekstkleuren en knoppenkleuren "
+"kunt veranderen."
+
+#: languages/_jsx-strings.js:194
+msgctxt "admin"
+msgid "Color Settings"
+msgstr "Kleur instellingen"
+
+#: languages/_jsx-strings.js:195
+msgctxt "admin"
+msgid "Media Settings"
+msgstr "Media instellingen"
+
+#: languages/_jsx-strings.js:196
+msgctxt "admin"
+msgid "Change"
+msgstr "Wijzigen"
+
+#: languages/_jsx-strings.js:197
+msgctxt "admin"
+msgid "Choose"
+msgstr "Kies"
+
+#: languages/_jsx-strings.js:198
+msgctxt "admin"
+msgid "Pick an icon"
+msgstr "Kies een icoon"
+
+#: languages/_jsx-strings.js:199
+msgctxt "admin"
+msgid "Type to find an icon"
+msgstr "Typ om een icoon te zoeken"
+
+#: languages/_jsx-strings.js:200
+msgctxt "admin"
+msgid "Loading..."
+msgstr "Laden…"
+
+#: languages/_jsx-strings.js:201
+msgctxt "admin"
+msgid "Select a post"
+msgstr "Selecteer een bericht"
+
+#: languages/_jsx-strings.js:202
+msgctxt "admin"
+msgid "Type to find posts"
+msgstr "Typ om berichten te zoeken"
+
+#: languages/_jsx-strings.js:203
+msgctxt "admin"
+msgid "Category"
+msgstr "Categorie"
+
+#: languages/_jsx-strings.js:204
+msgctxt "admin"
+msgid "Tags"
+msgstr "Tags"
+
+#: languages/_jsx-strings.js:205
+msgctxt "admin"
+msgid "Move up"
+msgstr "Verplaats omhoog"
+
+#: languages/_jsx-strings.js:206
+msgctxt "admin"
+msgid "Move down"
+msgstr "Verplaats omlaag"
+
+#: languages/_jsx-strings.js:208
+msgctxt "admin"
+msgid "SURF"
+msgstr "SURF"
+
+#: page-templates/asset-categories-template.php:15
+msgctxt "template"
+msgid "Asset Categories template"
+msgstr "Asset Categorieën template"
+
+#: page-templates/asset-sitemap-template.php:15
+msgctxt "template"
+msgid "Asset Sitemap template"
+msgstr "Asset Sitemap template"
+
+#: page-templates/faq-sitemap-template.php:15
+msgctxt "template"
+msgid "FAQ Sitemap template"
+msgstr "FAQ Sitemap template"
+
+#: page-templates/home-template.php:12
+msgctxt "template"
+msgid "Home template"
+msgstr "Home template"
+
+#: src/js/admin/components/widgetHelper.js:17
+msgctxt "admin"
+msgid "Please refresh the page to initialize the widget."
+msgstr "Ververs alstublieft de pagina om de widget te initialiseren."
+
+#~ msgid "Production date"
+#~ msgstr "Productiedatum"
+
+#~ msgid "(A > Z)"
+#~ msgstr "(A - Z)"
+
+#~ msgid "Z > A"
+#~ msgstr "(Z - A)"
+
+#~ msgctxt "admin"
+#~ msgid "Example description"
+#~ msgstr "Voorbeeld omschrijving"
+
+#~ msgctxt "admin"
+#~ msgid "Related"
+#~ msgstr "Gerelateerd"
+
+#~ msgctxt "admin"
+#~ msgid "Configure in the Settings panel > Examples"
+#~ msgstr "Configureer in Instellingen > Voorbeelden"
+
+#~ msgid "Lifecycle status"
+#~ msgstr "Lifecycle status"
+
+#~ msgctxt "in english"
+#~ msgid "Up to date"
+#~ msgstr "Up to date"
+
+#~ msgctxt "in english"
+#~ msgid "Out of date"
+#~ msgstr "Out of date"
+
+#~ msgid "Share this"
+#~ msgstr "Deel dit"
+
+#~ msgctxt "admin"
+#~ msgid "Background Color"
+#~ msgstr "Achtergrond Kleur"

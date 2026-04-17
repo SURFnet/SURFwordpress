@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+ZIPNAME="${1:-wp-surf-theme.zip}"
+
+cd "$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )/.."
+ROOT=$(pwd)
+
+
+if [[ ! -d "build" ]]; then
+  mkdir build
+fi
+
+echo "Copying wp-surf-theme..."
+rsync -a --exclude 'wp-surf-theme/node_modules' --exclude 'wp-surf-theme/vendor' wp-content/themes/wp-surf-theme build
+
+cd build/wp-surf-theme
+
+echo "Installing composer dependencies..."
+composer install
+
+echo "Installing node dependencies..."
+npm ci
+
+echo "Building bundle..."
+npm run build
+
+rm -r node_modules
+
+cd $ROOT/build
+
+echo "Zipping wp-surf-theme..."
+zip -r $ZIPNAME wp-surf-theme
+
+echo "Build completed"

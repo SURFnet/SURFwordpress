@@ -1,0 +1,19 @@
+//
+// ----------------------------------------------------------------------------
+// Layout / Waffle grid
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+
+
+$-waffle-grid-default-gap: variables.$grid-gap;
+$-waffle-grid-default-min: functions.rem(300);
+$-waffle-grid-default-mode: auto-fit;
+
+.waffle-grid {
+	display: grid;
+	grid-template-columns: repeat(var(--mode, $-waffle-grid-default-mode), minmax(Min(var(--min, #{$-waffle-grid-default-min}), 100%), 1fr));
+	gap: var(--gap, $-waffle-grid-default-gap);
+}

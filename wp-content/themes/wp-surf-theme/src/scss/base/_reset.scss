@@ -1,0 +1,42 @@
+//
+// ----------------------------------------------------------------------------
+// Base / Reset
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:first-child {
+	margin-top: 0;
+}
+
+:last-child {
+	margin-bottom: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+nav ul {
+	@include mixins.unstyled-list;
+}
+
+nav a {
+	color: inherit;
+	text-decoration: none;
+}

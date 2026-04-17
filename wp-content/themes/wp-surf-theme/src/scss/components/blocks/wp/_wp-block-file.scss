@@ -1,0 +1,95 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / File
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+@use '../../button';
+
+.wp-block-file {
+	background: var(--surf-color-file-block);
+	display: flex;
+	flex-direction: row;
+	padding: functions.rem(18);
+	border-radius: var(--surf-button-border-radius);
+	font-family: var(--surf-font-heading);
+	font-weight: var(--surf-font-heading-font-weight);
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.wp-block-file::before {
+	content: '';
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 .714v18.572c0 .374.347.714.727.714h14.546c.38 0 .727-.34.727-.714V5a.72.72 0 0 0-.212-.506L11.424.208A.746.746 0 0 0 10.91 0H.727C.318.003.003.403 0 .714zm1.455.715h8.727V5c0 .374.346.714.727.714h3.636v12.857H1.455V1.43zm10.181 1.004l1.887 1.853h-1.887V2.433z' fill='currentColor'/%3E%3C/svg%3E");
+	height: functions.rem(20);
+	width: functions.rem(16);
+	margin: functions.rem(0 15 0 0);
+}
+
+.wp-block-file a {
+	font-size: functions.rem(18);
+	color: var(--surf-color-black);
+	text-decoration: none;
+	width: calc(100% - #{functions.rem(31)});
+}
+
+.wp-block-file a:hover,
+.wp-block-file a:active {
+	color: var(--surf-color-primary);
+}
+
+.wp-block-file .wp-block-file__size {
+	font-size: functions.rem(14);
+	font-weight: normal;
+}
+
+.wp-block-file a.wp-block-file__button,
+.wp-block-file div.wp-block-file__button {
+	@extend %button;
+	margin-top: functions.rem(15);
+	margin-left: 0;
+	width: auto;
+}
+
+@include mixins.poweredTheme {
+	.wp-block-file a.wp-block-file__button,
+	.wp-block-file div.wp-block-file__button {
+		font-size: functions.rem(16);
+	}
+}
+
+@include mixins.breakpoint($from: large) {
+	.wp-block-file {
+		padding: functions.rem(30);
+		flex-wrap: nowrap;
+	}
+
+	.wp-block-file > a {
+		width: auto;
+	}
+
+	.wp-block-file .wp-block-file__content-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.wp-block-file a.wp-block-file__button,
+	.wp-block-file div.wp-block-file__button,
+	.wp-block-file .wp-block-file__button-richtext-wrapper {
+		margin-left: auto;
+		margin-top: 0;
+	}
+
+	.wp-block-file[data-wp-interactive] {
+		flex-wrap: wrap;
+	}
+
+	.wp-block-file[data-wp-interactive] object {
+		width: 100%;
+		order: -1;
+		margin-bottom: functions.rem(20);
+	}
+}

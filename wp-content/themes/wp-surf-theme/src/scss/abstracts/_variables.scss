@@ -1,0 +1,159 @@
+//
+// ----------------------------------------------------------------------------
+// Abstracts / Variables
+// ----------------------------------------------------------------------------
+//
+
+@use "sass:color";
+@use "sass:list";
+@use "sass:math";
+
+@use "./functions";
+
+//
+// Colors
+// ----------------------------------------------------------------------------
+// Colors are managed in the theme file of the selected theme
+
+//
+// Layout
+// ----------------------------------------------------------------------------
+
+// Breakpoints
+
+$breakpoints: (
+		small: 320px,
+		medium: 640px,
+		large: 1024px,
+		xlarge: 1440px,
+);
+
+// Container width settings
+
+$container-width: functions.rem(1200);
+$container-width-narrow: functions.rem(686);
+$container-width-wide: functions.rem(995);
+
+// Screen gap setting (controls space around content on smaller screens)
+
+$screen-gap: functions.rem(24);
+
+// Grid settings
+
+$grid-columns-sm: 4;
+$grid-columns-md: 8;
+$grid-columns-lg: 12;
+$grid-gap: functions.rem(35);
+
+//
+// Typography
+// ----------------------------------------------------------------------------
+
+// Font stacks
+
+$font-stack-body: var(--surf-font-body);
+$font-stack-headings: var(--surf-font-heading);
+$font-stack-heading-h1: var(--surf-font-heading-h1, $font-stack-headings);
+$font-stack-heading-h2: var(--surf-font-heading-h2, $font-stack-headings);
+$font-stack-heading-h3: var(--surf-font-heading-h3, $font-stack-headings);
+$font-stack-heading-h4: var(--surf-font-heading-h4, $font-stack-headings);
+$font-stack-heading-h5: var(--surf-font-heading-h5, $font-stack-headings);
+$font-stack-heading-h6: var(--surf-font-heading-h6, $font-stack-headings);
+
+// Font weights
+
+$font-weight-body: 400;
+
+// Line heights
+
+$line-height-base: 1.5;
+$line-height-headings: 1.2;
+
+// Spacing
+
+$spacing-heading-bottom: 0.5em;
+$spacing-heading-top: 1em;
+
+// Sizes
+$body-font-small: functions.rem(14);
+$body-font-size: functions.rem(16);
+$body-font-large: functions.rem(18);
+
+$heading-h1-mobile: functions.rem(30);
+$heading-h2-mobile: functions.rem(26);
+$heading-h3-mobile: functions.rem(22);
+$heading-h4-mobile: functions.rem(18);
+$heading-h5-mobile: functions.rem(16);
+$heading-h6-mobile: functions.rem(14);
+
+$heading-h1-desktop: functions.rem(36);
+$heading-h2-desktop: functions.rem(30);
+$heading-h3-desktop: functions.rem(24);
+$heading-h4-desktop: functions.rem(20);
+$heading-h5-desktop: functions.rem(18);
+$heading-h6-desktop: functions.rem(16);
+
+//
+// Forms
+// ----------------------------------------------------------------------------
+
+$form-field-background-color: var(--surf-color-white);
+$form-field-border-color: var(--surf-color-border);
+$form-field-border-color-focus: var(--surf-color-primary);
+$form-field-border-radius: functions.rem(8);
+$form-field-border-width: functions.rem(1);
+$form-field-padding: functions.rem(14 15);
+
+$form-elements: (
+		"[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
+);
+
+//
+// Selectors
+// ----------------------------------------------------------------------------
+
+$selector-h1: ("h1, .h1");
+$selector-h2: ("h2, .h2");
+$selector-h3: ("h3, .h3");
+$selector-h4: ("h4, .h4");
+$selector-h5: ("h5, .h5");
+$selector-h6: ("h6, .h6");
+
+$selector-headings: functions.merge-selectors(
+				$selector-h1,
+				$selector-h2,
+				$selector-h3,
+				$selector-h4,
+				$selector-h5,
+				$selector-h6
+);
+
+$selector-form-fields: (
+		"[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea"
+);
+
+//
+// Spacing
+// ----------------------------------------------------------------------------
+
+$spacing-mobile-sm: functions.rem(10);
+$spacing-mobile-md: functions.rem(18);
+$spacing-mobile-lg: functions.rem(35);
+
+$spacing-desktop-sm: functions.rem(15);
+$spacing-desktop-md: functions.rem(30);
+$spacing-desktop-lg: functions.rem(70);
+
+//
+// Transition
+// ----------------------------------------------------------------------------
+
+// when updating this duration value, keep in mind the setTimeout set in accordion.js
+$duration: 0.25s;
+$easing: cubic-bezier(0, 0.6, 0.7, 1);
+$transition: $duration $easing;
+
+//
+// Editor
+// ----------------------------------------------------------------------------
+$editor: false;

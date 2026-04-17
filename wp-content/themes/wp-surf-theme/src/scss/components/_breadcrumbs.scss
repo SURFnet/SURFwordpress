@@ -1,0 +1,62 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Breadcrumbs
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+$-breadcrumbs-color: #858585;
+
+.breadcrumbs {
+	font-size: functions.rem(13);
+	color: $-breadcrumbs-color;
+	margin-bottom: functions.rem(30) !important;
+	order: 0;
+}
+
+.breadcrumbs a {
+	color: $-breadcrumbs-color;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	color: var(--surf-color-primary);
+}
+
+.breadcrumb__separator {
+	display: inline-block;
+	align-items: center;
+	width: functions.rem(20);
+	height: functions.rem(2);
+	border-radius: functions.rem(2);
+	background-color: var(--surf-color-border);
+	margin: functions.rem(0 10);
+	transform: translateY(-3px);
+}
+
+.page .breadcrumbs + .entry__title {
+	margin-top: functions.rem(30);
+}
+
+.page-template-asset-categories-template .breadcrumbs {
+	margin-top: functions.rem(20);
+
+	@include mixins.breakpoint($from: medium) {
+		margin-top: functions.rem(50);
+	}
+}
+
+.breadcrumbs__spacer {
+	height: functions.rem(30);
+}
+
+.tax-surf-asset-category .breadcrumbs {
+	margin-top: functions.rem(30);
+
+	@include mixins.breakpoint($from: medium) {
+		margin-top: functions.rem(50);
+	}
+}

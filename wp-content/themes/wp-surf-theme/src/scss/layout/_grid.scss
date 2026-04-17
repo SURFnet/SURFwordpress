@@ -1,0 +1,78 @@
+//
+// ----------------------------------------------------------------------------
+// Layout / Grid
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+
+//
+// Grid
+// --------------------------------------------------------------------------------
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(variables.$grid-columns-sm, 1fr);
+	gap: variables.$grid-gap;
+}
+
+.column {
+	grid-column: var(--col-offset, auto) / var(--col-span);
+}
+
+@for $i from 1 through variables.$grid-columns-sm {
+	.column.span-#{$i}-sm {
+		--col-span: span #{$i};
+	}
+
+	.column.offset-#{$i}-sm {
+		--col-offset: #{$i + 1};
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.grid {
+		grid-template-columns: repeat(variables.$grid-columns-md, 1fr);
+	}
+
+	@for $i from 1 through variables.$grid-columns-md {
+		.column.span-#{$i}-md {
+			--col-span: span #{$i};
+		}
+
+		.column.offset-#{$i}-md {
+			--col-offset: #{$i + 1};
+		}
+	}
+}
+
+@include mixins.breakpoint($from: large) {
+	.grid {
+		grid-template-columns: repeat(variables.$grid-columns-lg, 1fr);
+	}
+
+	@for $i from 1 through variables.$grid-columns-lg {
+		.column.span-#{$i}-lg {
+			--col-span: span #{$i};
+		}
+
+		.column.offset-#{$i}-lg {
+			--col-offset: #{$i + 1};
+		}
+
+	}
+}
+
+
+//
+// Auto columns grid
+// --------------------------------------------------------------------------------
+
+.auto-columns-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(Min(var(--min-width, #{functions.rem(200)}), 100%), 1fr));
+	gap: var(--gap, #{variables.$grid-gap});
+}
