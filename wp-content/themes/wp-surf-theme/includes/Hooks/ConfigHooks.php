@@ -3,6 +3,7 @@
 namespace SURF\Hooks;
 
 use DOMDocument;
+use SURF\Helpers\ACFHelper;
 use SURF\Helpers\Helper;
 use WP_Error;
 use SURF\Application;
@@ -106,6 +107,7 @@ class ConfigHooks
 		add_filter( 'admin_body_class', [ static::class, 'addThemeBodyClass' ] );
 
 		add_filter( 'upload_mimes', [ static::class, 'uploadMimes' ], 99, 1 );
+		add_filter( 'wp_check_filetype_and_ext', [ static::class, 'secureFontMimeCheck' ], 10, 4 );
 
 		// Yoast
 		add_filter( 'wpseo_breadcrumb_separator', [ static::class, 'voSeoBreadcrumbSeparator' ], 10, 1 );
@@ -357,13 +359,62 @@ class ConfigHooks
 		$mimes['svg'] = 'image/svg+xml';
 
 		// Allow font uploads
-		$mimes['otf']   = 'font/otf';
-		$mimes['ttf']   = 'font/ttf';
-		$mimes['woff']  = 'font/woff';
-		$mimes['woff2'] = 'font/woff2';
-		$mimes['sfnt']  = 'font/sfnt';
+		foreach ( ACFHelper::listAllowedFontTypes() as $ext ) {
+			$mimes[ $ext ] = 'font/' . $ext;
+		}
 
 		return $mimes;
+	}
+
+	/**
+	 * @param $data
+	 * @param $file
+	 * @param $filename
+	 * @param $mimes
+	 * @return mixed
+	 */
+	public static function secureFontMimeCheck( $data, $file, $filename, $mimes )
+	{
+		if ( !empty( $data['ext'] ) && !empty( $data['type'] ) ) {
+			return $data;
+		}
+
+		$current_ext     = strtolower( pathinfo( $filename, PATHINFO_EXTENSION ) );
+		$font_extensions = ACFHelper::listAllowedFontTypes();
+		if ( !in_array( $current_ext, $font_extensions ) ) {
+			return $data;
+		}
+
+		// Use finfo() to scan the real content
+		$file_info = finfo_open( FILEINFO_MIME_TYPE );
+		$real_mime = finfo_file( $file_info, $file );
+		finfo_close( $file_info );
+
+		// List the secure MIME-types that servers appoint to fonts
+		$allowed_mimes = [
+			'application/x-font-ttf',
+			'application/x-font-otf',
+			'application/font-woff',
+			'application/font-woff2',
+			'application/font-sfnt',
+			'application/vnd.ms-opentype', // Often used for OTF/TTF
+			'application/octet-stream',    // Many fonts don't have a specific binary header
+			'font/ttf',
+			'font/otf',
+			'font/woff',
+			'font/woff2',
+			'font/sfnt',
+		];
+		if ( !in_array( $real_mime, $allowed_mimes ) ) {
+			return $data;
+		}
+
+		// Only when the content matches the list, we allow this file
+		$data['ext']             = $current_ext;
+		$data['type']            = $real_mime;
+		$data['proper_filename'] = $filename;
+
+		return $data;
 	}
 
 	/**

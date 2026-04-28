@@ -35,15 +35,4 @@ class ACFHelper
 		return [ 'otf', 'ttf', 'woff', 'woff2', 'sfnt' ];
 	}
 
-	/**
-	 * @return array
-	 */
-	public static function listAllowedFontExtensions(): array
-	{
-		return array_map( function ( $type )
-		{
-			return '.' . $type;
-		}, static::listAllowedFontTypes() );
-	}
-
 }

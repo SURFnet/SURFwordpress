@@ -4,7 +4,6 @@ namespace SURF\Hooks;
 
 use SURF\Enums\Theme;
 use SURF\Helpers\ACFHelper;
-use WP_Error;
 
 /**
  * Class ConfigHooks
@@ -24,7 +23,7 @@ class AcfHooks
 		add_filter( 'acf/validate_attachment/key=field_theme_settings_fonts_file', [
 			static::class,
 			'allowFontUploads',
-		], 10, 2 );
+		], 10, 3 );
 
 		$headings = HeadingHooks::$headings;
 		foreach ( $headings as $heading ) {
@@ -62,25 +61,32 @@ class AcfHooks
 
 	/**
 	 * @param $errors
-	 * @param mixed|null $attachment_id
+	 * @param array $file
+	 * @param array $attachment
 	 * @return mixed
 	 */
-	public static function allowFontUploads( $errors, $attachment_id = null )
+	public static function allowFontUploads( $errors, array $file, array $attachment )
 	{
+		if ( empty( $file ) ) {
+			return $errors;
+		}
+
+		$attachment_id = $attachment['id'] ?? 0;
 		if ( empty( $attachment_id ) ) {
 			return $errors;
 		}
 
+		$attachment = get_post( $attachment_id );
+		if ( empty( $attachment ) ) {
+			return $errors;
+		}
+
+		// Simply checking on extension, as we have a strict upload policy
+		$file_path = get_attached_file( $attachment_id );
+		$extension = strtolower( pathinfo( $file_path, PATHINFO_EXTENSION ) );
 		$allowed   = ACFHelper::listAllowedFontTypes();
-		$mime      = get_post_mime_type( $attachment_id );
-		$file_name = get_post( $attachment_id )->post_title . '.' . pathinfo( get_attached_file( $attachment_id ), PATHINFO_EXTENSION );
-		foreach ( $allowed as $type ) {
-			if ( str_ends_with( $mime, '-' . $type ) || str_ends_with( $mime, '/' . $type ) ) {
-				return $errors;
-			}
-			if ( str_ends_with( strtolower( $file_name ), '.' . $type ) ) {
-				return $errors;
-			}
+		if ( in_array( $extension, $allowed ) ) {
+			return $errors;
 		}
 
 		return [ 'error' => _x( 'Invalid font file type.', 'error', 'wp-surf-theme' ) ];

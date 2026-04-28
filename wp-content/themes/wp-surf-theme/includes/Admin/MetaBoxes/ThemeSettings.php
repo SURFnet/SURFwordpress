@@ -600,7 +600,7 @@ class ThemeSettings
 						'name'              => 'file',
 						'type'              => 'file',
 						'return_format'     => 'id',
-						'mime_types'        => implode( ',', ACFHelper::listAllowedFontExtensions() ),
+						'mime_types'        => implode( ',', ACFHelper::listAllowedFontTypes() ),
 						'conditional_logic' => static::getPoweredByCondition(),
 						'wrapper'           => [ 'width' => 50 ],
 					],
