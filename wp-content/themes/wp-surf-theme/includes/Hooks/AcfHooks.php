@@ -42,8 +42,8 @@ class AcfHooks
 			false => _x( 'Default', 'admin', 'wp-surf-theme' ),
 		];
 
-		$fonts = Theme::getGlobalOption( 'surf_fonts' );
-		if ( empty( $fonts ) || !is_array( $fonts ) ) {
+		$fonts = Theme::getGlobalRepeaterOption( 'surf_fonts', [ 'name' ] );
+		if ( empty( $fonts ) ) {
 			return $field;
 		}
 

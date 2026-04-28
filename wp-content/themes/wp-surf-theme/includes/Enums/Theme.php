@@ -663,8 +663,8 @@ class Theme extends Enum
 	 */
 	public static function fonts(): array
 	{
-		$fonts = static::getGlobalOption( 'surf_fonts' );
-		if ( empty( $fonts ) || !is_array( $fonts ) ) {
+		$fonts = static::getGlobalRepeaterOption( 'surf_fonts', [ 'name', 'file' ] );
+		if ( empty( $fonts ) ) {
 			return [];
 		}
 
@@ -700,6 +700,7 @@ class Theme extends Enum
 
 			return $value ?: null;
 		}
+
 		$value = static::getGlobalOption( 'surf_theme_heading_font' );
 
 		return $value ?: null;

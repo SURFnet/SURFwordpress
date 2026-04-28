@@ -228,7 +228,7 @@ class ThemeServiceProvider extends ServiceProvider
 			$output .= "
                     @font-face {
                         font-family: '{$body_font['name']}';
-                        src: url('{$body_font['url']}')
+                        src: url('{$body_font['url']}');
                     }
                 ";
 		}
