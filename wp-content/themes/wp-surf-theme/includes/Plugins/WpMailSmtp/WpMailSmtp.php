@@ -53,9 +53,9 @@ class WpMailSmtp extends Plugin
 		update_option( 'wp_mail_smtp', [
 			"smtp"       => [
 				"autotls"    => true,
-				"host"       => "out.surfmailfilter.nl",
+				"host"       => "mta.ia.surf.nl",
 				"encryption" => "tls",
-				"port"       => 587,
+				"port"       => 26,
 				"user"       => "",
 				"pass"       => Crypto::encrypt( '', $key ),
 				"auth"       => false,
