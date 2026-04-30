@@ -256,7 +256,7 @@ class AssetCategory extends Taxonomy
 		}
 
 		// If term has children, show children
-		$children = static::querySortedByPriority( [ 'parent' => $current_id ], 'term_order' );
+		$children = static::querySortedByPriority( [ 'parent' => $current_id, 'hide_empty' => false ], 'term_order' );
 		if ( $children->isNotEmpty() ) {
 			$back_term = $current;
 			$term_list = $children;
@@ -267,7 +267,7 @@ class AssetCategory extends Taxonomy
 				$parent    = $parent_id ? static::find( $parent_id ) : null;
 				if ( $parent instanceof Taxonomy ) {
 					$back_term = $parent;
-					$term_list = static::querySortedByPriority( [ 'parent' => $parent_id ], 'term_order' );
+					$term_list = static::querySortedByPriority( [ 'parent' => $parent_id, 'hide_empty' => false ], 'term_order' );
 				}
 			} catch ( MismatchingTaxonomyException $exception ) {
 				// If we can't find the parent, just show an empty list
