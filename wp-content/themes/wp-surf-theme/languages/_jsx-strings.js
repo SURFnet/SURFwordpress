@@ -52,6 +52,8 @@ _x('Examples', 'admin', 'wp-surf-theme');
 _x('This is a placeholder; settings should be configured through the Settings panel > Examples', 'admin', 'wp-surf-theme');
 _x('Placeholder - Asset examples', 'admin', 'wp-surf-theme');
 _x('Placeholder block for inserting the examples at a specific point in the page. So this one can only be added once here.', 'admin', 'wp-surf-theme');
+_x('Hover Background Color', 'admin', 'wp-surf-theme');
+_x('Hover Text Color', 'admin', 'wp-surf-theme');
 _x('Posts', 'admin', 'wp-surf-theme');
 _x('Contact person', 'admin', 'wp-surf-theme');
 _x('Shows a selected contact person.', 'admin', 'wp-surf-theme');

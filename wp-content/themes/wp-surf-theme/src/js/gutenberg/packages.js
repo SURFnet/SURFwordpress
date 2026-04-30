@@ -24,7 +24,9 @@ export const {
     URLInput,
     useBlockProps,
     withColors,
-    __experimentalBlockAlignmentMatrixControl
+    __experimentalBlockAlignmentMatrixControl,
+    __experimentalColorGradientSettingsDropdown,
+    __experimentalUseMultipleOriginColorsAndGradients
 } = wp.blockEditor
 
 //

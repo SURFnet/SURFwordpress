@@ -13,6 +13,11 @@
 
 .wp-block-button:not(.is-style-secondary) .wp-block-button__link {
 	@extend %button;
+
+	&:hover {
+		background-color: var(--hover-background-color, var(--surf-color-button-hover)) !important;
+		color: var(--hover-text-color, var(--surf-color-button-hover-text)) !important;
+	}
 }
 
 .wp-block-button.is-style-secondary .wp-block-button__link {

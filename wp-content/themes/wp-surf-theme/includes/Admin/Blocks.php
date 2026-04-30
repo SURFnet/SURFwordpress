@@ -17,7 +17,7 @@ class Blocks
 	 * How to add a new block:
 	 * 1. Use the register function here to register the new block
 	 * 2. Create a new folder in src/js/gutenberg/block with the name of your block
-	 * 3. Create an index.js file inside that new folder and implement the registerBlockType()
+	 * 3. Create an index.jsx file inside that new folder and implement the registerBlockType()
 	 * 4. If you are building a server side block, create the template file in template-parts/blocks
 	 * 5. Re-run [npm run dev] (or [npm run build] before deploying) and upload the assets/js/block contents
 	 */

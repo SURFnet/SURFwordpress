@@ -21,6 +21,7 @@ import RelatedAssets from '@surf/js/gutenberg/block/related-assets'
 import AssetExamples from '@surf/js/gutenberg/block/asset-examples'
 import Sitemap from '@surf/js/gutenberg/block/sitemap'
 import './block/image'
+import './block/button'
 
 const { _x } = wp.i18n
 const { setCategories, getCategories } = wp.blocks

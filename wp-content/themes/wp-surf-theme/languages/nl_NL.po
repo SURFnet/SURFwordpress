@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-03-19 08:45+0100\n"
-"PO-Revision-Date: 2026-03-19 08:45+0100\n"
+"POT-Creation-Date: 2026-04-30 08:49+0200\n"
+"PO-Revision-Date: 2026-04-30 08:50+0200\n"
 "Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
 "Language-Team: SURF B.V. <info@surf.nl>\n"
 "Language: nl_NL\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -185,7 +185,7 @@ msgstr "Geen agendapunten gevonden."
 msgid "Related events"
 msgstr "Gerelateerde evenementen"
 
-#: views/agenda/single.blade.php:115 views/asset/single.blade.php:66
+#: views/agenda/single.blade.php:115 views/asset/single.blade.php:91
 #: views/download/single.blade.php:81 views/home.blade.php:98
 #: views/parts/content-page.blade.php:48 views/parts/content.blade.php:37
 #: views/post/single.blade.php:82 views/vacancy/single.blade.php:127
@@ -194,13 +194,13 @@ msgid "Edit"
 msgstr "Bewerken"
 
 #: views/asset/file.blade.php:22
-#: views/asset/parts/single-download-cta.blade.php:17
-#: views/asset/parts/single-download-cta.blade.php:31
+#: views/asset/parts/single-download-cta.blade.php:22
+#: views/asset/parts/single-download-cta.blade.php:37
 #: views/download/item.blade.php:39 views/download/single.blade.php:66
 msgid "Download"
 msgstr "Download"
 
-#: views/asset/item.blade.php:49 views/post/item.blade.php:70
+#: views/asset/item.blade.php:49 views/post/item.blade.php:71
 msgid "Updated on"
 msgstr "Geüpdatet op"
 
@@ -216,20 +216,7 @@ msgstr "Vorige"
 msgid "Next"
 msgstr "Volgende"
 
-#: views/asset/parts/category-aside-menu.blade.php:10
-#: views/asset/parts/category-aside-menu.blade.php:14
-msgid "Subcategories"
-msgstr "Subcategorieën"
-
-#: views/asset/parts/category-top-menu-children.blade.php:14
-#: views/components/pages/top-menu-sub-toggle.blade.php:3
-msgid "Toggle submenu"
-msgstr "Submenu tonen"
-
-#: views/asset/parts/category-top-menu.blade.php:12
-msgid "Main categories"
-msgstr "Hoofdcategorieën"
-
+#: views/asset/parts/archive-filtering.blade.php:15
 #: views/asset/parts/counter.blade.php:10
 #, php-format
 msgid "%1$s asset"
@@ -237,10 +224,28 @@ msgid_plural "%1$s assets"
 msgstr[0] "%1$s asset"
 msgstr[1] "%1$s assets"
 
+#: views/asset/parts/archive-filtering.blade.php:19
+#: views/asset/parts/sorter.blade.php:10 views/faq/archive.blade.php:50
+msgid "Sort"
+msgstr "Sorteren"
+
+#: views/asset/parts/archive-filtering.blade.php:21
+#: views/asset/parts/sorter.blade.php:12
+msgctxt "submit button"
+msgid "Sort assets"
+msgstr "Assets sorteren"
+
+#: views/asset/parts/archive-filtering.blade.php:27
+#: views/blocks/header.blade.php:13 views/components/search-filter.blade.php:17
+msgid "Search"
+msgstr "Zoeken"
+
+#: views/asset/parts/archive-filtering.blade.php:28
 #: views/asset/parts/search-form.blade.php:10
 msgid "Search in the assets"
 msgstr "Zoek in de assets"
 
+#: views/asset/parts/archive-filtering.blade.php:31
 #: views/asset/parts/search-form.blade.php:12
 #: views/components/searchform.blade.php:11 views/faq/archive.blade.php:41
 #: views/faq/single.blade.php:40
@@ -248,16 +253,30 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Zoeken"
 
-#: views/asset/parts/sorter.blade.php:10 views/faq/archive.blade.php:50
-msgid "Sort"
-msgstr "Sorteren"
+#: views/asset/parts/category-aside-menu.blade.php:10
+#: views/asset/parts/category-aside-menu.blade.php:17
+msgid "Categories"
+msgstr "Categorieën"
 
-#: views/asset/parts/sorter.blade.php:12
-msgctxt "submit button"
-msgid "Sort assets"
-msgstr "Assets sorteren"
+#: views/asset/parts/category-top-menu-children.blade.php:19
+#: views/components/pages/top-menu-sub-toggle.blade.php:3
+msgid "Toggle submenu"
+msgstr "Submenu tonen"
 
-#: views/asset/search.blade.php:27 views/asset/template-categories.blade.php:55
+#: views/asset/parts/category-top-menu.blade.php:12
+#: views/asset/parts/category-top-menu.blade.php:19
+msgid "Main categories"
+msgstr "Hoofdcategorieën"
+
+#: views/asset/parts/category-top-menu.blade.php:50
+msgid "Scroll left"
+msgstr "Scroll links"
+
+#: views/asset/parts/category-top-menu.blade.php:53
+msgid "Scroll right"
+msgstr "Scroll rechts"
+
+#: views/asset/search.blade.php:27 views/asset/template-categories.blade.php:53
 msgid "Introduction"
 msgstr "Introductie"
 
@@ -269,12 +288,16 @@ msgstr "Zoekresultaten op"
 msgid "View more"
 msgstr "Meer bekijken"
 
-#: views/asset/single.blade.php:28
+#: views/asset/single.blade.php:37
 #, php-format
 msgid "Back to %s"
 msgstr "Terug naar %s"
 
-#: views/asset/template-categories.blade.php:92
+#: views/asset/single.blade.php:73
+msgid "Share this"
+msgstr "Deel dit"
+
+#: views/asset/template-categories.blade.php:90
 msgid "View item"
 msgstr "Bekijk item"
 
@@ -283,7 +306,7 @@ msgstr "Bekijk item"
 msgid "Read more articles"
 msgstr "Lees meer artikelen"
 
-#: views/blocks/contact-person.blade.php:25
+#: views/blocks/contact-person.blade.php:28
 #: views/components/contact-person.blade.php:31
 #, php-format
 msgid "Photo of %s"
@@ -297,15 +320,11 @@ msgstr "Bekijk alle bestanden"
 msgid "View more events"
 msgstr "Bekijk meer evenementen"
 
-#: views/blocks/header.blade.php:13 views/components/search-filter.blade.php:17
-msgid "Search"
-msgstr "Zoeken"
-
 #: views/blocks/hero.blade.php:16
 msgid "Search..."
 msgstr "Zoeken…"
 
-#: views/blocks/latest-vacancies.blade.php:28
+#: views/blocks/latest-vacancies.blade.php:33
 msgid "View vacancy"
 msgstr "Bekijk vacature"
 
@@ -393,12 +412,12 @@ msgctxt "placeholder"
 msgid "Search"
 msgstr "Zoeken"
 
-#: views/components/share.blade.php:4
+#: views/components/share.blade.php:11
 msgid "Share this article"
 msgstr "Deel dit artikel"
 
 #: views/components/social-links.blade.php:16
-#: views/parts/footer-extended.blade.php:28
+#: views/parts/footer-extended.blade.php:33
 msgid "Follow us"
 msgstr "Volg ons"
 
@@ -516,11 +535,11 @@ msgstr ""
 msgid "Continue reading %s"
 msgstr "Verder lezen %s"
 
-#: views/parts/footer-extended.blade.php:23
+#: views/parts/footer-extended.blade.php:28
 msgid "Driving innovation together"
 msgstr "Samen aanjagen van vernieuwing"
 
-#: views/parts/footer/copyright.blade.php:8
+#: views/parts/footer/copyright.blade.php:10
 msgid "Powered by"
 msgstr "Powered by"
 
@@ -673,27 +692,6 @@ msgstr "ID - Oplopend"
 msgid "ID - Descending"
 msgstr "ID - Aflopend"
 
-#: cache/views/10b2aabd02237af6dd007d48aa9543a72bce26e4.php:18
-#: includes/PostTypes/Asset.php:255
-msgid "Examples"
-msgstr "Voorbeelden"
-
-#: cache/views/ae44d7eb18dfdce8ce0f3ecb801ec9daf455ad54.php:37
-msgid "Uncategorized"
-msgstr "Zonder categorie"
-
-#: cache/views/b243374ee1a6981b55e29000be45556ba942b5cd.php:51
-msgid "Categories"
-msgstr "Categorieën"
-
-#: cache/views/b243374ee1a6981b55e29000be45556ba942b5cd.php:112
-msgid "Assets"
-msgstr "Assets"
-
-#: cache/views/bb2bd94fc77b580444248693c7fac978f20fcaef.php:2
-msgid "No assets have been found."
-msgstr "Geen berichten zijn gevonden."
-
 #: includes/Admin/BlockPatterns.php:23
 msgctxt "Block pattern category"
 msgid "Template parts"
@@ -770,7 +768,7 @@ msgstr "Button type"
 
 #: includes/Admin/MetaBoxes/MenuItemSettings.php:72
 #: includes/PostTypes/Asset.php:657 includes/PostTypes/Asset.php:950
-#: languages/_jsx-strings.js:105
+#: languages/_jsx-strings.js:107
 msgctxt "admin"
 msgid "None"
 msgstr "Geen"
@@ -800,7 +798,7 @@ msgstr "Button hover kleur"
 #: includes/Admin/MetaBoxes/ThemeSettings.php:55
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:73
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:89
-#: includes/PostTypes/Agenda.php:317 includes/PostTypes/Asset.php:761
+#: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:761
 #: includes/PostTypes/Download.php:179 includes/PostTypes/Faq.php:279
 #: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:481
 #: languages/_jsx-strings.js:38
@@ -922,7 +920,7 @@ msgctxt "admin"
 msgid "Global separator"
 msgstr "Globale scheidingslijn"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:451 languages/_jsx-strings.js:112
+#: includes/Admin/MetaBoxes/ThemeSettings.php:451 languages/_jsx-strings.js:114
 msgctxt "admin"
 msgid "No margin"
 msgstr "Geen marges"
@@ -942,7 +940,7 @@ msgstr ""
 "is standaard."
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:465
-#: includes/PostTypes/Asset.php:855 languages/_jsx-strings.js:134
+#: includes/PostTypes/Asset.php:855 languages/_jsx-strings.js:136
 msgctxt "admin"
 msgid "Bottom"
 msgstr "Onderaan"
@@ -951,7 +949,7 @@ msgstr "Onderaan"
 #: includes/PostTypes/Asset.php:854 includes/PostTypes/Asset.php:951
 #: includes/PostTypes/Page.php:250
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:164
-#: languages/_jsx-strings.js:133
+#: languages/_jsx-strings.js:135
 msgctxt "admin"
 msgid "Top"
 msgstr "Bovenaan"
@@ -1162,13 +1160,13 @@ msgstr "Afbeeldingen en knoppen"
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:714
 #: includes/PostTypes/Asset.php:887 includes/Taxonomies/AgendaLocation.php:163
-#: languages/_jsx-strings.js:107
+#: languages/_jsx-strings.js:109
 msgctxt "admin"
 msgid "Image"
 msgstr "Afbeelding"
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:721
-#: includes/Admin/MetaBoxes/ThemeSettings.php:792 languages/_jsx-strings.js:207
+#: includes/Admin/MetaBoxes/ThemeSettings.php:792 languages/_jsx-strings.js:209
 msgctxt "admin"
 msgid "Type"
 msgstr "Type"
@@ -1180,7 +1178,7 @@ msgstr "Selecteer hoe de afbeeldingen getoond moeten worden"
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:726
 #: includes/Admin/MetaBoxes/ThemeSettings.php:797
-#: includes/Hooks/AcfHooks.php:43 includes/Traits/HasCategoryColor.php:47
+#: includes/Hooks/AcfHooks.php:42 includes/Traits/HasCategoryColor.php:47
 msgctxt "admin"
 msgid "Default"
 msgstr "Standaard"
@@ -1314,7 +1312,7 @@ msgctxt "admin"
 msgid "Select post types where you would like to deactivate the breadcrumbs"
 msgstr "Selecteer post types waar je het kruimelpad zou willen verbergen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1028 languages/_jsx-strings.js:55
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1028 languages/_jsx-strings.js:57
 msgctxt "admin"
 msgid "Posts"
 msgstr "Posts"
@@ -1334,7 +1332,7 @@ msgctxt "admin"
 msgid "Assets"
 msgstr "Assets"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1032 languages/_jsx-strings.js:71
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1032 languages/_jsx-strings.js:73
 msgctxt "admin"
 msgid "Downloads"
 msgstr "Downloads"
@@ -2056,25 +2054,25 @@ msgstr "Volg ons op Vimeo"
 msgid "Follow us on TikTok"
 msgstr "Volg ons op TikTok"
 
-#: includes/Hooks/AcfHooks.php:81
+#: includes/Hooks/AcfHooks.php:92
 msgctxt "error"
 msgid "Invalid font file type."
 msgstr ""
 
-#: includes/Hooks/ConfigHooks.php:256
+#: includes/Hooks/ConfigHooks.php:258
 msgctxt "rest"
 msgid "Only authenticated users can access the REST API."
 msgstr "Alleen geverifieerde gebruikers hebben toegang tot de REST API."
 
-#: includes/Hooks/ConfigHooks.php:328
+#: includes/Hooks/ConfigHooks.php:330
 msgid "React on this article"
 msgstr "Reageer op dit artikel"
 
-#: includes/Hooks/ConfigHooks.php:333
+#: includes/Hooks/ConfigHooks.php:335
 msgid "Add your comment"
 msgstr "Plaats jouw reactie"
 
-#: includes/Hooks/ConfigHooks.php:334
+#: includes/Hooks/ConfigHooks.php:336
 msgid ""
 "You are currently logged in, therefor you don't see the fields for name, "
 "email etc."
@@ -2104,7 +2102,7 @@ msgstr "ACF Pro"
 
 #: includes/Plugins/AcfPro/AcfPro.php:66
 #: includes/Plugins/GravityForms/GravityForms.php:60
-#: includes/Plugins/Plugin.php:79
+#: includes/Plugins/Plugin.php:80
 #: includes/Plugins/PolylangPro/PolylangPro.php:74
 msgctxt "error"
 msgid "Could not fetch plugin info."
@@ -2127,7 +2125,7 @@ msgctxt "error"
 msgid "Could not download plugin, is the license key correct?"
 msgstr "Kon de plug-in niet downloaden, is de licentiesleutel correct?"
 
-#: includes/Plugins/AcfPro/AcfPro.php:99 includes/Plugins/Plugin.php:114
+#: includes/Plugins/AcfPro/AcfPro.php:99 includes/Plugins/Plugin.php:115
 msgctxt "error"
 msgid "Could not write plugin zip to disk"
 msgstr "Kon de plugin zip niet wegschrijven"
@@ -2157,28 +2155,28 @@ msgctxt "plugin"
 msgid "OpenID Connect"
 msgstr "OpenID Connect"
 
-#: includes/Plugins/Plugin.php:54
+#: includes/Plugins/Plugin.php:55
 #, php-format
 msgctxt "error"
 msgid "Could not open zip file %s."
 msgstr "Kon zip-bestand niet openen %s."
 
-#: includes/Plugins/Plugin.php:58
+#: includes/Plugins/Plugin.php:59
 msgctxt "error"
 msgid "Could not extract plugin."
 msgstr "Kon de plug-in niet uitpakken."
 
-#: includes/Plugins/Plugin.php:86
+#: includes/Plugins/Plugin.php:87
 msgctxt "error"
 msgid "Could not find download link."
 msgstr "Kon de downloadlink niet vinden."
 
-#: includes/Plugins/Plugin.php:103
+#: includes/Plugins/Plugin.php:104
 msgctxt "error"
 msgid "Could not download plugin."
 msgstr "Kon de plug-in niet downloaden."
 
-#: includes/Plugins/Plugin.php:108
+#: includes/Plugins/Plugin.php:109
 msgctxt "error"
 msgid "Downloaded plugin zip is empty."
 msgstr ""
@@ -2203,42 +2201,42 @@ msgstr ""
 "Deze plugin moet geconfigureerd worden na activatie. <a href=\"%s\" "
 "target=\"_blank\">Klik hier om de setup in een nieuw tabblad te openen</a>."
 
-#: includes/PostTypes/Agenda.php:41
+#: includes/PostTypes/Agenda.php:42
 msgctxt "CPT slug"
 msgid "agenda"
 msgstr "agenda"
 
-#: includes/PostTypes/Agenda.php:49
+#: includes/PostTypes/Agenda.php:50
 msgctxt "CPT label singular"
 msgid "Event"
 msgstr "Evenement"
 
-#: includes/PostTypes/Agenda.php:57
+#: includes/PostTypes/Agenda.php:58
 msgctxt "CPT label plural"
 msgid "Events"
 msgstr "Evenementen"
 
-#: includes/PostTypes/Agenda.php:321
+#: includes/PostTypes/Agenda.php:322
 msgctxt "admin"
 msgid "Start date"
 msgstr "Start datum"
 
-#: includes/PostTypes/Agenda.php:329
+#: includes/PostTypes/Agenda.php:330
 msgctxt "admin"
 msgid "End date"
 msgstr "Eind datum"
 
-#: includes/PostTypes/Agenda.php:340
+#: includes/PostTypes/Agenda.php:341
 msgctxt "admin"
 msgid "Location Settings"
 msgstr "Locatie instellingen"
 
-#: includes/PostTypes/Agenda.php:345
+#: includes/PostTypes/Agenda.php:346
 msgctxt "admin"
 msgid "Show location"
 msgstr "Toon locatie"
 
-#: includes/PostTypes/Agenda.php:346
+#: includes/PostTypes/Agenda.php:347
 msgctxt "admin"
 msgid "Show location on the single page"
 msgstr "Toon de locatie op de detailpagina"
@@ -2257,6 +2255,10 @@ msgstr "Asset"
 msgctxt "CPT label plural"
 msgid "Assets"
 msgstr "Assets"
+
+#: includes/PostTypes/Asset.php:255
+msgid "Examples"
+msgstr "Voorbeelden"
 
 #: includes/PostTypes/Asset.php:303
 msgctxt "default author name"
@@ -2315,7 +2317,7 @@ msgctxt "admin"
 msgid "User"
 msgstr "Gebruiker"
 
-#: includes/PostTypes/Asset.php:608 languages/_jsx-strings.js:89
+#: includes/PostTypes/Asset.php:608 languages/_jsx-strings.js:91
 msgctxt "admin"
 msgid "Text"
 msgstr "Tekst"
@@ -2372,7 +2374,7 @@ msgid "Add example"
 msgstr "Voorbeeld toevoegen"
 
 #: includes/PostTypes/Asset.php:726 includes/PostTypes/Asset.php:750
-#: languages/_jsx-strings.js:152
+#: languages/_jsx-strings.js:154
 msgctxt "admin"
 msgid "Related assets"
 msgstr "Gerelateerde assets"
@@ -2414,7 +2416,7 @@ msgctxt "admin"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: includes/PostTypes/Asset.php:816 languages/_jsx-strings.js:98
+#: includes/PostTypes/Asset.php:816 languages/_jsx-strings.js:100
 msgctxt "admin"
 msgid "Search"
 msgstr "Zoeken"
@@ -2434,7 +2436,7 @@ msgstr ""
 "categorieën en tags van Assets. <strong>Let op:</strong> dit kan de "
 "prestaties beïnvloeden."
 
-#: includes/PostTypes/Asset.php:835 languages/_jsx-strings.js:113
+#: includes/PostTypes/Asset.php:835 languages/_jsx-strings.js:115
 msgctxt "admin"
 msgid "Header"
 msgstr "Header"
@@ -2479,14 +2481,14 @@ msgstr "Tags positie"
 #: includes/PostTypes/Asset.php:952 includes/PostTypes/Page.php:251
 #: includes/PostTypes/Page.php:273
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:165
-#: languages/_jsx-strings.js:138
+#: languages/_jsx-strings.js:140
 msgctxt "admin"
 msgid "Left"
 msgstr "Links"
 
 #: includes/PostTypes/Asset.php:953 includes/PostTypes/Page.php:274
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:166
-#: languages/_jsx-strings.js:140
+#: languages/_jsx-strings.js:142
 msgctxt "admin"
 msgid "Right"
 msgstr "Rechts"
@@ -2932,7 +2934,7 @@ msgid "Vacancies"
 msgstr "Vacatures"
 
 #: includes/PostTypes/Vacancy.php:364
-#: includes/Services/GithubReleaseService.php:59
+#: includes/Services/GithubReleaseService.php:52
 msgctxt "admin"
 msgid "Source"
 msgstr "Bron"
@@ -3026,12 +3028,12 @@ msgctxt "admin"
 msgid "Roadmap display"
 msgstr "Postdatum-weergave"
 
-#: includes/PostTypes/Vacancy.php:521 languages/_jsx-strings.js:157
+#: includes/PostTypes/Vacancy.php:521 languages/_jsx-strings.js:159
 msgctxt "admin"
 msgid "Flow"
 msgstr "Flow"
 
-#: includes/PostTypes/Vacancy.php:522 languages/_jsx-strings.js:158
+#: includes/PostTypes/Vacancy.php:522 languages/_jsx-strings.js:160
 msgctxt "admin"
 msgid "Slider"
 msgstr "Slider"
@@ -3046,7 +3048,7 @@ msgctxt "admin"
 msgid "Steps"
 msgstr "Stappen"
 
-#: includes/PostTypes/Vacancy.php:539 languages/_jsx-strings.js:163
+#: includes/PostTypes/Vacancy.php:539 languages/_jsx-strings.js:165
 msgctxt "admin"
 msgid "Icon"
 msgstr "Icoon"
@@ -3178,12 +3180,12 @@ msgstr "Geselecteerde filters"
 msgid "Export for"
 msgstr "Export voor"
 
-#: includes/Services/GithubReleaseService.php:61
+#: includes/Services/GithubReleaseService.php:54
 msgctxt "admin"
 msgid "GitHub"
 msgstr "GitHub"
 
-#: includes/Services/GithubReleaseService.php:92
+#: includes/Services/GithubReleaseService.php:85
 msgctxt "admin"
 msgid "View full changelog"
 msgstr "Bekijk de volledige changelog"
@@ -3335,11 +3337,11 @@ msgctxt "tax slug - asset-category"
 msgid "category"
 msgstr "category"
 
-#: includes/Taxonomies/AssetCategory.php:269
+#: includes/Taxonomies/AssetCategory.php:280
 msgid "Back to main categories"
 msgstr "Terug naar de hoofdcategorieën"
 
-#: includes/Taxonomies/AssetCategory.php:278
+#: includes/Taxonomies/AssetCategory.php:289
 #, php-format
 msgid "Back to %1$s"
 msgstr "Terug naar %1$s"
@@ -3606,7 +3608,7 @@ msgctxt "admin"
 msgid "Post type Filter"
 msgstr "Post type Filter"
 
-#: includes/Widgets/PostTypeFilter.php:41 languages/_jsx-strings.js:168
+#: includes/Widgets/PostTypeFilter.php:41 languages/_jsx-strings.js:170
 msgctxt "admin"
 msgid "Post type"
 msgstr "Bericht type"
@@ -3857,423 +3859,433 @@ msgstr ""
 "Placeholder blok voor het invoegen van de voorbeelden op een specifiek punt "
 "op de pagina. Dus dit kan hier maar één keer worden toegevoegd."
 
+#: languages/_jsx-strings.js:55
+msgctxt "admin"
+msgid "Hover Background Color"
+msgstr "Achtergrondkleur bij hoveren"
+
 #: languages/_jsx-strings.js:56
+msgctxt "admin"
+msgid "Hover Text Color"
+msgstr "Tekstkleur bij hoveren"
+
+#: languages/_jsx-strings.js:58
 msgctxt "admin"
 msgid "Contact person"
 msgstr "Contact person"
 
-#: languages/_jsx-strings.js:57
+#: languages/_jsx-strings.js:59
 msgctxt "admin"
 msgid "Shows a selected contact person."
 msgstr "Toont een geselecteerde contactpersoon."
 
-#: languages/_jsx-strings.js:58
+#: languages/_jsx-strings.js:60
 msgid "Click here"
 msgstr "Klik hier"
 
-#: languages/_jsx-strings.js:59
+#: languages/_jsx-strings.js:61
 msgctxt "admin"
 msgid "Add a subtitle..."
 msgstr "Voeg een ondertitel toe..."
 
-#: languages/_jsx-strings.js:60
+#: languages/_jsx-strings.js:62
 msgctxt "admin"
 msgid "Call to action"
 msgstr "Call to action"
 
-#: languages/_jsx-strings.js:61
+#: languages/_jsx-strings.js:63
 msgctxt "admin"
 msgid "Call to action block with a title, subtitle and a button."
 msgstr "Call-to-action blok met een titel, ondertitel en een knop."
 
-#: languages/_jsx-strings.js:62
+#: languages/_jsx-strings.js:64
 msgctxt "admin"
 msgid "Upload Image"
 msgstr "Afbeelding uploaden"
 
-#: languages/_jsx-strings.js:63
+#: languages/_jsx-strings.js:65
 msgctxt "admin"
 msgid "Replace"
 msgstr "Vervangen"
 
-#: languages/_jsx-strings.js:64
+#: languages/_jsx-strings.js:66
 msgctxt "admin"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: languages/_jsx-strings.js:65
+#: languages/_jsx-strings.js:67
 msgctxt "admin"
 msgid "Card"
 msgstr "Kaart"
 
-#: languages/_jsx-strings.js:66
+#: languages/_jsx-strings.js:68
 msgctxt "admin"
 msgid "Card for the custom cards block"
 msgstr "Kaart voor het blok met custom kaarten"
 
-#: languages/_jsx-strings.js:67
+#: languages/_jsx-strings.js:69
 msgctxt "admin"
 msgid "Text color"
 msgstr "Tekst kleur"
 
-#: languages/_jsx-strings.js:68
+#: languages/_jsx-strings.js:70
 msgctxt "admin"
 msgid "Background color"
 msgstr "Achtergrondkleur"
 
-#: languages/_jsx-strings.js:69
+#: languages/_jsx-strings.js:71
 msgctxt "admin"
 msgid "Custom Cards"
 msgstr "Aangepaste kaarten"
 
-#: languages/_jsx-strings.js:70
+#: languages/_jsx-strings.js:72
 msgctxt "admin"
 msgid "Custom cards block with a title, subtitle and cards"
 msgstr "Custom kaart blokken met een titel, ondertitel en kaarten"
 
-#: languages/_jsx-strings.js:72
+#: languages/_jsx-strings.js:74
 msgctxt "admin"
 msgid "Shows selected downloads in a grid."
 msgstr "Toont geselecteerde downloads in een raster."
 
-#: languages/_jsx-strings.js:74
+#: languages/_jsx-strings.js:76
 msgctxt "admin"
 msgid "Display Options"
 msgstr "Toon opties"
 
-#: languages/_jsx-strings.js:75
+#: languages/_jsx-strings.js:77
 msgctxt "admin"
 msgid "Images will be hidden on mobile devices."
 msgstr "Afbeeldingen worden verborgen op mobiele apparaten."
 
-#: languages/_jsx-strings.js:76
+#: languages/_jsx-strings.js:78
 msgctxt "admin"
 msgid "Images will be shown on all devices."
 msgstr "Afbeeldingen worden op alle apparaten weergegeven."
 
-#: languages/_jsx-strings.js:77
+#: languages/_jsx-strings.js:79
 msgctxt "admin"
 msgid "Events"
 msgstr "Evenementen"
 
-#: languages/_jsx-strings.js:78
+#: languages/_jsx-strings.js:80
 msgctxt "admin"
 msgid "Shows selected events in a grid."
 msgstr "Toont geselecteerde events in een raster."
 
-#: languages/_jsx-strings.js:80
+#: languages/_jsx-strings.js:82
 msgctxt "admin"
 msgid "Hide categories"
 msgstr "Categorieën verbergen"
 
-#: languages/_jsx-strings.js:81
+#: languages/_jsx-strings.js:83
 msgctxt "admin"
 msgid "Hide dates"
 msgstr "Datums verbergen"
 
-#: languages/_jsx-strings.js:82
+#: languages/_jsx-strings.js:84
 msgctxt "admin"
 msgid "Featured items"
 msgstr "Uitgelichte items"
 
-#: languages/_jsx-strings.js:83
+#: languages/_jsx-strings.js:85
 msgctxt "admin"
 msgid "Shows items in a grid that are selected by you."
 msgstr "Toont items in een raster die door jou zijn geselecteerd."
 
-#: languages/_jsx-strings.js:84
+#: languages/_jsx-strings.js:86
 msgctxt "admin"
 msgid "Add Media"
 msgstr "Media toevoegen"
 
-#: languages/_jsx-strings.js:85
+#: languages/_jsx-strings.js:87
 msgctxt "admin"
 msgid "Replace background image"
 msgstr "Achtergrondafbeelding vervangen"
 
-#: languages/_jsx-strings.js:86
+#: languages/_jsx-strings.js:88
 msgctxt "admin"
 msgid "Add background image"
 msgstr "Achtergrondfoto toevoegen"
 
-#: languages/_jsx-strings.js:87
+#: languages/_jsx-strings.js:89
 msgctxt "admin"
 msgid "Foreground"
 msgstr "Voorgrond"
 
-#: languages/_jsx-strings.js:88
+#: languages/_jsx-strings.js:90
 msgctxt "admin"
 msgid "Select a variation"
 msgstr "Selecteer een variant"
 
-#: languages/_jsx-strings.js:90
+#: languages/_jsx-strings.js:92
 msgctxt "admin"
 msgid "Small image"
 msgstr "Kleine afbeelding"
 
-#: languages/_jsx-strings.js:91
+#: languages/_jsx-strings.js:93
 msgctxt "admin"
 msgid "Background image"
 msgstr "Achtergrondafbeelding"
 
-#: languages/_jsx-strings.js:92
+#: languages/_jsx-strings.js:94
 msgctxt "admin"
 msgid "Background video"
 msgstr "Achtergrondvideo"
 
-#: languages/_jsx-strings.js:93
+#: languages/_jsx-strings.js:95
 msgctxt "admin"
 msgid "Background video with gradient"
 msgstr "Achtergrondvideo met gradiënt"
 
-#: languages/_jsx-strings.js:94
+#: languages/_jsx-strings.js:96
 msgctxt "admin"
 msgid "Height"
 msgstr "Hoogte"
 
-#: languages/_jsx-strings.js:95
+#: languages/_jsx-strings.js:97
 msgctxt "admin"
 msgid "min. 230px"
 msgstr "min. 230px"
 
-#: languages/_jsx-strings.js:96
+#: languages/_jsx-strings.js:98
 msgctxt "admin"
 msgid "min. 460px"
 msgstr "min. 460px"
 
-#: languages/_jsx-strings.js:97
+#: languages/_jsx-strings.js:99
 msgctxt "admin"
 msgid "Video URL"
 msgstr "Video URL"
 
-#: languages/_jsx-strings.js:99
+#: languages/_jsx-strings.js:101
 msgctxt "admin"
 msgid "No search"
 msgstr "Geen zoeken"
 
-#: languages/_jsx-strings.js:100
+#: languages/_jsx-strings.js:102
 msgctxt "admin"
 msgid "Search at the top"
 msgstr "Zoekveld bovenaan"
 
-#: languages/_jsx-strings.js:101
+#: languages/_jsx-strings.js:103
 msgctxt "admin"
 msgid "Search at the bottom"
 msgstr "Zoekveld onderaan"
 
-#: languages/_jsx-strings.js:102
+#: languages/_jsx-strings.js:104
 msgctxt "admin"
 msgid "Placeholder"
 msgstr "Placeholder"
 
-#: languages/_jsx-strings.js:103
+#: languages/_jsx-strings.js:105
 msgctxt "admin"
 msgid "Background"
 msgstr "Achtergrond"
 
-#: languages/_jsx-strings.js:104
+#: languages/_jsx-strings.js:106
 msgctxt "admin"
 msgid "Background type"
 msgstr "Achtergrond type"
 
-#: languages/_jsx-strings.js:106
+#: languages/_jsx-strings.js:108
 msgctxt "admin"
 msgid "Video"
 msgstr "Video"
 
-#: languages/_jsx-strings.js:108
+#: languages/_jsx-strings.js:110
 msgctxt "admin"
 msgid "Color"
 msgstr "Kleur"
 
-#: languages/_jsx-strings.js:109
+#: languages/_jsx-strings.js:111
 msgctxt "admin"
 msgid "Video Background URL"
 msgstr "URL achtergrondvideo"
 
-#: languages/_jsx-strings.js:110
+#: languages/_jsx-strings.js:112
 msgctxt "admin"
 msgid "Margin"
 msgstr "Marge"
 
-#: languages/_jsx-strings.js:111
+#: languages/_jsx-strings.js:113
 msgctxt "admin"
 msgid "Normal"
 msgstr "Normaal"
 
-#: languages/_jsx-strings.js:114
+#: languages/_jsx-strings.js:116
 msgctxt "admin"
 msgid "Shows a header, with 3 types: Only text, a small image or a full image."
 msgstr ""
 "Toont een header, met 3 typen: alleen tekst, een kleine afbeelding of een "
 "volledige afbeelding."
 
-#: languages/_jsx-strings.js:115
+#: languages/_jsx-strings.js:117
 msgctxt "admin"
 msgid "Content layer"
 msgstr "Content laag"
 
-#: languages/_jsx-strings.js:116
+#: languages/_jsx-strings.js:118
 msgctxt "admin"
 msgid "Content variation"
 msgstr "Content variatie"
 
-#: languages/_jsx-strings.js:117
+#: languages/_jsx-strings.js:119
 msgctxt "admin"
 msgid "Content only"
 msgstr "Enkel content"
 
-#: languages/_jsx-strings.js:118
+#: languages/_jsx-strings.js:120
 msgctxt "admin"
 msgid "Content with media"
 msgstr "Content met media"
 
-#: languages/_jsx-strings.js:119
+#: languages/_jsx-strings.js:121
 msgctxt "admin"
 msgid "Content with media background"
 msgstr "Content met media achtergrond"
 
-#: languages/_jsx-strings.js:120
+#: languages/_jsx-strings.js:122
 msgctxt "admin"
 msgid "width"
 msgstr "breedte"
 
-#: languages/_jsx-strings.js:121
+#: languages/_jsx-strings.js:123
 msgctxt "admin"
 msgid "Small"
 msgstr "Klein"
 
-#: languages/_jsx-strings.js:122
+#: languages/_jsx-strings.js:124
 msgctxt "admin"
 msgid "Full"
 msgstr "Volledig"
 
-#: languages/_jsx-strings.js:123
+#: languages/_jsx-strings.js:125
 msgctxt "admin"
 msgid "Minimal height"
 msgstr "Minimale hoogte"
 
-#: languages/_jsx-strings.js:124
+#: languages/_jsx-strings.js:126
 msgctxt "admin"
 msgid "Low"
 msgstr "Laag"
 
-#: languages/_jsx-strings.js:125
+#: languages/_jsx-strings.js:127
 msgctxt "admin"
 msgid "High"
 msgstr "Hoog"
 
-#: languages/_jsx-strings.js:126
+#: languages/_jsx-strings.js:128
 msgctxt "admin"
 msgid "Select heading tag"
 msgstr "Selecteer koptag"
 
-#: languages/_jsx-strings.js:127
+#: languages/_jsx-strings.js:129
 msgctxt "admin"
 msgid "H1"
 msgstr "H1"
 
-#: languages/_jsx-strings.js:128
+#: languages/_jsx-strings.js:130
 msgctxt "admin"
 msgid "H2"
 msgstr "H2"
 
-#: languages/_jsx-strings.js:129
+#: languages/_jsx-strings.js:131
 msgctxt "admin"
 msgid "Enable tagline"
 msgstr "Slogan inschakelen"
 
-#: languages/_jsx-strings.js:130
+#: languages/_jsx-strings.js:132
 msgctxt "admin"
 msgid "Enable button"
 msgstr "Knop inschakelen"
 
-#: languages/_jsx-strings.js:131
+#: languages/_jsx-strings.js:133
 msgctxt "admin"
 msgid "Enable search"
 msgstr "Zoeken inschakelen"
 
-#: languages/_jsx-strings.js:132
+#: languages/_jsx-strings.js:134
 msgctxt "admin"
 msgid "Search alignment"
 msgstr "Uitlijning zoekveld"
 
-#: languages/_jsx-strings.js:135
+#: languages/_jsx-strings.js:137
 msgctxt "admin"
 msgid "Search width"
 msgstr "Breedte zoekveld"
 
-#: languages/_jsx-strings.js:136
+#: languages/_jsx-strings.js:138
 msgctxt "admin"
 msgid "Fill"
 msgstr "Vullen"
 
-#: languages/_jsx-strings.js:137
+#: languages/_jsx-strings.js:139
 msgctxt "admin"
 msgid "Horizontal alignment"
 msgstr "Horizontale uitlijning"
 
-#: languages/_jsx-strings.js:139
+#: languages/_jsx-strings.js:141
 msgctxt "admin"
 msgid "Center"
 msgstr "Gecentreerd"
 
-#: languages/_jsx-strings.js:141
+#: languages/_jsx-strings.js:143
 msgctxt "admin"
 msgid "Vertical alignment"
 msgstr "Verticale uitlijning"
 
-#: languages/_jsx-strings.js:142
+#: languages/_jsx-strings.js:144
 msgctxt "admin"
 msgid "Middle"
 msgstr "Midden"
 
-#: languages/_jsx-strings.js:143
+#: languages/_jsx-strings.js:145
 msgctxt "admin"
 msgid "Select media type"
 msgstr "Selecteer mediatype"
 
-#: languages/_jsx-strings.js:144
+#: languages/_jsx-strings.js:146
 msgctxt "admin"
 msgid "Enable rounded corners"
 msgstr "Afgeronde hoeken inschakelen"
 
-#: languages/_jsx-strings.js:145
+#: languages/_jsx-strings.js:147
 msgctxt "admin"
 msgid "Media location"
 msgstr "Medialocatie"
 
-#: languages/_jsx-strings.js:146
+#: languages/_jsx-strings.js:148
 msgctxt "admin"
 msgid "Backdrop layer"
 msgstr "Achtergrond laag"
 
-#: languages/_jsx-strings.js:147
+#: languages/_jsx-strings.js:149
 msgctxt "admin"
 msgid "Tagline"
 msgstr "Slogan"
 
-#: languages/_jsx-strings.js:148
+#: languages/_jsx-strings.js:150
 msgctxt "admin"
 msgid "Hero"
 msgstr "Hero"
 
-#: languages/_jsx-strings.js:149
+#: languages/_jsx-strings.js:151
 msgctxt "admin"
 msgid "Shows a header, with various options."
 msgstr "Toont een header, met verschillende opties."
 
-#: languages/_jsx-strings.js:150
+#: languages/_jsx-strings.js:152
 msgctxt "admin"
 msgid "Latest vacancies"
 msgstr "Laatste vacatures"
 
-#: languages/_jsx-strings.js:151
+#: languages/_jsx-strings.js:153
 msgctxt "admin"
 msgid "Shows the latest vacancies in a grid"
 msgstr "Toont de nieuwste vacatures in een raster"
 
-#: languages/_jsx-strings.js:153
+#: languages/_jsx-strings.js:155
 msgctxt "admin"
 msgid ""
 "This is a placeholder; settings should be configured through the Settings "
@@ -4282,12 +4294,12 @@ msgstr ""
 "Dit is een placeholder; instellingen moeten worden geconfigureerd via het "
 "Instellingen > Gerelateerde assets"
 
-#: languages/_jsx-strings.js:154
+#: languages/_jsx-strings.js:156
 msgctxt "admin"
 msgid "Placeholder - Related assets"
 msgstr "[Placeholder] Soortgelijke assets"
 
-#: languages/_jsx-strings.js:155
+#: languages/_jsx-strings.js:157
 msgctxt "admin"
 msgid ""
 "Placeholder block for inserting related assets at a specific point in the "
@@ -4297,167 +4309,167 @@ msgstr ""
 "specifiek punt op de pagina. Dus dit kan hier maar één keer worden "
 "toegevoegd."
 
-#: languages/_jsx-strings.js:156
+#: languages/_jsx-strings.js:158
 msgctxt "admin"
 msgid "Display type"
 msgstr "Weergave type"
 
-#: languages/_jsx-strings.js:159
+#: languages/_jsx-strings.js:161
 msgctxt "admin"
 msgid "Wide"
 msgstr "Breed"
 
-#: languages/_jsx-strings.js:160
+#: languages/_jsx-strings.js:162
 msgctxt "admin"
 msgid "Use Icons"
 msgstr "Gebruik iconen"
 
-#: languages/_jsx-strings.js:161
+#: languages/_jsx-strings.js:163
 msgctxt "admin"
 msgid "Roadmap"
 msgstr "Roadmap"
 
-#: languages/_jsx-strings.js:162
+#: languages/_jsx-strings.js:164
 msgctxt "admin"
 msgid "Roadmap block with a title, sub title and steps"
 msgstr "Roadmapblok met een titel, ondertitel en stappen"
 
-#: languages/_jsx-strings.js:164
+#: languages/_jsx-strings.js:166
 msgctxt "admin"
 msgid "Step"
 msgstr "Stap"
 
-#: languages/_jsx-strings.js:165
+#: languages/_jsx-strings.js:167
 msgctxt "admin"
 msgid "Steps for the roadmap"
 msgstr "Stappen voor de roadmap"
 
-#: languages/_jsx-strings.js:166
+#: languages/_jsx-strings.js:168
 msgctxt "admin"
 msgid "Separator"
 msgstr "Scheiding"
 
-#: languages/_jsx-strings.js:167
+#: languages/_jsx-strings.js:169
 msgctxt "admin"
 msgid "Shows a border bar that separates different blocks."
 msgstr "Toont een randbalk die verschillende blokken scheidt."
 
-#: languages/_jsx-strings.js:169
+#: languages/_jsx-strings.js:171
 msgctxt "admin"
 msgid "- Select a post type -"
 msgstr "- Selecteer een bericht type -"
 
-#: languages/_jsx-strings.js:170
+#: languages/_jsx-strings.js:172
 msgctxt "admin"
 msgid "Sitemap settings"
 msgstr "Sitemap-instellingen"
 
-#: languages/_jsx-strings.js:171
+#: languages/_jsx-strings.js:173
 msgctxt "admin"
 msgid "Hide empty categories"
 msgstr "Lege categorieën verbergen"
 
-#: languages/_jsx-strings.js:172
+#: languages/_jsx-strings.js:174
 msgctxt "admin"
 msgid "Use Yoast primary category only"
 msgstr "Gebruik enkel de primaire (Yoast) categorie"
 
-#: languages/_jsx-strings.js:173
+#: languages/_jsx-strings.js:175
 msgctxt "admin"
 msgid "Select a post type to generate the sitemap preview."
 msgstr "Selecteer een bericht type om de sitemap-preview te genereren."
 
-#: languages/_jsx-strings.js:174
+#: languages/_jsx-strings.js:176
 msgctxt "admin"
 msgid "Add title..."
 msgstr "Voeg titel toe..."
 
-#: languages/_jsx-strings.js:175
+#: languages/_jsx-strings.js:177
 msgctxt "admin"
 msgid "CPT sitemap"
 msgstr "CPT sitemap"
 
-#: languages/_jsx-strings.js:176
+#: languages/_jsx-strings.js:178
 msgctxt "admin"
 msgid "Shows a sitemap (table of contents) for the specified post type."
 msgstr "Toont een sitemap (inhoudsopgave) voor het opgegeven bericht type."
 
-#: languages/_jsx-strings.js:178
+#: languages/_jsx-strings.js:180
 msgctxt "admin"
 msgid "Divider"
 msgstr "Scheidingslijn"
 
-#: languages/_jsx-strings.js:179
+#: languages/_jsx-strings.js:181
 msgctxt "admin"
 msgid "Standard"
 msgstr "Standaard"
 
-#: languages/_jsx-strings.js:180
+#: languages/_jsx-strings.js:182
 msgctxt "admin"
 msgid "Position"
 msgstr "Positie"
 
-#: languages/_jsx-strings.js:181
+#: languages/_jsx-strings.js:183
 msgctxt "admin"
 msgid "Make a selection"
 msgstr "Maak een selectie"
 
-#: languages/_jsx-strings.js:182
+#: languages/_jsx-strings.js:184
 msgctxt "admin"
 msgid "Both sides"
 msgstr "Beide zijden"
 
-#: languages/_jsx-strings.js:183
+#: languages/_jsx-strings.js:185
 msgctxt "admin"
 msgid "Top only"
 msgstr "Alleen bovenaan"
 
-#: languages/_jsx-strings.js:184
+#: languages/_jsx-strings.js:186
 msgctxt "admin"
 msgid "Bottom only"
 msgstr "Alleen aan de onderkant"
 
-#: languages/_jsx-strings.js:185
+#: languages/_jsx-strings.js:187
 msgctxt "admin"
 msgid "Style"
 msgstr "Stijl"
 
-#: languages/_jsx-strings.js:186
+#: languages/_jsx-strings.js:188
 msgctxt "admin"
 msgid "Background (HEX)"
 msgstr "Achtergrond (HEX)"
 
-#: languages/_jsx-strings.js:187
+#: languages/_jsx-strings.js:189
 msgctxt "admin"
 msgid "Link"
 msgstr "Link"
 
-#: languages/_jsx-strings.js:188
+#: languages/_jsx-strings.js:190
 msgctxt "admin"
 msgid "Hover - Link"
 msgstr "Hover - Link"
 
-#: languages/_jsx-strings.js:189
+#: languages/_jsx-strings.js:191
 msgctxt "admin"
 msgid "Buttons"
 msgstr "Knoppen"
 
-#: languages/_jsx-strings.js:190
+#: languages/_jsx-strings.js:192
 msgctxt "admin"
 msgid "Hover - Background"
 msgstr "Hover - Achtergrond"
 
-#: languages/_jsx-strings.js:191
+#: languages/_jsx-strings.js:193
 msgctxt "admin"
 msgid "Hover - Text"
 msgstr "Hover - Tekst"
 
-#: languages/_jsx-strings.js:192
+#: languages/_jsx-strings.js:194
 msgctxt "admin"
 msgid "Style group"
 msgstr "Stijlgroep"
 
-#: languages/_jsx-strings.js:193
+#: languages/_jsx-strings.js:195
 msgctxt "admin"
 msgid ""
 "Creates a block where you can change your background, text colors, and "
@@ -4466,72 +4478,72 @@ msgstr ""
 "Maakt een blok aan waarin je je achtergrond, tekstkleuren en knoppenkleuren "
 "kunt veranderen."
 
-#: languages/_jsx-strings.js:194
+#: languages/_jsx-strings.js:196
 msgctxt "admin"
 msgid "Color Settings"
 msgstr "Kleur instellingen"
 
-#: languages/_jsx-strings.js:195
+#: languages/_jsx-strings.js:197
 msgctxt "admin"
 msgid "Media Settings"
 msgstr "Media instellingen"
 
-#: languages/_jsx-strings.js:196
+#: languages/_jsx-strings.js:198
 msgctxt "admin"
 msgid "Change"
 msgstr "Wijzigen"
 
-#: languages/_jsx-strings.js:197
+#: languages/_jsx-strings.js:199
 msgctxt "admin"
 msgid "Choose"
 msgstr "Kies"
 
-#: languages/_jsx-strings.js:198
+#: languages/_jsx-strings.js:200
 msgctxt "admin"
 msgid "Pick an icon"
 msgstr "Kies een icoon"
 
-#: languages/_jsx-strings.js:199
+#: languages/_jsx-strings.js:201
 msgctxt "admin"
 msgid "Type to find an icon"
 msgstr "Typ om een icoon te zoeken"
 
-#: languages/_jsx-strings.js:200
+#: languages/_jsx-strings.js:202
 msgctxt "admin"
 msgid "Loading..."
 msgstr "Laden…"
 
-#: languages/_jsx-strings.js:201
+#: languages/_jsx-strings.js:203
 msgctxt "admin"
 msgid "Select a post"
 msgstr "Selecteer een bericht"
 
-#: languages/_jsx-strings.js:202
+#: languages/_jsx-strings.js:204
 msgctxt "admin"
 msgid "Type to find posts"
 msgstr "Typ om berichten te zoeken"
 
-#: languages/_jsx-strings.js:203
+#: languages/_jsx-strings.js:205
 msgctxt "admin"
 msgid "Category"
 msgstr "Categorie"
 
-#: languages/_jsx-strings.js:204
+#: languages/_jsx-strings.js:206
 msgctxt "admin"
 msgid "Tags"
 msgstr "Tags"
 
-#: languages/_jsx-strings.js:205
+#: languages/_jsx-strings.js:207
 msgctxt "admin"
 msgid "Move up"
 msgstr "Verplaats omhoog"
 
-#: languages/_jsx-strings.js:206
+#: languages/_jsx-strings.js:208
 msgctxt "admin"
 msgid "Move down"
 msgstr "Verplaats omlaag"
 
-#: languages/_jsx-strings.js:208
+#: languages/_jsx-strings.js:210
 msgctxt "admin"
 msgid "SURF"
 msgstr "SURF"
@@ -4560,6 +4572,18 @@ msgstr "Home template"
 msgctxt "admin"
 msgid "Please refresh the page to initialize the widget."
 msgstr "Ververs alstublieft de pagina om de widget te initialiseren."
+
+#~ msgid "Subcategories"
+#~ msgstr "Subcategorieën"
+
+#~ msgid "Uncategorized"
+#~ msgstr "Zonder categorie"
+
+#~ msgid "Assets"
+#~ msgstr "Assets"
+
+#~ msgid "No assets have been found."
+#~ msgstr "Geen berichten zijn gevonden."
 
 #~ msgid "Production date"
 #~ msgstr "Productiedatum"
@@ -4592,10 +4616,3 @@ msgstr "Ververs alstublieft de pagina om de widget te initialiseren."
 #~ msgctxt "in english"
 #~ msgid "Out of date"
 #~ msgstr "Out of date"
-
-#~ msgid "Share this"
-#~ msgstr "Deel dit"
-
-#~ msgctxt "admin"
-#~ msgid "Background Color"
-#~ msgstr "Achtergrond Kleur"
