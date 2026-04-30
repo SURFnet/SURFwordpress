@@ -28,7 +28,7 @@
 @section( 'content' )
 	<article id="post-{{ $asset->ID() }}" {!! $asset->postClass('entry') !!}>
 		<div class="grid container padded">
-			<div class="column span-7-lg span-5-md span-4-sm">
+			<div class="column span-8-lg span-5-md span-4-sm">
 				@if( BreadcrumbsHelper::shouldShow() )
 					<x-breadcrumb/>
 				@elseif( !empty( $term ) )
@@ -60,7 +60,7 @@
 
 				@include( 'parts.single-contact-persons' )
 			</div>
-			<div class="column span-5-lg span-3-md span-4-sm">
+			<div class="column span-4-lg span-3-md span-4-sm">
 				<div class="assets-single__sidebar-sections">
 					<div class="assets-single__sidebar-meta">
 						@include( 'asset.parts.single-download-cta', ['asset' => $asset] )
