@@ -98,6 +98,10 @@
 		align-items: center;
 	}
 
+	.entry__header .vacancy__header {
+		flex-direction: row;
+	}
+
 	.vacancy__apply, .application-form .vacancy__apply {
 		width: initial;
 	}

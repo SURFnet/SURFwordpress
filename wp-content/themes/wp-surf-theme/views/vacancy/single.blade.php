@@ -1,6 +1,7 @@
 @php
 	use SURF\Enums\Theme;
 	use SURF\PostTypes\Vacancy;
+	use SURF\Taxonomies\VacancyCategory;
 
 	/**
 	 * @var Vacancy $vacancy
@@ -9,13 +10,14 @@
 
 	$postID = $vacancy->ID();
 	$termID = $vacancy->getPrimaryCategoryId($postID);
+	$primaryCategory = VacancyCategory::find($termID);
 @endphp
 
 @extends('layouts.app')
 
 @section('content')
 	<article id="post-{{$postID}}"
-			 {!! $vacancy->postClass('entry') !!} @if(Theme::isSURF() && $vacancy->getPrimaryCategoryColor($postID))style='--surf-color-category: {{ $vacancy->getPrimaryCategoryColor($postID) }};'@endif>
+	         {!! $vacancy->postClass('entry') !!} @if(Theme::isSURF() && $vacancy->getPrimaryCategoryColor($postID))style='--surf-color-category: {{ $vacancy->getPrimaryCategoryColor($postID) }};'@endif>
 		<div class="entry__header entry__header--full-with container padded">
 			<x-breadcrumb/>
 			<header class="vacancy__header">
@@ -30,11 +32,11 @@
 			<ul class="entry__meta">
 				<li class="entry__meta-category">
 					<x-icon icon="tag" sprite="global"/>
-					@if($termID)
+					@if($primaryCategory)
 						@php $showClosingATag = true; @endphp
-						<a href="{{ get_term_link($termID) }}">
+						<a href="{{ $primaryCategory->link() }}">
 							@endif
-							{{ $vacancy->getPrimaryCategoryName($postID) }}
+							{{ $primaryCategory->name }}
 							@if($showClosingATag ?? false)
 						</a>
 					@endif

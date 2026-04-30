@@ -154,7 +154,6 @@ trait Registers
 			}
 
 			$page = static::getArchivePage();
-
 			if ( !$page ) {
 				return $link;
 			}

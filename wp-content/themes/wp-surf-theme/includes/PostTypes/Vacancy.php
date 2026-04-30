@@ -2,6 +2,7 @@
 
 namespace SURF\PostTypes;
 
+use Exception;
 use SURF\Core\Exceptions\MismatchingPostTypesException;
 use SURF\Core\PostTypes\BasePost;
 use SURF\Core\PostTypes\HasFactory;
@@ -21,6 +22,7 @@ use SURF\Taxonomies\VacancyCategory;
 use SURF\Taxonomies\VacancyHours;
 use SURF\Traits\HasArchiveWidgetAreaFilters;
 use SURF\Traits\HasManagedTaxonomies;
+use WP_Post;
 use WP_Query;
 use WP_Term;
 
@@ -346,6 +348,37 @@ class Vacancy extends BasePost
 		$query = new WP_Query( array_merge( $baseArgs, $args ) );
 
 		return static::fromQuery( $query );
+	}
+
+	/**
+	 * @return void
+	 */
+	public static function registered(): void
+	{
+		add_filter( 'wpseo_breadcrumb_links', function ( $crumbs )
+		{
+			return array_map( function ( $crumb )
+			{
+				if ( ( $crumb['ptarchive'] ?? null ) !== static::getName() ) {
+					return $crumb;
+				}
+
+				try {
+					$page = static::getArchivePage();
+				} catch ( Exception $exception ) {
+					return $crumb;
+				}
+
+				if ( empty( $page ) ) {
+					return $crumb;
+				}
+
+				$crumb['url']  = $page->permalink();
+				$crumb['text'] = $page->title();
+
+				return $crumb;
+			}, $crumbs );
+		} );
 	}
 
 	/**
