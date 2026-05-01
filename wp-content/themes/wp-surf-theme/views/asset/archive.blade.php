@@ -27,7 +27,7 @@
 			<header class="archive-page__header">
 				@include( 'asset.parts.archive-header', [
 					'title'   => $title,
-					'content' => $content,
+					'content' => nl2br($content),
 				] )
 			</header><!-- .archive__header -->
 

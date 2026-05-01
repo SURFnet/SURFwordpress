@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-04-30 08:49+0200\n"
+"POT-Creation-Date: 2026-04-30 21:58+0200\n"
 "PO-Revision-Date: 2025-11-07 11:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: SURF B.V. <info@vsurf.nl>\n"
@@ -163,7 +163,7 @@ msgid "Category"
 msgstr ""
 
 #: views/agenda/archive.blade.php:57 views/agenda/item.blade.php:37
-#: views/vacancy/single.blade.php:66
+#: views/vacancy/single.blade.php:68
 msgid "Location"
 msgstr ""
 
@@ -179,10 +179,10 @@ msgstr ""
 msgid "Related events"
 msgstr ""
 
-#: views/agenda/single.blade.php:115 views/asset/single.blade.php:91
+#: views/agenda/single.blade.php:115 views/asset/single.blade.php:93
 #: views/download/single.blade.php:81 views/home.blade.php:98
 #: views/parts/content-page.blade.php:48 views/parts/content.blade.php:37
-#: views/post/single.blade.php:82 views/vacancy/single.blade.php:127
+#: views/post/single.blade.php:82 views/vacancy/single.blade.php:129
 msgctxt "admin"
 msgid "Edit"
 msgstr ""
@@ -287,7 +287,7 @@ msgstr ""
 msgid "Back to %s"
 msgstr ""
 
-#: views/asset/single.blade.php:73
+#: views/asset/single.blade.php:75
 msgid "Share this"
 msgstr ""
 
@@ -378,6 +378,26 @@ msgstr ""
 #: views/wp-widgets/term-filter-surf-widget.blade.php:59
 msgid "Close"
 msgstr ""
+
+#: views/components/category-list.blade.php:84
+#, php-format
+msgid "Show the category"
+msgid_plural "Show all %d categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: views/components/category-list.blade.php:85
+#, php-format
+msgid "Show the first category"
+msgid_plural "Show first %d categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: views/components/category-list.blade.php:86
+msgid "Toggle category"
+msgid_plural "Toggle categories"
+msgstr[0] ""
+msgstr[1] ""
 
 #: views/components/child-terms-filter-item.blade.php:29
 #, php-format
@@ -630,23 +650,23 @@ msgstr ""
 msgid "No vacancies were found."
 msgstr ""
 
-#: views/vacancy/single.blade.php:70
+#: views/vacancy/single.blade.php:72
 msgid "Degree"
 msgstr ""
 
-#: views/vacancy/single.blade.php:74
+#: views/vacancy/single.blade.php:76
 msgid "Employment"
 msgstr ""
 
-#: views/vacancy/single.blade.php:78
+#: views/vacancy/single.blade.php:80
 msgid "Salary"
 msgstr ""
 
-#: views/vacancy/single.blade.php:82
+#: views/vacancy/single.blade.php:84
 msgid "Hours per week"
 msgstr ""
 
-#: views/vacancy/single.blade.php:86
+#: views/vacancy/single.blade.php:88
 msgid "Deadline"
 msgstr ""
 
@@ -784,7 +804,7 @@ msgstr ""
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:89
 #: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:761
 #: includes/PostTypes/Download.php:179 includes/PostTypes/Faq.php:279
-#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:481
+#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:514
 #: languages/_jsx-strings.js:38
 msgctxt "admin"
 msgid "Settings"
@@ -1453,92 +1473,92 @@ msgctxt "rest"
 msgid "CSP Synced successfully"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:312
+#: includes/Core/PostTypes/Registers.php:311
 #, php-format
 msgctxt "admin: post type general name"
 msgid "%s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:313
+#: includes/Core/PostTypes/Registers.php:312
 #, php-format
 msgctxt "admin: post type singular name"
 msgid "%s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:314
+#: includes/Core/PostTypes/Registers.php:313
 #, php-format
 msgctxt "admin: admin menu"
 msgid "%s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:315
+#: includes/Core/PostTypes/Registers.php:314
 #, php-format
 msgctxt "admin: add new on admin bar"
 msgid "%s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:316
+#: includes/Core/PostTypes/Registers.php:315
 #, php-format
 msgctxt "admin"
 msgid "Add %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:317
+#: includes/Core/PostTypes/Registers.php:316
 #, php-format
 msgctxt "admin"
 msgid "Add New %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:318
+#: includes/Core/PostTypes/Registers.php:317
 #, php-format
 msgctxt "admin"
 msgid "New %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:319
+#: includes/Core/PostTypes/Registers.php:318
 #, php-format
 msgctxt "admin"
 msgid "Edit %s"
 msgstr ""
 
+#: includes/Core/PostTypes/Registers.php:319
 #: includes/Core/PostTypes/Registers.php:320
-#: includes/Core/PostTypes/Registers.php:321
 #, php-format
 msgctxt "admin"
 msgid "View %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:322
+#: includes/Core/PostTypes/Registers.php:321
 #, php-format
 msgctxt "admin"
 msgid "All %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:323
+#: includes/Core/PostTypes/Registers.php:322
 #, php-format
 msgctxt "admin"
 msgid "Search %s"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:324
+#: includes/Core/PostTypes/Registers.php:323
 #, php-format
 msgctxt "admin"
 msgid "Parent %s:"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:325
+#: includes/Core/PostTypes/Registers.php:324
 #, php-format
 msgctxt "admin"
 msgid "No %s found."
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:326
+#: includes/Core/PostTypes/Registers.php:325
 #, php-format
 msgctxt "admin"
 msgid "No %s found in Trash."
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:342
+#: includes/Core/PostTypes/Registers.php:341
 msgctxt "admin"
 msgid "&mdash; Select &mdash;"
 msgstr ""
@@ -1926,7 +1946,7 @@ msgctxt "admin"
 msgid "LinkedIn"
 msgstr ""
 
-#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:462
+#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:495
 msgctxt "admin"
 msgid "Email"
 msgstr ""
@@ -2856,160 +2876,160 @@ msgctxt "admin"
 msgid "Site default"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:69
+#: includes/PostTypes/Vacancy.php:71
 msgctxt "CPT slug"
 msgid "vacancy"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:77
+#: includes/PostTypes/Vacancy.php:79
 msgctxt "CPT label singular"
 msgid "Vacancy"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:85
+#: includes/PostTypes/Vacancy.php:87
 msgctxt "CPT label plural"
 msgid "Vacancies"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:364
+#: includes/PostTypes/Vacancy.php:397
 #: includes/Services/GithubReleaseService.php:52
 msgctxt "admin"
 msgid "Source"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:365
+#: includes/PostTypes/Vacancy.php:398
 msgctxt "admin"
 msgid ""
 "This vacancy cannot be edited since it has been imported from an external "
 "source."
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:375
+#: includes/PostTypes/Vacancy.php:408
 msgctxt "admin"
 msgid "Emply ID"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:376
+#: includes/PostTypes/Vacancy.php:409
 msgctxt "admin"
 msgid "The job id this vacancy has in Emply."
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:386
+#: includes/PostTypes/Vacancy.php:419
 msgctxt "admin"
 msgid "Location"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:396
+#: includes/PostTypes/Vacancy.php:429
 msgctxt "admin"
 msgid "Degree"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:406
+#: includes/PostTypes/Vacancy.php:439
 msgctxt "admin"
 msgid "Employment"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:416
+#: includes/PostTypes/Vacancy.php:449
 msgctxt "admin"
 msgid "Salary"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:426
+#: includes/PostTypes/Vacancy.php:459
 msgctxt "admin"
 msgid "Deadline"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:439
+#: includes/PostTypes/Vacancy.php:472
 msgctxt "admin"
 msgid "Contact"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:442
+#: includes/PostTypes/Vacancy.php:475
 msgctxt "admin"
 msgid "Add Contact"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:455
+#: includes/PostTypes/Vacancy.php:488
 msgctxt "admin"
 msgid "Person"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:469
+#: includes/PostTypes/Vacancy.php:502
 msgctxt "admin"
 msgid "Phone"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:495
+#: includes/PostTypes/Vacancy.php:528
 msgctxt "admin"
 msgid "Vacancy settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:499
+#: includes/PostTypes/Vacancy.php:532
 msgctxt "admin"
 msgid "Roadmap default settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:505
+#: includes/PostTypes/Vacancy.php:538
 msgctxt "admin"
 msgid "Roadmap Title"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:511
+#: includes/PostTypes/Vacancy.php:544
 msgctxt "admin"
 msgid "Roadmap Subtitle"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:517
+#: includes/PostTypes/Vacancy.php:550
 msgctxt "admin"
 msgid "Roadmap display"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:521 languages/_jsx-strings.js:159
+#: includes/PostTypes/Vacancy.php:554 languages/_jsx-strings.js:159
 msgctxt "admin"
 msgid "Flow"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:522 languages/_jsx-strings.js:160
+#: includes/PostTypes/Vacancy.php:555 languages/_jsx-strings.js:160
 msgctxt "admin"
 msgid "Slider"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:527
+#: includes/PostTypes/Vacancy.php:560
 msgctxt "admin"
 msgid "Roadmap icons"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:533
+#: includes/PostTypes/Vacancy.php:566
 msgctxt "admin"
 msgid "Steps"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:539 languages/_jsx-strings.js:165
+#: includes/PostTypes/Vacancy.php:572 languages/_jsx-strings.js:165
 msgctxt "admin"
 msgid "Icon"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:561
+#: includes/PostTypes/Vacancy.php:594
 msgctxt "admin"
 msgid "Subtitle"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:569
+#: includes/PostTypes/Vacancy.php:602
 msgctxt "admin"
 msgid "Employment conditions settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:575
+#: includes/PostTypes/Vacancy.php:608
 msgctxt "admin"
 msgid "Employment conditions"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:583
+#: includes/PostTypes/Vacancy.php:616
 msgctxt "admin"
 msgid "Disclaimer"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:585
+#: includes/PostTypes/Vacancy.php:618
 msgctxt "admin"
 msgid ""
 "This disclaimer will be shown on the vacancy page underneath the employment "

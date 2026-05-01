@@ -383,6 +383,17 @@
 		border-color: var(--surf-color-primary);
 	}
 
+	&.has-link:focus-within {
+		color: var(--surf-color-primary);
+		border-color: var(--surf-color-primary);
+		outline: 1px solid var(--surf-color-primary);
+		outline-offset: 1px;
+	}
+
+	&.has-link a:focus-visible {
+		outline: none;
+	}
+
 	@include poweredTheme() {
 		text-transform: uppercase;
 		font-weight: bold;

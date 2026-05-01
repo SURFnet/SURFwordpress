@@ -43,6 +43,8 @@
 				</h1>
 				<x-category-list prefix="assets"
 								 :list="$asset->categories()"
+								 :collapsible="true"
+								 :collapseAfter="3"
 								 :primaryName="$term?->name"
 								 :withParents="AssetCategory::shouldShowParents()"
 								 :hasArchive="AssetCategory::hasArchive()"/>

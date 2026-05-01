@@ -88,6 +88,65 @@ $-assets-background: #efefef;
 	text-decoration: none;
 }
 
+.assets-item__tags__more {
+	display: contents;
+}
+
+.assets-item__tags__toggle {
+	@include mixins.tag-pillow();
+	align-items: center;
+	background-color: transparent;
+	border-color: transparent;
+	color: var(--surf-color-black);
+	cursor: pointer;
+	display: inline-flex;
+	font-size: functions.rem(12);
+	font-weight: 700;
+	gap: .2rem;
+	list-style: none;
+	text-transform: lowercase;
+
+	&:hover span {
+		color: var(--surf-color-primary);
+
+		&.toggle__text {
+			text-decoration: underline;
+			text-underline-offset: .2em;
+		}
+	}
+
+	&:focus-visible {
+		color: var(--surf-color-primary);
+		border-color: var(--surf-color-primary);
+		outline: 1px solid var(--surf-color-primary);
+		outline-offset: 1px;
+		text-decoration: none;
+	}
+
+	[aria-hidden="true"] {
+		display: inline-block;
+		margin-right: .2rem;
+	}
+}
+
+.assets-item__tags__toggle::-webkit-details-marker {
+	display: none;
+}
+
+.assets-item__tags__toggle-open {
+	display: none;
+}
+
+.assets-item__tags__more[open] .assets-item__tags__toggle-closed {
+	display: none;
+}
+
+.assets-item__tags__more[open] .assets-item__tags__toggle-open {
+	display: inline-flex;
+	align-items: center;
+	gap: .2rem;
+}
+
 /**
  * Assets item: Full
  */

@@ -44,38 +44,81 @@
 		}
 	}
 
+	$collapse_after = max( 0, (int) ( $collapseAfter ?? 0 ) );
+	$collapsible    = !empty( $collapsible ) && $collapse_after > 0;
+
+	$items = [];
+	if ( !empty( $withParents ) ) {
+		foreach ( $term_list as $sub_list ) {
+			if ( !empty( $sub_list['parent'] ) ) {
+				$parent_item = $sub_list['parent'];
+				$items[]     = [
+					'class' => $prefix . '-item__tags__item--category',
+					'url'   => $parent_item['url'] ?? null,
+					'title' => $parent_item['title'] ?? $parent_item,
+				];
+			}
+
+			foreach ( $sub_list['children'] ?? [] as $item ) {
+				$items[] = [
+					'class' => $prefix . '-item__tags__item',
+					'url'   => $item['url'] ?? null,
+					'title' => $item['title'] ?? $item,
+				];
+			}
+		}
+	} else {
+		foreach ( $term_list as $item ) {
+			$items[] = [
+				'class' => $prefix . '-item__tags__item',
+				'url'   => $item['url'] ?? null,
+				'title' => $item['title'] ?? $item,
+			];
+		}
+	}
+
+	$total_count   = count( $items );
+	$hidden_count  = ( $collapsible && $total_count > $collapse_after ) ? $total_count - $collapse_after : 0;
+	$visible_items = $hidden_count > 0 ? array_slice( $items, 0, $collapse_after ) : $items;
+	$hidden_items  = $hidden_count > 0 ? array_slice( $items, $collapse_after ) : [];
+	$more_text     = sprintf( _n( 'Show the category', 'Show all %d categories', $total_count, 'wp-surf-theme' ), $total_count );
+	$less_text     = sprintf( _n( 'Show the first category', 'Show first %d categories', $collapse_after, 'wp-surf-theme' ), $collapse_after );
+	$toggle_sr     = _n( 'Toggle category', 'Toggle categories', $total_count, 'wp-surf-theme' );
+
 @endphp
 <div class="{{ $prefix }}__tags {{ $prefix }}-item__tags">
-	@if( !empty( $withParents ) )
-		@foreach( $term_list as $sub_list )
-			@if( !empty( $sub_list['parent'] ) )
-				<span class="{{ $prefix }}-item__tags__item--category {{ !empty( $sub_list['parent']['url'] ) ? 'has-link' : '' }}">
-					@if( !empty( $sub_list['parent']['url'] ) )
-						{!! Helper::buildLink( $sub_list['parent']['url'], $sub_list['parent']['title'], $link_args ) !!}
-					@else
-						{!! $sub_list['parent'] !!}
-					@endif
-				</span>
+	@foreach( $visible_items as $item )
+		<span class="{{ $item['class'] }} {{ !empty( $item['url'] ) ? 'has-link' : '' }}">
+			@if( !empty( $item['url'] ) )
+				{!! Helper::buildLink( $item['url'], $item['title'], $link_args ) !!}
+			@else
+				{!! $item['title'] !!}
 			@endif
-			@foreach( $sub_list['children'] ?? [] as $item )
-				<span class="{{ $prefix }}-item__tags__item {{ !empty( $item['url'] ) ? 'has-link' : '' }}">
+		</span>
+	@endforeach
+
+	@if( !empty( $hidden_items ) )
+		<details class="{{ $prefix }}-item__tags__more">
+			<summary class="{{ $prefix }}-item__tags__toggle">
+				<span class="sr-only">{{ $toggle_sr }}</span>
+				<span class="{{ $prefix }}-item__tags__toggle-closed">
+					<span aria-hidden="true">+</span>
+					<span class="toggle__text">{{ $more_text }}</span>
+				</span>
+				<span class="{{ $prefix }}-item__tags__toggle-open">
+					<span aria-hidden="true">-</span>
+					<span class="toggle__text">{{ $less_text }}</span>
+				</span>
+			</summary>
+			@foreach( $hidden_items as $item )
+				<span class="{{ $item['class'] }} {{ !empty( $item['url'] ) ? 'has-link' : '' }}">
 					@if( !empty( $item['url'] ) )
 						{!! Helper::buildLink( $item['url'], $item['title'], $link_args ) !!}
 					@else
-						{!! $item !!}
+						{!! $item['title'] !!}
 					@endif
 				</span>
 			@endforeach
-		@endforeach
-	@else
-		@foreach( $term_list as $item )
-			<span class="{{ $prefix }}-item__tags__item {{ !empty( $item['url'] ) ? 'has-link' : '' }}">
-			@if( !empty( $item['url'] ) )
-					{!! Helper::buildLink( $item['url'], $item['title'], $link_args ) !!}
-				@else
-					{!! $item !!}
-				@endif
-			</span>
-		@endforeach
+		</details>
 	@endif
 </div>

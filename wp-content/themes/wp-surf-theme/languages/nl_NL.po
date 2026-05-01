@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-04-30 08:49+0200\n"
-"PO-Revision-Date: 2026-04-30 08:50+0200\n"
+"POT-Creation-Date: 2026-04-30 21:58+0200\n"
+"PO-Revision-Date: 2026-04-30 21:58+0200\n"
 "Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
 "Language-Team: SURF B.V. <info@surf.nl>\n"
 "Language: nl_NL\n"
@@ -169,7 +169,7 @@ msgid "Category"
 msgstr "Categorie"
 
 #: views/agenda/archive.blade.php:57 views/agenda/item.blade.php:37
-#: views/vacancy/single.blade.php:66
+#: views/vacancy/single.blade.php:68
 msgid "Location"
 msgstr "Locatie"
 
@@ -185,10 +185,10 @@ msgstr "Geen agendapunten gevonden."
 msgid "Related events"
 msgstr "Gerelateerde evenementen"
 
-#: views/agenda/single.blade.php:115 views/asset/single.blade.php:91
+#: views/agenda/single.blade.php:115 views/asset/single.blade.php:93
 #: views/download/single.blade.php:81 views/home.blade.php:98
 #: views/parts/content-page.blade.php:48 views/parts/content.blade.php:37
-#: views/post/single.blade.php:82 views/vacancy/single.blade.php:127
+#: views/post/single.blade.php:82 views/vacancy/single.blade.php:129
 msgctxt "admin"
 msgid "Edit"
 msgstr "Bewerken"
@@ -293,7 +293,7 @@ msgstr "Meer bekijken"
 msgid "Back to %s"
 msgstr "Terug naar %s"
 
-#: views/asset/single.blade.php:73
+#: views/asset/single.blade.php:75
 msgid "Share this"
 msgstr "Deel dit"
 
@@ -387,6 +387,26 @@ msgstr "Categorie:"
 #: views/wp-widgets/term-filter-surf-widget.blade.php:59
 msgid "Close"
 msgstr "Sluiten"
+
+#: views/components/category-list.blade.php:84
+#, php-format
+msgid "Show the category"
+msgid_plural "Show all %d categories"
+msgstr[0] "Toon de categorie"
+msgstr[1] "Toon alle %d de categorieën"
+
+#: views/components/category-list.blade.php:85
+#, php-format
+msgid "Show the first category"
+msgid_plural "Show first %d categories"
+msgstr[0] "Toon de eerste categorie"
+msgstr[1] "Toon de eerste %d categorieën"
+
+#: views/components/category-list.blade.php:86
+msgid "Toggle category"
+msgid_plural "Toggle categories"
+msgstr[0] "De categorie tonen/verbergen"
+msgstr[1] "De categorieën tonen/verbergen"
 
 #: views/components/child-terms-filter-item.blade.php:29
 #, php-format
@@ -644,23 +664,23 @@ msgstr "Uren"
 msgid "No vacancies were found."
 msgstr "Er werden geen vacatures gevonden."
 
-#: views/vacancy/single.blade.php:70
+#: views/vacancy/single.blade.php:72
 msgid "Degree"
 msgstr "Opleidingsniveau"
 
-#: views/vacancy/single.blade.php:74
+#: views/vacancy/single.blade.php:76
 msgid "Employment"
 msgstr "Dienstverband"
 
-#: views/vacancy/single.blade.php:78
+#: views/vacancy/single.blade.php:80
 msgid "Salary"
 msgstr "Salaris"
 
-#: views/vacancy/single.blade.php:82
+#: views/vacancy/single.blade.php:84
 msgid "Hours per week"
 msgstr "Uren per week"
 
-#: views/vacancy/single.blade.php:86
+#: views/vacancy/single.blade.php:88
 msgid "Deadline"
 msgstr "Deadline"
 
@@ -800,7 +820,7 @@ msgstr "Button hover kleur"
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:89
 #: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:761
 #: includes/PostTypes/Download.php:179 includes/PostTypes/Faq.php:279
-#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:481
+#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:514
 #: languages/_jsx-strings.js:38
 msgctxt "admin"
 msgid "Settings"
@@ -1485,92 +1505,92 @@ msgctxt "rest"
 msgid "CSP Synced successfully"
 msgstr ""
 
-#: includes/Core/PostTypes/Registers.php:312
+#: includes/Core/PostTypes/Registers.php:311
 #, php-format
 msgctxt "admin: post type general name"
 msgid "%s"
 msgstr "%s"
 
-#: includes/Core/PostTypes/Registers.php:313
+#: includes/Core/PostTypes/Registers.php:312
 #, php-format
 msgctxt "admin: post type singular name"
 msgid "%s"
 msgstr "%s"
 
-#: includes/Core/PostTypes/Registers.php:314
+#: includes/Core/PostTypes/Registers.php:313
 #, php-format
 msgctxt "admin: admin menu"
 msgid "%s"
 msgstr "%s"
 
-#: includes/Core/PostTypes/Registers.php:315
+#: includes/Core/PostTypes/Registers.php:314
 #, php-format
 msgctxt "admin: add new on admin bar"
 msgid "%s"
 msgstr "%s"
 
-#: includes/Core/PostTypes/Registers.php:316
+#: includes/Core/PostTypes/Registers.php:315
 #, php-format
 msgctxt "admin"
 msgid "Add %s"
 msgstr "%s toevoegen"
 
-#: includes/Core/PostTypes/Registers.php:317
+#: includes/Core/PostTypes/Registers.php:316
 #, php-format
 msgctxt "admin"
 msgid "Add New %s"
 msgstr "Nieuwe %s toevoegen"
 
-#: includes/Core/PostTypes/Registers.php:318
+#: includes/Core/PostTypes/Registers.php:317
 #, php-format
 msgctxt "admin"
 msgid "New %s"
 msgstr "Nieuw %s"
 
-#: includes/Core/PostTypes/Registers.php:319
+#: includes/Core/PostTypes/Registers.php:318
 #, php-format
 msgctxt "admin"
 msgid "Edit %s"
 msgstr "Bewerk %s"
 
+#: includes/Core/PostTypes/Registers.php:319
 #: includes/Core/PostTypes/Registers.php:320
-#: includes/Core/PostTypes/Registers.php:321
 #, php-format
 msgctxt "admin"
 msgid "View %s"
 msgstr "Bekijk %s"
 
-#: includes/Core/PostTypes/Registers.php:322
+#: includes/Core/PostTypes/Registers.php:321
 #, php-format
 msgctxt "admin"
 msgid "All %s"
 msgstr "Alle %s"
 
-#: includes/Core/PostTypes/Registers.php:323
+#: includes/Core/PostTypes/Registers.php:322
 #, php-format
 msgctxt "admin"
 msgid "Search %s"
 msgstr "Zoek %s"
 
-#: includes/Core/PostTypes/Registers.php:324
+#: includes/Core/PostTypes/Registers.php:323
 #, php-format
 msgctxt "admin"
 msgid "Parent %s:"
 msgstr "Hoofd %s:"
 
-#: includes/Core/PostTypes/Registers.php:325
+#: includes/Core/PostTypes/Registers.php:324
 #, php-format
 msgctxt "admin"
 msgid "No %s found."
 msgstr "Geen %s gevonden."
 
-#: includes/Core/PostTypes/Registers.php:326
+#: includes/Core/PostTypes/Registers.php:325
 #, php-format
 msgctxt "admin"
 msgid "No %s found in Trash."
 msgstr "Geen %s gevonden in de prullenbak."
 
-#: includes/Core/PostTypes/Registers.php:342
+#: includes/Core/PostTypes/Registers.php:341
 msgctxt "admin"
 msgid "&mdash; Select &mdash;"
 msgstr "&mdash; Selecteer &mdash;"
@@ -1959,7 +1979,7 @@ msgctxt "admin"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:462
+#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:495
 msgctxt "admin"
 msgid "Email"
 msgstr "E-mail"
@@ -2918,28 +2938,28 @@ msgctxt "admin"
 msgid "Site default"
 msgstr "Standaard"
 
-#: includes/PostTypes/Vacancy.php:69
+#: includes/PostTypes/Vacancy.php:71
 msgctxt "CPT slug"
 msgid "vacancy"
 msgstr "vacature"
 
-#: includes/PostTypes/Vacancy.php:77
+#: includes/PostTypes/Vacancy.php:79
 msgctxt "CPT label singular"
 msgid "Vacancy"
 msgstr "Vacature"
 
-#: includes/PostTypes/Vacancy.php:85
+#: includes/PostTypes/Vacancy.php:87
 msgctxt "CPT label plural"
 msgid "Vacancies"
 msgstr "Vacatures"
 
-#: includes/PostTypes/Vacancy.php:364
+#: includes/PostTypes/Vacancy.php:397
 #: includes/Services/GithubReleaseService.php:52
 msgctxt "admin"
 msgid "Source"
 msgstr "Bron"
 
-#: includes/PostTypes/Vacancy.php:365
+#: includes/PostTypes/Vacancy.php:398
 msgctxt "admin"
 msgid ""
 "This vacancy cannot be edited since it has been imported from an external "
@@ -2948,132 +2968,132 @@ msgstr ""
 "Deze vacature kan niet worden aangepast omdat deze uit een externe bron is "
 "geïmporteerd."
 
-#: includes/PostTypes/Vacancy.php:375
+#: includes/PostTypes/Vacancy.php:408
 msgctxt "admin"
 msgid "Emply ID"
 msgstr "Emply ID"
 
-#: includes/PostTypes/Vacancy.php:376
+#: includes/PostTypes/Vacancy.php:409
 msgctxt "admin"
 msgid "The job id this vacancy has in Emply."
 msgstr "De job id van deze vacature in Emply."
 
-#: includes/PostTypes/Vacancy.php:386
+#: includes/PostTypes/Vacancy.php:419
 msgctxt "admin"
 msgid "Location"
 msgstr "Locatie"
 
-#: includes/PostTypes/Vacancy.php:396
+#: includes/PostTypes/Vacancy.php:429
 msgctxt "admin"
 msgid "Degree"
 msgstr "Opleidingsniveau"
 
-#: includes/PostTypes/Vacancy.php:406
+#: includes/PostTypes/Vacancy.php:439
 msgctxt "admin"
 msgid "Employment"
 msgstr "Dienstverband"
 
-#: includes/PostTypes/Vacancy.php:416
+#: includes/PostTypes/Vacancy.php:449
 msgctxt "admin"
 msgid "Salary"
 msgstr "Salaris"
 
-#: includes/PostTypes/Vacancy.php:426
+#: includes/PostTypes/Vacancy.php:459
 msgctxt "admin"
 msgid "Deadline"
 msgstr "Deadline"
 
-#: includes/PostTypes/Vacancy.php:439
+#: includes/PostTypes/Vacancy.php:472
 msgctxt "admin"
 msgid "Contact"
 msgstr "Contact"
 
-#: includes/PostTypes/Vacancy.php:442
+#: includes/PostTypes/Vacancy.php:475
 msgctxt "admin"
 msgid "Add Contact"
 msgstr "Contact toevoegen"
 
-#: includes/PostTypes/Vacancy.php:455
+#: includes/PostTypes/Vacancy.php:488
 msgctxt "admin"
 msgid "Person"
 msgstr "Persoon"
 
-#: includes/PostTypes/Vacancy.php:469
+#: includes/PostTypes/Vacancy.php:502
 msgctxt "admin"
 msgid "Phone"
 msgstr "Telefoonnummer"
 
-#: includes/PostTypes/Vacancy.php:495
+#: includes/PostTypes/Vacancy.php:528
 msgctxt "admin"
 msgid "Vacancy settings"
 msgstr "Vacature instellingen"
 
-#: includes/PostTypes/Vacancy.php:499
+#: includes/PostTypes/Vacancy.php:532
 msgctxt "admin"
 msgid "Roadmap default settings"
 msgstr "Content-instellingen"
 
-#: includes/PostTypes/Vacancy.php:505
+#: includes/PostTypes/Vacancy.php:538
 msgctxt "admin"
 msgid "Roadmap Title"
 msgstr "Roadmap Titel"
 
-#: includes/PostTypes/Vacancy.php:511
+#: includes/PostTypes/Vacancy.php:544
 msgctxt "admin"
 msgid "Roadmap Subtitle"
 msgstr "Roadmap Ondertitel"
 
-#: includes/PostTypes/Vacancy.php:517
+#: includes/PostTypes/Vacancy.php:550
 msgctxt "admin"
 msgid "Roadmap display"
 msgstr "Postdatum-weergave"
 
-#: includes/PostTypes/Vacancy.php:521 languages/_jsx-strings.js:159
+#: includes/PostTypes/Vacancy.php:554 languages/_jsx-strings.js:159
 msgctxt "admin"
 msgid "Flow"
 msgstr "Flow"
 
-#: includes/PostTypes/Vacancy.php:522 languages/_jsx-strings.js:160
+#: includes/PostTypes/Vacancy.php:555 languages/_jsx-strings.js:160
 msgctxt "admin"
 msgid "Slider"
 msgstr "Slider"
 
-#: includes/PostTypes/Vacancy.php:527
+#: includes/PostTypes/Vacancy.php:560
 msgctxt "admin"
 msgid "Roadmap icons"
 msgstr "Roadmap pictogrammen"
 
-#: includes/PostTypes/Vacancy.php:533
+#: includes/PostTypes/Vacancy.php:566
 msgctxt "admin"
 msgid "Steps"
 msgstr "Stappen"
 
-#: includes/PostTypes/Vacancy.php:539 languages/_jsx-strings.js:165
+#: includes/PostTypes/Vacancy.php:572 languages/_jsx-strings.js:165
 msgctxt "admin"
 msgid "Icon"
 msgstr "Icoon"
 
-#: includes/PostTypes/Vacancy.php:561
+#: includes/PostTypes/Vacancy.php:594
 msgctxt "admin"
 msgid "Subtitle"
 msgstr "Toon titel"
 
-#: includes/PostTypes/Vacancy.php:569
+#: includes/PostTypes/Vacancy.php:602
 msgctxt "admin"
 msgid "Employment conditions settings"
 msgstr "Instellingen voor arbeidsvoorwaarden"
 
-#: includes/PostTypes/Vacancy.php:575
+#: includes/PostTypes/Vacancy.php:608
 msgctxt "admin"
 msgid "Employment conditions"
 msgstr "Arbeidsvoorwaarden"
 
-#: includes/PostTypes/Vacancy.php:583
+#: includes/PostTypes/Vacancy.php:616
 msgctxt "admin"
 msgid "Disclaimer"
 msgstr "Disclaimer"
 
-#: includes/PostTypes/Vacancy.php:585
+#: includes/PostTypes/Vacancy.php:618
 msgctxt "admin"
 msgid ""
 "This disclaimer will be shown on the vacancy page underneath the employment "
@@ -4572,6 +4592,12 @@ msgstr "Home template"
 msgctxt "admin"
 msgid "Please refresh the page to initialize the widget."
 msgstr "Ververs alstublieft de pagina om de widget te initialiseren."
+
+#, php-format
+#~ msgid "Show all %d category"
+#~ msgid_plural "Show all %d categories"
+#~ msgstr[0] "Toon de categorie"
+#~ msgstr[1] "Toon alle %d categorieën"
 
 #~ msgid "Subcategories"
 #~ msgstr "Subcategorieën"
