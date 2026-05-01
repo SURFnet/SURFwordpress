@@ -359,6 +359,40 @@
 // Tag pillows
 // ----------------------------------------------------------------------------
 
+//
+// Focus styles
+// - focus-outline-only: outline with optional color, border-radius and offset
+// - focus-visible-pillow: color + border + outline for pill-shaped elements
+// - focus-visible-outline: outline-only version with color, border-radius and offset params
+// Parameters:
+//   $color: focus color (default: primary)
+//   $border-radius: border-radius for focus ring (default: 0, uses inherit)
+//   $offset: outline-offset distance (default: 1px)
+// ---
+
+@mixin focus-outline-only($color: var(--surf-color-primary), $border-radius: 0, $offset: 1px) {
+	outline: 1px solid $color;
+	outline-offset: $offset;
+	// Fallback for browsers that support outline + border-radius
+	@if $border-radius != 0 {
+		border-radius: $border-radius;
+	}
+}
+
+@mixin focus-visible-pillow($color: var(--surf-color-primary), $offset: 1px) {
+	color: $color;
+	border-color: $color;
+	@include focus-outline-only($color, 0, $offset);
+}
+
+@mixin focus-visible-outline($color: var(--surf-color-primary), $border-radius: 0, $offset: 1px) {
+	@include focus-outline-only($color, $border-radius, $offset);
+}
+
+//
+// Tag pillows
+// ----------------------------------------------------------------------------
+
 @mixin tag-pillow() {
 	display: inline-block;
 	padding: functions.rem(9 12);
@@ -384,10 +418,7 @@
 	}
 
 	&.has-link:focus-within {
-		color: var(--surf-color-primary);
-		border-color: var(--surf-color-primary);
-		outline: 1px solid var(--surf-color-primary);
-		outline-offset: 1px;
+		@include focus-visible-pillow();
 	}
 
 	&.has-link a:focus-visible {

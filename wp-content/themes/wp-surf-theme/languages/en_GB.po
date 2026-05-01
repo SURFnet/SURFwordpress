@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-04-30 21:58+0200\n"
-"PO-Revision-Date: 2026-04-30 21:58+0200\n"
+"POT-Creation-Date: 2026-05-01 14:35+0200\n"
+"PO-Revision-Date: 2026-05-01 14:35+0200\n"
 "Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
 "Language-Team: SURF B.V. <info@vsurf.nl>\n"
 "Language: en_GB\n"
@@ -771,7 +771,7 @@ msgid "Button type"
 msgstr ""
 
 #: includes/Admin/MetaBoxes/MenuItemSettings.php:72
-#: includes/PostTypes/Asset.php:657 includes/PostTypes/Asset.php:950
+#: includes/PostTypes/Asset.php:721 includes/PostTypes/Asset.php:1006
 #: languages/_jsx-strings.js:107
 msgctxt "admin"
 msgid "None"
@@ -802,9 +802,9 @@ msgstr ""
 #: includes/Admin/MetaBoxes/ThemeSettings.php:55
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:73
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:89
-#: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:761
+#: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:817
 #: includes/PostTypes/Download.php:179 includes/PostTypes/Faq.php:279
-#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:514
+#: includes/PostTypes/Page.php:170 includes/PostTypes/Vacancy.php:564
 #: languages/_jsx-strings.js:38
 msgctxt "admin"
 msgid "Settings"
@@ -939,13 +939,13 @@ msgid ""
 msgstr ""
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:465
-#: includes/PostTypes/Asset.php:855 languages/_jsx-strings.js:136
+#: includes/PostTypes/Asset.php:911 languages/_jsx-strings.js:136
 msgctxt "admin"
 msgid "Bottom"
 msgstr ""
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:466
-#: includes/PostTypes/Asset.php:854 includes/PostTypes/Asset.php:951
+#: includes/PostTypes/Asset.php:910 includes/PostTypes/Asset.php:1007
 #: includes/PostTypes/Page.php:250
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:164
 #: languages/_jsx-strings.js:135
@@ -1071,7 +1071,7 @@ msgid "Name"
 msgstr ""
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:599
-#: includes/Helpers/RoadmapHelper.php:18 includes/PostTypes/Asset.php:705
+#: includes/Helpers/RoadmapHelper.php:18 includes/PostTypes/Asset.php:761
 #: includes/Traits/HasIndexedPdf.php:99
 msgctxt "admin"
 msgid "File"
@@ -1150,7 +1150,7 @@ msgid "Images and buttons"
 msgstr ""
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:714
-#: includes/PostTypes/Asset.php:887 includes/Taxonomies/AgendaLocation.php:163
+#: includes/PostTypes/Asset.php:943 includes/Taxonomies/AgendaLocation.php:163
 #: languages/_jsx-strings.js:109
 msgctxt "admin"
 msgid "Image"
@@ -1231,7 +1231,7 @@ msgid "Bottom right corner"
 msgstr ""
 
 #: includes/Admin/MetaBoxes/ThemeSettings.php:785
-#: includes/PostTypes/Asset.php:797
+#: includes/PostTypes/Asset.php:853
 msgctxt "admin"
 msgid "Button"
 msgstr ""
@@ -1946,7 +1946,7 @@ msgctxt "admin"
 msgid "LinkedIn"
 msgstr ""
 
-#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:495
+#: includes/Helpers/SocialHelper.php:33 includes/PostTypes/Vacancy.php:545
 msgctxt "admin"
 msgid "Email"
 msgstr ""
@@ -2224,155 +2224,170 @@ msgctxt "admin"
 msgid "Show location on the single page"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:58
+#: includes/PostTypes/Asset.php:60
 msgctxt "CPT slug"
 msgid "assets"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:66
+#: includes/PostTypes/Asset.php:68
 msgctxt "CPT label singular"
 msgid "Asset"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:74
+#: includes/PostTypes/Asset.php:76
 msgctxt "CPT label plural"
 msgid "Assets"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:255
+#: includes/PostTypes/Asset.php:279
 msgid "Examples"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:303
+#: includes/PostTypes/Asset.php:327
 msgctxt "default author name"
 msgid "Surf"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:318
+#: includes/PostTypes/Asset.php:342
 msgid "Related assets"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:433
+#: includes/PostTypes/Asset.php:457
 msgid "SURF approved"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:440
+#: includes/PostTypes/Asset.php:464
 msgid "SURF developed"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:450
-#, php-format
-msgid "Production date %1$s"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:459
-#, php-format
-msgid "Last update on %1$s"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:470
-#, php-format
-msgid "Planned review on %1$s"
 msgstr ""
 
 #: includes/PostTypes/Asset.php:475
 #, php-format
+msgid "%1$s, date %2$s"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:490
+#, php-format
+msgid "Production date %1$s"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:499
+#, php-format
+msgid "Last update on %1$s"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:510
+#, php-format
+msgid "Planned review on %1$s"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:515
+#, php-format
 msgid "Reviewed at %1$s"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:506 includes/PostTypes/Asset.php:644
+#: includes/PostTypes/Asset.php:546 includes/PostTypes/Asset.php:708
 msgctxt "admin"
 msgid "Review Date"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:597
+#: includes/PostTypes/Asset.php:637
 msgctxt "admin"
 msgid "General"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:603
-msgctxt "admin"
-msgid "Author Type"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:607 includes/PostTypes/Asset.php:614
-msgctxt "admin"
-msgid "User"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:608 languages/_jsx-strings.js:91
-msgctxt "admin"
-msgid "Text"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:629
-msgctxt "admin"
-msgid "Author"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:652 includes/PostTypes/Faq.php:461
-msgctxt "admin"
-msgid "Label"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:658
-msgctxt "Asset label"
-msgid "SURF approved"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:659
-msgctxt "Asset label"
-msgid "SURF developed"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:664
-msgctxt "admin"
-msgid "Lifecycle text"
-msgstr ""
-
-#: includes/PostTypes/Asset.php:673 includes/PostTypes/Asset.php:713
+#: includes/PostTypes/Asset.php:645 includes/PostTypes/Asset.php:769
 msgctxt "admin"
 msgid "File description"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:679 includes/PostTypes/Asset.php:699
+#: includes/PostTypes/Asset.php:651
+msgctxt "admin"
+msgid "Author Type"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:655 includes/PostTypes/Asset.php:662
+msgctxt "admin"
+msgid "User"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:656 languages/_jsx-strings.js:91
+msgctxt "admin"
+msgid "Text"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:677
+msgctxt "admin"
+msgid "Author"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:692
+msgctxt "admin"
+msgid "Version"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:700
+msgctxt "admin"
+msgid "Version Date"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:716 includes/PostTypes/Faq.php:461
+msgctxt "admin"
+msgid "Label"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:722
+msgctxt "Asset label"
+msgid "SURF approved"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:723
+msgctxt "Asset label"
+msgid "SURF developed"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:728
+msgctxt "admin"
+msgid "Lifecycle text"
+msgstr ""
+
+#: includes/PostTypes/Asset.php:735 includes/PostTypes/Asset.php:755
 #: languages/_jsx-strings.js:51
 msgctxt "admin"
 msgid "Examples"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:684
+#: includes/PostTypes/Asset.php:740
 msgctxt "admin"
 msgid "Examples title"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:691
+#: includes/PostTypes/Asset.php:747
 msgctxt "admin"
 msgid "Intro examples"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:719
+#: includes/PostTypes/Asset.php:775
 msgctxt "admin"
 msgid "Add example"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:726 includes/PostTypes/Asset.php:750
+#: includes/PostTypes/Asset.php:782 includes/PostTypes/Asset.php:806
 #: languages/_jsx-strings.js:154
 msgctxt "admin"
 msgid "Related assets"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:731
+#: includes/PostTypes/Asset.php:787
 msgctxt "admin"
 msgid "Related title"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:738
+#: includes/PostTypes/Asset.php:794
 msgctxt "admin"
 msgid "Related description"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:746
+#: includes/PostTypes/Asset.php:802
 msgctxt "admin"
 msgid ""
 "By default, this section will be automatically filled with assets in the "
@@ -2380,80 +2395,80 @@ msgid ""
 "behaviour."
 msgstr ""
 
-#: includes/PostTypes/Asset.php:774 includes/PostTypes/Asset.php:812
+#: includes/PostTypes/Asset.php:830 includes/PostTypes/Asset.php:868
 msgctxt "admin"
 msgid "Assets settings"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:778
+#: includes/PostTypes/Asset.php:834
 msgctxt "admin"
 msgid "Contact block (single)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:791 includes/PostTypes/Asset.php:876
+#: includes/PostTypes/Asset.php:847 includes/PostTypes/Asset.php:932
 #: includes/PostTypes/ContactPerson.php:94
 msgctxt "admin"
 msgid "Description"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:816 languages/_jsx-strings.js:100
+#: includes/PostTypes/Asset.php:872 languages/_jsx-strings.js:100
 msgctxt "admin"
 msgid "Search"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:823
+#: includes/PostTypes/Asset.php:879
 msgctxt "admin"
 msgid "Search deep"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:828
+#: includes/PostTypes/Asset.php:884
 msgctxt "admin"
 msgid ""
 "Allow the global search to also look within Assets authors, categories, tags "
 "and files. <strong>Please note:</strong> this may affect performance."
 msgstr ""
 
-#: includes/PostTypes/Asset.php:835 languages/_jsx-strings.js:115
+#: includes/PostTypes/Asset.php:891 languages/_jsx-strings.js:115
 msgctxt "admin"
 msgid "Header"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:842
+#: includes/PostTypes/Asset.php:898
 msgctxt "admin"
 msgid "Fancy header"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:846
+#: includes/PostTypes/Asset.php:902
 msgctxt "admin"
 msgid "Make the header, with the navigation and search, fancy."
 msgstr ""
 
-#: includes/PostTypes/Asset.php:850
+#: includes/PostTypes/Asset.php:906
 msgctxt "admin"
 msgid "Content position"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:902
+#: includes/PostTypes/Asset.php:958
 msgctxt "admin"
 msgid "Top fade"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:920
+#: includes/PostTypes/Asset.php:976
 msgctxt "admin"
 msgid "Bottom fade"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:938
+#: includes/PostTypes/Asset.php:994
 msgctxt "admin"
 msgid "Archive"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:945
+#: includes/PostTypes/Asset.php:1001
 msgctxt "admin"
 msgid "Filters position"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:952 includes/PostTypes/Page.php:251
+#: includes/PostTypes/Asset.php:1008 includes/PostTypes/Page.php:251
 #: includes/PostTypes/Page.php:273
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:165
 #: languages/_jsx-strings.js:140
@@ -2461,50 +2476,50 @@ msgctxt "admin"
 msgid "Left"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:953 includes/PostTypes/Page.php:274
+#: includes/PostTypes/Asset.php:1009 includes/PostTypes/Page.php:274
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:166
 #: languages/_jsx-strings.js:142
 msgctxt "admin"
 msgid "Right"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:967
+#: includes/PostTypes/Asset.php:1023
 #, php-format
 msgid "Name %1$s"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:968
+#: includes/PostTypes/Asset.php:1024
 msgid "(A - Z)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:969
+#: includes/PostTypes/Asset.php:1025
 msgid "(Z - A)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:972
+#: includes/PostTypes/Asset.php:1028
 #, php-format
 msgid "Publication date %1$s"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:973 includes/PostTypes/Asset.php:978
-#: includes/PostTypes/Asset.php:983
+#: includes/PostTypes/Asset.php:1029 includes/PostTypes/Asset.php:1034
+#: includes/PostTypes/Asset.php:1039
 msgid "(oldest first)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:974
+#: includes/PostTypes/Asset.php:1030
 msgid "(newest first)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:977
+#: includes/PostTypes/Asset.php:1033
 #, php-format
 msgid "Modified date %1$s"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:979 includes/PostTypes/Asset.php:984
+#: includes/PostTypes/Asset.php:1035 includes/PostTypes/Asset.php:1040
 msgid "(latest first)"
 msgstr ""
 
-#: includes/PostTypes/Asset.php:982
+#: includes/PostTypes/Asset.php:1038
 #, php-format
 msgid "Review date %1$s"
 msgstr ""
@@ -2891,145 +2906,145 @@ msgctxt "CPT label plural"
 msgid "Vacancies"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:397
+#: includes/PostTypes/Vacancy.php:447
 #: includes/Services/GithubReleaseService.php:52
 msgctxt "admin"
 msgid "Source"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:398
+#: includes/PostTypes/Vacancy.php:448
 msgctxt "admin"
 msgid ""
 "This vacancy cannot be edited since it has been imported from an external "
 "source."
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:408
+#: includes/PostTypes/Vacancy.php:458
 msgctxt "admin"
 msgid "Emply ID"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:409
+#: includes/PostTypes/Vacancy.php:459
 msgctxt "admin"
 msgid "The job id this vacancy has in Emply."
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:419
+#: includes/PostTypes/Vacancy.php:469
 msgctxt "admin"
 msgid "Location"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:429
+#: includes/PostTypes/Vacancy.php:479
 msgctxt "admin"
 msgid "Degree"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:439
+#: includes/PostTypes/Vacancy.php:489
 msgctxt "admin"
 msgid "Employment"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:449
+#: includes/PostTypes/Vacancy.php:499
 msgctxt "admin"
 msgid "Salary"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:459
+#: includes/PostTypes/Vacancy.php:509
 msgctxt "admin"
 msgid "Deadline"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:472
+#: includes/PostTypes/Vacancy.php:522
 msgctxt "admin"
 msgid "Contact"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:475
+#: includes/PostTypes/Vacancy.php:525
 msgctxt "admin"
 msgid "Add Contact"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:488
+#: includes/PostTypes/Vacancy.php:538
 msgctxt "admin"
 msgid "Person"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:502
+#: includes/PostTypes/Vacancy.php:552
 msgctxt "admin"
 msgid "Phone"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:528
+#: includes/PostTypes/Vacancy.php:578
 msgctxt "admin"
 msgid "Vacancy settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:532
+#: includes/PostTypes/Vacancy.php:582
 msgctxt "admin"
 msgid "Roadmap default settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:538
+#: includes/PostTypes/Vacancy.php:588
 msgctxt "admin"
 msgid "Roadmap Title"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:544
+#: includes/PostTypes/Vacancy.php:594
 msgctxt "admin"
 msgid "Roadmap Subtitle"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:550
+#: includes/PostTypes/Vacancy.php:600
 msgctxt "admin"
 msgid "Roadmap display"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:554 languages/_jsx-strings.js:159
+#: includes/PostTypes/Vacancy.php:604 languages/_jsx-strings.js:159
 msgctxt "admin"
 msgid "Flow"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:555 languages/_jsx-strings.js:160
+#: includes/PostTypes/Vacancy.php:605 languages/_jsx-strings.js:160
 msgctxt "admin"
 msgid "Slider"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:560
+#: includes/PostTypes/Vacancy.php:610
 msgctxt "admin"
 msgid "Roadmap icons"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:566
+#: includes/PostTypes/Vacancy.php:616
 msgctxt "admin"
 msgid "Steps"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:572 languages/_jsx-strings.js:165
+#: includes/PostTypes/Vacancy.php:622 languages/_jsx-strings.js:165
 msgctxt "admin"
 msgid "Icon"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:594
+#: includes/PostTypes/Vacancy.php:644
 msgctxt "admin"
 msgid "Subtitle"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:602
+#: includes/PostTypes/Vacancy.php:652
 msgctxt "admin"
 msgid "Employment conditions settings"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:608
+#: includes/PostTypes/Vacancy.php:658
 msgctxt "admin"
 msgid "Employment conditions"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:616
+#: includes/PostTypes/Vacancy.php:666
 msgctxt "admin"
 msgid "Disclaimer"
 msgstr ""
 
-#: includes/PostTypes/Vacancy.php:618
+#: includes/PostTypes/Vacancy.php:668
 msgctxt "admin"
 msgid ""
 "This disclaimer will be shown on the vacancy page underneath the employment "
@@ -3525,7 +3540,7 @@ msgctxt "admin"
 msgid "Archive enabled"
 msgstr ""
 
-#: includes/Traits/HasPriority.php:79
+#: includes/Traits/HasPriority.php:80
 msgctxt "admin"
 msgid "Priority"
 msgstr ""

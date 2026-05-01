@@ -116,10 +116,7 @@ $-assets-background: #efefef;
 	}
 
 	&:focus-visible {
-		color: var(--surf-color-primary);
-		border-color: var(--surf-color-primary);
-		outline: 1px solid var(--surf-color-primary);
-		outline-offset: 1px;
+		@include mixins.focus-visible-pillow(var(--surf-color-primary));
 		text-decoration: none;
 	}
 

@@ -41,8 +41,26 @@
 		@if( !empty($propertyList) )
 			<div class="assets-single__group-list">
 				@foreach( $propertyList as $item )
-					<div>
-						<x-icon icon="{{ $item['icon'] ?? 'check' }}" sprite="global"/> {{ $item['label'] }}
+					<div class="asset-property-item">
+						@if(!empty($item['tooltip']))
+							<details class="property">
+								<summary>
+									<div class="property__header">
+										<x-icon icon="{{ $item['icon'] ?? 'check' }}" sprite="global"/>
+										<span class="property__label">{{ $item['label'] }}</span>
+										<x-icon icon="info-circle" sprite="global" class="property__trigger"/>
+									</div>
+								</summary>
+								<div class="property__content">
+									{!! nl2br($item['tooltip']) !!}
+								</div>
+							</details>
+						@else
+							<div class="property__header">
+								<x-icon icon="{{ $item['icon'] ?? 'check' }}" sprite="global"/>
+								<span>{{ $item['label'] }}</span>
+							</div>
+						@endif
 					</div>
 				@endforeach
 			</div>

@@ -37,6 +37,9 @@ class Asset extends BasePost
 	public const FIELD_AUTHOR_TYPE         = 'author_type';
 	public const FIELD_AUTHOR_USER         = 'author_user';
 	public const FIELD_AUTHOR_TEXT         = 'author_text';
+	public const FIELD_VERSION             = 'version';
+	public const FIELD_VERSION_DATE		   = 'version_date';
+	public const FIELD_VERSION_NOTES       = 'version_notes';
 	public const FIELD_REVIEW_DATE         = 'review_date';
 	public const FIELD_LABEL               = 'label';
 	public const FIELD_LIFECYCLE_TEXT      = 'lifecycle_text';
@@ -133,6 +136,36 @@ class Asset extends BasePost
 	public function lifecycleText(): ?string
 	{
 		return $this->getMeta( static::FIELD_LIFECYCLE_TEXT );
+	}
+
+	/**
+	 * @return string|null
+	 */
+	public function version(): ?string
+	{
+		return $this->getMeta( static::FIELD_VERSION );
+	}
+
+	/**
+	 * @param string $format
+	 * @return string
+	 */
+	public function versionDate( string $format = 'Ymd' ): string
+	{
+		$value = $this->getMeta( static::FIELD_VERSION_DATE );
+		if ( empty( $value ) ) {
+			return '';
+		}
+
+		return wp_date( $format, strtotime( $value ) );
+	}
+
+	/**
+	 * @return string|null
+	 */
+	public function versionNotes(): ?string
+	{
+		return $this->getMeta( static::FIELD_VERSION_NOTES );
 	}
 
 	/**
@@ -442,6 +475,23 @@ class Asset extends BasePost
 				break;
 		}
 
+		// Add version info
+		$version = $this->version();
+		if ( !empty( $version ) ) {
+			try {
+				$date = $this->versionDate( $format );
+				if ( !empty( $date ) ) {
+					$version = sprintf( __( '%1$s, date %2$s', 'wp-surf-theme' ), $version, $date );
+				}
+			} catch ( Exception $exception ) {}
+
+			$list[] = [
+				'icon'    => 'bullseye',
+				'label'   => $version,
+				'tooltip' => $this->versionNotes(),
+			];
+		}
+
 		// Add production date
 		try {
 			$date   = $this->date( $format );
@@ -598,6 +648,14 @@ class Asset extends BasePost
 				'type'      => 'tab',
 				'placement' => 'left',
 			],
+			static::getFileIDField( 'asset' ),
+			static::getFileIndexStatusField( 'asset' ),
+			[
+				'key'   => 'field_asset_' . static::FIELD_FILE_DESCRIPTION,
+				'label' => _x( 'File description', 'admin', 'wp-surf-theme' ),
+				'name'  => static::FIELD_FILE_DESCRIPTION,
+				'type'  => 'textarea',
+			],
 			[
 				'key'     => 'field_asset_' . static::FIELD_AUTHOR_TYPE,
 				'label'   => _x( 'Author Type', 'admin', 'wp-surf-theme' ),
@@ -640,6 +698,28 @@ class Asset extends BasePost
 				'wrapper'           => [ 'width' => 50 ],
 			],
 			[
+				'key'      => 'field_asset_' . static::FIELD_VERSION,
+				'label'    => _x( 'Version', 'admin', 'wp-surf-theme' ),
+				'name'     => static::FIELD_VERSION,
+				'type'     => 'text',
+				'required' => false,
+				'wrapper'  => [ 'width' => 50 ],
+			],
+			[
+				'key'      => 'field_asset_' . static::FIELD_VERSION_DATE,
+				'label'    => _x( 'Version Date', 'admin', 'wp-surf-theme' ),
+				'name'     => static::FIELD_VERSION_DATE,
+				'type'     => 'date_picker',
+				'required' => true,
+				'wrapper'  => [ 'width' => 50 ],
+			],
+			[
+				'key'     => 'field_asset_' . static::FIELD_VERSION_NOTES,
+				'label'   => _x( 'Version notes', 'admin', 'wp-surf-theme' ),
+				'name'    => static::FIELD_VERSION_NOTES,
+				'type'    => 'textarea',
+			],
+			[
 				'key'      => 'field_asset_' . static::FIELD_REVIEW_DATE,
 				'label'    => _x( 'Review Date', 'admin', 'wp-surf-theme' ),
 				'name'     => static::FIELD_REVIEW_DATE,
@@ -665,14 +745,6 @@ class Asset extends BasePost
 				'name'    => static::FIELD_LIFECYCLE_TEXT,
 				'type'    => 'textarea',
 				'wrapper' => [ 'width' => 50 ],
-			],
-			static::getFileIDField( 'asset' ),
-			static::getFileIndexStatusField( 'asset' ),
-			[
-				'key'   => 'field_asset_' . static::FIELD_FILE_DESCRIPTION,
-				'label' => _x( 'File description', 'admin', 'wp-surf-theme' ),
-				'name'  => static::FIELD_FILE_DESCRIPTION,
-				'type'  => 'textarea',
 			],
 			[
 				'key'   => 'tab_asset_examples',

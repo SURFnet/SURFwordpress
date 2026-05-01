@@ -19,7 +19,8 @@ trait HasPriority
 	 */
 	public function getPriority(): ?int
 	{
-		return $this->getMeta( static::FIELD_PRIORITY );
+		$value = $this->getMeta( static::FIELD_PRIORITY, null );
+		return $value ? (int) $value : null;
 	}
 
 	/**
