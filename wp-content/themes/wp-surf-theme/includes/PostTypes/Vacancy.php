@@ -254,12 +254,50 @@ class Vacancy extends BasePost
 	 */
 	public function getContact(): array
 	{
-		return $this->getRepeaterMeta( static::FIELD_CONTACT, [
+		$meta = $this->getMeta( static::FIELD_CONTACT );
+		if ( empty( $meta ) ) {
+			return [];
+		}
+
+		// Check for serialized values
+		if ( is_string( $meta ) ) {
+			$meta = maybe_unserialize( $meta );
+		}
+
+		$fields = [
 			'title'  => '',
 			'person' => '',
 			'email'  => '',
 			'phone'  => '',
-		] );
+		];
+
+		// Some imports store contact rows directly in the base meta key.
+		if ( is_array( $meta ) ) {
+			$list = [];
+			foreach ( $meta as $values ) {
+				if ( !is_array( $values ) ) {
+					continue;
+				}
+
+				$item  = [];
+				$empty = true;
+				foreach ( $fields as $field => $default ) {
+					$item[ $field ] = $values[ $field ] ?? $default;
+					if ( !empty( $item[ $field ] ) ) {
+						$empty = false;
+					}
+				}
+				if ( $empty ) {
+					continue;
+				}
+
+				$list[] = $item;
+			}
+
+			return $list;
+		}
+
+		return $this->getRepeaterMeta( static::FIELD_CONTACT, $fields );
 	}
 
 	/**
@@ -391,6 +429,18 @@ class Vacancy extends BasePost
 		$source   = $post?->getMeta( static::FIELD_SOURCE );
 		$readOnly = $source === static::SOURCE_EMPLY;
 		$contacts = $post?->getMeta( static::FIELD_CONTACT );
+		if ( is_string( $contacts ) ) {
+			$contacts = maybe_unserialize( $contacts );
+		}
+
+		if ( is_numeric( $contacts ) ) {
+			$contacts = max( 0, (int) $contacts );
+		} elseif ( is_array( $contacts ) ) {
+			$contacts = count( array_filter( $contacts, 'is_array' ) );
+		} else {
+			$contacts = 0;
+		}
+
 		$fields   = [
 			$source === static::SOURCE_EMPLY ? [
 				'key'          => 'field_vacancy_source',

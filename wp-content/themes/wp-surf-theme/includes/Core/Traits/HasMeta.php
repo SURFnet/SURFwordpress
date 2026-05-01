@@ -8,6 +8,7 @@ namespace SURF\Core\Traits;
  */
 trait HasMeta
 {
+	public const MAX_REPEATER_META_ROWS = 100;
 
 	/**
 	 * @return string
@@ -37,7 +38,15 @@ trait HasMeta
 	 */
 	public function getMeta( string $key, mixed $default = null ): mixed
 	{
-		return get_metadata( $this->getMetaType(), $this->getMetaId(), $key, true ) ?: $default;
+		if ( empty( $key ) ) {
+			return $default;
+		}
+
+		if ( !metadata_exists( $this->getMetaType(), $this->getMetaId(), $key ) ) {
+			return $default;
+		}
+
+		return get_metadata( $this->getMetaType(), $this->getMetaId(), $key, true );
 	}
 
 	/**
@@ -48,11 +57,12 @@ trait HasMeta
 	public function getRepeaterMeta( string $key, array $subFields ): array
 	{
 		$list  = [];
-		$count = $this->getMeta( $key );
-		if ( empty( $count ) ) {
+		$count = $this->getMeta( $key, 0 );
+		if ( empty( $count ) || !is_numeric( $count ) ) {
 			return $list;
 		}
 
+		$count = min( (int) $count, static::MAX_REPEATER_META_ROWS );
 		for ( $i = 0; $i < $count; $i++ ) {
 			$values = [];
 			foreach ( $subFields as $subKey => $subDefault ) {
