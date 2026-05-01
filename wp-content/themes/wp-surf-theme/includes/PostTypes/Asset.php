@@ -486,7 +486,7 @@ class Asset extends BasePost
 			} catch ( Exception $exception ) {}
 
 			$list[] = [
-				'icon'    => 'bullseye',
+				'icon'    => 'layer-group',
 				'label'   => $version,
 				'tooltip' => $this->versionNotes(),
 			];
