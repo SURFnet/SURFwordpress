@@ -116,6 +116,39 @@ class Helper
 	}
 
 	/**
+	 * Inserts a value or key/value pair after a specific key in an array
+	 * If the key doesn't exist, the value (or key/value pair) is appended to the end
+	 * @param array $array
+	 * @param string $key
+	 * @param array $new
+	 * @return array
+	 */
+	public static function addToArrayAfter( array $array, string $key, array $new ): array
+	{
+		$keys  = array_keys( $array );
+		$index = array_search( $key, $keys );
+		$pos   = false === $index ? count( $array ) : $index + 1;
+
+		return static::insertInArray( $array, $pos, $new );
+	}
+
+	/**
+	 * Inserts a value or key/value pair at a specified position in an array
+	 * @param array $array
+	 * @param int $position
+	 * @param array $new
+	 * @return array
+	 */
+	public static function insertInArray( array $array, int $position, array $new ): array
+	{
+		return array_merge(
+			array_slice( $array, 0, $position ),
+			$new,
+			array_slice( $array, $position )
+		);
+	}
+
+	/**
 	 * Tries to get array values from either an actual array or a comma-separated string
 	 * @param $item
 	 * @return array

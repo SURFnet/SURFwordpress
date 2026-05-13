@@ -93,6 +93,8 @@ class AssetCategory extends Taxonomy
 	 */
 	public static function registered(): void
 	{
+		static::addPriorityAdminColumn();
+
 		add_filter( 'surf_taxonomy_html_description', function ( array $allowed = [] ): array
 		{
 			return array_unique( array_values( array_merge( $allowed, [ static::getName() ] ) ) );

@@ -4,6 +4,7 @@ namespace SURF\Traits;
 
 use Illuminate\Support\Collection;
 use SURF\Core\PostTypes\BasePost;
+use SURF\Helpers\Helper;
 
 /**
  * Trait HasPriority
@@ -82,6 +83,67 @@ trait HasPriority
 			'type'  => 'number',
 			'min'   => 1,
 		];
+	}
+
+	/**
+	 * @param bool $sortable
+	 * @return void
+	 */
+	public static function addPriorityAdminColumn(bool $sortable = true): void
+	{
+		// Add custom column for priority
+		add_filter( 'manage_edit-' . static::getName() . '_columns', function ( array $columns ): array
+		{
+			return Helper::insertInArray( $columns, 2, [ static::FIELD_PRIORITY => _x( 'Priority', 'admin', 'wp-surf-theme' ) ] );
+		} );
+
+		// Populate custom columns
+		add_filter( 'manage_' . static::getName() . '_custom_column', function ( $value, $column, $term_id )
+		{
+			switch ( $column ) {
+				case static::FIELD_PRIORITY:
+					$term = static::find( $term_id );
+
+					return $term ? $term->getPriority() : '';
+
+				default:
+					return $value;
+			}
+		}, 10, 3 );
+
+		if ( $sortable ) {
+			// Make custom columns sortable
+			add_filter( 'manage_edit-' . static::getName() . '_sortable_columns', function ( array $columns ): array
+			{
+				return array_merge( $columns, [ static::FIELD_PRIORITY => static::FIELD_PRIORITY ] );
+			} );
+
+			// Define custom sorting
+			add_filter( 'terms_clauses', function ( $pieces, $taxonomies, $args )
+			{
+				global $pagenow;
+				if ( !is_admin() || $pagenow !== 'edit-tags.php' ) {
+					return $pieces;
+				}
+
+				$order_by = sanitize_text_field( $_GET['orderby'] ?? '' );
+				if ( $order_by !== static::FIELD_PRIORITY ) {
+					return $pieces;
+				}
+
+				$current_tax = reset( $taxonomies );
+				if ( $current_tax !== static::getName() ) {
+					return $pieces;
+				}
+
+				global $wpdb;
+				$pieces['join']    .= " INNER JOIN {$wpdb->termmeta} AS tm ON t.term_id = tm.term_id AND tm.meta_key = '" . static::FIELD_PRIORITY . "'";
+				$pieces['orderby'] = " ORDER BY tm.meta_value";
+				$pieces['order']   = strtoupper( sanitize_text_field( $_GET['order'] ?? 'DESC' ) );
+
+				return $pieces;
+			}, 10, 3 );
+		}
 	}
 
 }

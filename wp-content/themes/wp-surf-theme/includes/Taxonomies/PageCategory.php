@@ -53,6 +53,14 @@ class PageCategory extends Taxonomy
 	}
 
 	/**
+	 * @return void
+	 */
+	public static function registered(): void
+	{
+		static::addPriorityAdminColumn();
+	}
+
+	/**
 	 * @return array[]
 	 */
 	public static function getFields(): array
