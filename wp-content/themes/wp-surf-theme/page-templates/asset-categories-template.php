@@ -41,11 +41,7 @@ class AssetCategoriesTemplateController extends TemplateController
 		$totalPages  = ( $category?->children()->count() / $this->perPage ) ?? 0;
 		$subCategories = null;
 		if ( $hasChildren ) {
-			$subCategories = AssetCategory::querySortedByPriority( [
-				'number'   => $this->perPage,
-				'offset'   => ( $currentPage - 1 ) * $this->perPage,
-				'parent'   => $category->term_id,
-			] );
+			$subCategories = $category->children()->forPage( $currentPage, $this->perPage );
 		}
 
 		$mainCategories = AssetCategory::querySortedByPriority( [

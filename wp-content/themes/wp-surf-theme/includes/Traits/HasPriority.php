@@ -34,6 +34,7 @@ trait HasPriority
 		/** @var Collection $query */
 		$query = static::query( $args );
 
+
 		return $query->sort( function ( self $a, self $b ) use ( $fallback_property )
 		{
 			if ( $a->getPriority() && $b->getPriority() ) {
@@ -138,7 +139,7 @@ trait HasPriority
 
 				global $wpdb;
 				$pieces['join']    .= " INNER JOIN {$wpdb->termmeta} AS tm ON t.term_id = tm.term_id AND tm.meta_key = '" . static::FIELD_PRIORITY . "'";
-				$pieces['orderby'] = " ORDER BY tm.meta_value";
+				$pieces['orderby'] = " ORDER BY CAST(tm.meta_value AS UNSIGNED)";
 				$pieces['order']   = strtoupper( sanitize_text_field( $_GET['order'] ?? 'DESC' ) );
 
 				return $pieces;
