@@ -18,7 +18,7 @@
 		"illuminate/support" : "^9.2.0",
 		"illuminate/view" : "^9.2.0",
 		"mpdf/mpdf" : "^8.1",
-		"phpoffice/phpspreadsheet" : "^1.27",
+		"phpoffice/phpspreadsheet" : "^5.7.0",
 		"smalot/pdfparser" : "^2.2",
 		"spatie/schema-org" : "^3.13",
 		"vlucas/phpdotenv" : "^5.6"
