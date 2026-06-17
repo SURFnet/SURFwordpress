@@ -1,0 +1,16 @@
+@use 'abstracts/functions';
+
+.youtube-consent-wrapper__placeholder {
+	background-color: var(--surf-color-background);
+	aspect-ratio: 16/9;
+	padding: functions.rem(16);
+	border-radius: var(--surf-border-radius);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}

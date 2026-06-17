@@ -1,0 +1,51 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Button Group
+// ----------------------------------------------------------------------------
+//
+
+@use 'sass:math';
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.button-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.button-group__item {
+	display: block;
+	width: functions.rem(32);
+	height: functions.rem(32);
+	border-radius: functions.rem(4);
+	margin: functions.rem(0 10 10 0);
+	font-size: functions.rem(14);
+	background: var(--surf-color-button-group-link);
+	color: var(--surf-color-button-group-link-icon);
+	position: relative;
+	transition: variables.$transition;
+}
+
+.button-group--line .button-group__item {
+	margin-bottom: 0;
+}
+
+.button-group__item:hover,
+.button-group__item:active {
+	background: var(--surf-color-button-group-link-hover);
+	color: var(--surf-color-button-group-link-hover-icon);
+}
+
+.button-group__item .icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.button-group__item {
+		margin: functions.rem(0 15 15 0);
+	}
+}

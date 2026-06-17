@@ -1,0 +1,34 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Image
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/mixins';
+
+.wp-block-image img,
+.wp-block-image:not(.is-style-rounded) img {
+	@include mixins.standard-image();
+}
+
+.wp-block-image figcaption {
+	@include mixins.figcaption;
+}
+
+.wp-block-image.alignright {
+	float: right;
+	margin-inline-end: 0 !important;
+	margin-inline-start: 2em !important;
+}
+
+.wp-block-image.alignleft {
+	float: left;
+	margin-inline-start: 0 !important;
+	margin-inline-end: 2em !important;
+}
+
+.wp-block-image.hide-on-mobile {
+	@include mixins.breakpoint($until: medium) {
+		display: none;
+	}
+}

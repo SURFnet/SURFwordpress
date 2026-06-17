@@ -1,0 +1,31 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Related posts
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.related-posts {
+	margin: functions.rem(20 0);
+}
+
+.related-posts__header {
+	text-align: center;
+}
+
+.related-posts__title {
+	margin: functions.rem(0 0 20 0);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.related-posts {
+		margin: functions.rem(30 0);
+	}
+
+	.related-posts__title {
+		margin: functions.rem(0 0 35 0);
+	}
+}

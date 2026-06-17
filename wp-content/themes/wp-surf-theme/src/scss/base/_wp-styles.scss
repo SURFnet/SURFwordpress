@@ -1,0 +1,71 @@
+//
+// ----------------------------------------------------------------------------
+// WordPress Core styles
+// ----------------------------------------------------------------------------
+//
+
+/* Alignment */
+.alignnone {
+	margin: 0 0 1.5rem 0;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 1.5rem;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 1.5rem 1.5rem;
+}
+
+.alignwide {
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignfull {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* Captions */
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: 0;
+}
+
+.wp-caption-text {
+	font-size: .875rem;
+	opacity: .75;
+	margin-top: .5rem;
+}
+
+/* Galleries */
+.gallery-caption {
+	font-size: .875rem;
+}
+
+/* Sticky post */
+.sticky {
+	outline: 2px solid currentColor;
+	outline-offset: .5rem;
+}
+
+/* Author comments */
+.bypostauthor {
+	font-weight: 600;
+}

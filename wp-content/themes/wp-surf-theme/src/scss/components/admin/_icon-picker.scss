@@ -1,0 +1,35 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Admin / Icon Picker
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+
+.icon-picker {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: functions.rem(8);
+}
+
+.icon-picker__option-input[type='radio'] {
+	display: none;
+}
+
+.icon-picker__option-label {
+	display: block;
+	padding: functions.rem(8);
+	border-radius: functions.rem(4);
+}
+
+:checked + .icon-picker__option-label {
+	background-color: #f3f3f3;
+}
+
+.icon-picker__option-icon {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	fill: currentColor;
+}

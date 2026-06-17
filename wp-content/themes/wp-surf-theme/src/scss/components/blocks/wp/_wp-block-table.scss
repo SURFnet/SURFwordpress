@@ -1,0 +1,32 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Table
+// ----------------------------------------------------------------------------
+//
+
+
+.wp-block-table:not(:first-child) {
+	margin-top: var(--surf-font-size-3);
+}
+
+.wp-block-table:not(:last-child) {
+	margin-bottom: var(--surf-font-size-3);
+}
+
+.wp-block-table table {
+	border-collapse: collapse;
+}
+
+.wp-block-table th,
+.wp-block-table td {
+	padding: 0.5em;
+	border: 1px solid currentColor;
+}
+
+.wp-block-table figcaption {
+	display: block;
+	margin-top: 0.5em;
+	color: inherit;
+	font-size: var(--surf-font-size--1, 1em);
+	text-align: inherit;
+}

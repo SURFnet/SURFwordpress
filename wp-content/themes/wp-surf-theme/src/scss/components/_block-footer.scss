@@ -1,0 +1,22 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Block footer
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.block-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: functions.rem(15 0 0 0);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.block-footer {
+		margin: functions.rem(30 0 0 0);
+	}
+}

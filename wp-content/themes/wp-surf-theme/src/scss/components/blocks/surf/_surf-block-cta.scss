@@ -1,0 +1,89 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / CTA
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+@use '../../button';
+
+.surf-block-cta {
+	border-radius: var(--surf-border-radius);
+	display: flex;
+	flex-direction: column;
+	padding: functions.rem(25);
+	gap: functions.rem(75);
+}
+
+.surf-block-cta__title {
+	margin: functions.rem(0 0 5 0);
+	color: inherit;
+}
+
+.surf-block-cta__subtitle {
+	font-size: functions.rem(20);
+	line-height: functions.rem(26);
+}
+
+.surf-block-cta__button {
+	.wp-block-button .wp-block-button__link {
+		@extend %button-large;
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.surf-block-cta {
+		flex-direction: row;
+		align-items: center;
+		padding: functions.rem(60 55);
+		gap: functions.rem(30);
+	}
+
+	.surf-block-cta__button {
+		margin-left: auto;
+		margin-top: 0;
+	}
+
+	.surf-block-cta__subtitle {
+		font-size: functions.rem(24);
+		line-height: functions.rem(36);
+	}
+
+	.surf-block-cta__content {
+		flex: 1;
+	}
+}
+
+@include mixins.poweredTheme {
+	.surf-block-cta {
+		background-color: var(--surf-color-primary);
+		color: var(--surf-color-white);
+	}
+
+	.surf-block-cta .surf-block-cta__subtitle {
+		font-weight: normal;
+	}
+
+	.surf-block-cta .wp-block-button:not(.is-style-secondary) .wp-block-button__link {
+		background: var(--surf-color-white);
+		color: var(--surf-color-primary);
+
+		&:hover,
+		&:active {
+			color: var(--surf-color-white);
+			background: var(--surf-color-black);
+		}
+	}
+
+	.surf-block-cta .wp-block-button:not(.is-style-secondary) .wp-block-button__link.has-black-color {
+		color: var(--surf-color-primary) !important;
+
+		&:hover,
+		&:active {
+			color: var(--surf-color-white) !important;
+		}
+	}
+}

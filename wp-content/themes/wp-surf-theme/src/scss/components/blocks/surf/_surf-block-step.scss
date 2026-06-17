@@ -1,0 +1,80 @@
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+
+.wp-block .surf-block-step {
+
+}
+
+.surf-block-step__number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: functions.rem(40);
+	height: functions.rem(40);
+	border-radius: functions.rem(40);
+
+	background-color: var(--surf-color-primary);
+	color: var(--surf-color-white);
+	font-size: functions.rem(20);
+	font-family: var(--surf-font-heading);
+	font-weight: 600;
+}
+
+.surf-block-step__icon {
+	display: grid;
+	align-items: start;
+	font-size: functions.rem(40);
+	color: var(--surf-color-primary);
+
+	svg {
+		aspect-ratio: 1;
+		max-width: functions.rem(46);
+		max-height: functions.rem(30);
+	}
+}
+
+.surf-block-roadmap.surf-block-roadmap--flow .surf-block-step {
+	display: grid;
+	gap: functions.rem(20);
+
+	.surf-block-step__title {
+		margin-bottom: functions.rem(3);
+		font-size: functions.rem(18);
+		font-weight: 600;
+		word-break: break-word;
+		hyphens: auto;
+		text-wrap: balance;
+	}
+
+	@include mixins.breakpoint($from: 600px) {
+		grid-template-columns: auto 1fr;
+	}
+}
+
+
+.surf-block-roadmap.surf-block-roadmap--slider .surf-block-step {
+	border-radius: var(--surf-border-radius);
+	background-color: var(--surf-color-background);
+	padding: functions.rem(30);
+	user-select: none;
+
+	.surf-block-step__number, .surf-block-step__icon {
+		margin-bottom: functions.rem(60);
+	}
+
+	.surf-block-step__title {
+		margin-bottom: functions.rem(5);
+		font-size: functions.rem(22);
+		font-weight: 600;
+		word-break: break-word;
+		hyphens: auto;
+		text-wrap: balance;
+	}
+}
+
+
+.surf-block-roadmap.surf-block-roadmap--slider .block-editor-block-list__layout .surf-block-step {
+	height: 100%;
+}

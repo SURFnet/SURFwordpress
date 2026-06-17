@@ -1,0 +1,88 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Hamburger
+// ----------------------------------------------------------------------------
+//
+
+@use 'sass:math';
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+
+//
+// Variables
+$-hamburger-height: functions.rem(32);
+$-hamburger-width: functions.rem(32);
+$-hamburger-tap-size: functions.rem(14);
+$-hamburger-part-background: var(--surf-color-white);
+$-hamburger-part-height: functions.rem(2);
+$-hamburger-part-radius: functions.rem(2);
+$-hamburger-part-spacing: math.div($-hamburger-height - (3 * $-hamburger-part-height), 2);
+
+.hamburger {
+	position: relative;
+	display: block;
+	width: $-hamburger-width;
+	height: $-hamburger-height;
+	border: 0;
+	appearance: none;
+	background-color: var(--surf-color-header-hamburger-button);
+	color: $-hamburger-part-background;
+	border-radius: var(--surf-header-button-radius);
+	padding: functions.rem(10);
+	cursor: pointer;
+	transition: variables.$transition;
+
+	&.hamburger--small {
+		background-color: transparent;
+		color: var(--surf-color-header-hamburger-button);
+		padding: 0;
+	}
+}
+
+.hamburger::before {
+	position: absolute;
+	top: math.div($-hamburger-tap-size - $-hamburger-height, 2) * -1;
+	left: math.div($-hamburger-tap-size - $-hamburger-width, 2) * -1;
+	display: block;
+	width: $-hamburger-tap-size;
+	height: $-hamburger-tap-size;
+	content: '';
+}
+
+.hamburger__part {
+	position: absolute;
+	left: functions.rem(9);
+	display: block;
+	width: $-hamburger-tap-size;
+	height: $-hamburger-part-height;
+	border-radius: $-hamburger-part-radius;
+	background-color: currentColor;
+	transition: background-color 0.3s ease-in-out 0s, opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+}
+
+.hamburger__part:nth-child(1) {
+	top: functions.rem(10);
+}
+
+.hamburger__part:nth-child(2) {
+	top: calc(100% - #{math.div($-hamburger-height, 2) + math.div($-hamburger-part-height, 2)});
+}
+
+.hamburger__part:nth-child(3) {
+	top: calc(calc(100% - #{functions.rem(10)}) - #{$-hamburger-part-height});
+}
+
+//
+// Opened state
+.hamburger.is-open .hamburger__part:nth-child(1) {
+	transform: translateY(0.34rem) rotate(45deg);
+}
+
+.hamburger.is-open .hamburger__part:nth-child(2) {
+	opacity: 0;
+	transform: translateX(-25%);
+}
+
+.hamburger.is-open .hamburger__part:nth-child(3) {
+	transform: translateY(-0.3rem) rotate(-45deg);
+}

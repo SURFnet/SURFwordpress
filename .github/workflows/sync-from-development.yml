@@ -1,0 +1,81 @@
+name: "🔄 Sync from Development"
+
+on:
+  workflow_dispatch:
+    inputs:
+      remote_branch:
+        description: "Branch to pull from development repo"
+        required: true
+        default: "master"
+
+      local_branch:
+        description: "Branch to push to in current repo"
+        required: true
+        default: "sync/development-update"
+
+      type:
+        description: "Commit type"
+        required: true
+        default: "feat"
+        type: choice
+        options: [ feat, fix, chore, refactor, docs, test ]
+
+      scope:
+        description: "Optional scope (e.g. docs, theme)"
+        required: false
+
+      message:
+        description: "Short description"
+        required: true
+
+      jira:
+        description: "Optional JIRA ticket no. (e.g. SURF-123)"
+        required: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    env:
+      REMOTE_REPO: VanOns/surf-os
+      REMOTE_BRANCH: ${{ github.event.inputs.remote_branch }}
+      LOCAL_BRANCH: ${{ github.event.inputs.local_branch }}
+      INPUT_TYPE: ${{ github.event.inputs.type }}
+      INPUT_SCOPE: ${{ github.event.inputs.scope }}
+      INPUT_MESSAGE: ${{ github.event.inputs.message }}
+      INPUT_JIRA: ${{ github.event.inputs.jira }}
+      LOCAL_TEMP_DIR: development
+      SYNC_SCRIPT: .github/scripts/development-sync.sh
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: 🏁 Checkout current repo
+        uses: actions/checkout@v4
+
+      - name: 📥 Checkout Developer repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.REMOTE_REPO }}
+          ref: ${{ env.REMOTE_BRANCH }}
+          ssh-key: ${{ secrets.DEVELOPER_PRIVATE_KEY }}
+          path: ${{ env.LOCAL_TEMP_DIR }}
+
+      - name: ⚙️ Run sync script
+        run: |
+          if [ -f ${{ env.SYNC_SCRIPT }} ]; then
+            chmod +x ${{ env.SYNC_SCRIPT }}
+            ${{ env.SYNC_SCRIPT }} \
+              "${{ env.LOCAL_TEMP_DIR }}" \
+              "${{ env.LOCAL_BRANCH }}" \
+              "${{ env.INPUT_TYPE }}" \
+              "${{ env.INPUT_SCOPE }}" \
+              "${{ env.INPUT_MESSAGE }}" \
+              "${{ env.INPUT_JIRA }}"
+          else
+            echo "::error::${{ env.SYNC_SCRIPT }} not found!"
+            exit 10
+          fi

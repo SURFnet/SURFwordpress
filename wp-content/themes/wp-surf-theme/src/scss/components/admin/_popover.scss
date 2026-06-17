@@ -1,0 +1,12 @@
+@use 'abstracts/variables';
+
+.components-popover__buttons {
+	margin-top: variables.$spacing-desktop-sm;
+	display: flex;
+	justify-content: space-between;
+}
+
+.components-popover__title {
+	margin-top: variables.$spacing-desktop-sm * 0.5;
+	margin-bottom: variables.$spacing-desktop-sm;
+}

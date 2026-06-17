@@ -1,0 +1,104 @@
+//
+// ----------------------------------------------------------------------------
+// Base / Forms
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+
+#{variables.$form-elements} {
+	display: block;
+	width: 100%;
+	padding: variables.$form-field-padding;
+	border: variables.$form-field-border-width solid variables.$form-field-border-color;
+	border-radius: variables.$form-field-border-radius;
+	appearance: none;
+	background-color: variables.$form-field-background-color;
+	font-family: inherit;
+	line-height: 1.25;
+
+	&:focus {
+		border-color: variables.$form-field-border-color-focus;
+		box-shadow: 0 0 0 3px variables.$form-field-border-color-focus;
+		outline: none;
+	}
+}
+
+textarea {
+	line-height: 1.4em;
+}
+
+fieldset {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+legend {
+	float: left;
+	width: 100%;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+legend + * {
+	clear: left;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+	display: flex;
+	align-items: flex-start;
+
+	&::before {
+		content: '';
+		display: block;
+		border-radius: functions.rem(4);
+		border: 1px solid var(--surf-color-border);
+		background: var(--surf-color-white);
+		width: functions.rem(20);
+		min-width: functions.rem(20);
+		height: functions.rem(20);
+		margin: functions.rem(3 15 0 0);
+		cursor: pointer;
+	}
+
+	&:hover::before {
+		border-color: var(--surf-color-primary);
+	}
+}
+
+input[type='radio'] + label {
+	&::before {
+		border-radius: 50%;
+	}
+}
+
+input[type='checkbox']:checked + label {
+	&::before {
+		content: '';
+		background-size: functions.rem(12);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg width='94' height='66' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.74 39.777c-3.312-2.863-3.671-7.87-.808-11.184 2.864-3.313 7.871-3.672 11.184-.808l22.121 19.207 44.98-44.684c3.106-3.09 8.13-3.075 11.22.03 3.09 3.106 3.074 8.13-.032 11.22L41.198 63.437c-2.914 2.902-7.621 3.11-10.78.371L2.744 39.781l-.004-.004z'/%3E%3C/svg%3E");
+	}
+}
+
+input[type='radio']:checked + label {
+	&::before {
+		content: '';
+		background-size: functions.rem(8);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='864' cy='1008' r='5' transform='translate(-859 -1003)' fill='currentColor' fill-rule='evenodd'/%3E%3C/svg%3E");
+	}
+}
+
+// Hide input
+.comments__form {
+	input[type='checkbox'],
+	input[type='radio'] {
+		display: none;
+	}
+}

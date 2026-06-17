@@ -1,0 +1,21 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Nothing found
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.nothing-found {
+	background: rgba(0, 0, 0, 0.02);
+	border-radius: var(--surf-border-radius);
+	padding: functions.rem(100 0)
+}
+
+.nothing-found p {
+	@include mixins.h2-heading;
+	text-align: center;
+	opacity: 0.5;
+}

@@ -1,0 +1,18 @@
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.application-form, .application-success, .application-error {
+	margin-top: variables.$spacing-mobile-md;
+
+	@include mixins.breakpoint($from: large) {
+		margin-top: variables.$spacing-desktop-md;
+	}
+}
+
+.application-success, .application-error {
+	border-radius: var(--surf-border-radius);
+	background: var(--surf-color-comment-form-background);
+	padding: functions.rem(23 20);
+	text-align: center;
+}

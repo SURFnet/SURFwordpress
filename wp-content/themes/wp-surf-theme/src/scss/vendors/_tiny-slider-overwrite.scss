@@ -1,0 +1,58 @@
+//
+// ----------------------------------------------------------------------------
+// Vendor / Tiny Slider overwrite
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.tns-ovh {
+	overflow: inherit;
+}
+
+.tns-slider {
+	display: flex;
+}
+
+.tns-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: functions.rem(10);
+	margin: functions.rem(20 0 0 0);
+
+	button {
+		height: functions.rem(12);
+		width: functions.rem(12);
+		background-color: var(--surf-color-background);
+		border: 1px solid var(--surf-color-border);
+		border-radius: 6px;
+		transition: variables.$transition;
+		font-size: 0;
+		padding: 0;
+	}
+
+	button.tns-nav-active {
+		background-color: var(--surf-color-primary);
+	}
+}
+
+
+@include mixins.breakpoint($from: large) {
+	.tns-nav {
+		gap: functions.rem(15);
+	}
+}
+
+@include mixins.is-editor {
+	[data-mobile-slider] {
+		display: flex;
+		gap: functions.rem(35);
+
+		& > * {
+			width: 33%;
+		}
+	}
+}

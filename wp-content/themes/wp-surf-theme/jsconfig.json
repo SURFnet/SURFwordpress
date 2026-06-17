@@ -1,0 +1,20 @@
+{
+	"__comment" : "This file is only used so IDEs can resolve the aliases defined in vite.config.js",
+	"compilerOptions" : {
+		"baseUrl" : ".",
+		"paths" : {
+			"@surf/*" : [
+				"./src/*"
+			],
+			"@surf/images/*" : [
+				"./src/static/images/*"
+			],
+			"@fa-free-svg/*" : [
+				"./node_modules/@fortawesome/fontawesome-free/svgs/*"
+			],
+			"@fa-pro-svg/*" : [
+				"./node_modules/@fortawesome/fontawesome-pro/svgs/*"
+			]
+		}
+	}
+}

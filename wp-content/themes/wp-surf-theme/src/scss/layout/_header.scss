@@ -1,0 +1,134 @@
+//
+// ----------------------------------------------------------------------------
+// Layout / Header
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.header {
+	background: var(--surf-color-header-background);
+	padding: variables.$spacing-mobile-md 0;
+}
+
+.header__inner {
+	display: flex;
+	align-items: center;
+}
+
+@include mixins.breakpoint($from: large) {
+	.header {
+		padding: variables.$spacing-desktop-md 0;
+	}
+}
+
+/**
+* Branding
+**/
+
+.header__branding {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	gap: functions.rem(20);
+	align-items: center;
+}
+
+.header__branding-logo {
+	height: functions.rem(32);
+	width: functions.rem(62);
+	color: var(--surf-color-black);
+}
+
+.header__custom-branding-logo {
+	height: functions.rem(44);
+	width: auto;
+}
+
+.header__custom-branding-logo--size-150 {
+	height: functions.rem(50);
+}
+
+.header__custom-branding-logo--size-200 {
+	height: functions.rem(56);
+}
+
+
+@include mixins.breakpoint($from: medium) {
+	.header__branding {
+		gap: variables.$grid-gap;
+	}
+
+	.header__branding-logo {
+		height: functions.rem(48);
+		width: functions.rem(92);
+	}
+
+	.header__custom-branding-logo {
+		height: functions.rem(48);
+	}
+
+	.header__custom-branding-logo--size-150 {
+		height: functions.rem(56);
+	}
+
+	.header__custom-branding-logo--size-200 {
+		height: functions.rem(64);
+	}
+}
+
+@include mixins.breakpoint($from: large) {
+	.header__branding-logo {
+		height: functions.rem(72);
+		width: functions.rem(140);
+	}
+
+	.header__custom-branding-logo {
+		height: functions.rem(60);
+	}
+
+	.header__custom-branding-logo--size-150 {
+		height: functions.rem(80);
+	}
+
+	.header__custom-branding-logo--size-200 {
+		height: functions.rem(100);
+	}
+}
+
+/**
+* Navigation
+**/
+
+.header__navigation {
+	margin-left: auto;
+}
+
+@include mixins.breakpoint($until: large) {
+	.header__navigation {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.header__section-toggle {
+	margin-bottom: functions.rem(2);
+}
+
+/**
+* Separator
+**/
+
+.header__separator {
+	height: 2px;
+	background-color: var(--surf-color-border);
+}
+
+.header__separator--custom {
+	height: auto;
+	background-color: transparent;
+}
+

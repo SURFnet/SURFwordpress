@@ -1,0 +1,31 @@
+//
+// ----------------------------------------------------------------------------
+// Layout / Container
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+
+
+.container {
+	max-width: variables.$container-width;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.narrow.container {
+	max-width: variables.$container-width-narrow;
+}
+
+.wide.container {
+	max-width: variables.$container-width-wide;
+}
+
+.padded.container {
+	width: calc(100% - #{variables.$screen-gap * 2});
+}
+
+.medium-narrow.container {
+	max-width: functions.rem(790);
+}

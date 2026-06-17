@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Finder\Finder;
+use Symfony\Component\Finder\SplFileInfo;
+use SURF\Application;
+use SURF\Providers\ViewServiceProvider;
+
+const ABSPATH = __DIR__ . '/../';
+const SURF_THEME_DIR = __DIR__ . '/../wp-content/themes/wp-surf-theme';
+
+require SURF_THEME_DIR . '/vendor/autoload.php';
+require SURF_THEME_DIR . '/includes/helpers.php';
+
+$app = Application::getInstance();
+$app->registerProviders([ViewServiceProvider::class]);
+$app->boot();
+
+$compiler = $app->make('view')->getEngineResolver()->resolve('blade')->getCompiler();
+
+$views = collect(
+    Finder::create()
+          ->in(surfConfig('view.paths'))
+          ->exclude('vendor')
+          ->name('*.blade.php')
+          ->files()
+);
+
+$views->map(function (SplFileInfo $file) use ($compiler) {
+    $compiler->compile($file->getRealPath());
+});

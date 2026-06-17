@@ -1,0 +1,33 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Admin / Post Sorter
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+
+.post-sorter {
+	padding: 0;
+	margin: 0;
+	list-style: none none;
+}
+
+.post-sorter > * + * {
+	margin-top: functions.rem(8);
+}
+
+.post-sorter:not(:last-child) {
+	margin-bottom: functions.rem(16);
+}
+
+.post-sorter-item:not(:first-child) {
+	padding-top: functions.rem(8);
+	border-top: 1px solid var(--wp--preset--color--cyan-bluish-gray, #ccc);
+}
+
+.post-sorter-item__buttons {
+	display: flex;
+	gap: functions.rem(8);
+	margin-top: functions.rem(8);
+}

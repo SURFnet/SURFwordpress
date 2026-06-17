@@ -1,0 +1,13 @@
+.theme-updater {
+	display: flex;
+	align-items: center;
+	gap: 1rem
+}
+
+.theme-updater .error {
+	color: #d63638;
+}
+
+.theme-updater .success {
+	color: #00a32a;
+}

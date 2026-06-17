@@ -1,0 +1,27 @@
+//
+// ----------------------------------------------------------------------------
+// Admin styles
+// ----------------------------------------------------------------------------
+//
+
+//
+// Include styles here that need to be available anywhere in the WordPress
+// backend, for example: custom properties, @font-face rules, and styles of
+// admin elements that are inside the editor-styles-wrapper element.
+
+//
+// Make custom properties and custom fonts available in backend
+
+@use './base/custom-properties';
+@use './base/fonts';
+
+//
+// Make admin component styles available in backend (e.g. for components
+// inside the sidebar)
+
+@use './components/admin';
+
+// Remove H1 from the dropdown
+[aria-label="Heading 1"] {
+	display: none;
+}

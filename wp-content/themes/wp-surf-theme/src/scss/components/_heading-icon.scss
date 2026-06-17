@@ -1,0 +1,10 @@
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.heading-icon {
+	display: inline-block;
+	height: 1cap;
+	width: auto;
+	margin-right: functions.rem(8);
+}

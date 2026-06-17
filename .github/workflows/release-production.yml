@@ -1,0 +1,9 @@
+name: 🚨 Create Production Release
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: ./.github/workflows/release-workflow.yml
+    with:
+      release_type: stable

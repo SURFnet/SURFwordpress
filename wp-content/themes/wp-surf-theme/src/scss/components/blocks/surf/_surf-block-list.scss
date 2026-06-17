@@ -1,0 +1,67 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / SURF / Block List
+// ----------------------------------------------------------------------------
+//
+
+// !! This block is actually a core WP block. It's class is added by the
+// !! starter theme to make styling easier. The surf prefix is used to prevent
+// !! future conflicts.
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+
+.surf-block-list,
+.wp-block-list {
+	padding-left: functions.rem(35);
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+.surf-block-list.is-style-lead,
+.wp-block-list.is-style-lead {
+	@include mixins.body-lg;
+}
+
+.surf-block-list li,
+.wp-block-list li {
+	margin: functions.rem(9 0);
+}
+
+ol.surf-block-list li::marker,
+ol.wp-block-list li::marker {
+	color: var(--surf-color-black);
+	font-family: var(--surf-font-heading);
+	font-weight: var(--surf-font-heading-font-weight);
+}
+
+ul.surf-block-list,
+ul.wp-block-list {
+	list-style: none;
+	padding-left: functions.rem(20);
+	color: var(--surf-color-text);
+}
+
+ul.surf-block-list li,
+ul.wp-block-list li {
+	padding-left: functions.rem(20);
+	position: relative;
+}
+
+ul.surf-block-list li::before,
+ul.wp-block-list li::before {
+	content: '';
+	display: block;
+	height: functions.rem(9);
+	width: functions.rem(9);
+	flex-basis: functions.rem(9);
+	min-width: functions.rem(9);
+	background: var(--surf-color-primary);
+	border-radius: 50%;
+	margin-right: functions.rem(15);
+	position: absolute;
+	left: 0;
+	top: functions.rem(7);
+}

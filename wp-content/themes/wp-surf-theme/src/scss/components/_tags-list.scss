@@ -1,0 +1,24 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Tags list
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.tags-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tags-list a {
+	@include mixins.tag-pillow();
+}
+
+.entry__header .tags-list {
+	order: 3;
+	margin-top: functions.rem(15);
+	margin-bottom: -#{functions.rem(10)};
+}

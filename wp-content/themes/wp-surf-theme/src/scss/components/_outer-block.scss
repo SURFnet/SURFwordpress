@@ -1,0 +1,43 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Outer block
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.outer-block {
+	max-width: functions.rem(1340);
+	margin: 0 auto;
+	padding: var(--surf-outer-block-padding-sm);
+	background: var(--surf-color-outer-block-background);
+	transition: variables.$transition;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.outer-block {
+		padding: var(--surf-outer-block-padding-md);
+	}
+}
+
+@include mixins.breakpoint($from: large) {
+	.outer-block {
+		padding: var(--surf-outer-block-padding-lg);
+	}
+}
+
+@include mixins.breakpoint($from: 1340px) {
+	.outer-block {
+		border-radius: var(--surf-border-radius);
+	}
+}
+
+@include mixins.is-editor {
+	.has-outer-block {
+		background: var(--surf-color-outer-block-background);
+		border-radius: var(--surf-border-radius);
+		padding: var(--surf-outer-block-padding-lg);
+	}
+}

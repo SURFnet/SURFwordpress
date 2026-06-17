@@ -1,0 +1,67 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Share
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+.share {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	margin: functions.rem(20 0);
+	position: relative;
+}
+
+.share__title {
+	margin: functions.rem(0 20 0 0);
+}
+
+.share__line {
+	width: auto;
+	flex-grow: 1;
+	height: functions.rem(2);
+	background: var(--surf-color-border);
+	margin: functions.rem(0 20 0 0);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.share {
+		margin: functions.rem(25 0);
+	}
+}
+
+/**
+*
+*/
+
+.share__left {
+	bottom: functions.rem(15);
+	left: 0;
+	transform: translateX(-100%);
+
+	span:nth-child(1) {
+		top: 0;
+		left: 0;
+		border-top-right-radius: functions.rem(60);
+		border-bottom: 0;
+		border-left: 0;
+	}
+
+	span:nth-child(2) {
+		bottom: 0;
+		right: 0;
+		border-bottom-left-radius: functions.rem(60);
+		border-right: 0;
+		border-top: 0;
+	}
+
+	&::after {
+		top: 0;
+		left: -#{functions.rem(4000)};
+	}
+}

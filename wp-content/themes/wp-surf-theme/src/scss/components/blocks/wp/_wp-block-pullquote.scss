@@ -1,0 +1,34 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Pullquote
+// ----------------------------------------------------------------------------
+//
+
+.wp-block-pullquote {
+	padding: 0;
+}
+
+.wp-block-pullquote:not(:first-child) {
+	margin-top: var(--surf-font-size-5);
+}
+
+.wp-block-pullquote:not(:last-child) {
+	margin-bottom: var(--surf-font-size-5);
+}
+
+.wp-block-pullquote p,
+.editor-styles-wrapper .wp-block-pullquote div:first-of-type {
+	margin-bottom: 0;
+	font-size: var(--surf-font-size-3, 2.5em);
+	font-weight: 700;
+	line-height: inherit;
+}
+
+.wp-block-pullquote cite,
+.editor-styles-wrapper .wp-block-pullquote div:last-of-type {
+	display: block;
+	margin-top: 1em;
+	font-size: var(--surf-font-size--1, 1em);
+	font-style: italic;
+	line-height: inherit;
+}

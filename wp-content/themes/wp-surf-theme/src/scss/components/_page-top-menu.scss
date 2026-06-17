@@ -1,0 +1,166 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Page top menu
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.page-top-menu {
+	max-width: variables.$container-width !important;
+
+	a {
+		text-decoration: none;
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		margin-top: -#{functions.rem(30)};
+	}
+}
+
+.page-top-menu__list {
+	@include mixins.breakpoint($until: medium) {
+		flex-direction: column;
+		display: none !important;
+
+		li,
+		li:last-child {
+			margin: 0;
+		}
+
+		.page-top-menu__item {
+			flex-direction: column;
+		}
+
+		.menu-item-button {
+			display: none;
+		}
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		margin-top: -#{functions.rem(30)};
+	}
+
+	li:first-child {
+		margin-left: 0;
+	}
+
+	.sub-menu {
+		border: 0;
+		border-radius: var(--surf-submenu-border-radius);
+		background: var(--surf-color-background);
+		padding: functions.rem(5 20 10 20);
+		margin-top: 0;
+		z-index: 10;
+
+		&::before {
+			display: none;
+		}
+
+		@include mixins.breakpoint($until: medium) {
+			display: block;
+			background: transparent;
+			padding: functions.rem(0 0 0 10);
+			position: relative;
+			top: 0;
+			left: auto;
+			margin-bottom: functions.rem(10);
+		}
+
+		li {
+			flex-direction: column;
+		}
+	}
+}
+
+.page-top-menu__list--pos-left {
+	flex-direction: column;
+	align-items: start !important;
+
+	li,
+	li:last-child {
+		margin: 0;
+	}
+}
+
+.page-top-menu__list--align-right {
+	text-align: right;
+	align-items: end !important;
+
+	@include mixins.breakpoint($from: medium) {
+		.sub-menu {
+			left: unset;
+			right: -#{functions.rem(22)};
+		}
+	}
+}
+
+label.page-top-menu__toggle {
+	display: flex;
+	width: 100%;
+	background: var(--surf-color-background);
+	border-radius: functions.rem(5);
+	border: 0;
+	padding: functions.rem(7 7 7 12);
+	justify-content: space-between;
+	align-items: center !important;
+
+	&::before {
+		display: none !important;
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		display: none !important;
+	}
+}
+
+.page-top-menu__checkbox {
+	display: none;
+}
+
+.page-top-menu__checkbox:checked ~ .page-top-menu__list {
+	display: flex !important;
+}
+
+.page-top-menu__checkbox:checked + .page-top-menu__toggle .hamburger {
+	.hamburger__part:nth-child(1) {
+		transform: translateY(0.34rem) rotate(45deg);
+	}
+
+	.hamburger__part:nth-child(2) {
+		opacity: 0;
+		transform: translateX(-25%);
+	}
+
+	.hamburger__part:nth-child(3) {
+		transform: translateY(-0.3rem) rotate(-45deg);
+	}
+
+}
+
+.sub-menu .sub-menu {
+	position: relative;
+	display: block;
+	border-radius: 0;
+	border: none;
+	padding: 0;
+	padding-inline-start: 1.25em;
+	margin: 0;
+	left: 0;
+	top: 0;
+
+
+	.top-border-left, .top-border-right {
+		display: none;
+	}
+
+	&::before {
+		content: unset;
+	}
+}
+
+.sub-menu .menu-item-has-children {
+	display: block;
+}

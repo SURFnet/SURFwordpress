@@ -1,0 +1,157 @@
+//
+// ----------------------------------------------------------------------------
+// Theme style for SURF
+// Here we declare colors, fonts and custom element for the SURF style
+//
+// ----------------------------------------------------------------------------
+//
+
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:math';
+
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+// SURF Colors
+$color-black: #000;
+$color-white: #fff;
+$color-blue: #0077c8;
+$color-blue-10: #e5f1f9;
+$color-yellow: #fedb00;
+$color-light-green: #a9c23f;
+$color-green: #009d4d;
+$color-orange: #e67300;
+$color-purple: #772583;
+$color-red: #e03c31;
+$color-light-grey: #efefef;
+$color-medium-grey: #cccccc;
+$color-dark-grey: #676767;
+
+// Set theme colors
+$theme-colors: (
+		'black': $color-black,
+		'white': $color-white,
+		'primary': $color-blue,
+		'secondary': $color-yellow,
+		'disabled': $color-medium-grey,
+	// Global styles
+		'link': $color-blue,
+		'link-hover': color.scale($color-blue, $blackness: 30%),
+		'background': $color-light-grey,
+		'border': $color-medium-grey,
+		'headings': $color-black,
+		'text': $color-dark-grey,
+		'placeholder': $color-light-grey,
+	// Header colors
+		'top-bar-link': $color-dark-grey,
+		'top-bar-link-hover': $color-blue,
+		'header-menu-link': $color-black,
+		'header-menu-link-hover': $color-green,
+		'header-menu-link-active-indicator': $color-green,
+		'header-search-button': $color-black,
+		'header-search-button-icon': $color-white,
+		'header-search-button-hover': $color-yellow,
+		'header-search-button-hover-icon': $color-black,
+		'header-hamburger-button': $color-black,
+	// Footer colors
+		'footer-background': $color-light-grey,
+		'footer-custom-background': $color-light-grey,
+		'footer-link': $color-dark-grey,
+		'footer-link-hover': $color-green,
+	// Button group
+		'button-group-link': $color-yellow,
+		'button-group-link-icon': $color-black,
+		'button-group-link-hover': $color-black,
+		'button-group-link-hover-icon': $color-white,
+	// Button
+		'button': $color-blue,
+		'button-text': $color-white,
+		'button-hover': color.scale($color-blue, $blackness: 30%),
+		'button-hover-text': $color-white,
+	// Search form
+		'search-button': $color-yellow,
+		'search-button-icon': $color-black,
+		'search-button-hover': $color-black,
+		'search-button-hover-icon': $color-white,
+	// WP Blocks
+		'blockquote': $color-purple,
+		'file-block': $color-blue-10,
+	// Block: Articles
+		'articles-background': 'transparent',
+	// Outer block
+		'outer-block-background': $color-light-grey,
+	// Post item
+		'category': $color-blue,
+		'category-tag-text': $color-white,
+		'post-item-background': $color-white,
+		'post-meta': $color-black,
+	// Comments
+		'comment-form-background': $color-light-grey,
+		'required': $color-red,
+		'comment-awaiting-moderation': $color-red,
+		'comment-form-button': $color-orange,
+	// Search
+		'posttype-post': $color-green,
+		'posttype-page': $color-purple,
+		'posttype-agenda': $color-red,
+		'posttype-download': $color-blue
+);
+
+// Set as ROOT
+:root {
+
+	// Fonts
+	--surf-font-heading: 'Nunito', Helvetica, sans-serif;
+	--surf-font-heading-font-weight: 600;
+	--surf-font-body: 'Source Sans Pro', Helvetica, sans-serif;
+
+	// Border radius
+	--surf-border-radius: #{functions.rem(18)};
+	--surf-button-border-radius: #{functions.rem(8)};
+	--surf-header-button-radius: #{functions.rem(4)};
+	--surf-search-field-hero-border-radius: #{functions.rem(5)};
+	--surf-search-field-border-radius: #{functions.rem(9)};
+	--surf-post-item-figure-border-radius: #{functions.rem(0)};
+	--surf-submenu-border-radius: #{functions.rem(18)};
+	--surf-footer-border-radius: #{functions.rem(18)};
+	--surf-assets-header-border-radius: #{functions.rem(5)};
+	--surf-assets-button-border-radius: #{functions.rem(3)};
+
+	// Post item
+	--surf-post-item-border-width: #{functions.rem(1)};
+	--surf-post-item-padding-sides-sm: #{functions.rem(21)};
+	--surf-post-item-padding-sides-lg: #{functions.rem(24)};
+	--surf-post-item-padding-top-sm: #{functions.rem(16)};
+	--surf-post-item-padding-top-lg: #{functions.rem(29)};
+	--surf-post-item-padding-bottom-sm: #{functions.rem(16)};
+	--surf-post-item-padding-bottom-lg: #{functions.rem(29)};
+	--surf-category-tag-border-radius: #{functions.rem(8 8 8 8)};
+	--surf-category-tag-top-position: #{functions.rem(24)};
+	--surf-category-tag-right-position: #{functions.rem(24)};
+	--surf-category-tag-text-transform: uppercase;
+	--surf-category-tag-display-row-item: none;
+
+	// Block heading
+	--surf-block-heading-align: center;
+
+	// Outer block
+	--surf-outer-block-padding-sm: #{functions.rem(20 0)};
+	--surf-outer-block-padding-md: #{functions.rem(40 0)};
+	--surf-outer-block-padding-lg: #{functions.rem(50 0)};
+
+	// Separator
+	--surf-separator-display-sides: block;
+
+	// Block Articles
+	--surf-articles-padding-sm: #{functions.rem(0)};
+	--surf-articles-padding-md: #{functions.rem(0)};
+	--surf-articles-padding-lg: #{functions.rem(0)};
+
+	// Icons
+	--surf-display-arrow-link: inline-block;
+	--surf-button-left-arrow: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='matrix(-1 0 0 1 9.722 0)' fill='currentColor' d='M3.99890942 9.27708903L4.72182039 10 9.72220382 5.00038343 4.72182039 0 3.99890942 0.722910969 7.76517306 4.48917461 5.91074325e-14 4.48917461 6.63657919e-18 5.51164336 7.76517306 5.51164336z'/%3E%3C/svg%3E");
+	--surf-button-right-arrow: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='currentColor' d='M3.99890942 9.27708903L4.72182039 10 9.72220382 5.00038343 4.72182039 0 3.99890942 0.722910969 7.76517306 4.48917461 5.91074325e-14 4.48917461 6.63657919e-18 5.51164336 7.76517306 5.51164336z'/%3E%3C/svg%3E");
+	--surf-link-arrow-width: #{functions.rem(10)};
+	@include mixins.set-color-vars($theme-colors);
+}

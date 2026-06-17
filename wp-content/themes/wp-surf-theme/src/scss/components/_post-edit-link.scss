@@ -1,0 +1,14 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Post Edit Link
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+
+.post-edit-link {
+	position: fixed;
+	bottom: functions.rem(24);
+	right: functions.rem(24);
+	z-index: 10;
+}

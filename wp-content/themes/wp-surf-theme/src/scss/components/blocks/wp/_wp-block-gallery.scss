@@ -1,0 +1,29 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Blocks / WP / Gallery
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
+
+.wp-block-gallery {
+	clear: both;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size: functions.rem(16);
+	border-bottom-left-radius: var(--surf-border-radius);
+	border-bottom-right-radius: var(--surf-border-radius);
+}
+
+.wp-block-gallery.has-nested-images {
+	--wp--style--unstable-gallery-gap: #{functions.rem(40)};
+	gap: var(--wp--style--unstable-gallery-gap);
+}
+
+@include mixins.breakpoint($from: large) {
+	.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+		font-size: functions.rem(18);
+	}
+}

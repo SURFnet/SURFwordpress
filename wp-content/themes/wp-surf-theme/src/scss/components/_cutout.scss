@@ -1,0 +1,37 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Cutout
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.image-type-cutout {
+	.post-item:not(.post-item--row) .wp-post-image,
+	.surf-block-header__image img,
+	.wp-block-media-text__media img,
+	.wp-block-image img,
+	.wp-block-video,
+	.assets-header--fancy .assets-header__background img {
+		clip-path: var(--surf-image-cutout);
+	}
+
+	.surf-block-header--background-image .surf-block-header__content,
+	.assets-header--fancy .assets-header__background:after {
+		background-image: none;
+	}
+}
+
+.button-type-cutout {
+	.button {
+		padding: functions.rem(20 24);
+	}
+
+	.button,
+	.wp-block-button__link {
+		clip-path: var(--surf-button-cutout);
+	}
+
+}

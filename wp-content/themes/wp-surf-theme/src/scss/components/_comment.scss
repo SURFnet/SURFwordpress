@@ -1,0 +1,233 @@
+//
+// ----------------------------------------------------------------------------
+// Components / Comment
+// ----------------------------------------------------------------------------
+//
+
+@use 'abstracts/functions';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+.comment {
+	border-radius: var(--surf-border-radius);
+	position: relative;
+	margin: functions.rem(0 0 30 0);
+}
+
+.comment .comment-edit-link {
+	position: absolute;
+	display: block;
+	top: functions.rem(24);
+	right: functions.rem(24);
+	color: var(--surf-color-link);
+	text-decoration: none;
+	opacity: 0;
+	transition: variables.$transition;
+}
+
+.comment .comment-edit-link:hover,
+.comment .comment-edit-link:active {
+	color: var(--surf-color-link-hover);
+}
+
+.comment:hover .comment-edit-link,
+.comment:hover .comment__meta span {
+	opacity: 1;
+}
+
+@include mixins.breakpoint($from: medium) {
+	.comment {
+		margin: functions.rem(0 0 40 0);
+	}
+}
+
+.comment__avatar {
+	position: absolute;
+	top: 0;
+	left: functions.rem(30);
+	transform: translateY(-50%);
+	overflow: hidden;
+	background: var(--surf-color-white);
+	display: block;
+}
+
+@include mixins.breakpoint($until: medium) {
+	.comment__avatar {
+		width: functions.rem(46);
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.comment__avatar {
+		top: functions.rem(40);
+		left: 0;
+		transform: translateX(-50%);
+	}
+}
+
+.comment__author {
+	margin: 0;
+	display: block;
+}
+
+.comment__author .h4 {
+	margin: 0 0 functions.rem(10) 0;
+	display: block;
+}
+
+.comment__author a {
+	color: var(--surf-color-black);
+	text-decoration: none;
+}
+
+.comment__author a:hover,
+.comment__author a:active {
+	color: var(--surf-color-link-hover);
+}
+
+@include mixins.breakpoint($from: medium) {
+	.comment__author h4 {
+		margin: functions.rem(0 0 10 0);
+	}
+}
+
+.comment__meta {
+	font-family: var(--surf-font-heading);
+	font-weight: 700;
+	margin: functions.rem(10 0 0 0);
+	display: block;
+
+	& > * {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	a {
+		color: var(--surf-color-black);
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:active {
+		color: var(--surf-color-link-hover);
+	}
+
+	.icon {
+		margin: functions.rem(0 7 0 0);
+	}
+
+	span {
+		display: inline-block;
+		font-weight: 400;
+		opacity: 0;
+		transition: variables.$transition;
+		margin: functions.rem(0 0 0 10);
+		color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+@include mixins.breakpoint($from: medium) {
+	.comment__meta {
+		margin: functions.rem(15 0 0 0);
+	}
+}
+
+.comment .comment-reply-link {
+	font-family: var(--surf-font-heading);
+	font-weight: 700;
+	margin: functions.rem(10 0 0 0);
+	display: inline-block;
+	text-decoration: none;
+
+	@include mixins.arrow-right;
+}
+
+.comment .pingback-entry {
+	display: block;
+	margin: functions.rem(0 0 10 0);
+}
+
+.comment .comment__awaiting-moderation {
+	color: var(--surf-color-comment-awaiting-moderation);
+	display: block;
+	margin: functions.rem(0 0 1 0);
+}
+
+.comment__body {
+	display: block;
+}
+
+@include mixins.SurfTheme() {
+	.comment {
+		border: 2px solid var(--surf-color-border);
+		background: var(--surf-color-white);
+	}
+
+	.comment__avatar {
+		border-radius: functions.rem(8);
+		border: 2px solid var(--surf-color-border);
+	}
+
+	.comment__body {
+		padding: functions.rem(50 24 24 24);
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		.comment__body {
+			padding: functions.rem(30 30 30 80);
+		}
+	}
+
+	/**
+	* Comment reply - Add border
+	*/
+	.children .comment::before {
+		content: '';
+		display: block;
+		width: functions.rem(32);
+		height: calc(100% + #{functions.rem(20)});
+		position: absolute;
+		transform: translate(-100%, -100%);
+		border: 2px solid var(--surf-color-border);
+		border-bottom-left-radius: functions.rem(16);
+		border-top: 0;
+		border-right: 0;
+		top: functions.rem(65);
+		z-index: -1;
+	}
+
+	.children + .comment::before {
+		display: none;
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		.children .comment::before {
+			width: functions.rem(152);
+			border-bottom-left-radius: functions.rem(60);
+			top: functions.rem(90);
+		}
+	}
+}
+
+@include mixins.poweredTheme() {
+	.comment {
+		background: var(--surf-color-background);
+	}
+
+	.comment__body {
+		padding: functions.rem(50 24 24 24);
+	}
+
+	@include mixins.breakpoint($from: medium) {
+		.comment__body {
+			padding: functions.rem(30 30 30 30);
+		}
+
+		.comment__avatar {
+			top: 0;
+			transform: translateX(calc(-100% - 8px));
+			border-radius: functions.rem(4);
+		}
+	}
+}
