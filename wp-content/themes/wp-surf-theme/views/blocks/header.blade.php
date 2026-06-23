@@ -49,7 +49,7 @@
 			@if($search === 'search-top' && $variation === 'background-image' || $search === 'search-top' && $variation === 'background-video' || $search === 'search-top' && $variation === 'background-video-gradient')
 				{!! $searchForm !!}
 			@endif
-			<h1 class="surf-block-header__title">{{$blockAttributes['title']}}</h1>
+			<h1 class="surf-block-header__title">{{$blockAttributes['title'] ?? ''}}</h1>
 			@if(!empty($blockAttributes['intro']))
 				<p class="surf-block-header__text">{!! $blockAttributes['intro'] !!}</p>
 			@endif
