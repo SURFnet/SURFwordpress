@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-06-16 11:25+0200\n"
-"PO-Revision-Date: 2026-06-16 11:25+0200\n"
+"POT-Creation-Date: 2026-07-09 09:10+0200\n"
+"PO-Revision-Date: 2026-07-09 09:11+0200\n"
 "Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
 "Language-Team: SURF B.V. <info@surf.nl>\n"
 "Language: nl_NL\n"
@@ -817,9 +817,9 @@ msgctxt "admin"
 msgid "Button hover color"
 msgstr "Button hover kleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:38
-#: includes/Admin/MetaBoxes/ThemeSettings.php:46
-#: includes/Admin/MetaBoxes/ThemeSettings.php:55
+#: includes/Admin/MetaBoxes/ThemeSettings.php:39
+#: includes/Admin/MetaBoxes/ThemeSettings.php:47
+#: includes/Admin/MetaBoxes/ThemeSettings.php:56
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:73
 #: includes/Core/Traits/HasLocalizedSettingsPage.php:89
 #: includes/PostTypes/Agenda.php:318 includes/PostTypes/Asset.php:833
@@ -830,70 +830,70 @@ msgctxt "admin"
 msgid "Settings"
 msgstr "Instellingen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:213
-#: includes/Admin/MetaBoxes/ThemeSettings.php:870
+#: includes/Admin/MetaBoxes/ThemeSettings.php:216
+#: includes/Admin/MetaBoxes/ThemeSettings.php:904
 msgctxt "admin"
 msgid "Site"
 msgstr "Site"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:220
+#: includes/Admin/MetaBoxes/ThemeSettings.php:223
 msgctxt "admin"
 msgid "Theme"
 msgstr "Thema"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:227
-#: includes/Admin/MetaBoxes/ThemeSettings.php:878
+#: includes/Admin/MetaBoxes/ThemeSettings.php:230
+#: includes/Admin/MetaBoxes/ThemeSettings.php:912
 msgctxt "admin"
 msgid "Logo's"
 msgstr "Logo's"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:231
-#: includes/Admin/MetaBoxes/ThemeSettings.php:883
+#: includes/Admin/MetaBoxes/ThemeSettings.php:234
+#: includes/Admin/MetaBoxes/ThemeSettings.php:917
 msgctxt "admin"
 msgid "Add logo"
 msgstr "Logo toevoegen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:235
-#: includes/Admin/MetaBoxes/ThemeSettings.php:888
+#: includes/Admin/MetaBoxes/ThemeSettings.php:238
+#: includes/Admin/MetaBoxes/ThemeSettings.php:922
 msgctxt "admin"
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:243
-#: includes/Admin/MetaBoxes/ThemeSettings.php:895
+#: includes/Admin/MetaBoxes/ThemeSettings.php:246
+#: includes/Admin/MetaBoxes/ThemeSettings.php:929
 msgctxt "admin"
 msgid "Logo size"
 msgstr "Logo formaat"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:257
+#: includes/Admin/MetaBoxes/ThemeSettings.php:260
 msgctxt "admin"
 msgid "Font"
 msgstr "Lettertype"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:265
+#: includes/Admin/MetaBoxes/ThemeSettings.php:268
 msgctxt "admin"
 msgid "Heading font"
 msgstr "Kop lettertype"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:273
+#: includes/Admin/MetaBoxes/ThemeSettings.php:276
 msgctxt "admin"
 msgid "Menu separator"
 msgstr "Menu Scheidingslijn"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:281
-#: includes/Admin/MetaBoxes/ThemeSettings.php:371
+#: includes/Admin/MetaBoxes/ThemeSettings.php:284
+#: includes/Admin/MetaBoxes/ThemeSettings.php:374
 msgctxt "admin"
 msgid "Separator image"
 msgstr "Scheidingslijn afbeelding"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:288
-#: includes/Admin/MetaBoxes/ThemeSettings.php:378
+#: includes/Admin/MetaBoxes/ThemeSettings.php:291
+#: includes/Admin/MetaBoxes/ThemeSettings.php:381
 msgctxt "admin"
 msgid "Negative margins"
 msgstr "Negatieve marges"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:289
-#: includes/Admin/MetaBoxes/ThemeSettings.php:379
+#: includes/Admin/MetaBoxes/ThemeSettings.php:292
+#: includes/Admin/MetaBoxes/ThemeSettings.php:382
 msgctxt "admin"
 msgid ""
 "Sometimes an image has some whitespace, to control this you can add negative "
@@ -903,58 +903,58 @@ msgstr ""
 "negatieve marges toevoegen aan de boven- en onderkant, om de afbeelding "
 "beter uit te lijnen met de inhoud."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:299
-#: includes/Admin/MetaBoxes/ThemeSettings.php:389
+#: includes/Admin/MetaBoxes/ThemeSettings.php:302
+#: includes/Admin/MetaBoxes/ThemeSettings.php:392
 msgctxt "admin"
 msgid "Mobile - Top"
 msgstr "Mobiel - Boven"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:309
-#: includes/Admin/MetaBoxes/ThemeSettings.php:399
+#: includes/Admin/MetaBoxes/ThemeSettings.php:312
+#: includes/Admin/MetaBoxes/ThemeSettings.php:402
 msgctxt "admin"
 msgid "Mobile - Bottom"
 msgstr "Mobiel - Onder"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:319
-#: includes/Admin/MetaBoxes/ThemeSettings.php:409
+#: includes/Admin/MetaBoxes/ThemeSettings.php:322
+#: includes/Admin/MetaBoxes/ThemeSettings.php:412
 msgctxt "admin"
 msgid "Tablet - Top"
 msgstr "Tablet - Boven"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:329
-#: includes/Admin/MetaBoxes/ThemeSettings.php:419
+#: includes/Admin/MetaBoxes/ThemeSettings.php:332
+#: includes/Admin/MetaBoxes/ThemeSettings.php:422
 msgctxt "admin"
 msgid "Tablet - Bottom"
 msgstr "Tablet - Onder"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:339
-#: includes/Admin/MetaBoxes/ThemeSettings.php:429
+#: includes/Admin/MetaBoxes/ThemeSettings.php:342
+#: includes/Admin/MetaBoxes/ThemeSettings.php:432
 msgctxt "admin"
 msgid "Desktop - Top"
 msgstr "Desktop - Boven"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:349
-#: includes/Admin/MetaBoxes/ThemeSettings.php:439
+#: includes/Admin/MetaBoxes/ThemeSettings.php:352
+#: includes/Admin/MetaBoxes/ThemeSettings.php:442
 msgctxt "admin"
 msgid "Desktop - Bottom"
 msgstr "Desktop - Onder"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:363
+#: includes/Admin/MetaBoxes/ThemeSettings.php:366
 msgctxt "admin"
 msgid "Global separator"
 msgstr "Globale scheidingslijn"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:451 languages/_jsx-strings.js:114
+#: includes/Admin/MetaBoxes/ThemeSettings.php:454 languages/_jsx-strings.js:114
 msgctxt "admin"
 msgid "No margin"
 msgstr "Geen marges"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:460
+#: includes/Admin/MetaBoxes/ThemeSettings.php:463
 msgctxt "admin"
 msgid "Tags position"
 msgstr "Tags positie"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:461
+#: includes/Admin/MetaBoxes/ThemeSettings.php:464
 msgctxt "admin"
 msgid ""
 "Where do you want to show the tags, at the top of bottom of the post. Bottom "
@@ -963,13 +963,13 @@ msgstr ""
 "Waar wil je de tags laten zien? Bovenaan of onderaan een bericht. Onderaan "
 "is standaard."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:465
+#: includes/Admin/MetaBoxes/ThemeSettings.php:468
 #: includes/PostTypes/Asset.php:927 languages/_jsx-strings.js:136
 msgctxt "admin"
 msgid "Bottom"
 msgstr "Onderaan"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:466
+#: includes/Admin/MetaBoxes/ThemeSettings.php:469
 #: includes/PostTypes/Asset.php:926 includes/PostTypes/Asset.php:1023
 #: includes/PostTypes/Page.php:250
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:164
@@ -978,41 +978,41 @@ msgctxt "admin"
 msgid "Top"
 msgstr "Bovenaan"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:471
+#: includes/Admin/MetaBoxes/ThemeSettings.php:474
 msgctxt "admin"
 msgid "Show year in Event dates"
 msgstr "Toon jaar in Evenement datums"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:472
+#: includes/Admin/MetaBoxes/ThemeSettings.php:475
 msgctxt "admin"
 msgid "Select when to display the year in the Event dates of this site."
 msgstr ""
 "Selecteer wanneer het jaar moet worden weergegeven in de evenementdatums van "
 "deze site."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:476
+#: includes/Admin/MetaBoxes/ThemeSettings.php:479
 msgctxt "admin"
 msgid "Never"
 msgstr "Nooit"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:477
+#: includes/Admin/MetaBoxes/ThemeSettings.php:480
 msgctxt "admin"
 msgid "Always"
 msgstr "Altijd"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:478
+#: includes/Admin/MetaBoxes/ThemeSettings.php:481
 #, php-format
 msgctxt "admin"
 msgid "Only if not current (%s)"
 msgstr "Alleen indien niet huidige (%s)"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:484
+#: includes/Admin/MetaBoxes/ThemeSettings.php:487
 #: includes/PostTypes/Post.php:73 languages/_jsx-strings.js:44
 msgctxt "admin"
 msgid "Post date display"
 msgstr "Postdatum-weergave"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:485
+#: includes/Admin/MetaBoxes/ThemeSettings.php:488
 #: includes/PostTypes/Post.php:75
 msgctxt "admin"
 msgid ""
@@ -1022,7 +1022,7 @@ msgstr ""
 "Selecteer welke datum/data getoond moet(en) worden. Dit geldt alleen voor "
 "posts en pagina’s."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:489
+#: includes/Admin/MetaBoxes/ThemeSettings.php:492
 #: includes/PostTypes/Post.php:80
 #: includes/Traits/HasArchiveWidgetAreaFilters.php:163
 #: languages/_jsx-strings.js:34
@@ -1030,145 +1030,187 @@ msgctxt "admin"
 msgid "Hidden"
 msgstr "Verborgen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:490
+#: includes/Admin/MetaBoxes/ThemeSettings.php:493
 #: includes/PostTypes/Post.php:81 languages/_jsx-strings.js:35
 msgctxt "admin"
 msgid "Published"
 msgstr "Gepubliceerd"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:491
+#: includes/Admin/MetaBoxes/ThemeSettings.php:494
 #: includes/PostTypes/Post.php:82 languages/_jsx-strings.js:36
 msgctxt "admin"
 msgid "Modified"
 msgstr "Bewerkt"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:492
+#: includes/Admin/MetaBoxes/ThemeSettings.php:495
 #: includes/PostTypes/Post.php:83 languages/_jsx-strings.js:37
 msgctxt "admin"
 msgid "Published and modified"
 msgstr "Gepubliceerd en bewerkt"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:498
-#: includes/Admin/MetaBoxes/ThemeSettings.php:909
+#: includes/Admin/MetaBoxes/ThemeSettings.php:501
+#: includes/Admin/MetaBoxes/ThemeSettings.php:943
 msgctxt "admin"
 msgid "Post date display - Published at text"
 msgstr "Postdatum-weergave - “Gepubliceerd op” tekst"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:499
-#: includes/Admin/MetaBoxes/ThemeSettings.php:910
+#: includes/Admin/MetaBoxes/ThemeSettings.php:502
+#: includes/Admin/MetaBoxes/ThemeSettings.php:944
 msgctxt "admin"
 msgid "This will be displayed before the post's published date."
 msgstr "Dit zal worden getoond voor de publicatiedatum van de post."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:506
-#: includes/Admin/MetaBoxes/ThemeSettings.php:917
+#: includes/Admin/MetaBoxes/ThemeSettings.php:509
+#: includes/Admin/MetaBoxes/ThemeSettings.php:951
 msgctxt "admin"
 msgid "Post date display - Modified at text"
 msgstr "Postdatum-weergave - “Bewerkt op” tekst"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:507
-#: includes/Admin/MetaBoxes/ThemeSettings.php:918
+#: includes/Admin/MetaBoxes/ThemeSettings.php:510
+#: includes/Admin/MetaBoxes/ThemeSettings.php:952
 msgctxt "admin"
 msgid "This will be displayed before the post's modified date."
 msgstr "Dit zal worden getoond voor de bewerkdatum van de post."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:525
+#: includes/Admin/MetaBoxes/ThemeSettings.php:526
+msgctxt "admin"
+msgid "Media"
+msgstr "Media"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:533
+msgctxt "admin"
+msgid "Default allowed file types"
+msgstr "Standaard toegestane bestandstypen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:536
+#, php-format
+msgctxt "admin"
+msgid ""
+"By default, only the file types as mentioned in %1$s, are allowed. Use the "
+"setting below to expand the approved file types."
+msgstr ""
+"Standaard zijn alleen de bestandstypen zoals in %1$s genoemd toegestaan. "
+"Gebruik de onderstaande instelling om de goedgekeurde bestandstypen uit te "
+"breiden."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:536
+msgctxt "admin"
+msgid "the WordPress Codex"
+msgstr "de WordPress Codex"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:540
+msgctxt "admin"
+msgid "File types"
+msgstr "Bestandstypen"
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:542
+msgctxt "admin"
+msgid ""
+"Select all the extra file types you want to be able to upload. The right to "
+"upload these files are limited to the Administrator role only, because of "
+"security reasons."
+msgstr ""
+"Selecteer alle extra bestandstypen die je wilt kunnen uploaden. Het recht om "
+"deze bestanden te uploaden is beperkt tot de rol van Beheerder, om "
+"veiligheidsredenen."
+
+#: includes/Admin/MetaBoxes/ThemeSettings.php:559
 msgctxt "admin"
 msgid "Headings"
 msgstr "Kop lettertype"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:553
+#: includes/Admin/MetaBoxes/ThemeSettings.php:587
 #, php-format
 msgctxt "admin"
 msgid "Font %s"
 msgstr "Lettertype%s"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:576
-#: includes/Admin/MetaBoxes/ThemeSettings.php:584
+#: includes/Admin/MetaBoxes/ThemeSettings.php:610
+#: includes/Admin/MetaBoxes/ThemeSettings.php:618
 msgctxt "admin"
 msgid "Fonts"
 msgstr "Lettertypen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:588
+#: includes/Admin/MetaBoxes/ThemeSettings.php:622
 msgctxt "admin"
 msgid "Add font"
 msgstr "Lettertype toevoegen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:592
+#: includes/Admin/MetaBoxes/ThemeSettings.php:626
 msgctxt "admin"
 msgid "Name"
 msgstr "Naam"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:599
+#: includes/Admin/MetaBoxes/ThemeSettings.php:633
 #: includes/Helpers/RoadmapHelper.php:18 includes/PostTypes/Asset.php:777
 #: includes/Traits/HasIndexedPdf.php:99
 msgctxt "admin"
 msgid "File"
 msgstr "Bestand"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:621
+#: includes/Admin/MetaBoxes/ThemeSettings.php:655
 msgctxt "admin"
 msgid "Colors"
 msgstr "Kleuren"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:629
+#: includes/Admin/MetaBoxes/ThemeSettings.php:663
 msgctxt "admin"
 msgid "Primary color"
 msgstr "Primaire kleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:637
+#: includes/Admin/MetaBoxes/ThemeSettings.php:671
 msgctxt "admin"
 msgid "Secondary color"
 msgstr "Secundaire kleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:645
+#: includes/Admin/MetaBoxes/ThemeSettings.php:679
 msgctxt "admin"
 msgid "Tertiary color"
 msgstr "Tertiaire kleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:653
+#: includes/Admin/MetaBoxes/ThemeSettings.php:687
 msgctxt "admin"
 msgid "Quaternary color"
 msgstr "Tertiaire kleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:661
+#: includes/Admin/MetaBoxes/ThemeSettings.php:695
 msgctxt "admin"
 msgid "Header background color"
 msgstr "Header achtergrondkleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:662
+#: includes/Admin/MetaBoxes/ThemeSettings.php:696
 msgctxt "admin"
 msgid "This color will be used on items like: header"
 msgstr "Deze kleur wordt gebruikt bij elementen zoals: Footer"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:669
+#: includes/Admin/MetaBoxes/ThemeSettings.php:703
 msgctxt "admin"
 msgid "Footer background color"
 msgstr "Footer achtergrondkleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:670
+#: includes/Admin/MetaBoxes/ThemeSettings.php:704
 msgctxt "admin"
 msgid "This color will be used on items like: Footer"
 msgstr "Deze kleur wordt gebruikt bij elementen zoals: Footer"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:678
+#: includes/Admin/MetaBoxes/ThemeSettings.php:712
 msgctxt "admin"
 msgid "This color will be used on items like: Gravity Forms, Comment forms"
 msgstr ""
 "Deze kleur wordt gebruikt bij elementen zoals: Gravity Forms, Reactie "
 "formulier"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:679
+#: includes/Admin/MetaBoxes/ThemeSettings.php:713
 msgctxt "admin"
 msgid "Form background color"
 msgstr "Formulier achtergrondkleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:687
+#: includes/Admin/MetaBoxes/ThemeSettings.php:721
 msgctxt "admin"
 msgid "Global background color"
 msgstr "Globale achtergrondkleur"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:688
+#: includes/Admin/MetaBoxes/ThemeSettings.php:722
 msgctxt "admin"
 msgid ""
 "This color will be used on items like: Comments, Archive pages, FAQ items, "
@@ -1177,126 +1219,126 @@ msgstr ""
 "Deze kleur wordt gebruikt bij elementen zoals: Reacties, Archiefpagina’s, "
 "Filters, FAQ items, Artikelen blokken en meer"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:706
+#: includes/Admin/MetaBoxes/ThemeSettings.php:740
 msgctxt "admin"
 msgid "Images and buttons"
 msgstr "Afbeeldingen en knoppen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:714
+#: includes/Admin/MetaBoxes/ThemeSettings.php:748
 #: includes/PostTypes/Asset.php:959 includes/Taxonomies/AgendaLocation.php:163
 #: languages/_jsx-strings.js:109
 msgctxt "admin"
 msgid "Image"
 msgstr "Afbeelding"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:721
-#: includes/Admin/MetaBoxes/ThemeSettings.php:792 languages/_jsx-strings.js:209
+#: includes/Admin/MetaBoxes/ThemeSettings.php:755
+#: includes/Admin/MetaBoxes/ThemeSettings.php:826 languages/_jsx-strings.js:209
 msgctxt "admin"
 msgid "Type"
 msgstr "Type"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:723
+#: includes/Admin/MetaBoxes/ThemeSettings.php:757
 msgctxt "admin"
 msgid "Select how you would like to show the images"
 msgstr "Selecteer hoe de afbeeldingen getoond moeten worden"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:726
-#: includes/Admin/MetaBoxes/ThemeSettings.php:797
+#: includes/Admin/MetaBoxes/ThemeSettings.php:760
+#: includes/Admin/MetaBoxes/ThemeSettings.php:831
 #: includes/Hooks/AcfHooks.php:42 includes/Traits/HasCategoryColor.php:47
 msgctxt "admin"
 msgid "Default"
 msgstr "Standaard"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:727
-#: includes/Admin/MetaBoxes/ThemeSettings.php:798
+#: includes/Admin/MetaBoxes/ThemeSettings.php:761
+#: includes/Admin/MetaBoxes/ThemeSettings.php:832
 msgctxt "admin"
 msgid "Square"
 msgstr "Vierkant"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:728
-#: includes/Admin/MetaBoxes/ThemeSettings.php:734
-#: includes/Admin/MetaBoxes/ThemeSettings.php:799
-#: includes/Admin/MetaBoxes/ThemeSettings.php:805
+#: includes/Admin/MetaBoxes/ThemeSettings.php:762
+#: includes/Admin/MetaBoxes/ThemeSettings.php:768
+#: includes/Admin/MetaBoxes/ThemeSettings.php:833
+#: includes/Admin/MetaBoxes/ThemeSettings.php:839
 msgctxt "admin"
 msgid "Rounded"
 msgstr "Ronding"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:729
-#: includes/Admin/MetaBoxes/ThemeSettings.php:749
-#: includes/Admin/MetaBoxes/ThemeSettings.php:800
-#: includes/Admin/MetaBoxes/ThemeSettings.php:820
+#: includes/Admin/MetaBoxes/ThemeSettings.php:763
+#: includes/Admin/MetaBoxes/ThemeSettings.php:783
+#: includes/Admin/MetaBoxes/ThemeSettings.php:834
+#: includes/Admin/MetaBoxes/ThemeSettings.php:854
 msgctxt "admin"
 msgid "Cutout"
 msgstr "Uitknip"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:736
+#: includes/Admin/MetaBoxes/ThemeSettings.php:770
 msgctxt "admin"
 msgid "Select how round you want the image to be"
 msgstr "Selecteer hoe rond de afbeeldingen moeten worden"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:751
+#: includes/Admin/MetaBoxes/ThemeSettings.php:785
 msgctxt "admin"
 msgid "This will be used to decide the cutout for each corner of an image."
 msgstr ""
 "Dit zal worden gebruikt voor het uitknippen van elke hoek in een afbeelding."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:757
-#: includes/Admin/MetaBoxes/ThemeSettings.php:832
+#: includes/Admin/MetaBoxes/ThemeSettings.php:791
+#: includes/Admin/MetaBoxes/ThemeSettings.php:866
 msgctxt "admin"
 msgid "Top left corner"
 msgstr "Linksboven hoek"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:762
-#: includes/Admin/MetaBoxes/ThemeSettings.php:837
+#: includes/Admin/MetaBoxes/ThemeSettings.php:796
+#: includes/Admin/MetaBoxes/ThemeSettings.php:871
 msgctxt "admin"
 msgid "Top right corner"
 msgstr "Rechtsboven hoek"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:767
-#: includes/Admin/MetaBoxes/ThemeSettings.php:842
+#: includes/Admin/MetaBoxes/ThemeSettings.php:801
+#: includes/Admin/MetaBoxes/ThemeSettings.php:876
 msgctxt "admin"
 msgid "Bottom left corner"
 msgstr "Linksonder hoek"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:772
-#: includes/Admin/MetaBoxes/ThemeSettings.php:847
+#: includes/Admin/MetaBoxes/ThemeSettings.php:806
+#: includes/Admin/MetaBoxes/ThemeSettings.php:881
 msgctxt "admin"
 msgid "Bottom right corner"
 msgstr "Rechtsonder hoek"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:785
+#: includes/Admin/MetaBoxes/ThemeSettings.php:819
 #: includes/PostTypes/Asset.php:869
 msgctxt "admin"
 msgid "Button"
 msgstr "Knop"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:794
+#: includes/Admin/MetaBoxes/ThemeSettings.php:828
 msgctxt "admin"
 msgid "Select how you would like to show the buttons"
 msgstr "Selecteer hoe de knoppen getoond moeten worden"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:807
+#: includes/Admin/MetaBoxes/ThemeSettings.php:841
 msgctxt "admin"
 msgid "Select how round you want the button to be"
 msgstr "Selecteer hoe rond de knoppen moeten worden"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:823
+#: includes/Admin/MetaBoxes/ThemeSettings.php:857
 msgctxt "admin"
 msgid "This will be used to decide the cutout for each corner of an button."
 msgstr "Dit zal worden gebruikt voor het uitknippen van elke hoek in een knop."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:936
+#: includes/Admin/MetaBoxes/ThemeSettings.php:970
 msgctxt "admin"
 msgid "Social media"
 msgstr "Sociale media"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:963
-#: includes/Admin/MetaBoxes/ThemeSettings.php:969
+#: includes/Admin/MetaBoxes/ThemeSettings.php:997
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1003
 msgctxt "admin"
 msgid "Error page"
 msgstr "Foutpagina / 404"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:970
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1004
 msgctxt "admin"
 msgid ""
 "Select an error page, when there is not one selected, a standard page will "
@@ -1305,105 +1347,105 @@ msgstr ""
 "Selecteer een foutpagina, als er geen is geselecteerd, wordt een "
 "standaardpagina getoond."
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:987
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1021
 #: includes/Admin/Sidebars.php:22 includes/Admin/Sidebars.php:23
 msgctxt "admin"
 msgid "Footer"
 msgstr "Footer"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:994
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1028
 msgctxt "admin"
 msgid "Simple footer"
 msgstr "Simpele footer"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1001
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1035
 msgctxt "admin"
 msgid "Copyright"
 msgstr "Copyright"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1016
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1050
 msgctxt "admin"
 msgid "Breadcrumbs"
 msgstr "Kruimelpad"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1023
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1057
 msgctxt "admin"
 msgid "Deactivate breadcrumbs"
 msgstr "Kruimelpad verbergen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1024
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1058
 msgctxt "admin"
 msgid "Select post types where you would like to deactivate the breadcrumbs"
 msgstr "Selecteer post types waar je het kruimelpad zou willen verbergen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1028 languages/_jsx-strings.js:57
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1062 languages/_jsx-strings.js:57
 msgctxt "admin"
 msgid "Posts"
 msgstr "Posts"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1029
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1063
 msgctxt "admin"
 msgid "Pages"
 msgstr "Pagina’s"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1030
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1064
 msgctxt "admin"
 msgid "Agenda"
 msgstr "Agenda"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1031
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1065
 msgctxt "admin"
 msgid "Assets"
 msgstr "Assets"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1032 languages/_jsx-strings.js:73
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1066 languages/_jsx-strings.js:73
 msgctxt "admin"
 msgid "Downloads"
 msgstr "Downloads"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1033
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1067
 msgctxt "admin"
 msgid "FAQs"
 msgstr "FAQs"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1034
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1068
 msgctxt "admin"
 msgid "Vacancies"
 msgstr "Vacatures"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1048
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1082
 msgctxt "admin"
 msgid "Content Sharing"
 msgstr "Content delen"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1056
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1090
 #, php-format
 msgctxt "admin"
 msgid "Allow for sharing items via %1$s"
 msgstr "Delen van items via %1$s toestaan"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1078
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1112
 msgctxt "admin"
 msgid "Search labels"
 msgstr "Labels zoeken"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1085
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1119
 msgctxt "admin"
 msgid "Search page title"
 msgstr "Pagina titel zoeken"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1088
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1122
 msgctxt "admin"
 msgid "Search results"
 msgstr "Zoekresultaten"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1126
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1160
 #, php-format
 msgctxt "admin"
 msgid "Alternative search name: %s"
 msgstr "Alternatieve zoeknaam: %s"
 
-#: includes/Admin/MetaBoxes/ThemeSettings.php:1155
+#: includes/Admin/MetaBoxes/ThemeSettings.php:1189
 #, php-format
 msgctxt "admin"
 msgid "Alternative search name: %s (%s)"
@@ -1818,6 +1860,11 @@ msgctxt "admin"
 msgid "Quaternary"
 msgstr "Kwartair"
 
+#: includes/Helpers/AttachmentHelper.php:176
+msgctxt "admin"
+msgid ".md (MarkDown)"
+msgstr ".md (MarkDown)"
+
 #: includes/Helpers/CutoutHelper.php:29
 msgctxt "admin"
 msgid "X axis"
@@ -2113,6 +2160,11 @@ msgstr "Hero Groot"
 msgctxt "admin"
 msgid "Hero Small"
 msgstr "Hero Klein"
+
+#: includes/Hooks/MediaHooks.php:68
+msgctxt "admin"
+msgid "SURF Allowed Files"
+msgstr "SURF toegestane bestanden"
 
 #: includes/Plugins/Acf/Acf.php:20
 msgctxt "plugin"
