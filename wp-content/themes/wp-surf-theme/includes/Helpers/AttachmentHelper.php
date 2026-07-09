@@ -3,6 +3,7 @@
 namespace SURF\Helpers;
 
 use WP_Error;
+use WP_User;
 
 /**
  * Attachment helper methods
@@ -103,5 +104,78 @@ class AttachmentHelper
 
 		return $attachmentId;
 	}
+
+    /**
+     * @param WP_User|null $user
+     * @return array
+     */
+    public static function listAllowedExtraMimes(?WP_User $user = null): array
+    {
+        $list = [];
+        if (!static::isAllowedToUpload($user)) {
+            return $list;
+        }
+
+        $types = get_option('options_surf_media_types') ?: [];
+        if (empty($types)) {
+            return $list;
+        }
+
+        if (!is_array($types)) {
+            $types = [(string)$types];
+        }
+
+        $mapping = static::getMimeMapping();
+        foreach ($types as $file_ext) {
+            $file_ext  = strtolower(trim((string) $file_ext));
+            $mime_type = $mapping[$file_ext] ?? null;
+            if (empty($mime_type)) {
+                continue;
+            }
+
+            $list[$file_ext] = $mime_type;
+        }
+        return $list;
+    }
+
+    /**
+     * @param WP_User|null $user
+     * @return bool
+     */
+    public static function isAllowedToUpload(?WP_User $user = null): bool
+    {
+        $user = $user ?: wp_get_current_user();
+        if (!($user instanceof WP_User)) {
+            return false;
+        }
+
+        if (!user_can($user, 'edit_theme_settings')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @return string[]
+     */
+    public static function getMimeMapping(): array
+    {
+        return [
+            'md' => 'text/plain',
+            // Add additional file types here (extension => mime type)
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    public static function listExtraMimesForSelect(): array
+    {
+        return [
+            'md' => _x('.md (Markdown)', 'admin', 'wp-surf-theme'),
+            // Add additional file extensions here, with their nice name (for the select options)
+        ];
+    }
 
 }

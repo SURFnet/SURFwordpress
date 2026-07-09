@@ -19,6 +19,7 @@ use SURF\Hooks\AuthorHooks;
 use SURF\Hooks\ConfigHooks;
 use SURF\Hooks\HeadingHooks;
 use SURF\Hooks\ImageHooks;
+use SURF\Hooks\MediaHooks;
 use SURF\Hooks\MenuHooks;
 use SURF\Hooks\PageHooks;
 use SURF\Hooks\PostHooks;
@@ -61,6 +62,7 @@ TermHooks::register();
 SearchHooks::register();
 MenuHooks::register();
 AuthorHooks::register();
+MediaHooks::register();
 
 /*
  * API

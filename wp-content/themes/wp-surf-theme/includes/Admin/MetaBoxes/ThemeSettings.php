@@ -6,6 +6,7 @@ use SURF\Admin\MetaBoxes;
 use SURF\Admin\Pages;
 use SURF\Enums\Theme;
 use SURF\Helpers\ACFHelper;
+use SURF\Helpers\AttachmentHelper;
 use SURF\Helpers\CutoutHelper;
 use SURF\Helpers\PolylangHelper;
 use SURF\Helpers\SocialHelper;
@@ -156,6 +157,7 @@ class ThemeSettings
 	{
 		return [
 			static::getSite(),
+            static::getMedia(),
 			static::getSiteHeadings(),
 			static::getSiteFonts(),
 			static::getSiteColors(),
@@ -177,6 +179,7 @@ class ThemeSettings
 	{
 		return [
 			static::getSite(),
+            static::getMedia(),
 			static::getSiteHeadings(),
 			static::getSiteFonts(),
 			static::getSiteColors(),
@@ -511,6 +514,37 @@ class ThemeSettings
 			],
 		];
 	}
+
+    /**
+     * @return array|array[]
+     */
+    public static function getMedia(): array
+    {
+        return [
+            [
+                'key'       => 'field_theme_settings_site_media_tab',
+                'label'     => _x('Media', 'admin', 'wp-surf-theme'),
+                'type'      => 'tab',
+                'name'      => '',
+                'placement' => 'left',
+            ],
+            [
+                'key'     => 'field_theme_settings_site_media_explain',
+                'label'   => _x('Default allowed file types', 'admin', 'wp-surf-theme'),
+                'type'    => 'message',
+                'name'    => '',
+                'message' => sprintf(_x('By default, only the file types as mentioned in %1$s, are allowed. Use the setting below to expand the approved file types.', 'admin', 'wp-surf-theme'), '<a href="https://codex.wordpress.org/Uploading_Files" target="_blank" rel="noopener noreferrer">'._x('the WordPress Codex', 'admin', 'wp-surf-theme').'</a>'),
+            ],
+            [
+                'key'          => 'field_theme_settings_site_media_types',
+                'label'        => _x('File types', 'admin', 'wp-surf-theme'),
+                'name'         => 'surf_media_types',
+                'instructions' => _x('Select all the extra file types you want to be able to upload. The right to upload these files are limited to the Administrator role only, because of security reasons.', 'admin', 'wp-surf-theme'),
+                'type'         => 'checkbox',
+                'choices'      => AttachmentHelper::listExtraMimesForSelect(),
+            ],
+        ];
+    }
 
 	/**
 	 * @return array
