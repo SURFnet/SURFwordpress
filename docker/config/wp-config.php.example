@@ -24,7 +24,7 @@ define('DB_NAME', 'wp-surf-theme');
 define('DB_USER', 'surf');
 
 /* MySQL database password */
-define('DB_PASSWORD', 'x37YPHCq54Yh4E');
+define('DB_PASSWORD', '');
 
 /* MySQL hostname */
 define('DB_HOST', 'mysql');
