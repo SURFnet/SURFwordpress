@@ -1,5 +1,8 @@
 *.DS_Store
 
+.env
+docker/config/wp-config.php
+
 # Composer
 /wp-content/themes/wp-surf-theme/vendor
 

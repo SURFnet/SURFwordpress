@@ -1,4 +1,4 @@
-# WP SURF Theme 
+# WP SURF Theme
 
 ![BETA release](https://github.com/VanOns/surf-os/actions/workflows/release-beta.yml/badge.svg?branch=staging)
 ![PRODUCTION release](https://github.com/VanOns/surf-os/actions/workflows/release-production.yml/badge.svg?branch=master)
@@ -88,6 +88,9 @@ npm run build
 
 Make sure you have [Docker](https://docs.docker.com/get-docker/)
 and [Docker Compose](https://docs.docker.com/compose/install/).
+
+Make a copy of the `.env.example` file and rename it to `.env`. You can change the values in this file if you want to.
+Make a copy of the `docker/config/wp-config.php.example` file and rename it to `wp-config.php`. Update the database credentials to the ones you use in the `.env` file.
 
 Once all dependencies are installed and Docker has been set up you can run (in the project root):
 

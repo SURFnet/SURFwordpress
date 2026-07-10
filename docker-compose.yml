@@ -22,8 +22,5 @@ services:
             - ./docker/db:/var/lib/mysql
         ports:
           - "13306:3306"
-        environment:
-          MYSQL_ROOT_PASSWORD: CzSx9Wj7XNQeV9
-          MYSQL_USER: surf
-          MYSQL_PASSWORD: x37YPHCq54Yh4E
-          MYSQL_DATABASE: wp-surf-theme
+        env_file:
+          - .env
