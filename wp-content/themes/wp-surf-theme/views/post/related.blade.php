@@ -1,7 +1,14 @@
 @php
+    use SURF\Core\PostTypes\PostCollection;
+
 	/**
-	 * @var $relatedPosts
+	 * @var PostCollection $relatedPosts
 	 */
+
+    if ( $relatedPosts->isEmpty() ) {
+        return;
+    }
+
 @endphp
 <div class="related-posts container padded">
 	<div class="related-posts__header">

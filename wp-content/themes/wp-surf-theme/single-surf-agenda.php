@@ -22,7 +22,7 @@ class SingleSURFAgendaController extends TemplateController
 	 */
 	public function handle( Agenda $event ): View
 	{
-		$relatedEvents = $event->showRelatedItems() ? $this->getRelatedEvents( $event ) : [];
+		$relatedEvents = $event->showRelatedItems() ? $this->getRelatedEvents( $event ) : new PostCollection();
 
 		return $this->view( 'agenda.single', compact( 'event', 'relatedEvents' ) );
 	}
