@@ -1,11 +1,12 @@
 @php
+	use SURF\Core\PostTypes\PostCollection;
 	use SURF\Enums\Theme;
 	use SURF\PostTypes\Agenda;
 	use SURF\Taxonomies\AgendaLocation;
 
 	/**
 	 * @var Agenda $event
-	 * @var $relatedEvents
+	 * @var PostCollection $relatedEvents
 	 */
 
 	if($event->shouldShowLocation()) {
@@ -17,7 +18,7 @@
 
 @section('content')
 	<article id="post-{{$event->ID()}}"
-	         {!! $event->postClass('entry '.(!$event->shouldShowLocation() ? 'entry--single' : '')) !!} @if(Theme::isSURF() && $event->getPrimaryCategoryColor($event->ID()))style='--surf-color-category: {{ $event->getPrimaryCategoryColor($event->ID()) }};'@endif>
+			 {!! $event->postClass('entry '.(!$event->shouldShowLocation() ? 'entry--single' : '')) !!} @if(Theme::isSURF() && $event->getPrimaryCategoryColor($event->ID()))style="--surf-color-category: {{ $event->getPrimaryCategoryColor($event->ID()) }};"@endif>
 		<div class="entry__header container padded {{ ($event->shouldShowLocation() ? 'entry__header--full-with' : '') }}">
 			<x-breadcrumb/>
 			<h1 class="entry__title">
@@ -94,7 +95,7 @@
 									@if(!empty($location['openstreetmap_url']))
 										<a href="{{ $location['openstreetmap_url'] }}" target="_blank">
 											<x-icon icon="marker"
-											        sprite="global"/> {{ __('View on map', 'wp-surf-theme') }}
+													sprite="global"/> {{ __('View on map', 'wp-surf-theme') }}
 										</a>
 									@endif
 									@if(!empty($location['url']))

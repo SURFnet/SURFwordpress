@@ -1,11 +1,12 @@
 @php
 	use SURF\Core\PostTypes\BasePost;
+    use SURF\Core\PostTypes\PostCollection;
 	use SURF\Enums\Theme;
 	use SURF\Taxonomies\Category;
 
 	/**
 	 * @var BasePost $post
-	 * @var $relatedPosts
+	 * @var PostCollection $relatedPosts
 	 */
 
 	$category = $post->getPrimaryTerm( Category::getName() );
