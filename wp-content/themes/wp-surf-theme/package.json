@@ -7,8 +7,8 @@
 		"email": "info@surf.nl",
 		"url": "https://www.surf.nl/"
 	},
-	"copyright": "2025",
-	"version": "1.0",
+	"copyright": "2026",
+	"version": "1.1",
 	"bugs": {
 		"email": "support@surf.nl"
 	},
@@ -18,7 +18,7 @@
 		"start": "npm run serve",
 		"build": "vite build --config vite/vite.config.js",
 		"watch": "vite build --config vite/vite.config.js --watch",
-		"serve": "vite  --config vite/vite.config.js",
+		"serve": "vite --config vite/vite.config.js",
 		"compile-views": "php ../../../scripts/compile-views",
 		"prepoedit": "npm run compile-views",
 		"poedit": "open -a poedit languages/nl_NL.po",
@@ -26,18 +26,18 @@
 		"jsx-fix": "npm run i18n:jsx"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.5.0",
+		"autoprefixer": "^10.6.1",
 		"eslint": "^8.57.1",
 		"eslint-config-standard": "^17.1.0",
 		"eslint-plugin-react": "^7.37.5",
 		"glob": "^8.1.0",
 		"pofile": "^1.1.4",
-		"postcss-prefixwrap": "^1.58.0",
+		"postcss-prefixwrap": "^1.59.1",
 		"postcss-scss": "^4.0.9",
-		"sass": "^1.101.0",
+		"sass": "^1.105.0",
 		"sass-mq": "^6.0.0",
-		"svgo": "^4.0.1",
-		"vite": "^3.0.3",
+		"svgo": "^4.1",
+		"vite": "^3.2.11",
 		"vite-plugin-eslint": "^1.8.1",
 		"vite-plugin-full-reload": "^1.0.3",
 		"vite-plugin-stylelint": "^3.0.4"
@@ -59,6 +59,10 @@
 		"swr": "^1.3.0",
 		"tiny-slider": "^2.9.4"
 	},
+  "overrides": {
+    "browserslist": "^4.28.7",
+    "fast-uri": "^3.1.7"
+  },
 	"stylelint": {
 		"rules": {
 			"selector-max-compound-selectors": 10
