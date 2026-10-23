@@ -10,6 +10,25 @@ class PolylangHelper
 {
 
 	/**
+	 * Polylang version in which the arguments of pll_the_languages() were renamed
+	 * @see https://polylang.pro/polylang-3-9-language-switcher-pll-the-languages/
+	 */
+	public const PLL_LANG_ARGS_VERSION = '3.9';
+
+	/**
+	 * Whether the installed Polylang version uses the new pll_the_languages() arguments (3.9+)
+	 * @return bool
+	 */
+	public static function useNewPllLangArgs(): bool
+	{
+		if ( !defined( 'POLYLANG_VERSION' ) ) {
+			return false;
+		}
+
+		return version_compare( POLYLANG_VERSION, static::PLL_LANG_ARGS_VERSION, '>=' );
+	}
+
+	/**
 	 * @return array
 	 */
 	public static function getLanguages(): array
@@ -30,12 +49,11 @@ class PolylangHelper
 			return;
 		}
 
-		pll_the_languages();
+		pll_the_languages( static::getPllLangArgs() );
 	}
 
-	// get slugs
-
 	/**
+	 * Outputs the language switcher items with the language slugs as labels
 	 * @return void
 	 */
 	public static function theLanguagesSlugs(): void
@@ -44,7 +62,37 @@ class PolylangHelper
 			return;
 		}
 
-		pll_the_languages( [ 'display_names_as' => 'slug' ] );
+		pll_the_languages( static::getPllLangArgs( true ) );
+	}
+
+	/**
+	 * Returns pll_the_languages() arguments that output only the <li> items (the views add their own <ul>),
+	 * without triggering deprecation notices on Polylang 3.9+ and still working on older versions.
+	 * @param bool $show_slugs Show the language slugs (e.g. "nl") instead of the language names.
+	 * @return array
+	 */
+	public static function getPllLangArgs( bool $show_slugs = false ): array
+	{
+		$args = [];
+		if ( static::useNewPllLangArgs() ) {
+			$args = [
+				'layout'       => 'vertical',
+				'show_wrapper' => false,
+				'show_labels'  => 'names',
+			];
+
+			if ( $show_slugs ) {
+				$args['show_labels'] = 'codes';
+			}
+
+			return $args;
+		}
+
+		if ( $show_slugs ) {
+			$args['display_names_as'] = 'slug';
+		}
+
+		return $args;
 	}
 
 	/**
