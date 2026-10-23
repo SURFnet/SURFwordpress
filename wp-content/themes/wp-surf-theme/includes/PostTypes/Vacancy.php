@@ -342,12 +342,12 @@ class Vacancy extends BasePost
 	{
 		$id     = Helper::getSanitizedRequest( 'post' );
 		$action = Helper::getSanitizedRequest( 'action' );
-		if ( !is_admin() || !$id || !$action ) {
+		if ( !is_admin() || empty($id) || !$action ) {
 			return null;
 		}
 
 		$post = get_post( $id );
-		if ( $post->post_type !== static::getName() ) {
+		if ( empty($post) || $post->post_type !== static::getName() ) {
 			return null;
 		}
 
