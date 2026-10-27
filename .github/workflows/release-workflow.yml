@@ -17,11 +17,11 @@ env:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: 📄 Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -43,7 +43,7 @@ jobs:
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: 📦 Set up Composer dependency caching
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles(format('{0}/composer.lock', env.THEME_PATH)) }}
@@ -56,7 +56,7 @@ jobs:
           composer validate --no-check-publish && composer install --prefer-dist --no-progress --no-dev
 
       - name: ⚙️ Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version-file: '${{ env.THEME_PATH }}/.nvmrc'
           cache: 'npm'
@@ -86,7 +86,7 @@ jobs:
             -x "*/.github/*"
 
       - name: 🚀 Create a new release
-        uses: ncipollo/release-action@v1.10.0
+        uses: ncipollo/release-action@v1.21.0
         with:
           artifacts: ${{ env.WP_THEME_BASE }}/${{ env.THEME_SLUG }}.zip
           generateReleaseNotes: true
