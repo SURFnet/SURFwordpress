@@ -16,9 +16,19 @@ class BlockPatterns
 	 */
 	public static function init(): void
 	{
-		// Disable core patterns
+		// Disable core patterns; must happen before init, when core registers its patterns
 		remove_theme_support( 'core-block-patterns' );
 
+		// Pattern labels are translated, so register them on init
+		add_action( 'init', [ static::class, 'registerPatterns' ] );
+	}
+
+	/**
+	 * Registers the theme's block pattern categories and patterns
+	 * @return void
+	 */
+	public static function registerPatterns(): void
+	{
 		// Categories
 		static::register_category( 'surf-template-parts', _x( 'Template parts', 'Block pattern category', 'wp-surf-theme' ) );
 

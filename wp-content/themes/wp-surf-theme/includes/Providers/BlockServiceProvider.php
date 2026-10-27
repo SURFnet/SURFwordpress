@@ -54,7 +54,8 @@ class BlockServiceProvider extends ServiceProvider
 	public function register()
 	{
 		$this->disableCoreBlocks();
-		$this->registerBlockStyles();
+
+		add_action( 'init', [ $this, 'registerBlockStyles' ] );
 
 		add_filter( 'render_block', [ $this, 'addYoutubeConsent' ], 10, 3 );
 	}
@@ -64,7 +65,10 @@ class BlockServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		$this->registerCustomBlocks();
+		$this->blocks = $this->loadBlockClasses();
+
+		add_action( 'init', [ $this, 'registerCustomBlocks' ] );
+		add_action( 'acf/init', [ $this, 'registerAcfBlocks' ] );
 	}
 
 	/**
@@ -98,26 +102,47 @@ class BlockServiceProvider extends ServiceProvider
 	}
 
 	/**
-	 * @return void
+	 * Loads the block classes from the configured block directories
+	 * @return array
 	 */
-	public function registerCustomBlocks()
+	public function loadBlockClasses(): array
 	{
 		$blocks = ( new ClassLoader() )->loadDirectories(
 			array_map( fn( $path ) => $this->app->path( $path ), surfConfig( 'app.paths.blocks' ) )
 		);
 
-		foreach ( $blocks as $block ) {
-			if ( !class_exists( $block ) ) {
+		return array_values( array_filter( $blocks, fn( $block ) => class_exists( $block ) ) );
+	}
+
+	/**
+	 * Registers the native (non-ACF) blocks, hooked on init
+	 * @return void
+	 */
+	public function registerCustomBlocks()
+	{
+		foreach ( $this->blocks as $block ) {
+			if ( !is_a( $block, Block::class, true ) ) {
 				continue;
 			}
 
-			if (
-				is_a( $block, Block::class, true ) ||
-				is_a( $block, AcfBlock::class, true )
-			) {
-				$instance = new $block();
-				$instance->register();
+			$instance = new $block();
+			$instance->register();
+		}
+	}
+
+	/**
+	 * Registers the ACF blocks, hooked on acf/init
+	 * @return void
+	 */
+	public function registerAcfBlocks()
+	{
+		foreach ( $this->blocks as $block ) {
+			if ( !is_a( $block, AcfBlock::class, true ) ) {
+				continue;
 			}
+
+			$instance = new $block();
+			$instance->register();
 		}
 	}
 

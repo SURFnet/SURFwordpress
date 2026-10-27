@@ -24,6 +24,19 @@ class ThemeServiceProvider extends ServiceProvider
 			// Load translations
 			load_theme_textdomain( 'wp-surf-theme', get_stylesheet_directory() . '/languages' );
 		}, 10 );
+
+		add_action( 'init', function ()
+		{
+			$current_version = wp_get_theme()->get( 'Version' );
+			$flushed_version = get_option( 'surf_rewrite_flushed_version' );
+			if ( $flushed_version === $current_version ) {
+				return;
+			}
+
+			// Soft flush: rebuild the rewrite_rules option without touching .htaccess
+			flush_rewrite_rules( false );
+			update_option( 'surf_rewrite_flushed_version', $current_version, true );
+		}, 99 );
 	}
 
 	/**
