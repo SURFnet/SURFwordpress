@@ -49,11 +49,12 @@ class TaxonomyServiceProvider extends ServiceProvider
 	{
 		foreach ( $this->taxonomies as $taxonomy ) {
 			if ( method_exists( $taxonomy, 'register' ) ) {
-				$taxonomy::register();
+				// Priority 0: keep taxonomies registered before ACF fires acf/init on init priority 5
+				add_action( 'init', [ $taxonomy, 'register' ], 0 );
 			}
 
 			if ( method_exists( $taxonomy, 'registerFields' ) ) {
-				$taxonomy::registerFields();
+				add_action( 'acf/init', [ $taxonomy, 'registerFields' ] );
 			}
 		}
 	}

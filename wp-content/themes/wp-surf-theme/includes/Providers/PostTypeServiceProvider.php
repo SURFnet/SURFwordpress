@@ -57,18 +57,20 @@ class PostTypeServiceProvider extends ServiceProvider
 	 */
 	public function boot(): void
 	{
-		// Loop over each post type and call it's register and registerFields function
+		// Loop over each post type and hook its register and registerFields functions
 		foreach ( $this->postTypes as $postType ) {
 			if ( method_exists( $postType, 'isEnabled' ) && !$postType::isEnabled() ) {
 				continue;
 			}
 
 			if ( method_exists( $postType, 'register' ) ) {
-				$postType::register();
+				// Priority 0: register() can add acf/init hooks via registered(),
+				// and ACF fires acf/init on init priority 5
+				add_action( 'init', [ $postType, 'register' ], 0 );
 			}
 
 			if ( method_exists( $postType, 'registerFields' ) ) {
-				$postType::registerFields();
+				add_action( 'acf/init', [ $postType, 'registerFields' ] );
 			}
 
 			if ( method_exists( $postType, 'registerWidgetAreas' ) ) {
