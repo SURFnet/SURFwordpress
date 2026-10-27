@@ -34,7 +34,7 @@ on:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     permissions:
       contents: write
@@ -54,10 +54,10 @@ jobs:
 
     steps:
       - name: 🏁 Checkout current repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: 📥 Checkout Developer repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: ${{ env.REMOTE_REPO }}
           ref: ${{ env.REMOTE_BRANCH }}
