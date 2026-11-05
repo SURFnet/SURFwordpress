@@ -3,6 +3,7 @@
 namespace SURF\Admin;
 
 use SURF\Admin\MetaBoxes\AgendaSettings;
+use SURF\Admin\MetaBoxes\CspSettings;
 use SURF\Admin\MetaBoxes\MenuItemSettings;
 use SURF\Admin\MetaBoxes\ThemeSettings;
 use SURF\Admin\MetaBoxes\UserSettings;
@@ -33,6 +34,7 @@ class MetaBoxes
 		// Settings
 		ThemeSettings::init();
 		AgendaSettings::init();
+		CspSettings::init();
 		MenuItemSettings::init();
 		UserSettings::init();
 		ContactPersonsSettings::init();

@@ -10,7 +10,6 @@ use SURF\Admin\Sidebars;
 use SURF\Admin\Widgets;
 use SURF\Api\ExportController;
 use SURF\Api\SetupWizardController;
-use SURF\Api\SyncCspController;
 use SURF\Core\CLI;
 use SURF\Hooks\AcfHooks;
 use SURF\Hooks\AgendaHooks;
@@ -25,6 +24,7 @@ use SURF\Hooks\PageHooks;
 use SURF\Hooks\PostHooks;
 use SURF\Hooks\SearchHooks;
 use SURF\Hooks\TermHooks;
+use SURF\Services\CspService;
 
 /*
  * Register any classes that need some kind of bootstrapping here
@@ -65,8 +65,12 @@ AuthorHooks::register();
 MediaHooks::register();
 
 /*
+ * Services
+ */
+CspService::register();
+
+/*
  * API
  */
 ( new SetupWizardController() )->register();
 ( new ExportController() )->register();
-( new SyncCspController() )->register();

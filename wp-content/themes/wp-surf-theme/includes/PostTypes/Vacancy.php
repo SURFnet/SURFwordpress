@@ -260,8 +260,8 @@ class Vacancy extends BasePost
 		}
 
 		// Check for serialized values
-		if ( is_string( $meta ) ) {
-			$meta = maybe_unserialize( $meta );
+		if ( is_string( $meta ) && is_serialized( $meta ) ) {
+			$meta = unserialize( $meta, [ 'allowed_classes' => false ] );
 		}
 
 		$fields = [
@@ -429,8 +429,8 @@ class Vacancy extends BasePost
 		$source   = $post?->getMeta( static::FIELD_SOURCE );
 		$readOnly = $source === static::SOURCE_EMPLY;
 		$contacts = $post?->getMeta( static::FIELD_CONTACT );
-		if ( is_string( $contacts ) ) {
-			$contacts = maybe_unserialize( $contacts );
+		if ( is_string( $contacts ) && is_serialized( $contacts ) ) {
+			$contacts = unserialize( $contacts, [ 'allowed_classes' => false ] );
 		}
 
 		if ( is_numeric( $contacts ) ) {

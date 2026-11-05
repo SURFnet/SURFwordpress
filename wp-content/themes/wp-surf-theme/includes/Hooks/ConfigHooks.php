@@ -4,6 +4,7 @@ namespace SURF\Hooks;
 
 use DOMDocument;
 use SURF\Helpers\ACFHelper;
+use SURF\Helpers\AttachmentHelper;
 use SURF\Helpers\Helper;
 use WP_Error;
 use SURF\Application;
@@ -108,6 +109,8 @@ class ConfigHooks
 
 		add_filter( 'upload_mimes', [ static::class, 'uploadMimes' ], 99, 1 );
 		add_filter( 'wp_check_filetype_and_ext', [ static::class, 'secureFontMimeCheck' ], 10, 4 );
+		add_filter( 'wp_handle_upload_prefilter', [ static::class, 'sanitizeSvgUpload' ] );
+		add_filter( 'wp_handle_sideload_prefilter', [ static::class, 'sanitizeSvgUpload' ] );
 
 		// Yoast
 		add_filter( 'wpseo_breadcrumb_separator', [ static::class, 'voSeoBreadcrumbSeparator' ], 10, 1 );
@@ -364,6 +367,26 @@ class ConfigHooks
 		}
 
 		return $mimes;
+	}
+
+	/**
+	 * SVG files can contain scripts that run on the site's own domain, so every
+	 * uploaded SVG is sanitized and rejected when that is not possible.
+	 * @param array $file
+	 * @return array
+	 */
+	public static function sanitizeSvgUpload( array $file ): array
+	{
+		$name = (string) ( $file['name'] ?? '' );
+		if ( strtolower( pathinfo( $name, PATHINFO_EXTENSION ) ) !== 'svg' ) {
+			return $file;
+		}
+
+		if ( !AttachmentHelper::sanitizeSvgFile( (string) ( $file['tmp_name'] ?? '' ) ) ) {
+			$file['error'] = _x( 'This SVG file could not be checked for unsafe content and was not uploaded.', 'admin', 'wp-surf-theme' );
+		}
+
+		return $file;
 	}
 
 	/**

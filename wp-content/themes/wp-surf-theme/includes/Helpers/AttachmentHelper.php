@@ -2,6 +2,7 @@
 
 namespace SURF\Helpers;
 
+use enshrined\svgSanitize\Sanitizer;
 use WP_Error;
 use WP_User;
 
@@ -177,5 +178,34 @@ class AttachmentHelper
             // Add additional file extensions here, with their nice name (for the select options)
         ];
     }
+
+	/**
+	 * Removes scripts, event handlers and other active content from an SVG file,
+	 * in place. Fails closed: without the sanitizer library, or when the file
+	 * cannot be parsed, the file is not considered safe.
+	 * @param string $path
+	 * @return bool Whether the file is safe to keep
+	 */
+	public static function sanitizeSvgFile( string $path ): bool
+	{
+		if ( !class_exists( Sanitizer::class ) || !is_readable( $path ) ) {
+			return false;
+		}
+
+		$content = file_get_contents( $path );
+		if ( !is_string( $content ) || $content === '' ) {
+			return false;
+		}
+
+		$sanitizer = new Sanitizer();
+		$sanitizer->removeRemoteReferences( true );
+
+		$clean = $sanitizer->sanitize( $content );
+		if ( !is_string( $clean ) || $clean === '' ) {
+			return false;
+		}
+
+		return file_put_contents( $path, $clean ) !== false;
+	}
 
 }
