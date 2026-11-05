@@ -2,7 +2,6 @@
 
 namespace SURF\Admin;
 
-use SURF\Admin\Pages\CspTool;
 use SURF\Admin\Pages\SetupWizard;
 use SURF\Helpers\PolylangHelper;
 
@@ -14,6 +13,7 @@ class Pages
 
 	public const SLUG_THEME_SETTINGS = 'surf-theme-settings';
 	public const SLUG_EVENT_SETTINGS = 'surf-agenda-settings';
+	public const SLUG_CSP_SETTINGS   = 'surf-csp-settings';
 
 	/**
 	 * Make sure pages are registered at the right time
@@ -92,6 +92,16 @@ class Pages
 				'parent_slug' => 'edit.php?post_type=surf-agenda',
 			]
 		);
+
+		static::registerSubPage(
+			[
+				'page_title'  => _x( 'Content Security Policy', 'admin', 'wp-surf-theme' ),
+				'menu_title'  => _x( 'CSP settings', 'admin', 'wp-surf-theme' ),
+				'menu_slug'   => static::SLUG_CSP_SETTINGS,
+				'capability'  => 'edit_theme_settings',
+				'parent_slug' => 'options-general.php',
+			]
+		);
 	}
 
 	/**
@@ -136,15 +146,6 @@ class Pages
 			'setup-wizard',
 			[ new SetupWizard(), 'render' ],
 			'dashicons-superhero-alt'
-		);
-
-		add_submenu_page(
-			'tools.php',
-			_x( 'CSP Tool', 'admin', 'wp-surf-theme' ),
-			_x( 'CSP Tool', 'admin', 'wp-surf-theme' ),
-			$capability,
-			'csp-tool',
-			[ new CspTool(), 'render' ],
 		);
 	}
 

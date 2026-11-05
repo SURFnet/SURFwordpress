@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP SURF Theme\n"
-"POT-Creation-Date: 2026-07-09 09:11+0200\n"
-"PO-Revision-Date: 2026-07-09 09:11+0200\n"
+"POT-Creation-Date: 2026-10-29 14:23+0100\n"
+"PO-Revision-Date: 2026-10-29 14:23+0100\n"
 "Last-Translator: Saskia Bouten <saskia@van-ons.nl>\n"
 "Language-Team: SURF B.V. <info@vsurf.nl>\n"
 "Language: en_GB\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: "
@@ -54,32 +54,6 @@ msgstr ""
 
 #: views/404.blade.php:32
 msgid "home page"
-msgstr ""
-
-#: views/admin/pages/csp-tool.blade.php:8
-msgctxt "admin"
-msgid "CSP Tool"
-msgstr ""
-
-#: views/admin/pages/csp-tool.blade.php:12
-msgctxt "admin"
-msgid "Up to date!"
-msgstr ""
-
-#: views/admin/pages/csp-tool.blade.php:16
-msgctxt "admin"
-msgid "Something went wrong while syncing the new config"
-msgstr ""
-
-#: views/admin/pages/csp-tool.blade.php:24
-msgctxt "admin"
-msgid "Current CSP Config"
-msgstr ""
-
-#: views/admin/pages/csp-tool.blade.php:33
-#: views/admin/pages/csp-tool.blade.php:42
-msgctxt "admin"
-msgid "Sync CSP config"
 msgstr ""
 
 #: views/admin/theme-details.blade.php:65
@@ -148,11 +122,11 @@ msgstr ""
 msgid "Upcoming events"
 msgstr ""
 
-#: views/agenda/archive-location.blade.php:53 views/agenda/single.blade.php:97
+#: views/agenda/archive-location.blade.php:53 views/agenda/single.blade.php:98
 msgid "View on map"
 msgstr ""
 
-#: views/agenda/archive-location.blade.php:58 views/agenda/single.blade.php:102
+#: views/agenda/archive-location.blade.php:58 views/agenda/single.blade.php:103
 msgid "Website"
 msgstr ""
 
@@ -179,10 +153,10 @@ msgstr ""
 msgid "Related events"
 msgstr ""
 
-#: views/agenda/single.blade.php:115 views/asset/single.blade.php:93
+#: views/agenda/single.blade.php:116 views/asset/single.blade.php:93
 #: views/download/single.blade.php:81 views/home.blade.php:98
 #: views/parts/content-page.blade.php:48 views/parts/content.blade.php:37
-#: views/post/single.blade.php:82 views/vacancy/single.blade.php:129
+#: views/post/single.blade.php:83 views/vacancy/single.blade.php:129
 msgctxt "admin"
 msgid "Edit"
 msgstr ""
@@ -536,7 +510,7 @@ msgid ""
 "It seems we can't find what you're looking for. Perhaps searching can help."
 msgstr ""
 
-#: views/parts/content.blade.php:29 views/post/single.blade.php:70
+#: views/parts/content.blade.php:29 views/post/single.blade.php:71
 #, php-format
 msgid "Continue reading %s"
 msgstr ""
@@ -581,7 +555,7 @@ msgstr ""
 msgid "Read article"
 msgstr ""
 
-#: views/post/related.blade.php:10
+#: views/post/related.blade.php:17
 msgid "Related posts"
 msgstr ""
 
@@ -698,21 +672,54 @@ msgstr ""
 msgid "ID - Descending"
 msgstr ""
 
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:8
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:8
+msgctxt "admin"
+msgid "CSP Tool"
+msgstr ""
+
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:12
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:12
+msgctxt "admin"
+msgid "Up to date!"
+msgstr ""
+
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:16
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:16
+msgctxt "admin"
+msgid "Something went wrong while syncing the new config"
+msgstr ""
+
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:24
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:24
+msgctxt "admin"
+msgid "Current CSP Config"
+msgstr ""
+
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:33
+#: cache/views/70ad20f2502a23ec2a79732c72334f8061c57878.php:42
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:33
+#: cache/views/776599e822328f60c362f0e146d7e8912aec9244.php:42
+msgctxt "admin"
+msgid "Sync CSP config"
+msgstr ""
+
+#: cache/views/9af241822f0ecf8c1cc57bc7ae671003562d7812.php:38
 #: cache/views/c7383c4b905845f74e4bb4fcfaba4e0b1c1a2603.php:37
 msgid "Uncategorized"
 msgstr ""
 
-#: includes/Admin/BlockPatterns.php:23
+#: includes/Admin/BlockPatterns.php:33
 msgctxt "Block pattern category"
 msgid "Template parts"
 msgstr ""
 
-#: includes/Admin/BlockPatterns.php:27
+#: includes/Admin/BlockPatterns.php:37
 msgctxt "Block pattern title"
 msgid "Agenda - Columns"
 msgstr ""
 
-#: includes/Admin/BlockPatterns.php:28
+#: includes/Admin/BlockPatterns.php:38
 msgctxt "Block pattern description"
 msgid "A pattern that setups the agenda columns block"
 msgstr ""
@@ -762,6 +769,150 @@ msgstr ""
 #: includes/Admin/MetaBoxes/ContactPersonsSettings.php:98
 msgctxt "admin"
 msgid "Contact persons"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:35 includes/Admin/Pages.php:98
+msgctxt "admin"
+msgid "Content Security Policy"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:79
+msgctxt "admin"
+msgid "CSP Manager plugin"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:82
+msgctxt "admin"
+msgid ""
+"The CSP Manager plugin is active, so the theme does not send its own policy. "
+"Deactivate the plugin to use the policy below."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:87
+msgctxt "admin"
+msgid "How this works"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:109
+msgctxt "admin"
+msgid "Front"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:111
+msgctxt "admin"
+msgid "Admin"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:124
+#, php-format
+msgctxt "admin"
+msgid "Rules for %s"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:127
+msgctxt "admin"
+msgid ""
+"Add sources to a directive of the theme policy, or replace its sources "
+"entirely. Replacing without sources removes the directive."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:129
+msgctxt "admin"
+msgid "Add rule"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:133
+msgctxt "admin"
+msgid "Directive"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:142
+msgctxt "admin"
+msgid "Action"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:148
+msgctxt "admin"
+msgid "Add"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:149 languages/_jsx-strings.js:65
+msgctxt "admin"
+msgid "Replace"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:155
+msgctxt "admin"
+msgid "Sources"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:174
+msgctxt "admin"
+msgid "Resulting header"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:191
+msgctxt "admin"
+msgid ""
+"The theme sends a default Content Security Policy (CSP) to every visitor. It "
+"tells the browser from which domains scripts, styles, images, embeds and "
+"other content may be loaded; anything else is blocked. The default policy is "
+"maintained in the theme and is updated together with it."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:192
+msgctxt "admin"
+msgid ""
+"Only when this site needs something the default policy does not allow, for "
+"example an embed from another domain, add a rule below. Rules apply to the "
+"tab they are in: \"Front\" for the website and the login page, \"Admin\" for "
+"the WordPress dashboard."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:196
+msgctxt "admin"
+msgid ""
+"<strong>Add</strong> keeps the sources of the default policy and adds the "
+"sources of the rule. This is what you need in most cases."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:197
+msgctxt "admin"
+msgid ""
+"<strong>Replace</strong> discards the sources of the default policy for that "
+"directive and uses only the sources of the rule. Replacing without sources "
+"removes the directive from the policy."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:211
+msgctxt "admin"
+msgid ""
+"The resulting policy, including the rules of this site, is shown at the "
+"bottom of each tab after saving."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:221
+msgctxt "admin"
+msgid ""
+"Sources: one per line, for example player.example.com, *.example.com or "
+"https://example.com. Keywords such as 'self' and 'unsafe-inline' need the "
+"single quotes."
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:276 includes/PostTypes/Page.php:134
+msgctxt "admin"
+msgid "Disabled"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:289
+msgctxt "admin"
+msgid "Show the default theme policy"
+msgstr ""
+
+#: includes/Admin/MetaBoxes/CspSettings.php:309
+#, php-format
+msgctxt "admin"
+msgid "Invalid source \"%s\"."
 msgstr ""
 
 #: includes/Admin/MetaBoxes/MenuItemSettings.php:20
@@ -1437,7 +1588,12 @@ msgctxt "admin"
 msgid "Theme Settings (%s)"
 msgstr ""
 
-#: includes/Admin/Pages.php:133 includes/Admin/Pages.php:134
+#: includes/Admin/Pages.php:99
+msgctxt "admin"
+msgid "CSP settings"
+msgstr ""
+
+#: includes/Admin/Pages.php:143 includes/Admin/Pages.php:144
 #: languages/_jsx-strings.js:5
 msgctxt "admin"
 msgid "Setup Wizard"
@@ -1501,16 +1657,6 @@ msgstr ""
 #: includes/Admin/Widgets/SocialMenuWidget.php:25
 msgctxt "admin"
 msgid "Show the social links."
-msgstr ""
-
-#: includes/Api/SyncCspController.php:64
-msgctxt "rest"
-msgid "You are not authorized to perform this action"
-msgstr ""
-
-#: includes/Api/SyncCspController.php:69
-msgctxt "rest"
-msgid "CSP Synced successfully"
 msgstr ""
 
 #: includes/Core/PostTypes/Registers.php:311
@@ -1801,12 +1947,12 @@ msgctxt "admin"
 msgid "Powered by colors"
 msgstr ""
 
-#: includes/Enums/Theme.php:325 includes/Providers/BlockServiceProvider.php:131
+#: includes/Enums/Theme.php:325 includes/Providers/BlockServiceProvider.php:156
 msgctxt "admin"
 msgid "Primary"
 msgstr ""
 
-#: includes/Enums/Theme.php:330 includes/Providers/BlockServiceProvider.php:137
+#: includes/Enums/Theme.php:330 includes/Providers/BlockServiceProvider.php:162
 msgctxt "admin"
 msgid "Secondary"
 msgstr ""
@@ -1823,7 +1969,7 @@ msgstr ""
 
 #: includes/Helpers/AttachmentHelper.php:176
 msgctxt "admin"
-msgid ".md (MarkDown)"
+msgid ".md (Markdown)"
 msgstr ""
 
 #: includes/Helpers/CutoutHelper.php:29
@@ -2120,7 +2266,7 @@ msgctxt "admin"
 msgid "Hero Small"
 msgstr ""
 
-#: includes/Hooks/MediaHooks.php:68
+#: includes/Hooks/MediaHooks.php:70
 msgctxt "admin"
 msgid "SURF Allowed Files"
 msgstr ""
@@ -2168,11 +2314,6 @@ msgstr ""
 #: includes/Plugins/AcfPro/AcfPro.php:118
 msgctxt "error"
 msgid "ACF Pro is not activated."
-msgstr ""
-
-#: includes/Plugins/CspManager/CspManager.php:23
-msgctxt "plugin"
-msgid "CSP Manager"
 msgstr ""
 
 #: includes/Plugins/GravityForms/GravityForms.php:66
@@ -2830,11 +2971,6 @@ msgctxt "admin"
 msgid "Disable ID"
 msgstr ""
 
-#: includes/PostTypes/Page.php:134
-msgctxt "admin"
-msgid "Disabled"
-msgstr ""
-
 #: includes/PostTypes/Page.php:135
 msgctxt "admin"
 msgid "Existing"
@@ -2901,7 +3037,7 @@ msgid "Show the page date."
 msgstr ""
 
 #: includes/PostTypes/Page.php:218
-#: includes/Providers/ThemeServiceProvider.php:184
+#: includes/Providers/ThemeServiceProvider.php:197
 msgctxt "admin"
 msgid "Top menu"
 msgstr ""
@@ -3106,16 +3242,16 @@ msgid ""
 "conditions."
 msgstr ""
 
-#: includes/Providers/BlockServiceProvider.php:142
-#: includes/Providers/BlockServiceProvider.php:147
+#: includes/Providers/BlockServiceProvider.php:167
+#: includes/Providers/BlockServiceProvider.php:172
 msgctxt "admin"
 msgid "Larger"
 msgstr ""
 
-#: includes/Providers/BlockServiceProvider.php:152
-#: includes/Providers/BlockServiceProvider.php:157
-#: includes/Providers/BlockServiceProvider.php:162
-#: includes/Providers/BlockServiceProvider.php:167
+#: includes/Providers/BlockServiceProvider.php:177
+#: includes/Providers/BlockServiceProvider.php:182
+#: includes/Providers/BlockServiceProvider.php:187
+#: includes/Providers/BlockServiceProvider.php:192
 msgctxt "admin"
 msgid "Extra wide"
 msgstr ""
@@ -3130,37 +3266,37 @@ msgctxt "cache clear"
 msgid "SURF Cache cleared"
 msgstr ""
 
-#: includes/Providers/PostTypeServiceProvider.php:95
+#: includes/Providers/PostTypeServiceProvider.php:97
 msgctxt "admin"
 msgid "Custom Post Types"
 msgstr ""
 
-#: includes/Providers/PostTypeServiceProvider.php:98
+#: includes/Providers/PostTypeServiceProvider.php:100
 msgctxt "admin"
 msgid "Select the pages that are used for custom post type archives."
 msgstr ""
 
-#: includes/Providers/ThemeServiceProvider.php:183
+#: includes/Providers/ThemeServiceProvider.php:196
 msgctxt "admin"
 msgid "Primary Menu"
 msgstr ""
 
-#: includes/Providers/ThemeServiceProvider.php:185
+#: includes/Providers/ThemeServiceProvider.php:198
 msgctxt "admin"
 msgid "Footer menu"
 msgstr ""
 
-#: includes/Providers/ThemeServiceProvider.php:186
+#: includes/Providers/ThemeServiceProvider.php:199
 msgctxt "admin"
 msgid "First column menu"
 msgstr ""
 
-#: includes/Providers/ThemeServiceProvider.php:187
+#: includes/Providers/ThemeServiceProvider.php:200
 msgctxt "admin"
 msgid "Second column menu"
 msgstr ""
 
-#: includes/Providers/ThemeServiceProvider.php:188
+#: includes/Providers/ThemeServiceProvider.php:201
 msgctxt "admin"
 msgid "Third column menu (Powered by Surf only)"
 msgstr ""
@@ -3913,11 +4049,6 @@ msgstr ""
 #: languages/_jsx-strings.js:64
 msgctxt "admin"
 msgid "Upload Image"
-msgstr ""
-
-#: languages/_jsx-strings.js:65
-msgctxt "admin"
-msgid "Replace"
 msgstr ""
 
 #: languages/_jsx-strings.js:66

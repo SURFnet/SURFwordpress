@@ -2,7 +2,6 @@
 
 use SURF\Plugins\Acf\Acf;
 use SURF\Plugins\AcfPro\AcfPro;
-use SURF\Plugins\CspManager\CspManager;
 use SURF\Plugins\FriendlyCaptcha\FriendlyCaptcha;
 use SURF\Plugins\GravityForms\GravityForms;
 use SURF\Plugins\OpenIdConnect\OpenIdConnect;
@@ -18,7 +17,6 @@ return [
 	'installable' => [
 		Acf::class,
 		AcfPro::class,
-		CspManager::class,
 		FriendlyCaptcha::class,
 		GravityForms::class,
 		OpenIdConnect::class,

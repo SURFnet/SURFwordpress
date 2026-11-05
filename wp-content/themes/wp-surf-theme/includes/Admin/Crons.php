@@ -2,8 +2,6 @@
 
 namespace SURF\Admin;
 
-use SURF\Services\CspService;
-
 /**
  * Class Crons
  * @package SURF\Admin
@@ -43,20 +41,13 @@ class Crons
 	 * Add CRON actions here
 	 * Example: add_action('surf_example_action', [Example::class, 'job']);.
 	 */
-	protected static function actions(): void
-	{
-		$cspService = new CspService();
-		add_action( 'surf_check_for_csp', [ $cspService, 'syncCsp' ] );
-	}
+	protected static function actions(): void {}
 
 	/**
 	 * Add CRON jobs here
 	 * Example: static::addJob('surf_example_job', 'daily', 'Today 02:00');.
 	 */
-	protected static function jobs(): void
-	{
-		static::addJob( 'surf_check_for_csp', 'hourly' );
-	}
+	protected static function jobs(): void {}
 
 	/**
 	 * Add cron schedules filter.

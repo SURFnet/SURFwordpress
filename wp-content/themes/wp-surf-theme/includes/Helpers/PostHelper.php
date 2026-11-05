@@ -29,9 +29,17 @@ class PostHelper
 	{
 		if ( !empty( $id ) ) {
 			$the_post = get_post( $id );
-			$text     = ( $the_post->post_excerpt ) ? $the_post->post_excerpt : $the_post->post_content;
+			if ( !$the_post || post_password_required( $the_post ) ) {
+				return '';
+			}
+
+			$text = ( $the_post->post_excerpt ) ? $the_post->post_excerpt : $the_post->post_content;
 		} else {
 			global $post;
+			if ( !$post || post_password_required( $post ) ) {
+				return '';
+			}
+
 			$text = ( $post->post_excerpt ) ? $post->post_excerpt : get_the_content( '' );
 		}
 

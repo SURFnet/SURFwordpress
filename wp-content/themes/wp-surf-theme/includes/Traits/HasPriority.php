@@ -127,7 +127,7 @@ trait HasPriority
 					return $pieces;
 				}
 
-				$order_by = sanitize_text_field( $_GET['orderby'] ?? '' );
+				$order_by = Helper::getSanitizedGet( 'orderby', '' );
 				if ( $order_by !== static::FIELD_PRIORITY ) {
 					return $pieces;
 				}
@@ -140,7 +140,12 @@ trait HasPriority
 				global $wpdb;
 				$pieces['join']    .= " INNER JOIN {$wpdb->termmeta} AS tm ON t.term_id = tm.term_id AND tm.meta_key = '" . static::FIELD_PRIORITY . "'";
 				$pieces['orderby'] = " ORDER BY CAST(tm.meta_value AS UNSIGNED)";
-				$pieces['order']   = strtoupper( sanitize_text_field( $_GET['order'] ?? 'DESC' ) );
+				// Whitelisted, because the order clause is not escaped by WordPress
+				$order             = Helper::getSanitizedGet( 'order', '' );
+				$pieces['order']   = 'DESC';
+				if ( is_string( $order ) && strtoupper( $order ) === 'ASC' ) {
+					$pieces['order'] = 'ASC';
+				}
 
 				return $pieces;
 			}, 10, 3 );
