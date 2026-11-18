@@ -100,7 +100,9 @@ return [
 	*/
 	'contexts'   => [
 		'admin' => [
-			'add'     => [],
+			'add'     => [
+				'frame-src' => [ 'blob:' ],
+			],
 			'replace' => [],
 		],
 		'front' => [

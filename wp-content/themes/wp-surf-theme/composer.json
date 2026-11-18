@@ -7,6 +7,7 @@
 		}
 	},
 	"require" : {
+		"composer" : ">=2.11",
 		"enshrined/svg-sanitize": "^1.1",
 		"filp/whoops": "^2.14",
 		"firebase/php-jwt": "^7.0",
@@ -37,6 +38,14 @@
 		},
 		"allow-plugins" : {
 			"dealerdirect/phpcodesniffer-composer-installer" : true
+		},
+		"policy" : {
+			"cooldown" : {
+				"period" : "3 days",
+				"ignore" : {
+					"van-ons/*" : "Our own packages, installed from VCS"
+				}
+			}
 		}
 	}
 }
