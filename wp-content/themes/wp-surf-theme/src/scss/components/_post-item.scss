@@ -506,7 +506,7 @@
 	color: var(--surf-color-post-meta);
 }
 
-.post-item:not(.post-item--file) .post-item__content p {
+.post-item:not(.post-item--file) .post-item__content p:not(.badge) {
 	color: var(--surf-color-text);
 }
 

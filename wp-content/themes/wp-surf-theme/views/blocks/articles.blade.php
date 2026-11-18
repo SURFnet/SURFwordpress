@@ -41,7 +41,7 @@
 				@if(!$block->inEditor())
 					<div class="surf-block-articles__bottom">
 						<a href="{{ $archiveLink }}" class="button">
-							{{ $blockAttributes['buttonText'] ?? __('Read more articles', 'wp-surf-theme') }}
+							{{ $blockAttributes['buttonText'] ?: __('Read more articles', 'wp-surf-theme') }}
 						</a>
 					</div>
 				@endif
@@ -63,7 +63,7 @@
 				@if($hasMorePosts && !$block->inEditor() && $blockAttributes['count'] <= 3)
 					<div class="surf-block-articles__bottom">
 						<a href="{{ $archiveLink }}" class="button">
-							{{ $blockAttributes['buttonText'] ?? __('Read more articles', 'wp-surf-theme') }}
+							{{ $blockAttributes['buttonText'] ?: __('Read more articles', 'wp-surf-theme') }}
 						</a>
 					</div>
 				@endif
@@ -86,7 +86,7 @@
 					@if($hasMorePosts && !$block->inEditor())
 						<div class="surf-block-articles__bottom">
 							<a href="{{ $archiveLink }}" class="button">
-								{{ $blockAttributes['buttonText'] ?? __('Read more articles', 'wp-surf-theme') }}
+								{{ $blockAttributes['buttonText'] ?: __('Read more articles', 'wp-surf-theme') }}
 							</a>
 						</div>
 					@endif

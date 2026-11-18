@@ -53,7 +53,7 @@
 
 	@include mixins.breakpoint($from: medium) {
 		right: functions.rem(27);
-		top: functions.rem(60);
+		top: functions.rem(27);
 	}
 }
 
