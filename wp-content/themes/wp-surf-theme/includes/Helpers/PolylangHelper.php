@@ -163,12 +163,14 @@ class PolylangHelper
 
 	/**
 	 * Get default options fields
+	 * The default is used when the option has never been saved (the ACF default_value only applies to the settings form)
 	 * @param string $optionField
+	 * @param mixed $default
 	 * @return mixed
 	 */
-	public static function getGlobalThemeOption( string $optionField = '' ): mixed
+	public static function getGlobalThemeOption( string $optionField = '', mixed $default = false ): mixed
 	{
-		return get_option( 'options_' . $optionField );
+		return get_option( 'options_' . $optionField, $default );
 	}
 
 	/**
