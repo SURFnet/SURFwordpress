@@ -292,19 +292,21 @@ class Agenda extends BasePost
 	}
 
 	/**
+	 * Enabled by default, like the setting in the admin (and the VO Theme)
 	 * @return bool
 	 */
 	public function showRelatedItems(): bool
 	{
-		return (bool) Theme::getGlobalOption( static::SETTING_SHOW_RELATED );
+		return (bool) Theme::getGlobalOption( static::SETTING_SHOW_RELATED, true );
 	}
 
 	/**
+	 * Enabled by default, like the setting in the admin (and the VO Theme)
 	 * @return bool
 	 */
 	public static function hideExpired(): bool
 	{
-		return (bool) Theme::getGlobalOption( static::SETTING_HIDE_EXPIRED );
+		return (bool) Theme::getGlobalOption( static::SETTING_HIDE_EXPIRED, true );
 	}
 
 	/**

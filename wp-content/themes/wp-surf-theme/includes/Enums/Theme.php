@@ -94,11 +94,12 @@ class Theme extends Enum
 	/**
 	 * Gets a global theme option
 	 * @param string $key
+	 * @param mixed $default Used when the option has never been saved
 	 * @return mixed
 	 */
-	public static function getGlobalOption( string $key ): mixed
+	public static function getGlobalOption( string $key, mixed $default = false ): mixed
 	{
-		return PolylangHelper::getGlobalThemeOption( $key );
+		return PolylangHelper::getGlobalThemeOption( $key, $default );
 	}
 
 	/**
