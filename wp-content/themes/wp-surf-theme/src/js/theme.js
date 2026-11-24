@@ -1,9 +1,8 @@
 import '../scss/theme.scss'
 import './sprite'
 
-// Polyfills for Popover API and CSS Anchor Positioning
+// Polyfill for the Popover API
 import '@oddbird/popover-polyfill'
-import '@oddbird/css-anchor-positioning'
 
 import init from './util/init'
 import clientWidth from './components/clientWidth'

@@ -112,7 +112,6 @@ class ThemeServiceProvider extends ServiceProvider
 
 		vite()->enqueue( 'surf.theme', 'src/js/theme.js', [ 'wp-i18n' ] );
 		vite()->enqueue( 'surf.sub-theme', 'src/js/theme.' . Theme::current() . '.js' );
-		vite()->enqueue( 'surf.exports', 'src/scss/exports.scss' );
 
 		global $pageNr, $wp_query;
 		wp_localize_script( 'surf.theme', 'customData', [
