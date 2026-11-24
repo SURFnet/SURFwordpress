@@ -34,7 +34,6 @@ export default function () {
         if (vacancySliders.length > 0) {
             vacancySliders.forEach(slider => {
                 const wide = !!slider.dataset.vacancyWide
-                console.log(wide)
                 tns({
                     container: slider,
                     loop: false,

@@ -284,6 +284,14 @@ class ConfigHooks
 		libxml_use_internal_errors( true );
 
 		$document->loadHTML( $content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+
+		// The encoding hint is only needed for parsing, so remove it before saving, otherwise it ends up in the markup
+		foreach ( iterator_to_array( $document->childNodes ) as $node ) {
+			if ( $node->nodeType === XML_PI_NODE ) {
+				$document->removeChild( $node );
+			}
+		}
+
 		foreach ( $elements as $element ) {
 			foreach ( $document->getElementsByTagName( $element ) as $tag ) {
 				$hasClass = $tag->hasAttribute( 'class' );
