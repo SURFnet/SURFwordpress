@@ -160,3 +160,13 @@
 .card--block .in-row-only {
 	display: none;
 }
+
+// The focus ring of the title link is shown around the whole card, like the asset items
+.card:has(.card__anchor:focus-visible) {
+	@include mixins.focus-ring();
+	border-radius: var(--surf-card-border-radius);
+}
+
+.card__anchor:focus-visible {
+	outline: none;
+}

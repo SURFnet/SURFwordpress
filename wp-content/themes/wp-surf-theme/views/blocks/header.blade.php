@@ -18,6 +18,12 @@
 	$searchForm = SearchHelper::getForm(placeholder: $placeholder);
 	$blockMargin = $blockAttributes['blockmargin'] ?? '';
 	$backgroundType = $blockAttributes['backgroundtype'] ?? '';
+
+	// The alt text is read from the image in the media library, so changes there are used too
+	$imageAlt = '';
+	if ( !empty( $blockAttributes['image']['id'] ) ) {
+		$imageAlt = (string) get_post_meta( (int) $blockAttributes['image']['id'], '_wp_attachment_image_alt', true );
+	}
 @endphp
 <div @class([
         'alignfull surf-block-header__wrapper',
@@ -38,7 +44,7 @@
 
 	@if(!empty($blockAttributes['backgroundimage']) && $backgroundType === 'image')
 		<div class="surf-block-header__background surf-block-header__background--image">
-			<img src="{{$blockAttributes['backgroundimage']['sizes']['full']['url']}}">
+			<img src="{{$blockAttributes['backgroundimage']['sizes']['full']['url']}}" alt="">
 		</div>
 	@endif
 	<div @class(['wp-block-surf-header surf-block surf-block-header surf-block-header--' . $variation,
@@ -59,7 +65,7 @@
 		</div>
 		@if(!empty($blockAttributes['image']) && $variation === 'background-image')
 			<div class="surf-block-header__image">
-				<img src="{{$blockAttributes['image']['sizes']['hero-large']['url']}}">
+				<img src="{{$blockAttributes['image']['sizes']['hero-large']['url']}}" alt="{{ $imageAlt }}">
 			</div>
 		@endif
 		@if(!empty($blockAttributes['videobackgroundurl']) && $variation === 'background-video' || !empty($blockAttributes['videobackgroundurl']) && $variation === 'background-video-gradient')
@@ -71,7 +77,7 @@
 		@endif
 		@if(!empty($blockAttributes['image']) && $variation === 'small-image')
 			<div class="surf-block-header__image">
-				<img src="{{$blockAttributes['image']['sizes']['hero-small']['url']}}">
+				<img src="{{$blockAttributes['image']['sizes']['hero-small']['url']}}" alt="{{ $imageAlt }}">
 			</div>
 		@endif
 		@if($variation === 'text')

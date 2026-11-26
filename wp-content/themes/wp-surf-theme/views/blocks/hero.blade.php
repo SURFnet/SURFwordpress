@@ -18,16 +18,28 @@
 	$minHeight = $blockAttributes['minHeight'] ?? 'none';
 	$backgroundColor = $blockAttributes['backgroundColor'] ?? '#ffffff';
 	$textColor = $blockAttributes['textColor'] ?? '#000000';
+
+	// The alt text is read from the image in the media library, so changes there are used too
+	$imageAlt = '';
+	if ( !empty( $blockAttributes['image']['id'] ) ) {
+		$imageAlt = (string) get_post_meta( (int) $blockAttributes['image']['id'], '_wp_attachment_image_alt', true );
+	}
 	$horizontalAlignment = $blockAttributes['horizontalAlignment'] ?? 'center';
 	$verticalAlignment = $blockAttributes['verticalAlignment'] ?? 'middle';
 	$mediaType = $blockAttributes['mediaType'] ?? 'image';
 	$mediaLocation = $blockAttributes['mediaLocation'] ?? null;
 	$videoURL = $blockAttributes['video'] ?? '';
 	$roundedCornersEnabled = $blockAttributes['roundedCornersEnabled'] ?? true;
+
+	// With white text the background is dark, so the focus ring turns white to stay visible
+	$focusRingStyle = '';
+	if ( in_array( strtolower( $textColor ), [ '#fff', '#ffffff', 'white' ], true ) ) {
+		$focusRingStyle = ' --surf-focus-ring-color: var(--surf-color-white);';
+	}
 @endphp
 
 <article class="surf-block surf-block-hero"
-         style="background-color: {{ $backgroundColor }}; color: {{ $textColor }} !important;">
+         style="background-color: {{ $backgroundColor }}; color: {{ $textColor }} !important;{{ $focusRingStyle }}">
 	<section class="surf-block-hero__backdrop-layer">
 	</section>
 	<section
@@ -59,9 +71,9 @@
 						class="surf-block-hero__media {{ $minHeight !== 'none' ? 'surf-block-hero__media--fill' : '' }} {{ !$roundedCornersEnabled ? 'surf-block-hero__media--no-rounded-corners' : '' }}">
 					@if($mediaType === 'image')
 						@if($contentVariation === 'content-with-media')
-							<img src="{{$blockAttributes['image']['sizes']['hero-small']['url']}}">
+							<img src="{{$blockAttributes['image']['sizes']['hero-small']['url']}}" alt="{{ $imageAlt }}">
 						@else
-							<img src="{{$blockAttributes['image']['sizes']['hero-large']['url']}}">
+							<img src="{{$blockAttributes['image']['sizes']['hero-large']['url']}}" alt="{{ $imageAlt }}">
 						@endif
 					@endif
 					@if($mediaType === 'video')

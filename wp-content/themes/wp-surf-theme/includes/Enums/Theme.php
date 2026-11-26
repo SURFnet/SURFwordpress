@@ -696,7 +696,7 @@ class Theme extends Enum
 	 */
 	public static function headingFont( $heading = '' ): ?string
 	{
-		if ( in_array( $heading, HeadingHooks::$headings ) ) {
+		if ( in_array( $heading, HeadingHooks::HEADINGS ) ) {
 			$value = static::getGlobalOption( 'surf_theme_heading_font_' . $heading );
 
 			return $value ?: null;

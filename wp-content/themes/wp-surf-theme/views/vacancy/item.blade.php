@@ -68,7 +68,8 @@
 					@if($vacancy->categories()->pluck('name')->join(''))
 						<div class="post-item__category post-item__category--float">{{ $vacancy->categories()->pluck('name')->join('') }}</div>
 					@endif
-					<a href="{{ $vacancy->permalink() }}" rel="bookmark">
+					{{-- Same link as the title, so it is hidden from screen readers and the keyboard to avoid an empty, double link --}}
+					<a href="{{ $vacancy->permalink() }}" rel="bookmark" aria-hidden="true" tabindex="-1">
 						{!! $vacancy->postThumbnail('post-image-full') !!}
 					</a>
 				</div>

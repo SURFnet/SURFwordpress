@@ -87,6 +87,12 @@
 	box-shadow: none;
 }
 
+// Same focus style as the other form fields
+.header .search-form.is-active .search-field:focus {
+	border-color: variables.$form-field-border-color-focus;
+	box-shadow: 0 0 0 3px variables.$form-field-border-color-focus;
+}
+
 @include mixins.breakpoint($from: large) {
 	.header .search-form {
 		margin-right: -#{functions.rem(10)};

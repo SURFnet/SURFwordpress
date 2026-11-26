@@ -21,7 +21,7 @@
 				@foreach( $menu['items'] as $item )
 					@if( !empty( $item['back_link'] ) )
 						<div class="item item-up">
-							<a href="{{ $item['url'] }}" target="_self" id="{{ $item['slug'] }}"
+							<a href="{{ $item['url'] }}" target="_self"
 							   class="item__label">
 								{{ $item['title'] }}
 							</a>
@@ -29,11 +29,11 @@
 					@else
 						<div class="item">
 							@if( !empty($item['selected']) )
-								<div id="{{ $item['slug'] }}" class="item__label active">
+								<div class="item__label active">
 									{{ $item['title'] }}
 								</div>
 							@else
-								<a href="{{ $item['url'] }}" target="_self" id="{{ $item['slug'] }}"
+								<a href="{{ $item['url'] }}" target="_self"
 								   class="item__label">
 									{{ $item['title'] }}
 								</a>

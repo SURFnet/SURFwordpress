@@ -361,31 +361,36 @@
 
 //
 // Focus styles
-// - focus-outline-only: outline with optional color, border-radius and offset
-// - focus-visible-pillow: color + border + outline for pill-shaped elements
-// - focus-visible-outline: outline-only version with color, border-radius and offset params
+// - focus-ring: 2px outline in the focus ring color (default: primary, white on dark sections)
+// - focus-outline-only: focus ring with optional border-radius and offset
+// - focus-visible-pillow: color + border + focus ring for pill-shaped elements
+// - focus-visible-outline: focus ring with border-radius and offset params
 // Parameters:
-//   $color: focus color (default: primary)
+//   $color: text and border color of a pillow (the ring itself uses --surf-focus-ring-color)
 //   $border-radius: border-radius for focus ring (default: 0, uses inherit)
-//   $offset: outline-offset distance (default: 1px)
+//   $offset: outline-offset distance (default: 2px)
 // ---
 
-@mixin focus-outline-only($color: var(--surf-color-primary), $border-radius: 0, $offset: 1px) {
-	outline: 1px solid $color;
+@mixin focus-ring($offset: 2px) {
+	outline: 2px solid var(--surf-focus-ring-color, var(--surf-color-primary));
 	outline-offset: $offset;
+}
+
+@mixin focus-outline-only($color: var(--surf-color-primary), $border-radius: 0, $offset: 2px) {
+	@include focus-ring($offset);
 	// Fallback for browsers that support outline + border-radius
 	@if $border-radius != 0 {
 		border-radius: $border-radius;
 	}
 }
 
-@mixin focus-visible-pillow($color: var(--surf-color-primary), $offset: 1px) {
+@mixin focus-visible-pillow($color: var(--surf-color-primary), $offset: 2px) {
 	color: $color;
 	border-color: $color;
 	@include focus-outline-only($color, 0, $offset);
 }
 
-@mixin focus-visible-outline($color: var(--surf-color-primary), $border-radius: 0, $offset: 1px) {
+@mixin focus-visible-outline($color: var(--surf-color-primary), $border-radius: 0, $offset: 2px) {
 	@include focus-outline-only($color, $border-radius, $offset);
 }
 

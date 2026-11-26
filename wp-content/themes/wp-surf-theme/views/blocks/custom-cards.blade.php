@@ -23,10 +23,14 @@
 		<div class="container padded">
 			@if(!$block->inEditor())
 				<div class="block-header">
-					<h2 class="surf-block-custom-cards__title block-header__title"
-					    style="color: {{ $textColor }} !important;">{!! $title !!}</h2>
-					<p class="surf-block-custom-cards__subtitle block-header__intro"
-					   style="color: {{ $textColor }} !important;">{!! $subtitle !!}</p>
+					@if( !empty( $title ) )
+						<h2 class="surf-block-custom-cards__title block-header__title"
+						    style="color: {{ $textColor }} !important;">{!! $title !!}</h2>
+					@endif
+					@if( !empty( $subtitle ) )
+						<p class="surf-block-custom-cards__subtitle block-header__intro"
+						   style="color: {{ $textColor }} !important;">{!! $subtitle !!}</p>
+					@endif
 				</div>
 			@endif
 

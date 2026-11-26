@@ -12,12 +12,13 @@ class WalkerPrimaryMenu extends Walker_Nav_Menu
 {
 
 	/**
+	 * @param string $label The name of the parent menu item
 	 * @return bool|string
 	 */
-	public static function getMenuItemButton(): bool|string
+	public static function getMenuItemButton( string $label = '' ): bool|string
 	{
 		ob_start();
-		echo surfView( 'components.pages.top-menu-sub-toggle' );
+		echo surfView( 'components.pages.top-menu-sub-toggle', [ 'label' => $label ] );
 
 		return ob_get_clean();
 	}
@@ -33,7 +34,7 @@ class WalkerPrimaryMenu extends Walker_Nav_Menu
 				'menu-item-has-children',
 				is_array( $item->classes ) ? $item->classes : [ $item->classes ]
 			) ) {
-			$output .= $this->getMenuItemButton();
+			$output .= static::getMenuItemButton( wp_strip_all_tags( (string) $item->title ) );
 		}
 	}
 

@@ -513,3 +513,12 @@
 .post-item .meta-list {
 	margin-top: 0;
 }
+
+// The focus ring of the title link is shown around the whole item, like the asset items
+.post-item:has(.post-item__title a:focus-visible) {
+	@include mixins.focus-ring();
+}
+
+.post-item__title a:focus-visible {
+	outline: none;
+}

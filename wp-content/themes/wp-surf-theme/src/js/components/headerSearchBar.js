@@ -23,6 +23,11 @@ export default function () {
             }
         })
 
+        // The collapsed field sits behind the button, so it opens when it gets keyboard focus
+        searchInput.addEventListener('focus', () => {
+            searchForm.classList.add(toggleClass, animateClass)
+        })
+
         searchInput.addEventListener('focusout', () => {
             if (searchInput.value === '') {
                 searchForm.classList.remove(toggleClass)

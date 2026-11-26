@@ -332,7 +332,7 @@ function surfSearchArrayAndGetKey( $needle, $haystack )
  */
 function surfGetHeadingIcon( string $heading ): string
 {
-	if ( !in_array( $heading, HeadingHooks::$headings ) ) {
+	if ( !in_array( $heading, HeadingHooks::HEADINGS ) ) {
 		return '';
 	}
 

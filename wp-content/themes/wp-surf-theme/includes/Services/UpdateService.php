@@ -96,6 +96,11 @@ class UpdateService
 	 */
 	public function getUpdateObject(): ?array
 	{
+		// Development builds are updated by their deployment, not by a release
+		if ( $this->isDevelopmentBuild() ) {
+			return null;
+		}
+
 		$release = $this->getRelease();
 		if ( !$release ) {
 			return null;
@@ -200,6 +205,21 @@ class UpdateService
 		}
 
 		return ltrim( (string) $theme->get( 'Version' ), 'v' );
+	}
+
+	/**
+	 * Checks if the theme is a development build (like "2026.1-dev.122", set by the DEV and staging deployments).
+	 * Their version is not comparable to the releases, so an update would wrongly replace the build with a release.
+	 * @return bool
+	 */
+	public function isDevelopmentBuild(): bool
+	{
+		$version = $this->getThemeVersion();
+		if ( empty( $version ) ) {
+			return false;
+		}
+
+		return str_contains( $version, '-dev' );
 	}
 
 	/**

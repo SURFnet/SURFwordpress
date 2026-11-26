@@ -59,7 +59,6 @@ export default class AbstractArchive {
      * Sets up default values
      */
     setProperties () {
-        console.dir('setProperties')
         this.isLoading = false
         this.filterItems = {}
         this.filterTimers = {}
@@ -73,8 +72,6 @@ export default class AbstractArchive {
         if (this.fieldsets) {
             this.fieldsets.forEach(this.setFieldsetFilterItem.bind(this))
         }
-        console.dir('this.fieldsets')
-        console.dir(this.fieldsets)
 
         // Content Items
         this.posts = this.archive.querySelector('.archive__content')

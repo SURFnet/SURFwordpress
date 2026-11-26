@@ -20,10 +20,16 @@
         "surf-block-roadmap--flow" => $display === 'flow',
         "surf-block-roadmap--slider" => $display === 'slider',
         ])>
-	<div class="surf-block-roadmap__header">
-		<h2 class="surf-block-roadmap__title">{{ $title }}</h2>
-		<p class="surf-block-roadmap__subtitle">{{ $subtitle }}</p>
-	</div>
+	@if( !empty( $title ) || !empty( $subtitle ) )
+		<div class="surf-block-roadmap__header">
+			@if( !empty( $title ) )
+				<h2 class="surf-block-roadmap__title">{{ $title }}</h2>
+			@endif
+			@if( !empty( $subtitle ) )
+				<p class="surf-block-roadmap__subtitle">{{ $subtitle }}</p>
+			@endif
+		</div>
+	@endif
 	<div class="surf-block-roadmap-wrapper">
 		<div class="surf-block-roadmap__items"
 		     @if($blockAttributes['display'] === 'slider') data-vacancy-slider @endif
@@ -31,11 +37,12 @@
 		>
 			{!! $content !!}
 		</div>
-		<div id="controls">
-			<button class="previous">
+		{{-- A class instead of an ID, as a page can have more than one roadmap --}}
+		<div class="surf-block-roadmap__controls" data-slider-controls>
+			<button type="button" class="previous" aria-label="{{ __('Previous', 'wp-surf-theme') }}">
 				<x-icon icon="arrow-left" sprite="global"/>
 			</button>
-			<button class="next">
+			<button type="button" class="next" aria-label="{{ __('Next', 'wp-surf-theme') }}">
 				<x-icon icon="arrow-right" sprite="global"/>
 			</button>
 		</div>

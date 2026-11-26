@@ -113,7 +113,7 @@ class ConfigHooks
 		add_filter( 'wp_handle_sideload_prefilter', [ static::class, 'sanitizeSvgUpload' ] );
 
 		// Yoast
-		add_filter( 'wpseo_breadcrumb_separator', [ static::class, 'voSeoBreadcrumbSeparator' ], 10, 1 );
+		add_filter( 'wpseo_breadcrumb_separator', [ static::class, 'seoBreadcrumbSeparator' ], 10, 1 );
 
 		// Disables Gutenberg widgets
 		add_filter( 'use_widgets_block_editor', '__return_false' );
@@ -455,7 +455,8 @@ class ConfigHooks
 	{
 		$errorPage = get_option( 'options_error_page' );
 
-		if ( $errorPage && is_page( $errorPage ) ) {
+		// Never mark the front page as a 404, even when it is (accidentally) chosen as the error page
+		if ( $errorPage && is_page( $errorPage ) && !is_front_page() ) {
 			global $wp_query;
 			$wp_query->set_404();
 			status_header( 404 );
@@ -490,7 +491,7 @@ class ConfigHooks
 	/**
 	 * Add custom separator for Yoast Breadcrumbs
 	 */
-	public static function voSeoBreadcrumbSeparator( $this_options_breadcrumbs_sep )
+	public static function seoBreadcrumbSeparator( $this_options_breadcrumbs_sep )
 	{
 		return '<span class="breadcrumb__separator"></span>';
 	}

@@ -1,0 +1,64 @@
+//
+// ----------------------------------------------------------------------------
+// Base / Focus
+// ----------------------------------------------------------------------------
+//
+// One focus indicator for every interactive element, instead of the browser default.
+// The ring uses the primary color. On a dark or saturated background the primary color
+// would hardly be visible (WCAG 1.4.11 asks for 3:1), so sections with such a background
+// set their own ring color. Elements inherit it from the nearest section.
+// The Hero block sets the ring color inline (see hero.blade.php).
+//
+
+@use 'abstracts/mixins';
+
+:root {
+	--surf-focus-ring-color: var(--surf-color-primary);
+	--surf-focus-ring-radius: #{0.25rem};
+}
+
+// :where() keeps the specificity at zero, so components can still style their own focus state
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	@include mixins.focus-ring();
+}
+
+// Slightly rounded corners for links and buttons without a shape of their own (menu and footer links).
+// This rule has no specificity at all, so any border-radius a component sets wins.
+// Block buttons are left out, their shape comes from a rule with the same (zero) specificity.
+:where(a, button, summary):where(:not(.wp-element-button, .wp-block-button__link)):where(:focus-visible) {
+	border-radius: var(--surf-focus-ring-radius);
+}
+
+// Sections with a dark background: white ring
+.has-white-color,
+.has-black-background-color,
+.has-blue-background-color,
+.has-red-background-color,
+.has-green-background-color,
+.has-purple-background-color,
+.has-primary-background-color,
+.navigation-mobile__menu {
+	--surf-focus-ring-color: var(--surf-color-white);
+}
+
+// Orange is too light for a white ring and too close to the primary color
+.has-orange-background-color {
+	--surf-focus-ring-color: var(--surf-color-black);
+}
+
+// Sections with a light background inside a dark one: back to the primary color
+.has-white-background-color,
+.has-grey-background-color,
+.has-blue-5-background-color,
+.has-red-5-background-color,
+.has-green-5-background-color,
+.has-orange-5-background-color,
+.has-purple-5-background-color {
+	--surf-focus-ring-color: var(--surf-color-primary);
+}
+
+// A button sits on its own background, but its ring is drawn on the section around it,
+// so it keeps the ring color of that section
+.wp-block-button .wp-block-button__link {
+	--surf-focus-ring-color: inherit;
+}
