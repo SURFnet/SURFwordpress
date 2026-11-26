@@ -44,7 +44,8 @@
 .faq-item__title svg {
 	position: absolute;
 	right: functions.rem(17);
-	top: functions.rem(50);
+	// Level with the first line of the item (the padding), also when the categories are not shown
+	top: functions.rem(17);
 	border: 0;
 	background: transparent;
 	color: var(--surf-color-primary);
@@ -64,6 +65,15 @@
 .faq-item.is-open .faq-item__toggle,
 .faq-item.is-open .faq-item__title svg {
 	transform: rotate(180deg);
+}
+
+// Target size of at least 24 x 24 pixels (WCAG 2.5.8)
+.faq-item__toggle {
+	display: grid;
+	place-items: center;
+	min-width: functions.rem(24);
+	min-height: functions.rem(24);
+	padding: 0;
 }
 
 .faq-item__toggle:hover {

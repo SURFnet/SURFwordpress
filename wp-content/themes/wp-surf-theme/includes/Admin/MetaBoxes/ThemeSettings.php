@@ -551,7 +551,7 @@ class ThemeSettings
 	 */
 	public static function getSiteHeadings(): array
 	{
-		$headings = HeadingHooks::$headings;
+		$headings = HeadingHooks::HEADINGS;
 
 		return [
 			[

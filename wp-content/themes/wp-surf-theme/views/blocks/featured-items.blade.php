@@ -27,8 +27,12 @@
 	<div class="container padded">
 		@if(!$block->inEditor())
 			<div class="block-header">
-				<h2 class="surf-block-featured-items__title block-header__title">{!! $blockAttributes['title'] ?? '' !!}</h2>
-				<p class="surf-block-featured-items__intro block-header__intro">{!! $blockAttributes['intro'] ?? '' !!}</p>
+				@if( !empty( $blockAttributes['title'] ) )
+					<h2 class="surf-block-featured-items__title block-header__title">{!! $blockAttributes['title'] !!}</h2>
+				@endif
+				@if( !empty( $blockAttributes['intro'] ) )
+					<p class="surf-block-featured-items__intro block-header__intro">{!! $blockAttributes['intro'] !!}</p>
+				@endif
 			</div>
 		@endif
 

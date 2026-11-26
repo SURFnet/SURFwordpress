@@ -3,6 +3,7 @@
 	/**
 	 * @var array $children
 	 * @var string $slug
+	 * @var string $title
 	 */
 
 	if ( empty($children) ) {
@@ -11,12 +12,18 @@
 
 	$popoverId = 'asset-submenu-' . $slug;
 
+	// The name of the parent item is added, so every toggle has its own name for screen readers
+	$buttonText = __('Toggle submenu', 'wp-surf-theme');
+	if ( !empty( $title ) ) {
+		$buttonText .= ': ' . $title;
+	}
+
 @endphp
 <button type="button" class="menu-item-button" aria-expanded="false"
 	popovertarget="{{ $popoverId }}"
 	popovertargetaction="toggle">
 	<x-icon icon="chevron-down" sprite="global"/>
-	<span class="sr-only">{{ __('Toggle submenu', 'wp-surf-theme') }}</span>
+	<span class="sr-only">{{ $buttonText }}</span>
 </button>
 <ul class="sub-menu" id="{{ $popoverId }}" popover="true">
 	<span class="top-border-left" aria-hidden="true"></span>

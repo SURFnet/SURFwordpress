@@ -18,6 +18,7 @@ use SURF\Hooks\AuthorHooks;
 use SURF\Hooks\ConfigHooks;
 use SURF\Hooks\HeadingHooks;
 use SURF\Hooks\ImageHooks;
+use SURF\Hooks\LegacySlugHooks;
 use SURF\Hooks\MediaHooks;
 use SURF\Hooks\MenuHooks;
 use SURF\Hooks\PageHooks;
@@ -63,6 +64,7 @@ SearchHooks::register();
 MenuHooks::register();
 AuthorHooks::register();
 MediaHooks::register();
+LegacySlugHooks::register();
 
 /*
  * Services

@@ -61,7 +61,7 @@
 		padding-block-end: functions.rem(45);
 	}
 
-	#controls {
+	.surf-block-roadmap__controls {
 		display: none;
 	}
 }
@@ -124,7 +124,7 @@
 		}
 	}
 
-	#controls {
+	.surf-block-roadmap__controls {
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -136,7 +136,7 @@
 		gap: 20px;
 	}
 
-	#controls button {
+	.surf-block-roadmap__controls button {
 		width: 32px;
 		height: 32px;
 		display: grid;

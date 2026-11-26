@@ -6,7 +6,7 @@
 			</a>
 
 			@if(!empty($child['children']))
-				<x-pages.top-menu-sub-toggle/>
+				<x-pages.top-menu-sub-toggle :label="$child['title']"/>
 				<x-pages.top-menu-sub :children="$child['children']"/>
 			@endif
 		</li>

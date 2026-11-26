@@ -46,7 +46,8 @@
 		</div>
 		@if(has_post_thumbnail($download->ID()))
 			<div class="post-item__figure @if($hideImagesOnMobile) post-item__figure--hidden-on-mobile @endif">
-				<a href="{!! $download->permalink() !!}">
+				{{-- Same link as the title, so it is hidden from screen readers and the keyboard to avoid an empty, double link --}}
+				<a href="{!! $download->permalink() !!}" aria-hidden="true" tabindex="-1">
 					{!! $download->postThumbnail('post-image') !!}
 				</a>
 			</div>

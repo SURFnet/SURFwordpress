@@ -196,14 +196,23 @@ trait HasArchiveWidgetAreaFilters
 	}
 
 	/**
+	 * Gets the position of the widget area on the archive ('hidden', 'top', 'left' or 'right').
+	 * A widget area on the left or right without widgets is treated as hidden, so the posts use the full width.
 	 * @return string
 	 */
 	public static function getArchiveWidgetAreaPosition(): string
 	{
 		$key   = static::PREFIX_WIDGET_POSITION . static::getName();
 		$value = Theme::getGlobalOption( $key );
+		if ( empty( $value ) ) {
+			return 'hidden';
+		}
 
-		return !empty( $value ) ? $value : 'hidden';
+		if ( in_array( $value, [ 'left', 'right' ] ) && !is_active_sidebar( static::getWidgetAreaId() ) ) {
+			return 'hidden';
+		}
+
+		return $value;
 	}
 
 	/**

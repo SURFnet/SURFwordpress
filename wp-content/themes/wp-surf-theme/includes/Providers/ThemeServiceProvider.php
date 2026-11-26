@@ -263,7 +263,7 @@ class ThemeServiceProvider extends ServiceProvider
             ";
 		}
 
-		$headings = HeadingHooks::$headings;
+		$headings = HeadingHooks::HEADINGS;
 		foreach ( $headings as $heading ) {
 			$heading_font = Theme::headingFont( $heading );
 			if ( empty( $heading_font ) ) {

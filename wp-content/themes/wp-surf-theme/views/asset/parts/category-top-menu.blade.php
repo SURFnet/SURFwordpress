@@ -22,7 +22,7 @@
 				<div class="items-wrapper">
 					@foreach( $menu as $item )
 						<div class="item">
-							<a href="{{ $item['url'] }}" class="item__label" target="_self" id="{{ $item['slug'] }}">
+							<a href="{{ $item['url'] }}" class="item__label" target="_self">
 								{{ $item['title'] }}
 							</a>
 						</div>
@@ -36,11 +36,11 @@
 			<ul class="asset-top-menu__list">
 				@foreach( $menu as $item )
 					<li @class(['asset-top-menu__item', ...$item['classes'] ?? []])>
-						<a href="{{ $item['url'] }}" target="_self" id="{{ $item['slug'] }}">
+						<a href="{{ $item['url'] }}" target="_self">
 							{{ $item['title'] }}
 						</a>
 
-						@include( 'asset.parts.category-top-menu-children', ['children' => $item['children'] ?? [], 'slug' => $item['slug']] )
+						@include( 'asset.parts.category-top-menu-children', ['children' => $item['children'] ?? [], 'slug' => $item['slug'], 'title' => $item['title']] )
 					</li>
 				@endforeach
 			</ul>

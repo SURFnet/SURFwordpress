@@ -121,7 +121,7 @@ msgstr "Selecteer een menu"
 #: views/agenda/archive-aside.blade.php:30
 #: views/agenda/archive-aside.blade.php:51
 msgid "Toggle \"Upcoming events\""
-msgstr "Toggle \"Aankomende evenementen\""
+msgstr "Open of sluit \"Komende events\""
 
 #: views/agenda/archive-aside.blade.php:31
 #: views/agenda/archive-aside.blade.php:52 views/agenda/archive.blade.php:70
@@ -347,7 +347,7 @@ msgstr "PDF"
 #: views/wp-widgets/taxonomy-filter-surf-widget.blade.php:44
 #: views/wp-widgets/term-filter-surf-widget.blade.php:48
 msgid "Toggle"
-msgstr "Toggle"
+msgstr "Open of sluit"
 
 #: views/components/asset-category-filter.blade.php:29
 #: views/wp-widgets/taxonomy-filter-surf-widget.blade.php:52
@@ -660,7 +660,7 @@ msgstr "Deadline"
 
 #: views/wp-widgets/post-type-filter-surf-widget.blade.php:23
 msgid "Toggle post types"
-msgstr "Toggle bericht types"
+msgstr "Open of sluit berichttypes"
 
 #: views/wp-widgets/post-type-filter-surf-widget.blade.php:24
 msgid "Post type"

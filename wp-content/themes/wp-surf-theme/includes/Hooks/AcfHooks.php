@@ -25,7 +25,7 @@ class AcfHooks
 			'allowFontUploads',
 		], 10, 3 );
 
-		$headings = HeadingHooks::$headings;
+		$headings = HeadingHooks::HEADINGS;
 		foreach ( $headings as $heading ) {
 			$field_key = 'field_theme_settings_site_heading_font_' . $heading;
 			add_filter( 'acf/load_field/key=' . $field_key, [ static::class, 'populateFontOptions' ] );

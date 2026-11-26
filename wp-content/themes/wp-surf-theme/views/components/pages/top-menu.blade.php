@@ -37,7 +37,7 @@
 				</a>
 
 				@if(!empty($item['children']))
-					<x-pages.top-menu-sub-toggle/>
+					<x-pages.top-menu-sub-toggle :label="$item['title']"/>
 					<x-pages.top-menu-sub :children="$item['children']"/>
 				@endif
 			</li>

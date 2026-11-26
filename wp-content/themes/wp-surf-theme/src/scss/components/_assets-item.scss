@@ -57,6 +57,8 @@ $-assets-background: #efefef;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	// The link covers the whole item, so its focus ring follows the rounded corners of the item
+	border-radius: inherit;
 }
 
 .assets-item__category-group {
@@ -302,6 +304,8 @@ $-assets-background: #efefef;
 	top: 0;
 	width: 100%;
 	height: 100%;
+	// The link covers the whole item, so its focus ring follows the rounded corners of the item
+	border-radius: inherit;
 }
 
 .assets-item-full__excerpt {

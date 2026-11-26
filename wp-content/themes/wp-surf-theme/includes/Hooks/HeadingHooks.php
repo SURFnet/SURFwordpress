@@ -12,7 +12,7 @@ use DOMElement;
 class HeadingHooks
 {
 
-	public static array $headings = [
+	public const HEADINGS = [
 		'h1',
 		'h2',
 		'h3',
@@ -53,7 +53,7 @@ class HeadingHooks
 		libxml_use_internal_errors( true );
 
 		$document->loadHTML( $content, LIBXML_HTML_NODEFDTD );
-		foreach ( static::$headings as $heading ) {
+		foreach ( static::HEADINGS as $heading ) {
 			$headings = $document->getElementsByTagName( $heading );
 
 			foreach ( $headings as $h ) {

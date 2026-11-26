@@ -14,6 +14,7 @@ import FaqArchive from '@surf/js/components/faqArchive'
 import VacancyArchive from '@surf/js/components/vacancyArchive'
 import PostArchive from '@surf/js/components/postArchive'
 import headerSearchBar from './components/headerSearchBar'
+import languageSwitch from './components/languageSwitch'
 import hamburger from './components/hamburger'
 import accordion from './components/accordion'
 import mobileSlider from './components/mobileSlider'
@@ -48,6 +49,7 @@ init(() => {
     AssetCategoryArchive.init()
     SearchArchive.init()
     headerSearchBar()
+    languageSwitch()
     hamburger()
     accordion()
     mobileSlider()

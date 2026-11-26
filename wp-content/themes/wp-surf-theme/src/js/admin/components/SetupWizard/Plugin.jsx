@@ -29,8 +29,6 @@ const Plugin = ({ plugin }) => {
 
         const data = await response.json()
 
-        console.log(data)
-
         setError(data.message)
     }
 

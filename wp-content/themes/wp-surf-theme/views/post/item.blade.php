@@ -94,7 +94,8 @@
 					<x-badge>{{ $categoryName }}</x-badge>
 				@endif
 
-				<a href="{{ $post->permalink() }}" rel="bookmark">
+				{{-- Same link as the title, so it is hidden from screen readers and the keyboard to avoid an empty, double link --}}
+				<a href="{{ $post->permalink() }}" rel="bookmark" aria-hidden="true" tabindex="-1">
 					{!! $post->postThumbnail($type === 'large' ? 'post-image-large' : 'post-image') !!}
 				</a>
 			</div>

@@ -63,7 +63,6 @@ export default function () {
         if (!isExpanded || force === true) {
             const transition = body.style.transition
             if (skipTransition) {
-                console.log('skipTransition', transition)
                 body.style.transition = 'none'
             }
 
@@ -89,6 +88,73 @@ export default function () {
                 ? e.target
                 : e.target.closest('[data-accordion-button]')
 
+            toggleAccordion(button)
+        })
+    }
+
+    /**
+     * Makes the toggles usable with a keyboard and a screen reader. Most toggles are a <div>
+     * (like the accordion block and the archive filters), so they get the role and focus of a button.
+     */
+    const enhanceButtons = () => {
+        const usedIds = []
+
+        document.querySelectorAll('[data-accordion-button]').forEach((button, index) => {
+            // The accordion block uses its title as ID, so two accordions with the same title get the same ID
+            if (button.id) {
+                let id = button.id
+                let counter = 2
+                while (usedIds.includes(id)) {
+                    id = `${button.id}-${counter}`
+                    counter++
+                }
+                button.id = id
+                usedIds.push(id)
+            }
+
+            const item = button.closest('[data-accordion-item]')
+            const body = item ? item.querySelector('[data-accordion-target]') : null
+
+            if (body && !button.hasAttribute('aria-controls')) {
+                if (!body.id) {
+                    body.id = `accordion-content-${index + 1}`
+                }
+                button.setAttribute('aria-controls', body.id)
+            }
+
+            if (!button.hasAttribute('aria-expanded')) {
+                button.setAttribute('aria-expanded', 'false')
+            }
+
+            if (button.tagName === 'BUTTON') {
+                return
+            }
+
+            // A role on an element with a heading inside would hide that heading from screen readers,
+            // so these toggles keep their markup (they need a button inside the heading in the template)
+            if (button.querySelector('h1, h2, h3, h4, h5, h6')) {
+                return
+            }
+
+            button.setAttribute('role', 'button')
+            button.setAttribute('tabindex', '0')
+        })
+    }
+
+    /**
+     * Opens and closes a toggle with Enter or Space, like a native button
+     */
+    const handleKeys = () => {
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Enter' && e.key !== ' ') return
+
+            const button = e.target.closest('[data-accordion-button]')
+
+            // A native button already turns these keys into a click
+            if (!button || button.tagName === 'BUTTON') return
+
+            // Keep the page from scrolling on Space
+            e.preventDefault()
             toggleAccordion(button)
         })
     }
@@ -119,6 +185,8 @@ export default function () {
     }
 
     const init = () => {
+        enhanceButtons()
+        handleKeys()
         pageLoad()
         menuButtonExpand()
         handleClick()

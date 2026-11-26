@@ -40,7 +40,7 @@ export default function () {
                     swipeAngle: true,
                     items: 1,
                     mouseDrag: true,
-                    controlsContainer: slider.parentElement.querySelector('#controls'),
+                    controlsContainer: slider.parentElement.querySelector('[data-slider-controls]'),
                     prevButton: slider.parentElement.querySelector('.previous'),
                     nextButton: slider.parentElement.querySelector('.next'),
                     navPosition: 'bottom',
